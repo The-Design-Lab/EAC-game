@@ -1,7 +1,11 @@
-import Button from './components/DemoButton'
+import GlobalStyle from './styles/globalStyles'
 
 function App() {
-  return <Button />
+  return (
+    <>
+      <GlobalStyle />
+    </>
+  )
 }
 
 export default App
