@@ -6,7 +6,6 @@ function App() {
     <>
       <Reset />
       <GlobalStyle />
-      <a href="/">Link</a>
     </>
   )
 }
