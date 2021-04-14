@@ -7,6 +7,19 @@ const GlobalStyle = createGlobalStyle`
     --color-primary: #C9CBCD; // gray
     --color-secondary: #2940FF; // blue
     --color-tertiary: #6CF9AF; // green
+
+    // Bevels
+    --bevel-default: 
+      inset -2px -2px 0 0 #000, 
+      inset 2px 2px 0 0 #fff,
+      inset -3px -3px 0 0 var(--color-primary), 
+      inset 3px 3px 0 0 #DEDCDE;
+
+    --bevel-active:
+      inset -1px -1px 0 0 #fff, 
+      inset 1px 1px 0 0 #000, 
+      inset -2px -2px 0 0 var(--color-primary), 
+      inset 2px 2px 0 0 #DEDCDE;
   
     // Fonts
     --body: 'IBM Plex Sans', sans-serif;
