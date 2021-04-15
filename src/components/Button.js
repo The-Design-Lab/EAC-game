@@ -31,14 +31,14 @@ const Icon = styled.img`
 
 // Base button style
 const ButtonStyle = styled.button`
+  display: flex;
+  align-items: center;
   box-shadow: var(--box-shadow);
   cursor: pointer;
   text-align: center;
   box-shadow: var(--bevel-default);
   background-color: var(--color-primary);
-  display: flex;
   height: 80%;
-  align-items: center;
 
   // Change button variant based on button
   ${(type) => {
