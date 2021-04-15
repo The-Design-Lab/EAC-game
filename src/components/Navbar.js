@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import LinkButton from './LinkButton'
+import Button from './Button'
 
 const NavBar = styled.nav`
   width: 100%;
@@ -20,8 +20,8 @@ function Navbar() {
   return (
     <NavBar>
       <Container>
-        <LinkButton label="Game" />
-        <LinkButton label="Dictionary" />
+        <Button padding="primary" label="Game" />
+        <Button padding="primary" label="Dictionary" />
       </Container>
     </NavBar>
   )
