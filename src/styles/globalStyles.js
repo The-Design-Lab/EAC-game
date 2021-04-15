@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
   }
 
-  body {
+  body,button {
     font-family: var(--body);
   }
 
@@ -67,6 +67,9 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     font-size: 1rem;
+  }
+  button{
+    font-size: 0.875rem;
   }
 
 `
