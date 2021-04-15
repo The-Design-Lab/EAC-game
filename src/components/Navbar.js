@@ -20,8 +20,9 @@ function Navbar() {
   return (
     <NavBar>
       <Container>
-        <Button type="navItem" label="Game" />
-        <Button type="navItem" label="Dictionary" />
+        <Button type="navItem" label="Game" icon="windows" />
+        <Button type="navItem" label="Dictionary" icon="book" />
+        <Button type="navItem" label="Bank" icon="bank" />
       </Container>
     </NavBar>
   )
