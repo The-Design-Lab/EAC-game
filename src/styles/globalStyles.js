@@ -31,11 +31,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing:border-box;
-    background: slategray;
   }
 
   html {
     font-size: 16px;
+  }
+
+  body {
+    background: slategray;
   }
 
   body,button {
