@@ -5,8 +5,22 @@ const GlobalStyle = createGlobalStyle`
   :root {
     // Colors
     --color-primary: #C9CBCD; // gray
+    --color-primary-light: #E4E4E4; // light-gray
     --color-secondary: #2940FF; // blue
     --color-tertiary: #6CF9AF; // green
+
+    // Bevels
+    --bevel-default: 
+      inset -2px -2px 0 0 #000, 
+      inset 2px 2px 0 0 #fff,
+      inset -3px -3px 0 0 var(--color-primary), 
+      inset 3px 3px 0 0 #DEDCDE;
+
+    --bevel-active:
+      inset -1px -1px 0 0 #fff, 
+      inset 1px 1px 0 0 #000, 
+      inset -2px -2px 0 0 var(--color-primary), 
+      inset 2px 2px 0 0 #DEDCDE;
   
     // Fonts
     --body: 'IBM Plex Sans', sans-serif;
@@ -17,7 +31,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing:border-box;
-    background: slategray;
   }
 
   html {
@@ -25,6 +38,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    background: slategray;
+  }
+
+  body,button {
     font-family: var(--body);
   }
 
@@ -53,6 +70,9 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     font-size: 1rem;
+  }
+  button{
+    font-size: 0.875rem;
   }
 
 `
