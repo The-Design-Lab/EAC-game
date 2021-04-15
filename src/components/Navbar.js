@@ -19,11 +19,10 @@ const Container = styled.div`
 function Navbar() {
   return (
     <NavBar>
-      <Co
-      ntainer>
+      <Container>
         <Button type="navItem" label="Game" />
         <Button type="navItem" label="Dictionary" />
-      </Co>
+      </Container>
     </NavBar>
   )
 }
