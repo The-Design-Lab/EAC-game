@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// Button variants
 const buttonType = {
   navItem: {
     padding: '24px 96px 24px 16px',
@@ -13,12 +14,14 @@ const buttonType = {
   },
 }
 
+// Icon images
 const icons = {
   book: './icons/dictionary.png',
   windows: './icons/windows.png',
   bank: './icons/bank.png',
 }
 
+// Style icon
 const Icon = styled.img`
   background: none;
   margin-right: 10px;
@@ -26,6 +29,7 @@ const Icon = styled.img`
   width: 32px;
 `
 
+// Base button style
 const ButtonStyle = styled.button`
   box-shadow: var(--box-shadow);
   cursor: pointer;
@@ -36,6 +40,7 @@ const ButtonStyle = styled.button`
   height: 80%;
   align-items: center;
 
+  // Change button variant based on button
   ${(type) => {
     switch (type.buttonType) {
       case 'navItem':
@@ -58,6 +63,7 @@ const ButtonStyle = styled.button`
     outline: 2px dotted var(--color-secondary);
   }
 `
+// set icon if necessary
 const setIcon = (icon) => {
   if (icon) return <Icon src={icons[icon]} alt={icon} />
 }
