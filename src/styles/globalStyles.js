@@ -38,7 +38,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: slategray;
+    background: #018281;
+
+    // center window 
+    display:grid;
+    height: 90vh;
+    place-items: center;
+    justify-items: stretch;
   }
 
   body,button {
