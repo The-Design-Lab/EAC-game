@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     // Colors
     --color-primary: #C9CBCD; // gray
     --color-primary-light: #E4E4E4; // light-gray
-    --color-secondary: #2940FF; // blue
+    --color-secondary: #000082; // blue
     --color-tertiary: #6CF9AF; // green
 
     // Bevels
@@ -53,6 +53,8 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: 4.209rem;
+    line-height: 1.0em;
+    margin-bottom:20px;
 
     @media ${device.tabletS} {
       /* font-size: 1.62rem; */
@@ -76,9 +78,26 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     font-size: 1rem;
+    margin-bottom:15px;
   }
+
   button{
     font-size: 0.875rem;
+  }
+
+  hr{
+    box-shadow: var(--bevel-default);
+    margin: 40px 0 30px 0;
+  }
+
+  ul{
+    list-style: inside;
+
+    li {
+      list-style-type: disclosure-closed;
+      font-weight:700;
+      margin-bottom:5px;
+    }
   }
 
 `

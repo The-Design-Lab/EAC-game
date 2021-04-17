@@ -1,21 +1,16 @@
 import GlobalStyle from './styles/globalStyles'
 import Reset from './styles/reset'
 import Navbar from './components/Navbar'
-import { ThemeProvider } from 'styled-components'
+import Window from './components/Window'
 
-const baseTheme = {
-  color: 'green',
-  backgroundColor: 'white',
-}
 
 function App() {
   return (
     <>
-      <ThemeProvider theme={baseTheme}>
-        <Reset />
-        <GlobalStyle />
-        <Navbar />
-      </ThemeProvider>
+      <Reset />
+      <GlobalStyle />
+      <Window title='Welcome to Economic Awaraness Council'/>
+      <Navbar />
     </>
   )
 }
