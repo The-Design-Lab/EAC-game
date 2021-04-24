@@ -1,6 +1,8 @@
 import React from 'react'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import Home from '../pages/Home'
+import About from '../pages/About'
 
 const WindowWrapper = styled.div`
   max-width: 800px;
@@ -28,11 +30,17 @@ function Window({ maxWidth = '1000px' }) {
   return (
     <WindowWrapper style={{ maxWidth }}>
       <WindowHead>Welcome to Economic Awaraness Council</WindowHead>
-      <Content>
-        {/* Inject dynamic components */}
-        <Home />
-        {/* End injection */}
-      </Content>
+      <Router>
+        <Content>
+          {/* Inject dynamic components */}
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/" component={Home} />
+          </Switch>
+          {/* <Home /> */}
+          {/* End injection */}
+        </Content>
+      </Router>
     </WindowWrapper>
   )
 }

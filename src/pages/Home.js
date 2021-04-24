@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 
 const HomeContent = styled.div`
@@ -53,7 +54,9 @@ function Home() {
       </MainContent>
       <hr />
       <Buttons>
-        <Button label="Play" />
+        <Link to="/about">
+          <Button label="Play" />
+        </Link>
       </Buttons>
     </HomeContent>
   )
