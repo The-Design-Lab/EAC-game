@@ -1,21 +1,15 @@
 import GlobalStyle from './styles/globalStyles'
 import Reset from './styles/reset'
 import Navbar from './components/Navbar'
-import { ThemeProvider } from 'styled-components'
-
-const baseTheme = {
-  color: 'green',
-  backgroundColor: 'white',
-}
+import Window from './components/Window'
 
 function App() {
   return (
     <>
-      <ThemeProvider theme={baseTheme}>
-        <Reset />
-        <GlobalStyle />
-        <Navbar />
-      </ThemeProvider>
+      <Reset />
+      <GlobalStyle />
+      <Window maxWidth="800px" />
+      <Navbar />
     </>
   )
 }

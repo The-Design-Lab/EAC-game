@@ -10,7 +10,7 @@ const buttonType = {
     },
   },
   default: {
-    padding: '24px 16px',
+    padding: '10px 26px',
   },
 }
 
@@ -68,7 +68,7 @@ const setIcon = (icon) => {
   if (icon) return <Icon src={icons[icon]} alt={icon} />
 }
 
-function Button({ label, type, icon }) {
+function Button({ label, type = 'default', icon }) {
   return (
     <ButtonStyle buttonType={type}>
       {setIcon(icon)}
