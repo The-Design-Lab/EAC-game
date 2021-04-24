@@ -31,7 +31,7 @@ const Buttons = styled.div`
 
 const HomeContent = styled.div`
   display: flex;
-  gap: 70px;
+  flex-direction: column;
 
   img {
     object-fit: cover;
@@ -44,36 +44,48 @@ const HomeContent = styled.div`
   }
 `
 
-function Window({ title }) {
+const MainContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+`
+
+function Window({ maxWidth = '1000px' }) {
   return (
-    <WindowWrapper>
-      <WindowHead>{title}</WindowHead>
+    <WindowWrapper style={{ maxWidth }}>
+      <WindowHead>Welcome to Economic Awaraness Council</WindowHead>
       <Content>
+        {/* Injected dynamic components */}
         <HomeContent>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe6BUmB0VWV1tEu82L1tTqUEoOSyHhIZXIUg&usqp=CAU"
-            alt=""
-          />
-          <div>
-            <h1>Investor Simulator </h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p>Over the course of the following game, you will learn about:</p>
-            <ul>
-              <li>How to invest</li>
-              <li>Risk & Rewards</li>
-              <li>Retirement Funds</li>
-            </ul>
-          </div>
+          <MainContent>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe6BUmB0VWV1tEu82L1tTqUEoOSyHhIZXIUg&usqp=CAU"
+              alt="Home graphic"
+            />
+            <div>
+              <h1>Investor Simulator </h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <p>
+                Over the course of the following game, you will learn about:
+              </p>
+              <ul>
+                <li>How to invest</li>
+                <li>Risk & Rewards</li>
+                <li>Retirement Funds</li>
+              </ul>
+            </div>
+          </MainContent>
+          <hr />
+          <Buttons>
+            <Button label="Play" />
+          </Buttons>
         </HomeContent>
-        <hr />
-        <Buttons>
-          <Button label="Play" />
-        </Buttons>
+        {/* End injection */}
       </Content>
     </WindowWrapper>
   )
