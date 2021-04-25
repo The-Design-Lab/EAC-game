@@ -27,6 +27,7 @@ const Buttons = styled.div`
 const GoalChoices = styled.div`
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 `
 
 function Goals() {
