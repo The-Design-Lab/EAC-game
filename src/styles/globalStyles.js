@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
 
     // center window 
     display:grid;
-    height: 90vh;
+    height: 93vh;
     place-items: center;
     justify-items: stretch;
   }
@@ -99,7 +99,21 @@ const GlobalStyle = createGlobalStyle`
       margin-bottom:5px;
     }
   }
+  
+  // Resets
+  img {
+    width: 100%;
+    height: auto;
+  }
 
+  input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    cursor: inherit;
+  }
+}
+
+  
 `
 
 export default GlobalStyle
