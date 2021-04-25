@@ -100,17 +100,6 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   
-  // Resets
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  input[type=checkbox] {
-    position: absolute;
-    opacity: 0;
-    cursor: inherit;
-  }
 }
 
   
