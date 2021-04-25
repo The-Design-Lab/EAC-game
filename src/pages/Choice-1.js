@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
-import ChoiceCard from '../components/ChoiceCard'
 
 const MainContent = styled.div`
   display: flex;
@@ -17,6 +16,7 @@ const MainContent = styled.div`
   p {
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
   }
 `
 const Buttons = styled.div`
@@ -24,31 +24,25 @@ const Buttons = styled.div`
   justify-content: center;
 `
 
-const GoalChoices = styled.div`
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-`
-
-function Goals() {
+function ChoiceOne() {
   return (
     <>
       <MainContent>
-        <h1>What are your goals _____?</h1>
+        <h1>Choice #1 </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vitae
+          a cum culpa ipsa, minima assumenda est, illum hic, officiis
+          laudantium! Eveniet optio neque soluta fuga cumque tempora quo
+          voluptatibus aut delectus commodi, veritatis qui? Quis excepturi
+          voluptatem dolore voluptatibus.
         </p>
-
-        <GoalChoices>
-          <ChoiceCard />
-        </GoalChoices>
       </MainContent>
       <hr />
       <Buttons>
-        <Link to="/choice-1">
+        <Link to="/goals">
+          <Button label="Back" />
+        </Link>
+        <Link to="/choice-2">
           <Button label="Continue" />
         </Link>
       </Buttons>
@@ -56,4 +50,4 @@ function Goals() {
   )
 }
 
-export default Goals
+export default ChoiceOne

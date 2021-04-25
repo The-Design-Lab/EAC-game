@@ -11,6 +11,8 @@ const buttonType = {
   },
   default: {
     padding: '10px 26px',
+    width: '120px',
+    justifyContent: 'center',
   },
 }
 
@@ -35,7 +37,7 @@ const ButtonStyle = styled.button`
   align-items: center;
   box-shadow: var(--box-shadow);
   cursor: pointer;
-  text-align: center;
+  /* text-align: center; */
   box-shadow: var(--bevel-default);
   background-color: var(--color-primary);
   height: 80%;
@@ -50,6 +52,8 @@ const ButtonStyle = styled.button`
       default:
         return `
           padding: ${buttonType.default.padding};
+          width: ${buttonType.default.width};
+          justify-content: ${buttonType.default.justifyContent};
         `
     }
   }}
