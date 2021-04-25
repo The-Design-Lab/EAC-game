@@ -2,11 +2,11 @@ import React from 'react'
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import Home from '../pages/Home'
-import About from '../pages/About'
+import Goals from '../pages/Goals'
 
 const WindowWrapper = styled.div`
-  max-width: 800px;
-  height: 600px;
+  /* min-width: 600px; */
+  min-height: 600px;
   box-shadow: var(--bevel-default);
   margin: 0 auto;
   background-color: var(--color-primary);
@@ -26,7 +26,7 @@ const Content = styled.div`
   margin: 30px auto;
 `
 
-function Window({ maxWidth = '1000px' }) {
+function Window({ maxWidth = '1200px' }) {
   return (
     <WindowWrapper style={{ maxWidth }}>
       <WindowHead>Welcome to Economic Awaraness Council</WindowHead>
@@ -34,10 +34,9 @@ function Window({ maxWidth = '1000px' }) {
         <Content>
           {/* Inject dynamic components */}
           <Switch>
-            <Route path="/about" component={About} />
+            <Route path="/goals" name="Home" component={Goals} />
             <Route path="/" component={Home} />
           </Switch>
-          {/* <Home /> */}
           {/* End injection */}
         </Content>
       </Router>

@@ -54,7 +54,7 @@ function Home() {
       </MainContent>
       <hr />
       <Buttons>
-        <Link to="/about">
+        <Link to="/goals">
           <Button label="Play" />
         </Link>
       </Buttons>

@@ -8,7 +8,7 @@ function App() {
     <>
       <Reset />
       <GlobalStyle />
-      <Window maxWidth="800px" />
+      <Window />
       <Navbar />
     </>
   )
