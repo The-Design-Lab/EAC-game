@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
 
     // center window 
     display:grid;
-    height: 90vh;
+    height: 93vh;
     place-items: center;
     justify-items: stretch;
   }
