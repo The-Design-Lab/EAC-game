@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     --color-primary: #C9CBCD; // gray
     --color-primary-light: #E4E4E4; // light-gray
     --color-secondary: #000082; // blue
-    --color-tertiary: #6CF9AF; // green
+    --color-tertiary: #F9BA7F; // orange
 
     // Bevels
     --bevel-default: 
@@ -100,17 +100,6 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   
-  // Resets
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  input[type=checkbox] {
-    position: absolute;
-    opacity: 0;
-    cursor: inherit;
-  }
 }
 
   
