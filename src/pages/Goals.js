@@ -34,7 +34,7 @@ function Goals() {
   return (
     <>
       <MainContent>
-        <h1>What are your goals _____?</h1>
+        <h1>What are your goals?</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -48,6 +48,9 @@ function Goals() {
       </MainContent>
       <hr />
       <Buttons>
+        <Link to="/">
+          <Button label="Back" />
+        </Link>
         <Link to="/choice-1">
           <Button label="Continue" />
         </Link>
