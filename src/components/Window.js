@@ -5,8 +5,8 @@ import Home from '../pages/Home'
 import Goals from '../pages/Goals'
 
 const WindowWrapper = styled.div`
-  /* min-width: 600px; */
-  min-height: 600px;
+  max-height: 800px;
+  overflow: scroll;
   box-shadow: var(--bevel-default);
   margin: 0 auto;
   background-color: var(--color-primary);
