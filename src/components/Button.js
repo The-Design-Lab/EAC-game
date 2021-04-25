@@ -9,10 +9,18 @@ const buttonType = {
       background: 'red',
     },
   },
+  choice: {
+    padding: '10px 26px',
+    width: '200px',
+    height: '65px',
+    backgroundColor: 'var(--color-tertiary)',
+    active: {
+      background: 'red',
+    },
+  },
   default: {
     padding: '10px 26px',
     width: '120px',
-    justifyContent: 'center',
   },
 }
 
@@ -21,6 +29,7 @@ const icons = {
   book: './icons/dictionary.png',
   windows: './icons/windows.png',
   bank: './icons/bank.png',
+  market: './icons/market.png',
 }
 
 // Style icon
@@ -37,7 +46,7 @@ const ButtonStyle = styled.button`
   align-items: center;
   box-shadow: var(--box-shadow);
   cursor: pointer;
-  /* text-align: center; */
+  justify-content: center;
   box-shadow: var(--bevel-default);
   background-color: var(--color-primary);
   height: 80%;
@@ -49,11 +58,17 @@ const ButtonStyle = styled.button`
         return `
           padding: ${buttonType.navItem.padding};
         `
+      case 'choice':
+        return `
+          padding: ${buttonType.choice.padding};
+          width: ${buttonType.choice.width};
+          height: ${buttonType.choice.height};
+          background-color: ${buttonType.choice.backgroundColor};
+        `
       default:
         return `
           padding: ${buttonType.default.padding};
           width: ${buttonType.default.width};
-          justify-content: ${buttonType.default.justifyContent};
         `
     }
   }}
