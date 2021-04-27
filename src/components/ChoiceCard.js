@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
+import { GoalContext } from '../contexts/GoalContext'
 
 const checkboxes = [
   {
@@ -99,15 +100,20 @@ const Checkbox = ({ type = 'checkbox', name, checked = false, onChange }) => {
 }
 
 function GoalCards() {
+  const { dispatch } = useContext(GoalContext)
   const [checkedItems, setCheckedItems] = useState({})
 
   const handleChange = (e) => {
+    dispatch({ type: 'CHECK_GOAL', goal: { checkedItems } })
     setCheckedItems({
       ...checkedItems,
       [e.target.name]: e.target.checked,
     })
   }
-  console.log('checkedItems: ', checkedItems)
+
+  // let array = JSON.parse(checkedItems)
+  // console.log(array[0].checkedItems)
+  console.log(checkedItems)
 
   return (
     <>
@@ -115,7 +121,7 @@ function GoalCards() {
         <Card
           key={index}
           tabindex={index}
-          label={item.name}
+          label={item.label}
           style={
             checkedItems[item.name]
               ? { boxShadow: 'var(--bevel-active)', opacity: '.4' }
