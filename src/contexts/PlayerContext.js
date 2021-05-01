@@ -4,7 +4,7 @@ import { createContext, useReducer } from 'react'
 const initialState = {
   bank: 65000,
   salary: 65000,
-  goals: [{ name: 'Save for Retirement', price: 270000 }],
+  goals: [{ name: 'Save for Retirement', price: 270000, checked: true }],
   choices: [],
   investments: [],
 }
