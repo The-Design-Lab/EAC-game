@@ -65,7 +65,13 @@ const Modal = ({ title }) => {
       {(context) => {
         if (context.showModal) {
           return (
-            <Draggable handle="#handle">
+            <Draggable
+              handle="#handle"
+              defaultPosition={{
+                x: Math.floor(Math.random() * 10) + 200,
+                y: Math.floor(Math.random() * 10) + 200,
+              }}
+            >
               <WindowWrapper>
                 <WindowHead id="handle">
                   {title}
