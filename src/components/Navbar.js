@@ -29,7 +29,6 @@ function Navbar() {
         <Button type="navItem" label="Game" icon="windows" />
         <Button type="navItem" label="Dictionary" icon="book" />
         <Button type="navItem" label="Bank" icon="bank" />
-        <Button type="navItem" label="Financial Market" icon="market" />
       </Buttons>
       <DateTime />
     </NavBar>
