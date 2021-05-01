@@ -87,9 +87,9 @@ const setIcon = (icon) => {
   if (icon) return <Icon src={icons[icon]} alt={icon} />
 }
 
-function Button({ label, type = 'default', icon }) {
+function Button({ label, type = 'default', icon, onClick }) {
   return (
-    <ButtonStyle buttonType={type}>
+    <ButtonStyle buttonType={type} onClick={onClick}>
       {setIcon(icon)}
       {label}
     </ButtonStyle>
