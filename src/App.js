@@ -7,8 +7,6 @@ import Window from './components/Window'
 import { PlayerProvider } from './contexts/PlayerContext'
 
 function App() {
-  console.log(PlayerProvider)
-
   return (
     <>
       <PlayerProvider>

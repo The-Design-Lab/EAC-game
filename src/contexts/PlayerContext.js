@@ -4,9 +4,9 @@ import { createContext, useReducer } from 'react'
 const initialState = {
   bank: 65000,
   salary: 65000,
-  goals: [],
+  goals: [{ name: 'Save for Retirement', price: 270000 }],
   choices: [],
-  investmentes: [],
+  investments: [],
 }
 
 // create the context
@@ -18,7 +18,14 @@ export const PlayerProvider = ({ children }) => {
 
   return (
     <PlayerContext.Provider
-      value={{ budget: state.budget, expenses: state.expenses, dispatch }}
+      value={{
+        bank: state.bank,
+        salary: state.salary,
+        goals: state.goals,
+        choices: state.choices,
+        investments: state.investments,
+        dispatch,
+      }}
     >
       {children}
     </PlayerContext.Provider>
@@ -27,18 +34,18 @@ export const PlayerProvider = ({ children }) => {
 
 const PlayerReducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_EXPENSE':
+    case 'ADD_GOAL':
       return {
         ...state,
-        expenses: [...state.expenses, action.payload],
+        goals: [...state.goals, action.payload],
       }
-    case 'DELETE_EXPENSE':
-      return {
-        ...state,
-        expenses: state.expenses.filter(
-          (expense) => expense.id !== action.payload
-        ),
-      }
+    // case 'DELETE_EXPENSE':
+    //   return {
+    //     ...state,
+    //     expenses: state.expenses.filter(
+    //       (expense) => expense.id !== action.payload
+    //     ),
+    //   }
     default:
       return state
   }

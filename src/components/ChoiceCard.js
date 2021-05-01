@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { PlayerContext } from '../contexts/PlayerContext'
 import styled from 'styled-components'
 
 const checkboxes = [
@@ -94,23 +95,45 @@ const Card = styled.label`
     margin: 10px 0;
   }
 `
-const Checkbox = ({ type = 'checkbox', name, checked = false, onChange }) => {
-  return <input type={type} name={name} checked={checked} onChange={onChange} />
+const Checkbox = ({ name, price, checked = false, onChange }) => {
+  return (
+    <input
+      type="checkbox"
+      name={name}
+      price={price}
+      checked={checked}
+      onChange={onChange}
+    />
+  )
 }
 
 function GoalCards() {
-  const [checkedItems, setCheckedItems] = useState({})
+  const { goals } = useContext(PlayerContext)
+  console.log(goals.length)
+
+  const { dispatch } = useContext(PlayerContext)
+
+  const [checkedItems, setCheckedItems] = useState({ goals })
 
   const handleChange = (e) => {
+    console.log(e.target.attributes.name.value)
+    console.log(e.target.attributes.price.value)
+
     setCheckedItems({
       ...checkedItems,
       [e.target.name]: e.target.checked,
     })
-  }
 
-  // let array = JSON.parse(checkedItems)
-  // console.log(array[0].checkedItems)
-  console.log(checkedItems)
+    const goal = {
+      name: e.target.attributes.name.value,
+      price: e.target.attributes.price.value,
+    }
+
+    dispatch({
+      type: 'ADD_GOAL',
+      payload: goal,
+    })
+  }
 
   return (
     <>
@@ -127,7 +150,8 @@ function GoalCards() {
         >
           <Checkbox
             name={item.name}
-            checked={checkedItems[item.name]}
+            price={item.price}
+            // checked={checkedItems[item.name]}
             onChange={handleChange}
           />
           <img
