@@ -1,20 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { PlayerContext } from '../contexts/PlayerContext'
 import styled from 'styled-components'
 
-const checkboxes = [
+const checkboxData = [
   {
     name: 'Buy a Car',
     img:
       'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2f6d8426253581.563537ab0f34f.jpg',
     price: '24,999',
-    label: 'car',
-  },
-  {
-    name: 'Buy a House',
-    img:
-      'https://cdn.dribbble.com/users/3567453/screenshots/9391580/media/77af2d5b11c3a2729fb5df183aab29dc.png?compress=1&resize=400x300',
-    price: '600,000',
     label: 'house',
+    checked: false,
   },
   {
     name: 'Buy for Fun',
@@ -22,6 +17,7 @@ const checkboxes = [
       'https://previews.123rf.com/images/saphatthachat/saphatthachat1903/saphatthachat190300115/124294868-vector-pixel-art-fantasy-gift-box-isolated-cartoon.jpg',
     price: '600,000',
     label: 'fun',
+    checked: false,
   },
   {
     name: 'Start a Business',
@@ -29,6 +25,7 @@ const checkboxes = [
       'https://images.cdn2.stockunlimited.net/preview1300/pixel-art-business-agreement_2009884.jpg',
     price: '600,000',
     label: 'fun',
+    checked: false,
   },
   {
     name: 'Save for Retirement',
@@ -36,6 +33,7 @@ const checkboxes = [
       'https://image.shutterstock.com/image-vector/vector-8-bit-pixel-art-260nw-534940771.jpg',
     price: '600,000',
     label: 'retirement',
+    checked: false,
   },
   {
     name: 'Save for Kids',
@@ -43,6 +41,7 @@ const checkboxes = [
       'https://image.shutterstock.com/shutterstock/photos/1171388173/display_1500/stock-vector-vector-pixel-art-cry-baby-isolated-cartoon-1171388173.jpg',
     price: '600,000',
     label: 'kids',
+    checked: false,
   },
   {
     name: 'Save for Vacation',
@@ -50,6 +49,7 @@ const checkboxes = [
       'https://previews.123rf.com/images/pdreams/pdreams1305/pdreams130500011/19606915-family-road-trip-summer-vacation-holidays-pixel-art-retro-clipart.jpg',
     price: '600,000',
     label: 'vacation',
+    checked: false,
   },
   {
     name: 'Save for Education',
@@ -57,6 +57,7 @@ const checkboxes = [
       'https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg',
     price: '600,000',
     label: 'education',
+    checked: false,
   },
 ]
 
@@ -94,47 +95,75 @@ const Card = styled.label`
     margin: 10px 0;
   }
 `
-const Checkbox = ({ type = 'checkbox', name, checked = false, onChange }) => {
-  return <input type={type} name={name} checked={checked} onChange={onChange} />
+const Checkbox = ({ name, price, checked, onChange }) => {
+  return (
+    <input
+      type="checkbox"
+      name={name}
+      price={price}
+      checked={checked}
+      onChange={onChange}
+    />
+  )
 }
 
 function GoalCards() {
+  const { goals } = useContext(PlayerContext)
+  const { dispatch } = useContext(PlayerContext)
+
+  console.log(goals)
+
   const [checkedItems, setCheckedItems] = useState({})
 
   const handleChange = (e) => {
+    // set checked items for UI change
     setCheckedItems({
       ...checkedItems,
       [e.target.name]: e.target.checked,
     })
+
+    // create an object to hold each goal data
+    const goal = {
+      name: e.target.attributes.name.value,
+      price: e.target.attributes.price.value,
+      checked: true,
+    }
+
+    // send the goal data to the global state
+    dispatch({
+      type: 'ADD_GOAL',
+      payload: goal,
+    })
   }
-  console.log('checkedItems: ', checkedItems)
 
   return (
     <>
-      {checkboxes.map((item, index) => (
+      {checkboxData.map(({ name, price, img, checked, label }, index) => (
         <Card
           key={index}
           tabindex={index}
-          label={item.name}
+          label={label}
+          checked={checked}
           style={
-            checkedItems[item.name]
+            checkedItems[name]
               ? { boxShadow: 'var(--bevel-active)', opacity: '.4' }
               : null
           }
         >
           <Checkbox
-            name={item.name}
-            checked={checkedItems[item.name]}
+            name={name}
+            price={price}
+            checked={checkedItems[name]}
             onChange={handleChange}
           />
           <img
-            src={item.img}
+            src={img}
             style={{ height: '100px', objectFit: 'cover' }}
-            alt=""
+            alt={name}
           />
-          <span className="title">{item.name}</span>
+          <span className="title">{name}</span>
           <hr />
-          <span className="price">${item.price}</span>
+          <span className="price">${price}</span>
         </Card>
       ))}
     </>
