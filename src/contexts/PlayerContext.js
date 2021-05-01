@@ -38,6 +38,9 @@ const PlayerReducer = (state, action) => {
       return {
         ...state,
         goals: [...state.goals, action.payload],
+        // goals: [...state.goals, action.payload].filter(
+        //   (goal) => goal.name !== action.payload.name
+        // ),
       }
     // case 'DELETE_EXPENSE':
     //   return {

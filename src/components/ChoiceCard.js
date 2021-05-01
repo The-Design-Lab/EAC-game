@@ -123,7 +123,7 @@ function GoalCards() {
       ...checkedItems,
       [e.target.name]: e.target.checked,
     })
-
+    
     const goal = {
       name: e.target.attributes.name.value,
       price: e.target.attributes.price.value,
@@ -151,7 +151,7 @@ function GoalCards() {
           <Checkbox
             name={item.name}
             price={item.price}
-            // checked={checkedItems[item.name]}
+            checked={checkedItems[item.name]}
             onChange={handleChange}
           />
           <img
