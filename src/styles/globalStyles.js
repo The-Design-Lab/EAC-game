@@ -62,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    font-size: 3.157rem;
+    font-size: 3rem;
   }
   h3 {
     font-size: 2.369rem;

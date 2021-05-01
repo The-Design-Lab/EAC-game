@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Button from './Button'
 import DateTime from './Clock'
@@ -25,12 +25,17 @@ const Buttons = styled.div`
 `
 
 function Navbar() {
-  const [showModal, updateShowModal] = React.useState(false)
+  const [showModal, updateShowModal] = useState(false)
   const toggleBankModal = () => updateShowModal((state) => !state)
+
+  const [showDictionaryModal, updateShowDictionaryModal] = useState(false)
+  const toggleDictionaryModal = () =>
+    updateShowDictionaryModal((state) => !state)
 
   return (
     <NavBar>
       <Buttons>
+        {/* Modals */}
         <ModalContext.Provider value={{ showModal, toggleBankModal }}>
           <Modal
             title="The Bank"
@@ -38,8 +43,26 @@ function Navbar() {
             updateModalState={toggleBankModal}
           />
         </ModalContext.Provider>
+
+        <ModalContext.Provider
+          value={{ showDictionaryModal, toggleDictionaryModal }}
+        >
+          <Modal
+            title="Dictionary"
+            canShow={showDictionaryModal}
+            updateModalState={toggleDictionaryModal}
+          />
+        </ModalContext.Provider>
+
+        {/* Buttons */}
         <Button type="navItem" label="Game" icon="windows" />
-        <Button type="navItem" label="Dictionary" icon="book" />
+        <Button
+          onClick={toggleDictionaryModal}
+          type="navItem"
+          label="Dictionary"
+          icon="book"
+        />
+
         <Button
           onClick={toggleBankModal}
           type="navItem"
