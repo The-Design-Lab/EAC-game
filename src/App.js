@@ -1,19 +1,22 @@
 import GlobalStyle from './styles/globalStyles'
 import Reset from './styles/reset'
-import GoalContextProvider from './contexts/GoalContext'
+// Components
 import Navbar from './components/Navbar'
 import Window from './components/Window'
+// Contexts
+import { PlayerProvider } from './contexts/PlayerContext'
 
 function App() {
-  console.log(GoalContextProvider.checkedItems)
+  console.log(PlayerProvider)
+
   return (
     <>
-      <GoalContextProvider>
+      <PlayerProvider>
         <Reset />
         <GlobalStyle />
         <Window />
         <Navbar />
-      </GoalContextProvider>
+      </PlayerProvider>
     </>
   )
 }
