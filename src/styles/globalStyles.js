@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     --color-primary: #C9CBCD; // gray
     --color-primary-light: #E4E4E4; // light-gray
     --color-secondary: #000082; // blue
-    --color-tertiary: #6CF9AF; // green
+    --color-tertiary: #F9BA7F; // orange
 
     // Bevels
     --bevel-default: 
@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
 
     // center window 
     display:grid;
-    height: 90vh;
+    height: 93vh;
     place-items: center;
     justify-items: stretch;
   }
@@ -99,7 +99,10 @@ const GlobalStyle = createGlobalStyle`
       margin-bottom:5px;
     }
   }
+  
+}
 
+  
 `
 
 export default GlobalStyle

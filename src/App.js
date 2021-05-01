@@ -1,16 +1,19 @@
 import GlobalStyle from './styles/globalStyles'
 import Reset from './styles/reset'
+import GoalContextProvider from './contexts/GoalContext'
 import Navbar from './components/Navbar'
 import Window from './components/Window'
 
-
 function App() {
+  console.log(GoalContextProvider.checkedItems)
   return (
     <>
-      <Reset />
-      <GlobalStyle />
-      <Window title='Welcome to Economic Awaraness Council'/>
-      <Navbar />
+      <GoalContextProvider>
+        <Reset />
+        <GlobalStyle />
+        <Window />
+        <Navbar />
+      </GoalContextProvider>
     </>
   )
 }
