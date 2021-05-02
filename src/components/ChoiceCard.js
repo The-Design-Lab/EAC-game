@@ -108,11 +108,7 @@ const Checkbox = ({ name, price, checked, onChange }) => {
 }
 
 function GoalCards() {
-  const { goals } = useContext(PlayerContext)
   const { dispatch } = useContext(PlayerContext)
-
-  console.log(goals)
-
   const [checkedItems, setCheckedItems] = useState({})
 
   const handleChange = (e) => {

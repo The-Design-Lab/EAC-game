@@ -42,6 +42,14 @@ const PlayerReducer = (state, action) => {
         //   (goal) => goal.name !== action.payload.name
         // ),
       }
+    case 'SELECT_CHOICE-1':
+      return {
+        ...state,
+        choices: [...state.choices, action.payload],
+        // goals: [...state.goals, action.payload].filter(
+        //   (goal) => goal.name !== action.payload.name
+        // ),
+      }
     // case 'DELETE_EXPENSE':
     //   return {
     //     ...state,

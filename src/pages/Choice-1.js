@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
+import { PlayerContext } from '../contexts/PlayerContext'
 
 const MainContent = styled.div`
   display: flex;
@@ -56,6 +57,19 @@ const Choices = styled.div`
 `
 
 function ChoiceOne() {
+  const { dispatch } = useContext(PlayerContext)
+
+  const handleSelect = (e) => {
+    const decision = {
+      choice: e.target.textContent,
+    }
+
+    dispatch({
+      type: 'SELECT_CHOICE-1',
+      payload: decision,
+    })
+  }
+
   return (
     <>
       <MainContent>
@@ -80,14 +94,15 @@ function ChoiceOne() {
         </ul>
       </MainContent>
       <Choices>
-        <Button type="choice" label="Invest in a 401K" />
-        <Button type="choice" label="Keep & spend the money" />
+        <Button onClick={handleSelect} type="choice" label="Invest in a 401K" />
+        <Button
+          onClick={handleSelect}
+          type="choice"
+          label="Keep & spend the money"
+        />
       </Choices>
       <hr />
       <Buttons>
-        <Link to="/goals">
-          <Button label="Back" />
-        </Link>
         <Link to="/choice-2">
           <Button label="Continue" />
         </Link>
