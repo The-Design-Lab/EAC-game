@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
+import '../utilities.css'
 import { PlayerContext } from '../contexts/PlayerContext'
 
 const MainContent = styled.div`
@@ -60,11 +61,17 @@ function ChoiceOne() {
   const { dispatch } = useContext(PlayerContext)
   const [choice, setChoice] = useState('')
 
-  const handleSelect = (e) => {
-    // const decision = {
-    //   choice: e.target.textContent,
-    // }
+  // const [gender, setGender] = useState('')
 
+  // const handleChange = (e) => {
+  //   setGender(e.target.value)
+  // }
+
+  const setSelectedStyles = (e) => {
+    setChoice(e.target.value)
+  }
+
+  const handleSelect = () => {
     dispatch({
       type: 'SELECT_CHOICE-1',
       payload: choice,
@@ -95,16 +102,61 @@ function ChoiceOne() {
         </ul>
       </MainContent>
       <Choices>
-        <Button
-          onClick={(e) => setChoice(e.target.textContent)}
+        {/* <Button
+          onClick={(e) => setSelectedStyles(e)}
+          // style={{
+          //   fontSize: setStyle ? '30px !important' : '10px !important',
+          // }}
           type="choice"
           label="Invest in a 401K"
         />
         <Button
-          onClick={(e) => setChoice(e.target.textContent)}
+          onClick={(e) => setSelectedStyles(e)}
           type="choice"
           label="Keep & spend the money"
+        /> */}
+
+        <input
+          onClick={(e) => setSelectedStyles(e)}
+          type="radio"
+          name="choice-1"
+          id="invest"
+          value="invest"
         />
+        <label className="button" for="invest">
+          <span class="invest">Invest in 401K</span>
+        </label>
+
+        <input
+          onClick={(e) => setSelectedStyles(e)}
+          type="radio"
+          name="choice-1"
+          id="spend"
+          value="spend"
+        />
+        <label className="button" for="spend">
+          <span class="spend">Keep & spend the money</span>
+        </label>
+
+        {/* <label for="male">Male</label>
+        <input
+          type="radio"
+          value="male"
+          id="male"
+          onChange={handleChange}
+          name="gender"
+        />
+
+        <label for="female">Female</label>
+        <input
+          type="radio"
+          value="female"
+          id="female"
+          onChange={handleChange}
+          name="gender"
+        /> */}
+
+        {/* <p>You gender is {gender}</p> */}
       </Choices>
       <hr />
       <Buttons>
