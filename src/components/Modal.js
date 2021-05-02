@@ -69,7 +69,7 @@ const Modal = ({ title }) => {
               handle="#handle"
               defaultPosition={{
                 x: Math.floor(Math.random() * 10) + 200,
-                y: Math.floor(Math.random() * 10) + 200,
+                y: Math.floor(Math.random() * 10) - 200,
               }}
             >
               <WindowWrapper>
