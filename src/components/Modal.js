@@ -76,7 +76,13 @@ const Modal = ({ title }) => {
 
         if (context.showDictionaryModal) {
           return (
-            <Draggable handle="#handle">
+            <Draggable
+              handle="#handle"
+              defaultPosition={{
+                x: Math.floor(Math.random() * 10) + 150,
+                y: Math.floor(Math.random() * 10) - 150,
+              }}
+            >
               <WindowWrapper>
                 <WindowHead id="handle">
                   {title}
@@ -92,7 +98,13 @@ const Modal = ({ title }) => {
 
         if (context.showMarketModal) {
           return (
-            <Draggable handle="#handle">
+            <Draggable
+              handle="#handle"
+              defaultPosition={{
+                x: Math.floor(Math.random() * 10) + 250,
+                y: Math.floor(Math.random() * 10) - 250,
+              }}
+            >
               <WindowWrapper>
                 <WindowHead id="handle">
                   {title}
