@@ -32,10 +32,24 @@ function Navbar() {
   const toggleDictionaryModal = () =>
     updateShowDictionaryModal((state) => !state)
 
+  const [showMarketModal, updateShowMarketModal] = useState(false)
+  const toggleMarketModal = () => updateShowMarketModal((state) => !state)
+
   return (
     <NavBar>
       <Buttons>
-        {/* Modals */}
+        {/* Dictionary Modal */}
+        <ModalContext.Provider
+          value={{ showDictionaryModal, toggleDictionaryModal }}
+        >
+          <Modal
+            title="Dictionary"
+            canShow={showDictionaryModal}
+            updateModalState={toggleDictionaryModal}
+          />
+        </ModalContext.Provider>
+
+        {/* Bank Modal */}
         <ModalContext.Provider value={{ showModal, toggleBankModal }}>
           <Modal
             title="The Bank"
@@ -44,13 +58,12 @@ function Navbar() {
           />
         </ModalContext.Provider>
 
-        <ModalContext.Provider
-          value={{ showDictionaryModal, toggleDictionaryModal }}
-        >
+        {/* Market Modal */}
+        <ModalContext.Provider value={{ showMarketModal, toggleMarketModal }}>
           <Modal
-            title="Dictionary"
-            canShow={showDictionaryModal}
-            updateModalState={toggleDictionaryModal}
+            title="Market"
+            canShow={showMarketModal}
+            updateShowMarketModal={toggleMarketModal}
           />
         </ModalContext.Provider>
 
@@ -69,7 +82,12 @@ function Navbar() {
           label="Bank"
           icon="bank"
         />
-        <Button type="navItem" label="Financial Market" icon="market" />
+        <Button
+          onClick={toggleMarketModal}
+          type="navItem"
+          label="Financial Market"
+          icon="market"
+        />
       </Buttons>
       <DateTime />
     </NavBar>

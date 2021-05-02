@@ -1,8 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Draggable from 'react-draggable'
 import { ModalContext } from '../contexts/ModalContext'
-import { PlayerContext } from '../contexts/PlayerContext'
 import styled from 'styled-components'
+import Dictionary from './Dictionary'
+import Bank from './Bank'
+import Market from './Market'
 
 const WindowWrapper = styled.div`
   position: fixed;
@@ -11,6 +13,7 @@ const WindowWrapper = styled.div`
   transform: translate(-50%, -50%);
   max-width: 500px;
   min-width: 400px;
+  max-height: 600px;
   min-height: 400px;
   overflow: scroll;
   box-shadow: var(--bevel-default);
@@ -28,6 +31,9 @@ const WindowHead = styled.h5`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  // set head to top of window
+  position: sticky;
+  top: 0;
 `
 
 const Content = styled.div`
@@ -42,24 +48,7 @@ const CloseBtn = styled.button`
   cursor: pointer;
 `
 
-const DefinitionList = styled.dl`
-  lh {
-    font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 10px;
-    display: block;
-  }
-  dt {
-    font-weight: 700;
-  }
-  dd {
-    margin-left: 10px;
-  }
-`
-
 const Modal = ({ title }) => {
-  const { bank } = useContext(PlayerContext)
-
   return (
     <ModalContext.Consumer>
       {(context) => {
@@ -75,10 +64,10 @@ const Modal = ({ title }) => {
               <WindowWrapper>
                 <WindowHead id="handle">
                   {title}
-                  <CloseBtn onClick={context.toggleBankModal}>X</CloseBtn>
+                  <CloseBtn onClick={context.toggleBankModal}>x</CloseBtn>
                 </WindowHead>
                 <Content>
-                  <p>Account Balance: ${bank}</p>
+                  <Bank />
                 </Content>
               </WindowWrapper>
             </Draggable>
@@ -94,22 +83,23 @@ const Modal = ({ title }) => {
                   <CloseBtn onClick={context.toggleDictionaryModal}>X</CloseBtn>
                 </WindowHead>
                 <Content>
-                  <DefinitionList>
-                    <lh>Definitions</lh>
-                    <dt>401K</dt>
-                    <dd>
-                      A 401(k) plan is a tax-advantaged, defined-contribution
-                      retirement account offered by many employers to their
-                      employees. It is named after a section of the U.S.
-                      Internal Revenue Code. Workers can make contributions to
-                      their 401(k) accounts through automatic payroll
-                      withholding, and their employers can match some or all of
-                      those contributions. The investment earnings in a
-                      traditional 401(k) plan are not taxed until the employee
-                      withdraws that money, typically after retirement. In a
-                      Roth 401(k) plan, withdrawals can be tax-free.
-                    </dd>
-                  </DefinitionList>
+                  <Dictionary />
+                </Content>
+              </WindowWrapper>
+            </Draggable>
+          )
+        }
+
+        if (context.showMarketModal) {
+          return (
+            <Draggable handle="#handle">
+              <WindowWrapper>
+                <WindowHead id="handle">
+                  {title}
+                  <CloseBtn onClick={context.toggleMarketModal}>X</CloseBtn>
+                </WindowHead>
+                <Content>
+                  <Market />
                 </Content>
               </WindowWrapper>
             </Draggable>
