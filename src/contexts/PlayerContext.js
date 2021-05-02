@@ -42,13 +42,11 @@ const PlayerReducer = (state, action) => {
         //   (goal) => goal.name !== action.payload.name
         // ),
       }
-    // case 'DELETE_EXPENSE':
-    //   return {
-    //     ...state,
-    //     expenses: state.expenses.filter(
-    //       (expense) => expense.id !== action.payload
-    //     ),
-    //   }
+    case 'SELECT_CHOICE-1':
+      return {
+        ...state,
+        choices: [...state.choices, action.payload],
+      }
     default:
       return state
   }

@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Button from './Button'
 import DateTime from './Clock'
+import Modal from './Modal'
+import { ModalContext } from '../contexts/ModalContext'
 
 const NavBar = styled.nav`
   display: flex;
@@ -23,13 +25,69 @@ const Buttons = styled.div`
 `
 
 function Navbar() {
+  const [showModal, updateShowModal] = useState(false)
+  const toggleBankModal = () => updateShowModal((state) => !state)
+
+  const [showDictionaryModal, updateShowDictionaryModal] = useState(false)
+  const toggleDictionaryModal = () =>
+    updateShowDictionaryModal((state) => !state)
+
+  const [showMarketModal, updateShowMarketModal] = useState(false)
+  const toggleMarketModal = () => updateShowMarketModal((state) => !state)
+
   return (
     <NavBar>
       <Buttons>
+        {/* Dictionary Modal */}
+        <ModalContext.Provider
+          value={{ showDictionaryModal, toggleDictionaryModal }}
+        >
+          <Modal
+            title="Dictionary"
+            canShow={showDictionaryModal}
+            updateModalState={toggleDictionaryModal}
+          />
+        </ModalContext.Provider>
+
+        {/* Bank Modal */}
+        <ModalContext.Provider value={{ showModal, toggleBankModal }}>
+          <Modal
+            title="The Bank"
+            canShow={showModal}
+            updateModalState={toggleBankModal}
+          />
+        </ModalContext.Provider>
+
+        {/* Market Modal */}
+        <ModalContext.Provider value={{ showMarketModal, toggleMarketModal }}>
+          <Modal
+            title="Market"
+            canShow={showMarketModal}
+            updateShowMarketModal={toggleMarketModal}
+          />
+        </ModalContext.Provider>
+
+        {/* Buttons */}
         <Button type="navItem" label="Game" icon="windows" />
-        <Button type="navItem" label="Dictionary" icon="book" />
-        <Button type="navItem" label="Bank" icon="bank" />
-        <Button type="navItem" label="Financial Market" icon="market" />
+        <Button
+          onClick={toggleDictionaryModal}
+          type="navItem"
+          label="Dictionary"
+          icon="book"
+        />
+
+        <Button
+          onClick={toggleBankModal}
+          type="navItem"
+          label="Bank"
+          icon="bank"
+        />
+        <Button
+          onClick={toggleMarketModal}
+          type="navItem"
+          label="Financial Market"
+          icon="market"
+        />
       </Buttons>
       <DateTime />
     </NavBar>

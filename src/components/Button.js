@@ -44,11 +44,10 @@ const Icon = styled.img`
 const ButtonStyle = styled.button`
   display: flex;
   align-items: center;
-  box-shadow: var(--box-shadow);
-  cursor: pointer;
-  justify-content: center;
   box-shadow: var(--bevel-default);
   background-color: var(--color-primary);
+  cursor: pointer;
+  justify-content: center;
   height: 80%;
 
   // Change button variant based on button
@@ -87,9 +86,9 @@ const setIcon = (icon) => {
   if (icon) return <Icon src={icons[icon]} alt={icon} />
 }
 
-function Button({ label, type = 'default', icon }) {
+function Button({ label, type = 'default', icon, onClick }) {
   return (
-    <ButtonStyle buttonType={type}>
+    <ButtonStyle buttonType={type} onClick={onClick}>
       {setIcon(icon)}
       {label}
     </ButtonStyle>

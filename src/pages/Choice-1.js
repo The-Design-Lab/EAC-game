@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
+import { PlayerContext } from '../contexts/PlayerContext'
 
 const MainContent = styled.div`
   display: flex;
@@ -56,18 +57,24 @@ const Choices = styled.div`
 `
 
 function ChoiceOne() {
+  const { dispatch } = useContext(PlayerContext)
+
+  const handleSelect = (e) => {
+    const decision = {
+      choice: e.target.textContent,
+    }
+
+    dispatch({
+      type: 'SELECT_CHOICE-1',
+      payload: decision,
+    })
+  }
+
   return (
     <>
       <MainContent>
         <span>Year: 2004</span>
         <h1>Retirement and financial goals</h1>
-        <p>
-          The US economy grew at an annual rate of 2.86% in 2003, an increase
-          from the preceding year. The S&P 500, which fell for three consecutive
-          years in 2000-2002, rebounded in 2003 up 26.38% for the year. The
-          Schiller PE Ratio increased from 22.9% at the beginning of the year to
-          26.64 at year end, indicating that stocks are in an extreme bubble.
-        </p>
         <h2>Your Choices</h2>
         <ul>
           <li>
@@ -87,14 +94,15 @@ function ChoiceOne() {
         </ul>
       </MainContent>
       <Choices>
-        <Button type="choice" label="Invest in a 401K" />
-        <Button type="choice" label="Keep & spend the money" />
+        <Button onClick={handleSelect} type="choice" label="Invest in a 401K" />
+        <Button
+          onClick={handleSelect}
+          type="choice"
+          label="Keep & spend the money"
+        />
       </Choices>
       <hr />
       <Buttons>
-        <Link to="/goals">
-          <Button label="Back" />
-        </Link>
         <Link to="/choice-2">
           <Button label="Continue" />
         </Link>
