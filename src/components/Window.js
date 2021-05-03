@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Home from '../pages/Home'
 import Goals from '../pages/Goals'
 import ChoiceOne from '../pages/Choice-1'
+import GraphOne from '../pages/Graph-1'
 
 const WindowWrapper = styled.div`
   max-height: 800px; // height for home page
@@ -36,6 +37,7 @@ function Window({ maxWidth = '1200px' }) {
         <Content>
           {/* Inject dynamic components */}
           <Switch>
+            <Route path="/graph-1" name="Graph-1" component={GraphOne} />
             <Route path="/choice-1" name="Choice-1" component={ChoiceOne} />
             <Route path="/goals" name="Home" component={Goals} />
             <Route path="/" component={Home} />

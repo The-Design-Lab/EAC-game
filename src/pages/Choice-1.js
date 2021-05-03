@@ -129,7 +129,7 @@ function ChoiceOne() {
       </Choices>
       <hr />
       <Buttons>
-        <Link to="/choice-2">
+        <Link to="/graph-1">
           <Button label="Continue" onClick={submitSelection} />
         </Link>
       </Buttons>
