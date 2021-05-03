@@ -79,7 +79,8 @@ function ChoiceOne() {
   const submitSelection = () => {
     const selection = {
       choice: choice,
-      investment: choice === 'invest' ? true : false,
+      investment: choice === 'invest' ? 'S&P' : null,
+      expenditures: -6500,
     }
 
     dispatch({

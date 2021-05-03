@@ -2,9 +2,9 @@ import { createContext, useReducer } from 'react'
 
 // Set initial state of expenses with mock data
 const initialState = {
-  bank: 65000,
+  bank: [0],
   salary: 65000,
-  goals: [{ name: 'Save for Retirement', price: 270000, checked: true }],
+  goals: [{ name: 'Save for Retirement', price: 6000, checked: true }],
   choices: [],
   investments: [],
 }
@@ -44,6 +44,9 @@ const PlayerReducer = (state, action) => {
         ...state,
         choices: [...state.choices, action.payload.choice],
         investments: [...state.investments, action.payload.investment],
+        bank: [
+          +state.bank + (state.salary + +action.payload.expenditures - 6000),
+        ],
       }
     default:
       return state
