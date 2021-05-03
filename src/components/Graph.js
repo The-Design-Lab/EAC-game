@@ -13,29 +13,22 @@ import {
 const data = [
   {
     name: 'Q1',
-    'S&P': 4000,
-    CD: 2400,
-    Bank: 2400,
+    'S&P': 10158,
   },
   {
     name: 'Q2',
-    'S&P': 3000,
-    CD: 1398,
-    Bank: 2210,
+    'S&P': 9891,
   },
   {
     name: 'Q3',
-    'S&P': 2000,
-    CD: 9800,
-    Bank: 2290,
+    'S&P': 9795,
   },
   {
     name: 'Q4',
-    'S&P': 2780,
-    CD: 3908,
-    Bank: 2000,
+    'S&P': 10595,
   },
 ]
+
 const CustomizedDot = ({ cx, cy, color }) => {
   return (
     <svg
@@ -52,7 +45,8 @@ const CustomizedDot = ({ cx, cy, color }) => {
     </svg>
   )
 }
-function Graph() {
+
+const Graph = () => {
   return (
     <ResponsiveContainer width="100%" height={500}>
       <LineChart
@@ -77,22 +71,6 @@ function Graph() {
         <Line
           type="linear"
           dataKey="S&P"
-          stroke="#8884d8"
-          strokeWidth="2"
-          dot={<CustomizedDot color="#BBC2FF" />}
-          activeDot={false}
-        />
-        <Line
-          type="linear"
-          dataKey="CD"
-          stroke="#82ca9d"
-          strokeWidth="2"
-          dot={<CustomizedDot color="#F9BA7F" />}
-          activeDot={false}
-        />
-        <Line
-          type="linear"
-          dataKey="Bank"
           stroke="#f96263"
           strokeWidth="2"
           dot={<CustomizedDot color="#f96263" />}
