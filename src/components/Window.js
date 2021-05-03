@@ -5,15 +5,20 @@ import Home from '../pages/Home'
 import Goals from '../pages/Goals'
 import ChoiceOne from '../pages/Choice-1'
 import GraphOne from '../pages/Graph-1'
+import device from '../styles/mediaQueries'
+
 
 const WindowWrapper = styled.div`
   max-height: 700px; // height for home page
   overflow: scroll;
-  /* width: 800px; */
   box-shadow: var(--bevel-default);
   margin: 0 auto;
   background-color: var(--color-primary);
   padding: 5px;
+
+  @media ${device.laptopL} {
+    max-height: 850px;
+  }
 `
 
 const WindowHead = styled.h5`
@@ -65,7 +70,7 @@ function Window() {
       return width
     }
   }, [width, pathname, smWidth, lgWidth])
-  
+
   return (
     <WindowWrapper style={{ width: width }}>
       <WindowHead>Welcome to Economic Awaraness Council</WindowHead>
