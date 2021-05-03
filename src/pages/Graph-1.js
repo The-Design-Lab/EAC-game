@@ -6,6 +6,7 @@ import Graph from '../components/Graph'
 
 const Title = styled.h4`
   text-align: center;
+  margin-bottom: 30px;
 `
 const Grid = styled.div`
   display: grid;
@@ -27,7 +28,6 @@ const Investments = styled.aside`
 
 const InvestmentName = styled.div`
   box-shadow: var(--bevel-default);
-  background: red;
   width: 150px;
   padding: 15px 20px;
   text-align: center;
@@ -48,16 +48,25 @@ function GraphOne() {
   return (
     <div>
       <Title>2006 Summary</Title>
+      <hr />
       <Grid>
         <Graph />
         <Investments>
           <h5>Investments</h5>
           <hr />
           <InvestmentGroup>
-            <InvestmentName>S&P 500</InvestmentName>
-            <InvestmentName>CD</InvestmentName>
-            <InvestmentName>Insego</InvestmentName>
-            <InvestmentName>Mutual Fund</InvestmentName>
+            <InvestmentName style={{ backgroundColor: '#f96263' }}>
+              S&P 500
+            </InvestmentName>
+            <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
+              CD
+            </InvestmentName>
+            <InvestmentName style={{ backgroundColor: '#E6E547' }}>
+              Insego
+            </InvestmentName>
+            <InvestmentName style={{ backgroundColor: '#BBC2FF' }}>
+              Mutual Fund
+            </InvestmentName>
           </InvestmentGroup>
         </Investments>
       </Grid>
