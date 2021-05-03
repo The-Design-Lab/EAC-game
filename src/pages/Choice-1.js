@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
+import '../utilities.css'
 import { PlayerContext } from '../contexts/PlayerContext'
 
 const MainContent = styled.div`
@@ -56,55 +57,80 @@ const Choices = styled.div`
   }
 `
 
+const choiceData = {
+  year: 2004,
+  option1: ` Invest 10% into a 401k with a match of 5% (of annual income). All
+  of the funds 15% will be invested in the S&P 500 throughout the
+  game unless the player makes a change.`,
+  option2: `Keep the money and spend it. Maybe choose between swanky apartment
+  and used car with no investments vs. studio apt. and take public
+  transportation with investment
+`,
+}
+
 function ChoiceOne() {
   const { dispatch } = useContext(PlayerContext)
+  const [choice, setChoice] = useState('')
 
-  const handleSelect = (e) => {
-    const decision = {
-      choice: e.target.textContent,
+  const handleSelection = (e) => {
+    setChoice(e.target.value)
+  }
+
+  const submitSelection = () => {
+    const selection = {
+      choice: choice,
+      investment: choice === 'invest' ? 'S&P' : null,
+      expenditures: -6500,
     }
 
     dispatch({
       type: 'SELECT_CHOICE-1',
-      payload: decision,
+      payload: selection,
     })
   }
 
   return (
     <>
       <MainContent>
-        <span>Year: 2004</span>
+        <span>{choiceData.year}</span>
         <h1>Retirement and financial goals</h1>
         <h2>Your Choices</h2>
         <ul>
           <li>
-            <p>
-              Invest 10% into a 401k with a match of 5% (of annual income). All
-              of the funds 15% will be invested in the S&P 500 throughout the
-              game unless the player makes a change.
-            </p>
+            <p>{choiceData.option1}</p>
           </li>
           <li>
-            <p>
-              Keep the money and spend it. Maybe choose between swanky apartment
-              and used car with no investments vs. studio apt. and take public
-              transportation with investment
-            </p>
+            <p>{choiceData.option2}</p>
           </li>
         </ul>
       </MainContent>
       <Choices>
-        <Button onClick={handleSelect} type="choice" label="Invest in a 401K" />
-        <Button
-          onClick={handleSelect}
-          type="choice"
-          label="Keep & spend the money"
+        <input
+          onClick={(e) => handleSelection(e)}
+          type="radio"
+          name="choice-1"
+          id="invest"
+          value="invest"
         />
+        <label className="button" for="invest">
+          <span class="invest">Invest in 401K</span>
+        </label>
+
+        <input
+          onClick={(e) => handleSelection(e)}
+          type="radio"
+          name="choice-1"
+          id="spend"
+          value="spend"
+        />
+        <label className="button" for="spend">
+          <span class="spend">Keep & spend the money</span>
+        </label>
       </Choices>
       <hr />
       <Buttons>
         <Link to="/choice-2">
-          <Button label="Continue" />
+          <Button label="Continue" onClick={submitSelection} />
         </Link>
       </Buttons>
     </>

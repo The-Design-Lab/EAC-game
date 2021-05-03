@@ -99,6 +99,13 @@ const GlobalStyle = createGlobalStyle`
       margin-bottom:5px;
     }
   }
+
+  input[type='radio']{
+    display:none;
+    &:checked + label{
+      opacity:.4;
+    }
+  }
   
 }
 `

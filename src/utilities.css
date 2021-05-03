@@ -1,0 +1,12 @@
+.button {
+  box-shadow: var(--bevel-default);
+  background-color: var(--color-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 26px;
+  background-color: var(--color-tertiary);
+  height: 65px;
+  width: 200px;
+  justify-content: center;
+}
