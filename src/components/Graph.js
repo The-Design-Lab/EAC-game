@@ -36,7 +36,22 @@ const data = [
     Bank: 2000,
   },
 ]
-
+const CustomizedDot = ({ cx, cy, color }) => {
+  return (
+    <svg
+      x={cx - 10}
+      y={cy - 10}
+      width={20}
+      height={20}
+      fill={color}
+      stroke="#000"
+      stroke-width="3"
+      viewBox="0 0 50 50"
+    >
+      <path d="M37.85 44.2l-13.69-7.18-13.68 7.21 2.6-15.24L2 18.21l15.3-2.24L24.13 2.1l6.85 13.86 15.3 2.21-11.06 10.8z" />
+    </svg>
+  )
+}
 function Graph() {
   return (
     <ResponsiveContainer width="100%" height={500}>
@@ -45,23 +60,44 @@ function Graph() {
         margin={{
           top: 20,
           right: 50,
+          bottom: 20,
+        }}
+        style={{
+          backgroundColor: 'white',
+          padding: '0 10px 0 10px',
+          border: '2px solid black',
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
+        <CartesianGrid strokeDasharray="5 5" stroke="#000" />
+        <XAxis dataKey="name" stroke="#000" />
+        <YAxis stroke="#000" />
         <Tooltip />
         <Legend />
-
         {/* Lines */}
         <Line
-          type="monotone"
+          type="linear"
           dataKey="S&P"
           stroke="#8884d8"
-          activeDot={{ r: 8 }}
+          strokeWidth="2"
+          dot={<CustomizedDot color="#BBC2FF" />}
+          activeDot={false}
         />
-        <Line type="monotone" dataKey="CD" stroke="#82ca9d" />
-        <Line type="monotone" dataKey="Bank" stroke="#f96263" />
+        <Line
+          type="linear"
+          dataKey="CD"
+          stroke="#82ca9d"
+          strokeWidth="2"
+          dot={<CustomizedDot color="#F9BA7F" />}
+          activeDot={false}
+        />
+        <Line
+          type="linear"
+          dataKey="Bank"
+          stroke="#f96263"
+          strokeWidth="2"
+          dot={<CustomizedDot color="#f96263" />}
+          activeDot={false}
+        />
       </LineChart>
     </ResponsiveContainer>
   )

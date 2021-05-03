@@ -58,7 +58,7 @@ function GraphOne() {
             <InvestmentName style={{ backgroundColor: '#f96263' }}>
               S&P 500
             </InvestmentName>
-            <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
+            {/* <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
               CD
             </InvestmentName>
             <InvestmentName style={{ backgroundColor: '#E6E547' }}>
@@ -66,7 +66,7 @@ function GraphOne() {
             </InvestmentName>
             <InvestmentName style={{ backgroundColor: '#BBC2FF' }}>
               Mutual Fund
-            </InvestmentName>
+            </InvestmentName> */}
           </InvestmentGroup>
         </Investments>
       </Grid>
