@@ -6,7 +6,7 @@ import Graph from '../components/Graph'
 
 const Title = styled.h4`
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 `
 const Grid = styled.div`
   display: grid;

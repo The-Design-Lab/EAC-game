@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import Home from '../pages/Home'
@@ -7,13 +7,13 @@ import ChoiceOne from '../pages/Choice-1'
 import GraphOne from '../pages/Graph-1'
 
 const WindowWrapper = styled.div`
-  max-height: 800px; // height for home page
+  max-height: 700px; // height for home page
   overflow: scroll;
+  /* width: 800px; */
   box-shadow: var(--bevel-default);
   margin: 0 auto;
   background-color: var(--color-primary);
   padding: 5px;
-  /* margin-bottom: 58px; */
 `
 
 const WindowHead = styled.h5`
@@ -26,12 +26,48 @@ const WindowHead = styled.h5`
 
 const Content = styled.div`
   width: 90%;
-  margin: 30px auto;
+  margin: 15px auto;
 `
 
-function Window({ maxWidth = '1200px' }) {
+// const useSetWidth = () => {
+//   const [width, setWidth] = useState('')
+//   let smWidth = '800px'
+//   let lgWidth = '1200px'
+//   let pathname = window.location.pathname
+
+//   useEffect(() => {
+//     if (pathname === '/') {
+//       console.log(pathname)
+//       setWidth(smWidth)
+//       return width
+//     } else {
+//       console.log(pathname)
+//       setWidth(lgWidth)
+//       return width
+//     }
+//   }, [width, pathname, smWidth, lgWidth])
+// }
+
+function Window() {
+  const [width, setWidth] = useState('')
+  let smWidth = '800px'
+  let lgWidth = '1200px'
+  let pathname = window.location.pathname
+
+  useEffect(() => {
+    if (pathname === '/') {
+      console.log(pathname)
+      setWidth(smWidth)
+      return width
+    } else {
+      console.log(pathname)
+      setWidth(lgWidth)
+      return width
+    }
+  }, [width, pathname, smWidth, lgWidth])
+  
   return (
-    <WindowWrapper style={{ maxWidth }}>
+    <WindowWrapper style={{ width: width }}>
       <WindowHead>Welcome to Economic Awaraness Council</WindowHead>
       <Router>
         <Content>
