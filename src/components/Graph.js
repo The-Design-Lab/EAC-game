@@ -30,14 +30,15 @@ const CustomizedDot = ({ cx, cy, color }) => {
   )
 }
 
-const CreateLine = (title, color) => {
+const CreateLine = (title, index) => {
+  const colors = ['#f96263', '#F9BA7F', '#E6E547', '#BBC2FF']
   return (
     <Line
       type="linear"
       dataKey={title}
-      stroke={color}
+      stroke={colors[index]}
       strokeWidth="2"
-      dot={<CustomizedDot color={color} />}
+      dot={<CustomizedDot color={colors[index]} />}
       activeDot={false}
     />
   )
@@ -46,6 +47,12 @@ const CreateLine = (title, color) => {
 const Graph = () => {
   const { investments, choices } = useContext(PlayerContext)
   console.log(investments.includes('S&P'))
+
+  const getLineData = () => {
+    return investments.map((investment, index) => {
+      return CreateLine(investment, index)
+    })
+  }
 
   return (
     <ResponsiveContainer width="100%" height={500}>
@@ -70,8 +77,7 @@ const Graph = () => {
         <Legend />
         {/* Lines */}
 
-        {CreateLine('S&P', '#f96263')}
-        {CreateLine('retirement', '#F9BA7F')}
+        {getLineData()}
       </LineChart>
     </ResponsiveContainer>
   )
