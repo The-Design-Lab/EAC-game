@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import Home from '../pages/Home'
@@ -7,9 +7,9 @@ import ChoiceOne from '../pages/Choice-1'
 import GraphOne from '../pages/Graph-1'
 import device from '../styles/mediaQueries'
 
-
 const WindowWrapper = styled.div`
   max-height: 700px; // height for home page
+  width: 1200px;
   overflow: scroll;
   box-shadow: var(--bevel-default);
   margin: 0 auto;
@@ -54,25 +54,8 @@ const Content = styled.div`
 // }
 
 function Window() {
-  const [width, setWidth] = useState('')
-  let smWidth = '800px'
-  let lgWidth = '1200px'
-  let pathname = window.location.pathname
-
-  useEffect(() => {
-    if (pathname === '/') {
-      console.log(pathname)
-      setWidth(smWidth)
-      return width
-    } else {
-      console.log(pathname)
-      setWidth(lgWidth)
-      return width
-    }
-  }, [width, pathname, smWidth, lgWidth])
-
   return (
-    <WindowWrapper style={{ width: width }}>
+    <WindowWrapper>
       <WindowHead>Welcome to Economic Awaraness Council</WindowHead>
       <Router>
         <Content>

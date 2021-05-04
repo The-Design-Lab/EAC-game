@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
   LineChart,
   Line,
@@ -9,25 +9,9 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts'
+import { PlayerContext } from '../contexts/PlayerContext'
 
-const data = [
-  {
-    name: 'Q1',
-    'S&P': 10158,
-  },
-  {
-    name: 'Q2',
-    'S&P': 9891,
-  },
-  {
-    name: 'Q3',
-    'S&P': 9795,
-  },
-  {
-    name: 'Q4',
-    'S&P': 10595,
-  },
-]
+import investmentData from '../data/investmentData'
 
 const CustomizedDot = ({ cx, cy, color }) => {
   return (
@@ -46,11 +30,28 @@ const CustomizedDot = ({ cx, cy, color }) => {
   )
 }
 
+const CreateLine = () => {
+  return (
+    <Line
+      type="linear"
+      dataKey="S&P"
+      stroke="#f96263"
+      strokeWidth="2"
+      dot={<CustomizedDot color="#f96263" />}
+      activeDot={false}
+    />
+  )
+}
+
 const Graph = () => {
+  const { investments, choices } = useContext(PlayerContext)
+  console.log(investments.includes('retirement'))
+
   return (
     <ResponsiveContainer width="100%" height={500}>
       <LineChart
-        data={data}
+        // data={investmentData[1]}
+        data={investmentData[choices.length - 1]}
         margin={{
           top: 20,
           right: 50,
@@ -76,6 +77,15 @@ const Graph = () => {
           dot={<CustomizedDot color="#f96263" />}
           activeDot={false}
         />
+        <Line
+          type="linear"
+          dataKey="retirement"
+          stroke="#F9BA7F"
+          strokeWidth="2"
+          dot={<CustomizedDot color="#F9BA7F" />}
+          activeDot={false}
+        />
+        }
       </LineChart>
     </ResponsiveContainer>
   )

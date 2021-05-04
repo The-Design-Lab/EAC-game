@@ -138,6 +138,13 @@ function GoalCards() {
       type: 'ADD_GOAL',
       payload: goal,
     })
+
+    if(e.target.name === 'Save for Retirement'){
+      dispatch({
+        type: `ADD_INVESTMENT`,
+        payload: 'retirement'
+      })
+    }
   }
 
   return (
