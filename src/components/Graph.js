@@ -30,14 +30,14 @@ const CustomizedDot = ({ cx, cy, color }) => {
   )
 }
 
-const CreateLine = () => {
+const CreateLine = (title, color) => {
   return (
     <Line
       type="linear"
-      dataKey="S&P"
-      stroke="#f96263"
+      dataKey={title}
+      stroke={color}
       strokeWidth="2"
-      dot={<CustomizedDot color="#f96263" />}
+      dot={<CustomizedDot color={color} />}
       activeDot={false}
     />
   )
@@ -45,13 +45,13 @@ const CreateLine = () => {
 
 const Graph = () => {
   const { investments, choices } = useContext(PlayerContext)
-  console.log(investments.includes('retirement'))
+  console.log(investments.includes('S&P'))
 
   return (
     <ResponsiveContainer width="100%" height={500}>
       <LineChart
-        // data={investmentData[1]}
-        data={investmentData[choices.length - 1]}
+        data={investmentData[0]}
+        // data={investmentData[choices.length - 1]}
         margin={{
           top: 20,
           right: 50,
@@ -69,23 +69,9 @@ const Graph = () => {
         <Tooltip />
         <Legend />
         {/* Lines */}
-        <Line
-          type="linear"
-          dataKey="S&P"
-          stroke="#f96263"
-          strokeWidth="2"
-          dot={<CustomizedDot color="#f96263" />}
-          activeDot={false}
-        />
-        <Line
-          type="linear"
-          dataKey="retirement"
-          stroke="#F9BA7F"
-          strokeWidth="2"
-          dot={<CustomizedDot color="#F9BA7F" />}
-          activeDot={false}
-        />
-        }
+
+        {CreateLine('S&P', '#f96263')}
+        {CreateLine('retirement', '#F9BA7F')}
       </LineChart>
     </ResponsiveContainer>
   )

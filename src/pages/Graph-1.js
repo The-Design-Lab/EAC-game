@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Button from '../components/Button'
 import Graph from '../components/Graph'
+import { PlayerContext } from '../contexts/PlayerContext'
 
 const Title = styled.h4`
   text-align: center;
@@ -45,6 +46,9 @@ const Buttons = styled.div`
 `
 
 function GraphOne() {
+  const { investments } = useContext(PlayerContext)
+  console.log(investments)
+
   return (
     <div>
       <Title>2006 Summary</Title>
@@ -55,9 +59,16 @@ function GraphOne() {
           <h5>Investments</h5>
           <hr />
           <InvestmentGroup>
-            <InvestmentName style={{ backgroundColor: '#f96263' }}>
-              S&P 500
-            </InvestmentName>
+            {investments.includes('S&P') && (
+              <InvestmentName style={{ backgroundColor: '#f96263' }}>
+                S&P 500
+              </InvestmentName>
+            )}
+            {investments.includes('retirement') && (
+              <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
+                Retirement
+              </InvestmentName>
+            )}
             {/* <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
               CD
             </InvestmentName>
@@ -71,7 +82,7 @@ function GraphOne() {
         </Investments>
       </Grid>
       <Buttons>
-        <Link to="/graph-1">
+        <Link to="/goals">
           <Button label="Continue" />
         </Link>
       </Buttons>
