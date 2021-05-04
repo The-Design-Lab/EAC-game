@@ -1,28 +1,5 @@
-const SP = [
-  [
-    { name: 'Q1', 'S&P': 10158, retirement: 1500 },
-    { name: 'Q2', 'S&P': 9891, retirement: 3000 },
-    { name: 'Q3', 'S&P': 9795, retirement: 4500 },
-    { name: 'Q4', 'S&P': 10595, retirement: 6000 },
-  ],
-  // [
-  //   { name: 'Q1', 'S&P': 20468 },
-  //   { name: 'Q2', 'S&P': 20424 },
-  //   { name: 'Q3', 'S&P': 20840 },
-  //   { name: 'Q4', 'S&P': 21671 },
-  // ],
-]
+const SP = [10158, 9891, 9795, 10595]
+const retirement = [1500, 3000, 4500, 6000]
+const CD = [5000, 3899, 4567, 9874]
 
-// const retirement = [
-//   [
-//     { name: 'Q1', retirement: 1500 },
-//     { name: 'Q2', retirement: 3000 },
-//     { name: 'Q3', retirement: 4500 },
-//     { name: 'Q4', retirement: 6000 },
-//   ],
-// ]
-
-const investmentData = SP
-console.log(investmentData)
-
-export default SP
+export default (SP, retirement, CD)

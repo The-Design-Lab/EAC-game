@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Button from '../components/Button'
-import Graph from '../components/Graph'
+import Graph from '../components/graph/Graph'
 import { PlayerContext } from '../contexts/PlayerContext'
 
 const Title = styled.h4`

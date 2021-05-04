@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { PlayerContext } from '../contexts/PlayerContext'
 
 const useModal = () => {
   const [isShowing, setIsShowing] = useState(false)
