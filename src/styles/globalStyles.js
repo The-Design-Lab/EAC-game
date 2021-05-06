@@ -87,7 +87,8 @@ const GlobalStyle = createGlobalStyle`
 
   hr{
     box-shadow: var(--bevel-default);
-    margin: 40px 0 30px 0;
+    /* margin: 40px 0 30px 0; */
+    margin: 20px 0;
   }
 
   ul{

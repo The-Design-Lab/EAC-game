@@ -4,6 +4,14 @@ import styled from 'styled-components'
 
 const checkboxData = [
   {
+    name: 'Buy a House',
+    img:
+      'https://cdn5.vectorstock.com/i/1000x1000/33/89/pixel-house-with-fence-and-garden-vector-10273389.jpg',
+    price: '250,000',
+    label: 'house',
+    checked: false,
+  },
+  {
     name: 'Buy a Car',
     img:
       'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2f6d8426253581.563537ab0f34f.jpg',
@@ -130,6 +138,13 @@ function GoalCards() {
       type: 'ADD_GOAL',
       payload: goal,
     })
+
+    if(e.target.name === 'Save for Retirement'){
+      dispatch({
+        type: `ADD_INVESTMENT`,
+        payload: 'retirement'
+      })
+    }
   }
 
   return (

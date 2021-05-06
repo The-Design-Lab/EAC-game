@@ -4,7 +4,7 @@ import { createContext, useReducer } from 'react'
 const initialState = {
   bank: [0],
   salary: 65000,
-  goals: [{ name: 'Save for Retirement', price: 6000, checked: true }],
+  goals: [],
   choices: [],
   investments: [],
 }
@@ -38,6 +38,11 @@ const PlayerReducer = (state, action) => {
       return {
         ...state,
         goals: [...state.goals, action.payload],
+      }
+    case 'ADD_INVESTMENT':
+      return {
+        ...state,
+        investments: [...state.investments, action.payload],
       }
     case 'SELECT_CHOICE-1':
       return {
