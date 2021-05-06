@@ -58,6 +58,7 @@ function GraphOne() {
         <Investments>
           <h5>Investments</h5>
           <hr />
+          {/* render condtional investment labels */}
           <InvestmentGroup>
             {investments.includes('S&P') && (
               <InvestmentName style={{ backgroundColor: '#f96263' }}>
