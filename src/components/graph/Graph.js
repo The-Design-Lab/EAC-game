@@ -12,11 +12,11 @@ import { PlayerContext } from '../../contexts/PlayerContext'
 
 import CreateLine from './CreateLine'
 
-// import output from '../data/investmentData'
+import output from '../../data/investmentData'
 import useGetQuarterData from '../../hooks/useGetQuarterData'
 
-const SP = [10158, 9891, 9795, 10595]
-const retirement = [1500, 3000, 4500, 6000]
+// const SP = [10158, 9891, 9795, 10595]
+// const retirement = [1500, 3000, 4500, 6000]
 
 const Graph = () => {
   const { investments } = useContext(PlayerContext)
@@ -28,8 +28,8 @@ const Graph = () => {
   return (
     <ResponsiveContainer width="100%" height={500}>
       <LineChart
-        data={useGetQuarterData(SP, retirement)}
-        // data={investmentData[choices.length - 1]}
+        // data={useGetQuarterData(output)}
+        data={useGetQuarterData(...output)}
         margin={{
           top: 20,
           right: 50,
