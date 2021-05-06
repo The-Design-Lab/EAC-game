@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Button from '../components/Button'
 import Graph from '../components/graph/Graph'
 import { PlayerContext } from '../contexts/PlayerContext'
+import { choice1 } from '../data/investmentData'
 
 const Title = styled.h4`
   text-align: center;
@@ -13,7 +14,6 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
 `
-
 const Investments = styled.aside`
   padding: 0 20px;
 
@@ -26,7 +26,6 @@ const Investments = styled.aside`
     margin: 20px 0;
   }
 `
-
 const InvestmentName = styled.div`
   box-shadow: var(--bevel-default);
   width: 150px;
@@ -54,7 +53,7 @@ function GraphOne() {
       <Title>2006 Summary</Title>
       <hr />
       <Grid>
-        <Graph />
+        <Graph data={choice1} />
         <Investments>
           <h5>Investments</h5>
           <hr />

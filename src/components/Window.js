@@ -16,7 +16,7 @@ const WindowWrapper = styled.div`
   background-color: var(--color-primary);
   padding: 5px;
 
-  @media ${device.desktopL} {
+  @media ${device.desktop} {
     max-height: 850px;
   }
 `
