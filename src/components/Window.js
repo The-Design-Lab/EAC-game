@@ -16,7 +16,7 @@ const WindowWrapper = styled.div`
   background-color: var(--color-primary);
   padding: 5px;
 
-  @media ${device.laptopL} {
+  @media ${device.desktopL} {
     max-height: 850px;
   }
 `
@@ -34,25 +34,6 @@ const Content = styled.div`
   margin: 15px auto;
 `
 
-// const useSetWidth = () => {
-//   const [width, setWidth] = useState('')
-//   let smWidth = '800px'
-//   let lgWidth = '1200px'
-//   let pathname = window.location.pathname
-
-//   useEffect(() => {
-//     if (pathname === '/') {
-//       console.log(pathname)
-//       setWidth(smWidth)
-//       return width
-//     } else {
-//       console.log(pathname)
-//       setWidth(lgWidth)
-//       return width
-//     }
-//   }, [width, pathname, smWidth, lgWidth])
-// }
-
 function Window() {
   return (
     <WindowWrapper>
@@ -64,7 +45,7 @@ function Window() {
             <Route path="/graph-1" name="Graph-1" component={GraphOne} />
             <Route path="/choice-1" name="Choice-1" component={ChoiceOne} />
             <Route path="/goals" name="Home" component={Goals} />
-            <Route path="/" component={Home} />
+            <Route path="/" exact component={Home} />
           </Switch>
           {/* End injection */}
         </Content>
