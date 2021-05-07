@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Button from '../../components/Button'
 import Graph from '../../components/graph/Graph'
 import { PlayerContext } from '../../contexts/PlayerContext'
-import { choice2 } from '../../data/investmentData'
+import { choice3 } from '../../data/investmentData'
 
 const Title = styled.h4`
   text-align: center;
@@ -53,7 +53,7 @@ function GraphTwo() {
       <Title>2007 Summary</Title>
       <hr />
       <Grid>
-        <Graph data={choice2} />
+        <Graph data={choice3} />
         <Investments>
           <h5>Investments</h5>
           <hr />
