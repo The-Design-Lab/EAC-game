@@ -1,9 +1,9 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Button from '../../components/Button'
 import '../../utilities.css'
-import { PlayerContext } from '../../contexts/PlayerContext'
+import usePlayer from '../../hooks/usePlayer'
 
 const MainContent = styled.div`
   display: flex;
@@ -64,7 +64,7 @@ const choiceData = {
 }
 
 function ChoiceTwo() {
-  const { salary, investments, dispatch } = useContext(PlayerContext)
+  const { salary, investments, dispatch } = usePlayer()
   const [choice, setChoice] = useState('')
 
   // check if user saves for retirement and add it to their yearly expenditures

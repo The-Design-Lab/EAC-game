@@ -1,9 +1,9 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Button from '../../components/Button'
 import '../../utilities.css'
-import { PlayerContext } from '../../contexts/PlayerContext'
+import usePlayer from '../../hooks/usePlayer'
 
 const MainContent = styled.div`
   display: flex;
@@ -64,7 +64,7 @@ const choiceData = {
 }
 
 function ChoiceTwo() {
-  const { salary, investments, dispatch } = useContext(PlayerContext)
+  const { salary, investments, dispatch } = usePlayer()
   const [choice, setChoice] = useState('')
 
   // check if user saves for retirement and add it to their yearly expenditures
@@ -79,6 +79,8 @@ function ChoiceTwo() {
     ? (add401K = -(salary * 0.1))
     : (add401K = -(salary * 0.02))
 
+  // const add401k = investments.includes('S&P') ? -(salary * 0.1) : -(salary * 0.02)
+
   const handleSelection = (e) => {
     setChoice(e.target.value)
   }
@@ -87,13 +89,13 @@ function ChoiceTwo() {
     const selection = {
       choice: choice,
     }
-    
+
     let CD = -2000
     if (choice === 'invest') {
       selection.investment = 'CD'
       selection.expenditures = addRetirement + add401K + CD
     } else {
-      selection.investment = 'spend'
+      // selection.investment = 'spend'
       selection.expenditures = addRetirement + add401K
     }
 

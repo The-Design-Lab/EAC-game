@@ -2,7 +2,8 @@ import { createContext, useReducer } from 'react'
 
 // Set initial state of expenses with mock data
 const initialState = {
-  bank: [0],
+  // bank: [0],
+  bank: 0,
   salary: 65000,
   goals: [],
   choices: [],
@@ -10,7 +11,7 @@ const initialState = {
 }
 
 // create the context
-export const PlayerContext = createContext()
+export const PlayerContext = createContext(null)
 
 // create the provider
 export const PlayerProvider = ({ children }) => {
@@ -49,7 +50,7 @@ const PlayerReducer = (state, action) => {
         ...state,
         choices: [...state.choices, action.payload.choice],
         investments: [...state.investments, action.payload.investment],
-        bank: [+state.bank + (state.salary + +action.payload.expenditures)],
+        bank: state.bank + state.salary + action.payload.expenditures,
       }
     default:
       return state
