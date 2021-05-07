@@ -75,9 +75,8 @@ function ChoiceOne() {
   // check if user saves for retirement and add it to their yearly expenditures
   const addRetirement = investments.includes('retirement') ? -6000 : 0
 
-  const handleSelection = (e) => {
-    setChoice(e.target.value)
-  }
+  // set choice value to selected choice in UI
+  const handleSelection = (e) => setChoice(e.target.value)
 
   // send selection data to the global player object
   const submitSelection = () => {

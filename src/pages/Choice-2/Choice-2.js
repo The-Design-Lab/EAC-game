@@ -71,7 +71,7 @@ function ChoiceTwo() {
   const addRetirement = investments.includes('retirement') ? -6000 : 0
 
   // check how much the player invests in a 401k
-  let add401K=investments.includes('S&P') ? -(salary * 0.1) : -(salary * 0.02)
+  let add401K = investments.includes('S&P') ? -(salary * 0.1) : -(salary * 0.02)
 
   const handleSelection = (e) => {
     setChoice(e.target.value)
@@ -82,13 +82,13 @@ function ChoiceTwo() {
       choice: choice,
     }
 
-    let CD = -2000
+    let CD,
+      addBuyNewCar = -2000
     if (choice === 'invest') {
       selection.investment = 'CD'
       selection.expenditures = addRetirement + add401K + CD
     } else {
-      // selection.investment = 'spend'
-      selection.expenditures = addRetirement + add401K
+      selection.expenditures = addRetirement + add401K + addBuyNewCar
     }
 
     dispatch({
