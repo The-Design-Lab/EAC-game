@@ -1,0 +1,99 @@
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import Button from '../../components/Button'
+import Graph from '../../components/graph/Graph'
+import { PlayerContext } from '../../contexts/PlayerContext'
+import { choice2 } from '../../data/investmentData'
+
+const Title = styled.h4`
+  text-align: center;
+  margin-bottom: 20px;
+`
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+`
+const Investments = styled.aside`
+  padding: 0 20px;
+
+  h5 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  hr {
+    margin: 20px 0;
+  }
+`
+const InvestmentName = styled.div`
+  box-shadow: var(--bevel-default);
+  width: 150px;
+  padding: 15px 20px;
+  text-align: center;
+`
+const InvestmentGroup = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+`
+
+const Buttons = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+`
+
+function GraphTwo() {
+  const { investments } = useContext(PlayerContext)
+  console.log(investments)
+
+  return (
+    <div>
+      <Title>2007 Summary</Title>
+      <hr />
+      <Grid>
+        <Graph data={choice2} />
+        <Investments>
+          <h5>Investments</h5>
+          <hr />
+          {/* render condtional investment labels */}
+          <InvestmentGroup>
+            {investments.includes('S&P') && (
+              <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
+                S&P 500
+              </InvestmentName>
+            )}
+            {investments.includes('retirement') && (
+              <InvestmentName style={{ backgroundColor: '#f96263' }}>
+                Retirement
+              </InvestmentName>
+            )}
+            {investments.includes('CD') && (
+              <InvestmentName style={{ backgroundColor: '#E6E547' }}>
+                CD
+              </InvestmentName>
+            )}
+            {investments.includes('Inseego') && (
+              <InvestmentName style={{ backgroundColor: '#E6E547' }}>
+                Insego
+              </InvestmentName>
+            )}
+            {investments.includes('MutualFund') && (
+              <InvestmentName style={{ backgroundColor: '#BBC2FF' }}>
+                Mutual Fund
+              </InvestmentName>
+            )}
+          </InvestmentGroup>
+        </Investments>
+      </Grid>
+      <Buttons>
+        <Link to="/goals">
+          <Button label="Continue" />
+        </Link>
+      </Buttons>
+    </div>
+  )
+}
+
+export default GraphTwo
