@@ -32,6 +32,7 @@ function useGetQuarterData(...quarterData) {
           result[i][invesment] = quarterData[3][i]
           break
         case INVESTMENTS_VEHICLES.mutualFund:
+
           result[i][invesment] = quarterData[4][i]
           break
         default:

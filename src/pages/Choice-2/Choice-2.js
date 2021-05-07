@@ -7,6 +7,7 @@ import usePlayer from '../../hooks/usePlayer'
 import useCheckInvestments from '../../hooks/useCheckInvestments'
 import INVESTMENTS_VEHICLES from '../../data/Investments'
 
+
 const MainContent = styled.div`
   display: flex;
   flex-direction: column;

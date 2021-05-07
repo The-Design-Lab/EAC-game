@@ -61,11 +61,13 @@ function GraphTwo() {
           {/* render condtional investment labels */}
           <InvestmentGroup>
             {investments.includes(INVESTMENTS_VEHICLES.SP) && (
+
               <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
                 S&P 500
               </InvestmentName>
             )}
             {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
+
               <InvestmentName style={{ backgroundColor: '#f96263' }}>
                 Retirement
               </InvestmentName>
