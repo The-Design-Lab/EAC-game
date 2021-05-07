@@ -79,7 +79,7 @@ function GraphTwo() {
                 Insego
               </InvestmentName>
             )}
-            {investments.includes('MutualFund') && (
+            {investments.includes('mutualFund') && (
               <InvestmentName style={{ backgroundColor: '#BBC2FF' }}>
                 Mutual Fund
               </InvestmentName>
