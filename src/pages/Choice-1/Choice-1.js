@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Button from '../../components/Button'
 import '../../utilities.css'
 import usePlayer from '../../hooks/usePlayer'
+import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const MainContent = styled.div`
   display: flex;
@@ -73,7 +74,9 @@ function ChoiceOne() {
   const [choice, setChoice] = useState('')
 
   // check if user saves for retirement and add it to their yearly expenditures
-  const addRetirement = investments.includes('retirement') ? -6000 : 0
+  const addRetirement = investments.includes(INVESTMENTS_VEHICLES.retirement)
+    ? -6000
+    : 0
 
   // set choice value to selected choice in UI
   const handleSelection = (e) => setChoice(e.target.value)
@@ -86,7 +89,7 @@ function ChoiceOne() {
     let SPPercentage
     if (choice === 'invest') {
       SPPercentage = 0.1
-      selection.investment = 'S&P'
+      selection.investment = INVESTMENTS_VEHICLES.SP
       selection.expenditures = -(salary * SPPercentage) + addRetirement
     } else {
       SPPercentage = 0.02

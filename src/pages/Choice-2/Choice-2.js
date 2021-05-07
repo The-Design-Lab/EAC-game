@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Button from '../../components/Button'
 import '../../utilities.css'
 import usePlayer from '../../hooks/usePlayer'
+import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const MainContent = styled.div`
   display: flex;
@@ -68,10 +69,14 @@ function ChoiceTwo() {
   const [choice, setChoice] = useState('')
 
   // check if user saves for retirement and add it to their yearly expenditures
-  const addRetirement = investments.includes('retirement') ? -6000 : 0
+  const addRetirement = investments.includes(INVESTMENTS_VEHICLES.retirement)
+    ? -6000
+    : 0
 
   // check how much the player invests in a 401k
-  let add401K = investments.includes('S&P') ? -(salary * 0.1) : -(salary * 0.02)
+  let add401K = investments.includes(INVESTMENTS_VEHICLES.SP)
+    ? -(salary * 0.1)
+    : -(salary * 0.02)
 
   const handleSelection = (e) => {
     setChoice(e.target.value)
@@ -82,10 +87,10 @@ function ChoiceTwo() {
       choice: choice,
     }
 
-    let CD,
-      addBuyNewCar = -2000
+    const CD = -2000
+    const addBuyNewCar = -2000
     if (choice === 'invest') {
-      selection.investment = 'CD'
+      selection.investment = INVESTMENTS_VEHICLES.CD
       selection.expenditures = addRetirement + add401K + CD
     } else {
       selection.expenditures = addRetirement + add401K + addBuyNewCar
