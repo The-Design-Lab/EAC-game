@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Button from '../components/Button'
 import Graph from '../components/graph/Graph'
 import { PlayerContext } from '../contexts/PlayerContext'
-import { choice1 } from '../data/investmentData'
+import { choice2 } from '../data/investmentData'
 
 const Title = styled.h4`
   text-align: center;
@@ -44,36 +44,48 @@ const Buttons = styled.div`
   margin-top: 20px;
 `
 
-function GraphOne() {
+function GraphTwo() {
   const { investments } = useContext(PlayerContext)
   console.log(investments)
 
   return (
     <div>
-      <Title>2006 Summary</Title>
+      <Title>2007 Summary</Title>
       <hr />
       <Grid>
-        <Graph data={choice1} />
+        <Graph data={choice2} />
         <Investments>
           <h5>Investments</h5>
           <hr />
           {/* render condtional investment labels */}
           <InvestmentGroup>
             {investments.includes('S&P') && (
-              <InvestmentName style={{ backgroundColor: '#f96263' }}>
+              <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
                 S&P 500
               </InvestmentName>
             )}
             {investments.includes('retirement') && (
-              <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
+              <InvestmentName style={{ backgroundColor: '#f96263' }}>
                 Retirement
               </InvestmentName>
             )}
+            {investments.includes('CD') && (
+              <InvestmentName style={{ backgroundColor: '#E6E547' }}>
+                CD
+              </InvestmentName>
+            )}
+
+            {/* <InvestmentName style={{ backgroundColor: '#E6E547' }}>
+              Insego
+            </InvestmentName>
+            <InvestmentName style={{ backgroundColor: '#BBC2FF' }}>
+              Mutual Fund
+            </InvestmentName> */}
           </InvestmentGroup>
         </Investments>
       </Grid>
       <Buttons>
-        <Link to="/choice-2">
+        <Link to="/goals">
           <Button label="Continue" />
         </Link>
       </Buttons>
@@ -81,4 +93,4 @@ function GraphOne() {
   )
 }
 
-export default GraphOne
+export default GraphTwo
