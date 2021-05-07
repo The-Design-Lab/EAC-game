@@ -60,12 +60,12 @@ const Choices = styled.div`
 `
 
 const choiceData = {
-  year: 2006,
-  option1: `You invest the money in stock in a small company, Invesgo, that has high risk but recently has shown potential for a high return. Invesgo’s stock price has increased from $6.01 to $13.1 in the years 2004 - 2006 with a high of $19.25 during that time.`,
-  option2: `Invest the $2,000 in a growth mutual fund so that you can continue to diversify. You decide to invest in a growth mutual fund that has had a price increase from $5.14 per share to $6.97 per share from 2004-2006.`,
+  year: 2009,
+  option1: `Keep all of the funds in the S & P 500 because you have 36 more years until you need your money.`,
+  option2: `Sell all of your shares because you are concerned the S & P 500 will continue to go down.`,
 }
 
-function ChoiceThree() {
+function ChoiceTwo() {
   const { dispatch } = usePlayer()
   const addAnnualExpenditures = useCheckInvestments()
   const [choice, setChoice] = useState('')
@@ -74,11 +74,10 @@ function ChoiceThree() {
     setChoice(e.target.value)
   }
 
-  let addInvestment = -2000 // this is the same for a inveesgo or a mutual fund
   const submitSelection = () => {
     const selection = {
       choice: choice,
-      expenditures: addAnnualExpenditures + addInvestment,
+      expenditures: addAnnualExpenditures,
       investment:
         choice === INVESTMENTS_VEHICLES.inveesgo
           ? INVESTMENTS_VEHICLES.inveesgo
@@ -95,7 +94,7 @@ function ChoiceThree() {
     <>
       <MainContent>
         <span>{choiceData.year}</span>
-        <h1>Individual stocks</h1>
+        <h1>Hold or Sell</h1>
         <h2>Your Choices</h2>
         <ul>
           <li>
@@ -110,23 +109,23 @@ function ChoiceThree() {
         <input
           onClick={(e) => handleSelection(e)}
           type="radio"
-          name="choice-3"
-          id="inveesgo"
-          value="inveesgo"
+          name="choice-4"
+          id="hold"
+          value="hold"
         />
-        <label className="button" for="inveesgo">
-          <span class="inveesgo">Invest in Invesgo</span>
+        <label className="button" for="hold">
+          <span class="hold">Keep investment in the S&P 500</span>
         </label>
 
         <input
           onClick={(e) => handleSelection(e)}
           type="radio"
-          name="choice-3"
-          id="mutualFund"
-          value="mutualFund"
+          name="choice-4"
+          id="sell"
+          value="sell"
         />
-        <label className="button" for="mutualFund">
-          <span class="mutualFund">Invest in a mutual fund</span>
+        <label className="button" for="sell">
+          <span class="sell">Sell your shares</span>
         </label>
       </Choices>
       <hr />
@@ -139,4 +138,4 @@ function ChoiceThree() {
   )
 }
 
-export default ChoiceThree
+export default ChoiceTwo

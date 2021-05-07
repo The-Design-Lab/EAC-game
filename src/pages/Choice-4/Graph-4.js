@@ -89,7 +89,7 @@ function GraphTwo() {
         </Investments>
       </Grid>
       <Buttons>
-        <Link to="/choice-4">
+        <Link to="/goals">
           <Button label="Continue" />
         </Link>
       </Buttons>
