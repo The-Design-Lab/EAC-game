@@ -99,7 +99,7 @@ function ChoiceOne() {
     }
 
     dispatch({
-      type: 'SELECT_CHOICE-1',
+      type: 'SELECT_CHOICE',
       payload: selection,
     })
   }

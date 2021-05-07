@@ -92,7 +92,7 @@ function ChoiceTwo() {
     }
 
     dispatch({
-      type: 'SELECT_CHOICE-3',
+      type: 'SELECT_CHOICE',
       payload: selection,
     })
   }
