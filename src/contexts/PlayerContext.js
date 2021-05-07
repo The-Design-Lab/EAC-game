@@ -51,6 +51,15 @@ const PlayerReducer = (state, action) => {
         investments: [...state.investments, action.payload.investment],
         bank: state.bank + state.salary + action.payload.expenditures,
       }
+    case 'REMOVE_INVESTMENT':
+      return {
+        ...state,
+        choices: [...state.choices, action.payload.choice],
+        investments: [...state.investments, action.payload.investment].filter(
+          (investment) => investment !== 'S&P'
+        ),
+        bank: state.bank + state.salary + action.payload.expenditures,
+      }
     default:
       return state
   }

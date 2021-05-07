@@ -12,7 +12,7 @@ function useGetQuarterData(...quarterData) {
   for (let i = 0; i < quarters.length; i++) {
     // set each object with a new quarter
     result.push({
-      name: `Quarter${i + 1}`,
+      name: `Q${i + 1}`,
     })
 
     // loop through every investment and add quarter data to its respective data array
@@ -32,7 +32,6 @@ function useGetQuarterData(...quarterData) {
           result[i][invesment] = quarterData[3][i]
           break
         case INVESTMENTS_VEHICLES.mutualFund:
-
           result[i][invesment] = quarterData[4][i]
           break
         default:

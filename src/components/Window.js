@@ -9,6 +9,8 @@ import ChoiceTwo from '../pages/Choice-2/Choice-2'
 import GraphTwo from '../pages/Choice-2/Graph-2'
 import ChoiceThree from '../pages/Choice-3/Choice-3'
 import GraphThree from '../pages/Choice-3/Graph-3'
+import ChoiceFour from '../pages/Choice-4/Choice-4'
+import GraphFour from '../pages/Choice-4/Graph-4'
 import device from '../styles/mediaQueries'
 
 const WindowWrapper = styled.div`
@@ -49,6 +51,8 @@ function Window() {
         <Content>
           {/* Inject dynamic components */}
           <Switch>
+            <Route path="/graph-4" name="Graph-4" component={GraphFour} />
+            <Route path="/choice-4" name="Graph-4" component={ChoiceFour} />
             <Route path="/graph-3" name="Graph-3" component={GraphThree} />
             <Route path="/choice-3" name="Graph-3" component={ChoiceThree} />
             <Route path="/graph-2" name="Graph-2" component={GraphTwo} />

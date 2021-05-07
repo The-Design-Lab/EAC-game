@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Button from '../../components/Button'
 import Graph from '../../components/graph/Graph'
 import { PlayerContext } from '../../contexts/PlayerContext'
-import { choice3 } from '../../data/investmentData'
+import { choice4 } from '../../data/investmentData'
 import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const Title = styled.h4`
@@ -45,16 +45,16 @@ const Buttons = styled.div`
   margin-top: 20px;
 `
 
-function GraphTwo() {
+function GraphFour() {
   const { investments } = useContext(PlayerContext)
   console.log(investments)
 
   return (
     <div>
-      <Title>2006 Summary</Title>
+      <Title>2007–2009 Summary</Title>
       <hr />
       <Grid>
-        <Graph data={choice3} />
+        <Graph data={choice4} />
         <Investments>
           <h5>Investments</h5>
           <hr />
@@ -89,7 +89,7 @@ function GraphTwo() {
         </Investments>
       </Grid>
       <Buttons>
-        <Link to="/choice-4">
+        <Link to="/goals">
           <Button label="Continue" />
         </Link>
       </Buttons>
@@ -97,4 +97,4 @@ function GraphTwo() {
   )
 }
 
-export default GraphTwo
+export default GraphFour
