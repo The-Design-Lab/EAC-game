@@ -49,8 +49,15 @@ const PlayerReducer = (state, action) => {
         ...state,
         choices: [...state.choices, action.payload.choice],
         investments: [...state.investments, action.payload.investment],
+        bank: [+state.bank + (state.salary + +action.payload.expenditures)],
+      }
+    case 'SELECT_CHOICE-2':
+      return {
+        ...state,
+        choices: [...state.choices, action.payload.choice],
+        investments: [...state.investments, action.payload.investment],
         bank: [
-          +state.bank + (state.salary + +action.payload.expenditures - 6000),
+          +state.bank + (state.salary + +action.payload.expenditures),
         ],
       }
     default:
