@@ -5,7 +5,7 @@ import Button from '../../components/Button'
 import '../../utilities.css'
 import usePlayer from '../../hooks/usePlayer'
 import useCheckInvestments from '../../hooks/useCheckInvestments'
-import INVESTMENTS_VEHICLES from '../../data/Investments'
+// import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const MainContent = styled.div`
   display: flex;
@@ -75,19 +75,18 @@ function ChoiceTwo() {
   }
 
   const submitSelection = () => {
+    const removedInvestment = choice === 'sell' ? 'S&P' : null
     const selection = {
       choice: choice,
       expenditures: addAnnualExpenditures,
-      investment:
-        choice === INVESTMENTS_VEHICLES.inveesgo
-          ? INVESTMENTS_VEHICLES.inveesgo
-          : INVESTMENTS_VEHICLES.mutualFund,
+      investment: removedInvestment,
     }
 
-    dispatch({
-      type: 'SELECT_CHOICE',
-      payload: selection,
-    })
+    if (choice === 'sell')
+      dispatch({
+        type: 'REMOVE_INVESTMENT',
+        payload: selection,
+      })
   }
 
   return (
@@ -130,7 +129,7 @@ function ChoiceTwo() {
       </Choices>
       <hr />
       <Buttons>
-        <Link to="/graph-3">
+        <Link to="/graph-4">
           <Button label="Continue" onClick={submitSelection} />
         </Link>
       </Buttons>
