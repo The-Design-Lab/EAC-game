@@ -69,18 +69,29 @@ const choiceData = {
 }
 
 function ChoiceOne() {
-  const { dispatch } = useContext(PlayerContext)
+  const { salary, investments, dispatch } = useContext(PlayerContext)
   const [choice, setChoice] = useState('')
+
+  // check if user saves for retirement and add it to their yearly expenditures
+  let addRetirement
+  investments.includes('retirement')
+    ? (addRetirement = -6000)
+    : (addRetirement = 0)
 
   const handleSelection = (e) => {
     setChoice(e.target.value)
   }
 
+  // send selection data to the global player object
   const submitSelection = () => {
     const selection = {
       choice: choice,
-      investment: choice === 'invest' ? 'S&P' : null,
-      expenditures: -6500,
+      expenditures: -(salary * 0.1) + addRetirement,
+    }
+    if (choice === 'invest') {
+      selection.investment = 'S&P'
+    } else {
+      selection.investment = 'spend'
     }
 
     dispatch({

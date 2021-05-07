@@ -69,20 +69,11 @@ function GraphOne() {
                 Retirement
               </InvestmentName>
             )}
-            {/* <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
-              CD
-            </InvestmentName>
-            <InvestmentName style={{ backgroundColor: '#E6E547' }}>
-              Insego
-            </InvestmentName>
-            <InvestmentName style={{ backgroundColor: '#BBC2FF' }}>
-              Mutual Fund
-            </InvestmentName> */}
           </InvestmentGroup>
         </Investments>
       </Grid>
       <Buttons>
-        <Link to="/goals">
+        <Link to="/choice-2">
           <Button label="Continue" />
         </Link>
       </Buttons>
