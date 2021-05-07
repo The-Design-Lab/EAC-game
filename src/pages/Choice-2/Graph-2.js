@@ -50,7 +50,7 @@ function GraphTwo() {
 
   return (
     <div>
-      <Title>2007 Summary</Title>
+      <Title>2005 Summary</Title>
       <hr />
       <Grid>
         <Graph data={choice2} />

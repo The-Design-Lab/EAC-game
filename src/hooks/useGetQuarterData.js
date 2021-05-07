@@ -27,6 +27,12 @@ function useGetQuarterData(...quarterData) {
         case 'CD':
           result[i][invesment] = quarterData[2][i]
           break
+        case 'inveesgo':
+          result[i][invesment] = quarterData[3][i]
+          break
+        case 'mutualFund':
+          result[i][invesment] = quarterData[4][i]
+          break
         default:
           return
       }

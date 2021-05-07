@@ -50,7 +50,7 @@ function GraphOne() {
 
   return (
     <div>
-      <Title>2006 Summary</Title>
+      <Title>2004 Summary</Title>
       <hr />
       <Grid>
         <Graph data={choice1} />

@@ -83,22 +83,16 @@ function ChoiceTwo() {
     setChoice(e.target.value)
   }
 
+  let addInvestment = -2000
   const submitSelection = () => {
     const selection = {
       choice: choice,
-    }
-
-    let CD = -2000
-    if (choice === 'invest') {
-      selection.investment = 'CD'
-      selection.expenditures = addRetirement + add401K + CD
-    } else {
-      selection.investment = 'spend'
-      selection.expenditures = addRetirement + add401K
+      expenditures: addRetirement + add401K + addInvestment,
+      investment: choice === 'inveesgo' ? 'inveesgo' : 'mutualFund',
     }
 
     dispatch({
-      type: 'SELECT_CHOICE-2',
+      type: 'SELECT_CHOICE-3',
       payload: selection,
     })
   }
@@ -122,28 +116,28 @@ function ChoiceTwo() {
         <input
           onClick={(e) => handleSelection(e)}
           type="radio"
-          name="choice-1"
-          id="invest"
-          value="invest"
+          name="choice-3"
+          id="inveesgo"
+          value="inveesgo"
         />
-        <label className="button" for="invest">
-          <span class="invest">Invest in Invesgo</span>
+        <label className="button" for="inveesgo">
+          <span class="inveesgo">Invest in Invesgo</span>
         </label>
 
         <input
           onClick={(e) => handleSelection(e)}
           type="radio"
-          name="choice-1"
-          id="spend"
-          value="spend"
+          name="choice-3"
+          id="mutualFund"
+          value="mutualFund"
         />
-        <label className="button" for="spend">
-          <span class="spend">Invest in a mutual fund</span>
+        <label className="button" for="mutualFund">
+          <span class="mutualFund">Invest in a mutual fund</span>
         </label>
       </Choices>
       <hr />
       <Buttons>
-        <Link to="/graph-2">
+        <Link to="/graph-3">
           <Button label="Continue" onClick={submitSelection} />
         </Link>
       </Buttons>

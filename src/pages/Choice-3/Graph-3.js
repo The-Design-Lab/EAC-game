@@ -50,7 +50,7 @@ function GraphTwo() {
 
   return (
     <div>
-      <Title>2007 Summary</Title>
+      <Title>2006 Summary</Title>
       <hr />
       <Grid>
         <Graph data={choice3} />
@@ -74,8 +74,8 @@ function GraphTwo() {
                 CD
               </InvestmentName>
             )}
-            {investments.includes('Inseego') && (
-              <InvestmentName style={{ backgroundColor: '#E6E547' }}>
+            {investments.includes('inveesgo') && (
+              <InvestmentName style={{ backgroundColor: '#BBC2FF' }}>
                 Insego
               </InvestmentName>
             )}
