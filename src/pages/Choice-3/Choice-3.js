@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Button from '../../components/Button'
 import '../../utilities.css'
 import usePlayer from '../../hooks/usePlayer'
+import useCheckInvestments from '../../hooks/useCheckInvestments'
 import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const MainContent = styled.div`
@@ -65,26 +66,19 @@ const choiceData = {
 }
 
 function ChoiceTwo() {
-  const { salary, investments, dispatch } = usePlayer()
+  const { dispatch } = usePlayer()
+  const addAnnualExpenditures = useCheckInvestments()
   const [choice, setChoice] = useState('')
-
-  // check if user saves for retirement and add it to their yearly expenditures
-  const addRetirement = investments.includes(INVESTMENTS_VEHICLES.retirement)
-    ? -6000
-    : 0
-
-  // check how much the player invests in a 401k
-  let add401K = investments.includes(INVESTMENTS_VEHICLES.SP) ? -(salary * 0.1) : -(salary * 0.02)
 
   const handleSelection = (e) => {
     setChoice(e.target.value)
   }
 
-  let addInvestment = -2000
+  let addInvestment = -2000 // this is the same for a inveesgo or a mutual fund
   const submitSelection = () => {
     const selection = {
       choice: choice,
-      expenditures: addRetirement + add401K + addInvestment,
+      expenditures: addAnnualExpenditures + addInvestment,
       investment:
         choice === INVESTMENTS_VEHICLES.inveesgo
           ? INVESTMENTS_VEHICLES.inveesgo
