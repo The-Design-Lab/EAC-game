@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import Button from '../components/Button'
-import Graph from '../components/graph/Graph'
-import { PlayerContext } from '../contexts/PlayerContext'
-import { choice1 } from '../data/investmentData'
+import Button from '../../components/Button'
+import Graph from '../../components/graph/Graph'
+import { PlayerContext } from '../../contexts/PlayerContext'
+import { choice1 } from '../../data/investmentData'
 
 const Title = styled.h4`
   text-align: center;
@@ -50,7 +50,7 @@ function GraphOne() {
 
   return (
     <div>
-      <Title>2006 Summary</Title>
+      <Title>2004 Summary</Title>
       <hr />
       <Grid>
         <Graph data={choice1} />

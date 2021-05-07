@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import Button from '../components/Button'
-import '../utilities.css'
-import { PlayerContext } from '../contexts/PlayerContext'
+import Button from '../../components/Button'
+import '../../utilities.css'
+import { PlayerContext } from '../../contexts/PlayerContext'
 
 const MainContent = styled.div`
   display: flex;
@@ -58,12 +58,17 @@ const Choices = styled.div`
 `
 
 const choiceData = {
-  year: 2005,
-  option1: `You know how important emergency savings is so you save $2,000 and deposit this in a special savings account which is just for emergencies. `,
-  option2: `What can go wrong when you are a young adult? You decide you don’t need emergency savings and you use the $2,000 extra in your budget over the year to pay to upgrade your really old, used car to a nicer, used car. `,
+  year: 2004,
+  option1: ` Invest 10% into a 401k with a match of 5% (of annual income). All
+  of the funds 15% will be invested in the S&P 500 throughout the
+  game unless the player makes a change.`,
+  option2: `Keep the money and spend it. Maybe choose between swanky apartment
+  and used car with no investments vs. studio apt. and take public
+  transportation with investment
+`,
 }
 
-function ChoiceTwo() {
+function ChoiceOne() {
   const { salary, investments, dispatch } = useContext(PlayerContext)
   const [choice, setChoice] = useState('')
 
@@ -73,32 +78,28 @@ function ChoiceTwo() {
     ? (addRetirement = -6000)
     : (addRetirement = 0)
 
-  // check how much the player invests in a 401k
-  let add401K
-  investments.includes('S&P')
-    ? (add401K = -(salary * 0.1))
-    : (add401K = -(salary * 0.02))
-
   const handleSelection = (e) => {
     setChoice(e.target.value)
   }
 
+  // send selection data to the global player object
   const submitSelection = () => {
     const selection = {
       choice: choice,
     }
-    
-    let CD = -2000
+    let SPPercentage
     if (choice === 'invest') {
-      selection.investment = 'CD'
-      selection.expenditures = addRetirement + add401K + CD
+      SPPercentage = 0.1
+      selection.investment = 'S&P'
+      selection.expenditures = -(salary * SPPercentage) + addRetirement
     } else {
+      SPPercentage = 0.02
       selection.investment = 'spend'
-      selection.expenditures = addRetirement + add401K
+      selection.expenditures = -(salary * SPPercentage) + addRetirement
     }
 
     dispatch({
-      type: 'SELECT_CHOICE-2',
+      type: 'SELECT_CHOICE',
       payload: selection,
     })
   }
@@ -107,7 +108,7 @@ function ChoiceTwo() {
     <>
       <MainContent>
         <span>{choiceData.year}</span>
-        <h1>CDs and Emergency Savings</h1>
+        <h1>Retirement and financial goals</h1>
         <h2>Your Choices</h2>
         <ul>
           <li>
@@ -127,7 +128,7 @@ function ChoiceTwo() {
           value="invest"
         />
         <label className="button" for="invest">
-          <span class="invest">Invest in CD</span>
+          <span class="invest">Invest in 401K</span>
         </label>
 
         <input
@@ -143,7 +144,7 @@ function ChoiceTwo() {
       </Choices>
       <hr />
       <Buttons>
-        <Link to="/graph-2">
+        <Link to="/graph-1">
           <Button label="Continue" onClick={submitSelection} />
         </Link>
       </Buttons>
@@ -151,4 +152,4 @@ function ChoiceTwo() {
   )
 }
 
-export default ChoiceTwo
+export default ChoiceOne
