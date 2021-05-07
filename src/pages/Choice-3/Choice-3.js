@@ -1,9 +1,11 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Button from '../../components/Button'
 import '../../utilities.css'
-import { PlayerContext } from '../../contexts/PlayerContext'
+import usePlayer from '../../hooks/usePlayer'
+import useCheckInvestments from '../../hooks/useCheckInvestments'
+import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const MainContent = styled.div`
   display: flex;
@@ -64,31 +66,23 @@ const choiceData = {
 }
 
 function ChoiceTwo() {
-  const { salary, investments, dispatch } = useContext(PlayerContext)
+  const { dispatch } = usePlayer()
+  const addAnnualExpenditures = useCheckInvestments()
   const [choice, setChoice] = useState('')
-
-  // check if user saves for retirement and add it to their yearly expenditures
-  let addRetirement
-  investments.includes('retirement')
-    ? (addRetirement = -6000)
-    : (addRetirement = 0)
-
-  // check how much the player invests in a 401k
-  let add401K
-  investments.includes('S&P')
-    ? (add401K = -(salary * 0.1))
-    : (add401K = -(salary * 0.02))
 
   const handleSelection = (e) => {
     setChoice(e.target.value)
   }
 
-  let addInvestment = -2000
+  let addInvestment = -2000 // this is the same for a inveesgo or a mutual fund
   const submitSelection = () => {
     const selection = {
       choice: choice,
-      expenditures: addRetirement + add401K + addInvestment,
-      investment: choice === 'inveesgo' ? 'inveesgo' : 'mutualFund',
+      expenditures: addAnnualExpenditures + addInvestment,
+      investment:
+        choice === INVESTMENTS_VEHICLES.inveesgo
+          ? INVESTMENTS_VEHICLES.inveesgo
+          : INVESTMENTS_VEHICLES.mutualFund,
     }
 
     dispatch({

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { PlayerContext } from '../contexts/PlayerContext'
 import styled from 'styled-components'
+import INVESTMENTS_VEHICLES from '../data/Investments'
 
 const checkboxData = [
   {
@@ -139,10 +140,10 @@ function GoalCards() {
       payload: goal,
     })
 
-    if(e.target.name === 'Save for Retirement'){
+    if (e.target.name === 'Save for Retirement') {
       dispatch({
         type: `ADD_INVESTMENT`,
-        payload: 'retirement'
+        payload: INVESTMENTS_VEHICLES.retirement,
       })
     }
   }

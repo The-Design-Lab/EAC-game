@@ -1,9 +1,11 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Button from '../../components/Button'
 import '../../utilities.css'
-import { PlayerContext } from '../../contexts/PlayerContext'
+import usePlayer from '../../hooks/usePlayer'
+import useCheckInvestments from '../../hooks/useCheckInvestments'
+import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const MainContent = styled.div`
   display: flex;
@@ -69,18 +71,12 @@ const choiceData = {
 }
 
 function ChoiceOne() {
-  const { salary, investments, dispatch } = useContext(PlayerContext)
+  const { salary, dispatch } = usePlayer()
+  const addAnnualExpenditures = useCheckInvestments()
   const [choice, setChoice] = useState('')
 
-  // check if user saves for retirement and add it to their yearly expenditures
-  let addRetirement
-  investments.includes('retirement')
-    ? (addRetirement = -6000)
-    : (addRetirement = 0)
-
-  const handleSelection = (e) => {
-    setChoice(e.target.value)
-  }
+  // set choice value to selected choice in UI
+  const handleSelection = (e) => setChoice(e.target.value)
 
   // send selection data to the global player object
   const submitSelection = () => {
@@ -90,12 +86,12 @@ function ChoiceOne() {
     let SPPercentage
     if (choice === 'invest') {
       SPPercentage = 0.1
-      selection.investment = 'S&P'
-      selection.expenditures = -(salary * SPPercentage) + addRetirement
+      selection.investment = INVESTMENTS_VEHICLES.SP
+      selection.expenditures = -(salary * SPPercentage) + addAnnualExpenditures
     } else {
       SPPercentage = 0.02
       selection.investment = 'spend'
-      selection.expenditures = -(salary * SPPercentage) + addRetirement
+      selection.expenditures = -(salary * SPPercentage) + addAnnualExpenditures
     }
 
     dispatch({

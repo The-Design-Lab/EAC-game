@@ -5,6 +5,7 @@ import Button from '../../components/Button'
 import Graph from '../../components/graph/Graph'
 import { PlayerContext } from '../../contexts/PlayerContext'
 import { choice2 } from '../../data/investmentData'
+import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const Title = styled.h4`
   text-align: center;
@@ -59,12 +60,14 @@ function GraphTwo() {
           <hr />
           {/* render condtional investment labels */}
           <InvestmentGroup>
-            {investments.includes('S&P') && (
+            {investments.includes(INVESTMENTS_VEHICLES.SP) && (
+
               <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
                 S&P 500
               </InvestmentName>
             )}
-            {investments.includes('retirement') && (
+            {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
+
               <InvestmentName style={{ backgroundColor: '#f96263' }}>
                 Retirement
               </InvestmentName>

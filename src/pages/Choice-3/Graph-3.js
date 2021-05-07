@@ -5,6 +5,7 @@ import Button from '../../components/Button'
 import Graph from '../../components/graph/Graph'
 import { PlayerContext } from '../../contexts/PlayerContext'
 import { choice3 } from '../../data/investmentData'
+import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const Title = styled.h4`
   text-align: center;
@@ -59,27 +60,27 @@ function GraphTwo() {
           <hr />
           {/* render condtional investment labels */}
           <InvestmentGroup>
-            {investments.includes('S&P') && (
+            {investments.includes(INVESTMENTS_VEHICLES.SP) && (
               <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
                 S&P 500
               </InvestmentName>
             )}
-            {investments.includes('retirement') && (
+            {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
               <InvestmentName style={{ backgroundColor: '#f96263' }}>
                 Retirement
               </InvestmentName>
             )}
-            {investments.includes('CD') && (
+            {investments.includes(INVESTMENTS_VEHICLES.CD) && (
               <InvestmentName style={{ backgroundColor: '#E6E547' }}>
                 CD
               </InvestmentName>
             )}
-            {investments.includes('inveesgo') && (
+            {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
               <InvestmentName style={{ backgroundColor: '#BBC2FF' }}>
                 Insego
               </InvestmentName>
             )}
-            {investments.includes('mutualFund') && (
+            {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
               <InvestmentName style={{ backgroundColor: '#BBC2FF' }}>
                 Mutual Fund
               </InvestmentName>

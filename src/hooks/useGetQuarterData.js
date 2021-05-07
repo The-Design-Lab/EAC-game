@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { PlayerContext } from '../contexts/PlayerContext'
+import INVESTMENTS_VEHICLES from '../data/Investments'
 
 function useGetQuarterData(...quarterData) {
   const { investments } = useContext(PlayerContext)
@@ -18,19 +19,20 @@ function useGetQuarterData(...quarterData) {
     investments.forEach((invesment) => {
       // test wheather or not the investment exists, and if if does, hook it up to the correct array of quarter results
       switch (invesment) {
-        case 'retirement':
+        case INVESTMENTS_VEHICLES.retirement:
           result[i][invesment] = quarterData[0][i]
           break
-        case 'S&P':
+        case INVESTMENTS_VEHICLES.SP:
           result[i][invesment] = quarterData[1][i]
           break
-        case 'CD':
+        case INVESTMENTS_VEHICLES.CD:
           result[i][invesment] = quarterData[2][i]
           break
-        case 'inveesgo':
+        case INVESTMENTS_VEHICLES.inveesgo:
           result[i][invesment] = quarterData[3][i]
           break
-        case 'mutualFund':
+        case INVESTMENTS_VEHICLES.mutualFund:
+
           result[i][invesment] = quarterData[4][i]
           break
         default:
