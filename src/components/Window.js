@@ -5,6 +5,8 @@ import Home from '../pages/Home'
 import Goals from '../pages/Goals'
 import ChoiceOne from '../pages/Choice-1'
 import GraphOne from '../pages/Graph-1'
+import ChoiceTwo from '../pages/Choice-2'
+import GraphTwo from '../pages/Graph-2'
 import device from '../styles/mediaQueries'
 
 const WindowWrapper = styled.div`
@@ -18,6 +20,9 @@ const WindowWrapper = styled.div`
 
   @media ${device.desktop} {
     max-height: 850px;
+  }
+  @media ${device.laptopL} {
+    max-height: 700px;
   }
 `
 
@@ -42,6 +47,8 @@ function Window() {
         <Content>
           {/* Inject dynamic components */}
           <Switch>
+            <Route path="/graph-2" name="Graph-1" component={GraphTwo} />
+            <Route path="/choice-2" name="Graph-1" component={ChoiceTwo} />
             <Route path="/graph-1" name="Graph-1" component={GraphOne} />
             <Route path="/choice-1" name="Choice-1" component={ChoiceOne} />
             <Route path="/goals" name="Home" component={Goals} />
