@@ -73,10 +73,7 @@ function ChoiceOne() {
   const [choice, setChoice] = useState('')
 
   // check if user saves for retirement and add it to their yearly expenditures
-  let addRetirement
-  investments.includes('retirement')
-    ? (addRetirement = -6000)
-    : (addRetirement = 0)
+  const addRetirement = investments.includes('retirement') ? -6000 : 0
 
   const handleSelection = (e) => {
     setChoice(e.target.value)

@@ -68,18 +68,10 @@ function ChoiceTwo() {
   const [choice, setChoice] = useState('')
 
   // check if user saves for retirement and add it to their yearly expenditures
-  let addRetirement
-  investments.includes('retirement')
-    ? (addRetirement = -6000)
-    : (addRetirement = 0)
+  const addRetirement = investments.includes('retirement') ? -6000 : 0
 
   // check how much the player invests in a 401k
-  let add401K
-  investments.includes('S&P')
-    ? (add401K = -(salary * 0.1))
-    : (add401K = -(salary * 0.02))
-
-  // const add401k = investments.includes('S&P') ? -(salary * 0.1) : -(salary * 0.02)
+  let add401K=investments.includes('S&P') ? -(salary * 0.1) : -(salary * 0.02)
 
   const handleSelection = (e) => {
     setChoice(e.target.value)
