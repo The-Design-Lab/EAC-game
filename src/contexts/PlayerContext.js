@@ -56,9 +56,7 @@ const PlayerReducer = (state, action) => {
         ...state,
         choices: [...state.choices, action.payload.choice],
         investments: [...state.investments, action.payload.investment],
-        bank: [
-          +state.bank + (state.salary + +action.payload.expenditures),
-        ],
+        bank: [+state.bank + (state.salary + +action.payload.expenditures)],
       }
     default:
       return state

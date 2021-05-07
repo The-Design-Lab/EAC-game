@@ -86,12 +86,16 @@ function ChoiceOne() {
   const submitSelection = () => {
     const selection = {
       choice: choice,
-      expenditures: -(salary * 0.1) + addRetirement,
     }
+    let SPPercentage
     if (choice === 'invest') {
+      SPPercentage = 0.1
       selection.investment = 'S&P'
+      selection.expenditures = -(salary * SPPercentage) + addRetirement
     } else {
+      SPPercentage = 0.02
       selection.investment = 'spend'
+      selection.expenditures = -(salary * SPPercentage) + addRetirement
     }
 
     dispatch({

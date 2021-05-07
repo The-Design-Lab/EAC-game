@@ -64,8 +64,20 @@ const choiceData = {
 }
 
 function ChoiceTwo() {
-  const { dispatch } = useContext(PlayerContext)
+  const { salary, investments, dispatch } = useContext(PlayerContext)
   const [choice, setChoice] = useState('')
+
+  // check if user saves for retirement and add it to their yearly expenditures
+  let addRetirement
+  investments.includes('retirement')
+    ? (addRetirement = -6000)
+    : (addRetirement = 0)
+
+  // check how much the player invests in a 401k
+  let add401K
+  investments.includes('S&P')
+    ? (add401K = -(salary * 0.1))
+    : (add401K = -(salary * 0.02))
 
   const handleSelection = (e) => {
     setChoice(e.target.value)
@@ -74,8 +86,15 @@ function ChoiceTwo() {
   const submitSelection = () => {
     const selection = {
       choice: choice,
-      investment: choice === 'invest' ? 'CD' : null,
-      expenditures: -2000,
+    }
+    
+    let CD = -2000
+    if (choice === 'invest') {
+      selection.investment = 'CD'
+      selection.expenditures = addRetirement + add401K + CD
+    } else {
+      selection.investment = 'spend'
+      selection.expenditures = addRetirement + add401K
     }
 
     dispatch({
