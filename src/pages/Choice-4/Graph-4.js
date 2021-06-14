@@ -89,7 +89,7 @@ function GraphFour() {
         </Investments>
       </Grid>
       <Buttons>
-        <Link to="/goals">
+        <Link to="/choice-5">
           <Button label="Continue" />
         </Link>
       </Buttons>
