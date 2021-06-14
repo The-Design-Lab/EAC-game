@@ -9,6 +9,7 @@ import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const choiceData = {
   year: 2006,
+  setup: `You have been working for a few more years and have another $2,000 saved up that you are thinking about investing. You have two choices:`,
   option1: `You invest the money in stock in a small company, Invesgo, that has high risk but recently has shown potential for a high return. Invesgo’s stock price has increased from $6.01 to $13.1 in the years 2004 - 2006 with a high of $19.25 during that time.`,
   option2: `Invest the $2,000 in a growth mutual fund so that you can continue to diversify. You decide to invest in a growth mutual fund that has had a price increase from $5.14 per share to $6.97 per share from 2004-2006.`,
 }
@@ -44,6 +45,7 @@ function ChoiceThree() {
       <MainContent>
         <span>{choiceData.year}</span>
         <h1>Individual stocks</h1>
+        <p>{choiceData.setup}</p>
         <h2>Your Choices</h2>
         <ul>
           <li>

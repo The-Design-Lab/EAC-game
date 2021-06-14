@@ -8,13 +8,13 @@ import useCheckInvestments from '../../hooks/useCheckInvestments'
 // import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const choiceData = {
-  year: 2009,
-  setup: `The stock market has gone down recently. In 2004, you invested 15% of your income in shares of an S & P 500 Index Fund at $17.18. The S & P 500 is now down at $13.93. BUT you do not need your money until 2040.`,
-  option1: `Keep all of the funds in the S & P 500 because you have 36 more years until you need your money.`,
-  option2: `Sell all of your shares because you are concerned the S & P 500 will continue to go down.`,
+  year: 2013,
+  setup: `The stock market has recently increased. In 2004, you invested 15% of your income in shares of the S & P 500 at $17.18. The S & P 500 is now at $22.19. You do not need your money until 2040.`,
+  option1: `Keep all of the funds in the S & P 500 because you have 32 more years until you need your money which you think is plenty of time to withstand ups and downs in the market.`,
+  option2: `Sell all of your shares because you are happy with the $5 gain you have made.`,
 }
 
-function ChoiceFour() {
+function ChoiceFive() {
   const { dispatch } = usePlayer()
   const addAnnualExpenditures = useCheckInvestments()
   const [choice, setChoice] = useState('')
@@ -42,7 +42,7 @@ function ChoiceFour() {
     <>
       <MainContent>
         <span>{choiceData.year}</span>
-        <h1> Index Funds & Mutual Funds</h1>
+        <h1>Hold or Sell</h1>
         <p>{choiceData.setup}</p>
         <h2>Your Choices</h2>
         <ul>
@@ -58,7 +58,7 @@ function ChoiceFour() {
         <input
           onClick={(e) => handleSelection(e)}
           type="radio"
-          name="choice-4"
+          name="choice-5"
           id="hold"
           value="hold"
         />
@@ -69,7 +69,7 @@ function ChoiceFour() {
         <input
           onClick={(e) => handleSelection(e)}
           type="radio"
-          name="choice-4"
+          name="choice-5"
           id="sell"
           value="sell"
         />
@@ -79,7 +79,7 @@ function ChoiceFour() {
       </Choices>
       <hr />
       <Buttons>
-        <Link to="/graph-4">
+        <Link to="/graph-5">
           <Button label="Continue" onClick={submitSelection} />
         </Link>
       </Buttons>
@@ -87,4 +87,4 @@ function ChoiceFour() {
   )
 }
 
-export default ChoiceFour
+export default ChoiceFive

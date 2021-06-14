@@ -9,9 +9,8 @@ import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const choiceData = {
   year: 2004,
-  option1: ` Invest 10% into a 401k with a match of 5% (of annual income). All
-  of the funds 15% will be invested in the S&P 500 throughout the
-  game unless the player makes a change.`,
+  setup: `Congrats! Your employer has a benefits program to help workers invest for their retirement. Your employer allows you to invest funds into a 401k up to 10% of your salary with a match of 50% of your investment. You have two choices.`,
+  option1: `You know how important investing is and you choose to get a small studio apartment so that you can afford to invest 10% of your salary into a 401k with a match of 5% (of your annual income). All of the funds, 15% of your total salary, will be invested in the S&P 500 index fund throughout the game.`,
   option2: `Keep the money and spend it. Maybe choose between swanky apartment
   and used car with no investments vs. studio apt. and take public
   transportation with investment
@@ -53,6 +52,7 @@ function ChoiceOne() {
       <MainContent>
         <span>{choiceData.year}</span>
         <h1>Retirement and financial goals</h1>
+        <p>{choiceData.setup}</p>
         <h2>Your Choices</h2>
         <ul>
           <li>

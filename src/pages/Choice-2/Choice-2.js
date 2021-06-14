@@ -9,6 +9,7 @@ import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const choiceData = {
   year: 2005,
+  setup: ` You have been working for over a year and you notice that you have some extra room in your budget. You have two choices:`,
   option1: `You know how important emergency savings is so you save $2,000 and deposit this in a special savings account which is just for emergencies. `,
   option2: `What can go wrong when you are a young adult? You decide you don’t need emergency savings and you use the $2,000 extra in your budget over the year to pay to upgrade your really old, used car to a nicer, used car. `,
 }
@@ -47,6 +48,7 @@ function ChoiceTwo() {
       <MainContent>
         <span>{choiceData.year}</span>
         <h1>CDs and Emergency Savings</h1>
+        <p>{choiceData.setup}</p>
         <h2>Your Choices</h2>
         <ul>
           <li>
