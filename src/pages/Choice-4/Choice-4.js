@@ -21,6 +21,7 @@ function ChoiceFour() {
 
   const handleSelection = (e) => {
     setChoice(e.target.value)
+    console.log(choice)
   }
 
   const submitSelection = () => {
@@ -30,12 +31,19 @@ function ChoiceFour() {
       expenditures: addAnnualExpenditures,
       investment: removedInvestment,
     }
+    if (choice === 'S&P') {
+      dispatch({
+        type: 'SELECT_CHOICE',
+        payload: selection,
+      })
+    }
 
-    if (choice === 'sell')
+    if (choice === 'sell') {
       dispatch({
         type: 'REMOVE_INVESTMENT',
         payload: selection,
       })
+    }
   }
 
   return (
