@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/EAC-game/static/css/main.779bdff3.chunk.css",
+    "main.js": "/EAC-game/static/js/main.c4a219af.chunk.js",
+    "main.js.map": "/EAC-game/static/js/main.c4a219af.chunk.js.map",
+    "runtime-main.js": "/EAC-game/static/js/runtime-main.895d7d1c.js",
+    "runtime-main.js.map": "/EAC-game/static/js/runtime-main.895d7d1c.js.map",
+    "static/js/2.42d02693.chunk.js": "/EAC-game/static/js/2.42d02693.chunk.js",
+    "static/js/2.42d02693.chunk.js.map": "/EAC-game/static/js/2.42d02693.chunk.js.map",
+    "index.html": "/EAC-game/index.html",
+    "static/css/main.779bdff3.chunk.css.map": "/EAC-game/static/css/main.779bdff3.chunk.css.map",
+    "static/js/2.42d02693.chunk.js.LICENSE.txt": "/EAC-game/static/js/2.42d02693.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.895d7d1c.js",
+    "static/js/2.42d02693.chunk.js",
+    "static/css/main.779bdff3.chunk.css",
+    "static/js/main.c4a219af.chunk.js"
+  ]
+}
