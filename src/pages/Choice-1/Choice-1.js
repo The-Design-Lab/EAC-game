@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import { MainContent, Buttons, Choices } from '../../styles/choicesSyles'
 import { Link } from 'react-router-dom'
 import Button from '../../components/Button'
 import '../../utilities.css'
@@ -7,63 +7,10 @@ import usePlayer from '../../hooks/usePlayer'
 import useCheckInvestments from '../../hooks/useCheckInvestments'
 import INVESTMENTS_VEHICLES from '../../data/Investments'
 
-const MainContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  h1 {
-    text-align: center;
-    font-family: var(--body);
-    font-weight: 400;
-  }
-  h2 {
-    font-size: 36px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  p {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  ul {
-    max-width: 800px;
-    margin: 0 auto;
-    list-style: center;
-
-    li {
-      margin-bottom: 25px;
-      list-style-type: decimal;
-
-      p {
-        text-align: left;
-      }
-    }
-  }
-`
-const Buttons = styled.div`
-  display: flex;
-  justify-content: center;
-`
-const Choices = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 50px;
-
-  button {
-    font-weight: 700;
-  }
-`
-
 const choiceData = {
   year: 2004,
-  option1: ` Invest 10% into a 401k with a match of 5% (of annual income). All
-  of the funds 15% will be invested in the S&P 500 throughout the
-  game unless the player makes a change.`,
+  setup: `Congrats! Your employer has a benefits program to help workers invest for their retirement. Your employer allows you to invest funds into a 401k up to 10% of your salary with a match of 50% of your investment. You have two choices.`,
+  option1: `You know how important investing is and you choose to get a small studio apartment so that you can afford to invest 10% of your salary into a 401k with a match of 5% (of your annual income). All of the funds, 15% of your total salary, will be invested in the S&P 500 index fund throughout the game.`,
   option2: `Keep the money and spend it. Maybe choose between swanky apartment
   and used car with no investments vs. studio apt. and take public
   transportation with investment
@@ -105,6 +52,7 @@ function ChoiceOne() {
       <MainContent>
         <span>{choiceData.year}</span>
         <h1>Retirement and financial goals</h1>
+        <p>{choiceData.setup}</p>
         <h2>Your Choices</h2>
         <ul>
           <li>
