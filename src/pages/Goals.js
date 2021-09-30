@@ -1,8 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import Button from '../components/Button'
-import ChoiceCard from '../components/ChoiceCard'
+import React, { useContext } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import Button from "../components/Button";
+import ChoiceCard from "../components/ChoiceCard";
+import { PlayerContext } from "../contexts/PlayerContext";
 
 const MainContent = styled.div`
   display: flex;
@@ -14,23 +15,33 @@ const MainContent = styled.div`
     font-family: var(--body);
     font-weight: 400;
   }
+
   p {
     max-width: 800px;
     margin: 0 auto;
   }
-`
+`;
 const Buttons = styled.div`
   display: flex;
   justify-content: center;
-`
+`;
 
 const GoalChoices = styled.div`
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-`
+`;
 
 function Goals() {
+  const { dispatch } = useContext(PlayerContext);
+  const resetGoals = () => {
+    dispatch({
+      type: "RESET",
+      payload: "",
+    });
+    console.log("Successfully reset");
+  };
+
   return (
     <>
       <MainContent>
@@ -52,11 +63,11 @@ function Goals() {
           <Button label="Back" />
         </Link>
         <Link to="/choice-1">
-          <Button label="Continue" />
+          <Button label="Continue" onClick={resetGoals} />
         </Link>
       </Buttons>
     </>
-  )
+  );
 }
 
-export default Goals
+export default Goals;
