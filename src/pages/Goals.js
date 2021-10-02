@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
@@ -42,6 +42,10 @@ function Goals() {
     console.log("Successfully reset");
   };
 
+  useEffect(() => {
+    resetGoals();
+  }, []);
+
   return (
     <>
       <MainContent>
@@ -63,7 +67,7 @@ function Goals() {
           <Button label="Back" />
         </Link>
         <Link to="/choice-1">
-          <Button label="Continue" onClick={resetGoals} />
+          <Button label="Continue" />
         </Link>
       </Buttons>
     </>
