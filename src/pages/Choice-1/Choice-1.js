@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import { MainContent, Buttons, Choices } from '../../styles/choicesSyles'
-import { Link } from 'react-router-dom'
-import Button from '../../components/Button'
-import '../../utilities.css'
-import usePlayer from '../../hooks/usePlayer'
-import useCheckInvestments from '../../hooks/useCheckInvestments'
-import INVESTMENTS_VEHICLES from '../../data/Investments'
+import React, { useState } from "react";
+import { MainContent, Buttons, Choices } from "../../styles/choicesSyles";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button";
+import "../../utilities.css";
+import usePlayer from "../../hooks/usePlayer";
+import useCheckInvestments from "../../hooks/useCheckInvestments";
+import INVESTMENTS_VEHICLES from "../../data/Investments";
 
 const choiceData = {
   year: 2004,
@@ -15,37 +15,38 @@ const choiceData = {
   and used car with no investments vs. studio apt. and take public
   transportation with investment
 `,
-}
+};
 
 function ChoiceOne() {
-  const { salary, dispatch } = usePlayer()
-  const addAnnualExpenditures = useCheckInvestments()
-  const [choice, setChoice] = useState('')
-
+  const { salary, dispatch } = usePlayer();
+  const addAnnualExpenditures = useCheckInvestments();
+  const [choice, setChoice] = useState("");
+  const player = usePlayer();
+  console.log(player);
   // set choice value to selected choice in UI
-  const handleSelection = (e) => setChoice(e.target.value)
+  const handleSelection = (e) => setChoice(e.target.value);
 
   // send selection data to the global player object
   const submitSelection = () => {
     const selection = {
       choice: choice,
-    }
-    let SPPercentage
-    if (choice === 'invest') {
-      SPPercentage = 0.1
-      selection.investment = INVESTMENTS_VEHICLES.SP
-      selection.expenditures = -(salary * SPPercentage) + addAnnualExpenditures
+    };
+    let SPPercentage;
+    if (choice === "invest") {
+      SPPercentage = 0.1;
+      selection.investment = INVESTMENTS_VEHICLES.SP;
+      selection.expenditures = -(salary * SPPercentage) + addAnnualExpenditures;
     } else {
-      SPPercentage = 0.02
-      selection.investment = 'spend'
-      selection.expenditures = -(salary * SPPercentage) + addAnnualExpenditures
+      SPPercentage = 0.02;
+      selection.investment = "spend";
+      selection.expenditures = -(salary * SPPercentage) + addAnnualExpenditures;
     }
 
     dispatch({
-      type: 'SELECT_CHOICE',
+      type: "SELECT_CHOICE",
       payload: selection,
-    })
-  }
+    });
+  };
 
   return (
     <>
@@ -93,7 +94,7 @@ function ChoiceOne() {
         </Link>
       </Buttons>
     </>
-  )
+  );
 }
 
-export default ChoiceOne
+export default ChoiceOne;

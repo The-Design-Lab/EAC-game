@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import Button from '../../components/Button'
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import Button from "../../components/Button";
 
 function Summary() {
   const MainContent = styled.div`
@@ -18,12 +18,12 @@ function Summary() {
       max-width: 800px;
       margin: 0 auto;
     }
-  `
+  `;
 
   const Buttons = styled.div`
     display: flex;
     justify-content: center;
-  `
+  `;
 
   return (
     <>
@@ -42,12 +42,12 @@ function Summary() {
         <Link to="/recap">
           <Button label="Back" />
         </Link>
-        <Link to="/summary">
+        <Link to="/Goals">
           <Button label="Continue" />
         </Link>
       </Buttons>
     </>
-  )
+  );
 }
 
-export default Summary
+export default Summary;
