@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/definitions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dictionary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dictionary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dictionary.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dictionary.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +79,7 @@
       <workItem from="1633030994073" duration="1107000" />
       <workItem from="1633106768016" duration="646000" />
       <workItem from="1633137334302" duration="1110000" />
-      <workItem from="1633716344982" duration="3469000" />
+      <workItem from="1633716344982" duration="4639000" />
     </task>
     <servers />
   </component>

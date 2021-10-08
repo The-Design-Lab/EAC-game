@@ -38,7 +38,7 @@ const tabList = dictionaryData.map(({ term }) => {
   return (
     <>
       <li>
-        <a href={term}>{term}</a>
+        <a href={"#" + term}>{term}</a>
       </li>
     </>
   );
