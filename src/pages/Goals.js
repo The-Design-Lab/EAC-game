@@ -34,16 +34,17 @@ const GoalChoices = styled.div`
 
 function Goals() {
   const { dispatch } = useContext(PlayerContext);
-  const resetGoals = () => {
-    dispatch({
-      type: "RESET",
-      payload: "",
-    });
-    console.log("Successfully reset");
-  };
 
   useEffect(() => {
+    const resetGoals = () => {
+      dispatch({
+        type: "RESET",
+        payload: "",
+      });
+      console.log("Successfully reset");
+    };
     resetGoals();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
