@@ -1,5 +1,5 @@
 .tab-list {
-  position: absolute;
+  position: static;
   bottom: 0;
   left: 0;
   width: 100%;

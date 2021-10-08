@@ -1,7 +1,8 @@
-import React from 'react'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import styled from 'styled-components'
-import './dictionary.css'
+import React from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import styled from "styled-components";
+import "./dictionary.css";
+import { dictionaryData } from "../data/definitions";
 
 const DefinitionList = styled.dl`
   lh {
@@ -21,34 +22,7 @@ const DefinitionList = styled.dl`
     margin-left: 1em;
     line-height: 1.4em;
   }
-`
-
-const dictionaryData = [
-  {
-    term: '401K',
-    definition: 'Lorem Ipsum...',
-  },
-  {
-    term: 'IRA',
-    definition: 'Lorem Ipsum...',
-  },
-  {
-    term: 'Roth IRA',
-    definition: 'Lorem Ipsum...',
-  },
-  {
-    term: 'Emergency Savings',
-    definition: 'Lorem Ipsum...',
-  },
-  {
-    term: "CD's",
-    definition: 'Lorem Ipsum...',
-  },
-  {
-    term: 'FDIC Insurance',
-    definition: 'Lorem Ipsum...',
-  },
-]
+`;
 
 const dictionaryList = dictionaryData.map(({ term, definition }) => {
   return (
@@ -57,8 +31,18 @@ const dictionaryList = dictionaryData.map(({ term, definition }) => {
       <dd>{definition}</dd>
       <hr />
     </>
-  )
-})
+  );
+});
+
+const tabList = dictionaryData.map(({ term }) => {
+  return (
+    <>
+      <li>
+        <a href={"#" + term}>{term}</a>
+      </li>
+    </>
+  );
+});
 
 function Dictionary() {
   return (
@@ -74,15 +58,16 @@ function Dictionary() {
 
       <TabPanel>
         <ul>
-          <li>
-            <a href="#401k">401k</a>
-          </li>
-          <li>
-            <a href="#ira">IRA</a>
-          </li>
-          <li>
-            <a href="#roth-ira">Roth IRA</a>
-          </li>
+          {tabList}
+          {/*<li>*/}
+          {/*  <a href="#401k">401k</a>*/}
+          {/*</li>*/}
+          {/*<li>*/}
+          {/*  <a href="#ira">IRA</a>*/}
+          {/*</li>*/}
+          {/*<li>*/}
+          {/*  <a href="#roth-ira">Roth IRA</a>*/}
+          {/*</li>*/}
         </ul>
       </TabPanel>
       <TabPanel>
@@ -92,7 +77,7 @@ function Dictionary() {
         </DefinitionList>
       </TabPanel>
     </Tabs>
-  )
+  );
 }
 
-export default Dictionary
+export default Dictionary;
