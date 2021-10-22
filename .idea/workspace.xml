@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/data/event-list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Goals.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +79,8 @@
       <workItem from="1633106768016" duration="646000" />
       <workItem from="1633137334302" duration="1110000" />
       <workItem from="1633716344982" duration="4639000" />
+      <workItem from="1634222879914" duration="1473000" />
+      <workItem from="1634872793467" duration="2121000" />
     </task>
     <servers />
   </component>
@@ -95,6 +97,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
