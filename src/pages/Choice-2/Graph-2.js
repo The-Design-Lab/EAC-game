@@ -1,20 +1,21 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import Button from '../../components/Button'
-import Graph from '../../components/graph/Graph'
-import { PlayerContext } from '../../contexts/PlayerContext'
-import { choice2 } from '../../data/investmentData'
-import INVESTMENTS_VEHICLES from '../../data/Investments'
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import Button from "../../components/Button";
+import Graph from "../../components/graph/Graph";
+import { PlayerContext } from "../../contexts/PlayerContext";
+import { choice2 } from "../../data/investmentData";
+import INVESTMENTS_VEHICLES from "../../data/Investments";
+import { randomEvent } from "../../data/pick-random-event";
 
 const Title = styled.h4`
   text-align: center;
   margin-bottom: 20px;
-`
+`;
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-`
+`;
 const Investments = styled.aside`
   padding: 0 20px;
 
@@ -26,28 +27,30 @@ const Investments = styled.aside`
   hr {
     margin: 20px 0;
   }
-`
+`;
 const InvestmentName = styled.div`
   box-shadow: var(--bevel-default);
   width: 150px;
   padding: 15px 20px;
   text-align: center;
-`
+`;
 const InvestmentGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-`
+`;
 
 const Buttons = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
-`
+`;
 
 function GraphTwo() {
-  const { investments } = useContext(PlayerContext)
-  console.log(investments)
+  const { investments } = useContext(PlayerContext);
+  const eventTrigger = randomEvent();
+  console.log(eventTrigger);
+  console.log(investments);
 
   return (
     <div>
@@ -61,19 +64,17 @@ function GraphTwo() {
           {/* render condtional investment labels */}
           <InvestmentGroup>
             {investments.includes(INVESTMENTS_VEHICLES.SP) && (
-
-              <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
+              <InvestmentName style={{ backgroundColor: "#F9BA7F" }}>
                 S&P 500
               </InvestmentName>
             )}
             {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
-
-              <InvestmentName style={{ backgroundColor: '#f96263' }}>
+              <InvestmentName style={{ backgroundColor: "#f96263" }}>
                 Retirement
               </InvestmentName>
             )}
-            {investments.includes('CD') && (
-              <InvestmentName style={{ backgroundColor: '#E6E547' }}>
+            {investments.includes("CD") && (
+              <InvestmentName style={{ backgroundColor: "#E6E547" }}>
                 CD
               </InvestmentName>
             )}
@@ -81,12 +82,18 @@ function GraphTwo() {
         </Investments>
       </Grid>
       <Buttons>
-        <Link to="/choice-3">
-          <Button label="Continue" />
-        </Link>
+        {eventTrigger ? (
+          <Link to={`/event/${eventTrigger}`}>
+            <Button label="Continue" />
+          </Link>
+        ) : (
+          <Link to="/choice-3">
+            <Button label="Continue" />
+          </Link>
+        )}
       </Buttons>
     </div>
-  )
+  );
 }
 
-export default GraphTwo
+export default GraphTwo;

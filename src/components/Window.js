@@ -1,21 +1,22 @@
-import React from 'react'
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
-import styled from 'styled-components'
-import Home from '../pages/Home'
-import Goals from '../pages/Goals'
-import ChoiceOne from '../pages/Choice-1/Choice-1'
-import GraphOne from '../pages/Choice-1/Graph-1'
-import ChoiceTwo from '../pages/Choice-2/Choice-2'
-import GraphTwo from '../pages/Choice-2/Graph-2'
-import ChoiceThree from '../pages/Choice-3/Choice-3'
-import GraphThree from '../pages/Choice-3/Graph-3'
-import ChoiceFour from '../pages/Choice-4/Choice-4'
-import GraphFour from '../pages/Choice-4/Graph-4'
-import ChoiceFive from '../pages/Choice-5/Choice-5'
-import GraphFive from '../pages/Choice-5/Graph-5'
-import device from '../styles/mediaQueries'
-import Recap from '../pages/recap'
-import Summary from '../pages/Summary/Summary'
+import React from "react";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import styled from "styled-components";
+import Home from "../pages/Home";
+import Goals from "../pages/Goals";
+import ChoiceOne from "../pages/Choice-1/Choice-1";
+import GraphOne from "../pages/Choice-1/Graph-1";
+import ChoiceTwo from "../pages/Choice-2/Choice-2";
+import GraphTwo from "../pages/Choice-2/Graph-2";
+import ChoiceThree from "../pages/Choice-3/Choice-3";
+import GraphThree from "../pages/Choice-3/Graph-3";
+import ChoiceFour from "../pages/Choice-4/Choice-4";
+import GraphFour from "../pages/Choice-4/Graph-4";
+import ChoiceFive from "../pages/Choice-5/Choice-5";
+import GraphFive from "../pages/Choice-5/Graph-5";
+import device from "../styles/mediaQueries";
+import Recap from "../pages/recap";
+import Summary from "../pages/Summary/Summary";
+import LifeEvent from "../pages/Life-Event";
 
 const WindowWrapper = styled.div`
   max-height: 700px; // height for home page
@@ -32,7 +33,7 @@ const WindowWrapper = styled.div`
   @media ${device.laptopL} {
     max-height: 700px;
   }
-`
+`;
 
 const WindowHead = styled.h5`
   background-color: var(--color-secondary);
@@ -40,12 +41,12 @@ const WindowHead = styled.h5`
   width: 100%;
   color: white;
   text-align: center;
-`
+`;
 
 const Content = styled.div`
   width: 90%;
   margin: 15px auto;
-`
+`;
 
 function Window() {
   return (
@@ -68,13 +69,18 @@ function Window() {
             <Route path="/goals" name="Home" component={Goals} />
             <Route path="/recap" name="Recap" component={Recap} />
             <Route path="/summary" name="Summary" component={Summary} />
+            <Route
+              path="/event/:num"
+              name="Random-event"
+              component={LifeEvent}
+            />
             <Route path="/" exact component={Home} />
           </Switch>
           {/* End injection */}
         </Content>
       </Router>
     </WindowWrapper>
-  )
+  );
 }
 
-export default Window
+export default Window;

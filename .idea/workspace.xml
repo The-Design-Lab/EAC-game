@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/event-list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/pick-random-event.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Window.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/PlayerContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/PlayerContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Graph-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Graph-2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Life-Event.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Life-Event.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +51,15 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Raphy\Documents\Repos\EAC-game\src\data" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.start">
+    <configuration name="pick-random-event.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/data/pick-random-event.js" working-dir="$PROJECT_DIR$/src/data">
+      <method v="2" />
+    </configuration>
     <configuration name="scratch.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$APPLICATION_CONFIG_DIR$/scratches/scratch.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -60,6 +75,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.pick-random-event.js" />
         <item itemvalue="Node.js.scratch.js" />
       </list>
     </recent_temporary>
@@ -80,7 +96,7 @@
       <workItem from="1633137334302" duration="1110000" />
       <workItem from="1633716344982" duration="4639000" />
       <workItem from="1634222879914" duration="1473000" />
-      <workItem from="1634872793467" duration="2121000" />
+      <workItem from="1634872793467" duration="6917000" />
     </task>
     <servers />
   </component>
