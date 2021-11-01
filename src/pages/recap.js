@@ -37,9 +37,6 @@ function Recap() {
   return (
     <>
       <MainContent>
-        <h1>Did You Achieve Your Goals?</h1>
-        <p>You ended up with {player.bank}</p>
-
         <GoalChoices>
           {/* insert logic so it only shows goals selected at the beginning */}
           {/* insert logic that highlights goals green if achieved and red if not */}

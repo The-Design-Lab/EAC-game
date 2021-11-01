@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import Button from './Button'
-import DateTime from './Clock'
-import Modal from './Modal'
-import { ModalContext } from '../contexts/ModalContext'
+import React, { useState } from "react";
+import styled from "styled-components";
+import Button from "./Button";
+import DateTime from "./Clock";
+import Modal from "./Modal";
+import { ModalContext } from "../contexts/ModalContext";
 
 const NavBar = styled.nav`
   display: flex;
@@ -16,24 +16,24 @@ const NavBar = styled.nav`
   background-color: var(--color-primary);
   box-shadow: var(--bevel-default);
   padding: 10px 5px;
-`
+`;
 
 const Buttons = styled.div`
   display: flex;
   align-items: center;
   height: 54px;
-`
+`;
 
 function Navbar() {
-  const [showModal, updateShowModal] = useState(false)
-  const toggleBankModal = () => updateShowModal((state) => !state)
+  const [showModal, updateShowModal] = useState(false);
+  const toggleBankModal = () => updateShowModal((state) => !state);
 
-  const [showDictionaryModal, updateShowDictionaryModal] = useState(false)
+  const [showDictionaryModal, updateShowDictionaryModal] = useState(false);
   const toggleDictionaryModal = () =>
-    updateShowDictionaryModal((state) => !state)
+    updateShowDictionaryModal((state) => !state);
 
-  const [showMarketModal, updateShowMarketModal] = useState(false)
-  const toggleMarketModal = () => updateShowMarketModal((state) => !state)
+  const [showMarketModal, updateShowMarketModal] = useState(false);
+  const toggleMarketModal = () => updateShowMarketModal((state) => !state);
 
   return (
     <NavBar>
@@ -69,6 +69,7 @@ function Navbar() {
 
         {/* Buttons */}
         <Button type="navItem" label="Game" icon="windows" />
+
         <Button
           onClick={toggleDictionaryModal}
           type="navItem"
@@ -91,7 +92,7 @@ function Navbar() {
       </Buttons>
       <DateTime />
     </NavBar>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
