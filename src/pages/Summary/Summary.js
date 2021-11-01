@@ -2,8 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../../components/Button";
+import usePlayer from "../../hooks/usePlayer";
+import { formatter } from "../../formatter";
 
 function Summary() {
+  const player = usePlayer();
+  let total = 0;
+  console.log(player);
   const MainContent = styled.div`
     display: flex;
     flex-direction: column;
@@ -29,12 +34,23 @@ function Summary() {
     <>
       {/* Is there a way to instead of having several pages change the content dynamically when the next is pressed?  */}
       <MainContent>
-        <h1>Header</h1>
+        <h1>Did You Achieve Your Goals?</h1>
+        <p>You ended up with {formatter.format(player.bank)}</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Your goals were:{" "}
+          {player.goals.map((goal) => {
+            total = total + goal.price;
+            return (
+              <ul>
+                <li>
+                  {goal.name}: {formatter.format(goal.price)}
+                </li>
+              </ul>
+            );
+          })}
+        </p>
+        <p>
+          Total: <b>{formatter.format(total)}</b>
         </p>
       </MainContent>
       <hr />

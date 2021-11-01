@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import styled from "styled-components";
 import { events } from "../data/event-list";
+import { PlayerContext } from "../contexts/PlayerContext";
 
 function LifeEvent(props) {
   console.log(props.match.params.num);
@@ -27,6 +28,16 @@ function LifeEvent(props) {
     display: flex;
     justify-content: center;
   `;
+
+  const { dispatch } = useContext(PlayerContext);
+
+  useEffect(() => {
+    dispatch({
+      type: "ADD_EVENT",
+      payload: event.amount,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>

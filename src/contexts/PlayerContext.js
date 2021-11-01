@@ -60,6 +60,12 @@ const PlayerReducer = (state, action) => {
         ),
         bank: state.bank + state.salary + action.payload.expenditures,
       };
+    case "ADD_EVENT":
+      return {
+        ...state,
+
+        bank: state.bank + action.payload,
+      };
     case "RESET":
       return initialState;
     default:

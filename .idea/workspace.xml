@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/pick-random-event.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/formatter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Window.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChoiceCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChoiceCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contexts/PlayerContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/PlayerContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Graph-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Graph-2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/event-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/event-list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Life-Event.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Life-Event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Summary/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Summary/Summary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/recap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/recap.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +96,10 @@
       <workItem from="1633137334302" duration="1110000" />
       <workItem from="1633716344982" duration="4639000" />
       <workItem from="1634222879914" duration="1473000" />
-      <workItem from="1634872793467" duration="6917000" />
+      <workItem from="1634872793467" duration="7614000" />
+      <workItem from="1634934819674" duration="2876000" />
+      <workItem from="1635372664146" duration="3218000" />
+      <workItem from="1635432928280" duration="608000" />
     </task>
     <servers />
   </component>
