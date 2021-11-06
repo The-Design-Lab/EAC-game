@@ -68,8 +68,12 @@ function Navbar() {
         </ModalContext.Provider>
 
         {/* Buttons */}
-        <Button type="navItem" label="Game" icon="windows" />
-
+        <Button
+          type="navItem"
+          label="Game"
+          icon="windows"
+          onClick={(e) => (window.location.href = "/")}
+        />
         <Button
           onClick={toggleDictionaryModal}
           type="navItem"
