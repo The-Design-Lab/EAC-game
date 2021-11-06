@@ -39,7 +39,7 @@ function Summary() {
         <p>
           Your goals were:{" "}
           {player.goals.map((goal) => {
-            total = total + goal.price;
+            total = total + parseInt(goal.price);
             return (
               <ul>
                 <li>

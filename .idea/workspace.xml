@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/formatter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ChoiceCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChoiceCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/PlayerContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/PlayerContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/event-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/event-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Life-Event.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Life-Event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Goals.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Summary/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Summary/Summary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/recap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/recap.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +96,7 @@
       <workItem from="1634934819674" duration="2876000" />
       <workItem from="1635372664146" duration="3218000" />
       <workItem from="1635432928280" duration="608000" />
+      <workItem from="1636219508894" duration="2659000" />
     </task>
     <servers />
   </component>

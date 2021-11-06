@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
@@ -35,17 +35,22 @@ const GoalChoices = styled.div`
 function Goals() {
   const { dispatch } = useContext(PlayerContext);
 
+  const [goalSelected, setGoalSelected] = useState(false);
+
   useEffect(() => {
     const resetGoals = () => {
       dispatch({
         type: "RESET",
         payload: "",
       });
-      console.log("Successfully reset");
     };
     resetGoals();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    console.log(goalSelected);
+  }, [goalSelected]);
 
   return (
     <>
@@ -59,7 +64,7 @@ function Goals() {
         </p>
 
         <GoalChoices>
-          <ChoiceCard />
+          <ChoiceCard setGoalSelected={setGoalSelected} />
         </GoalChoices>
       </MainContent>
       <hr />
@@ -68,7 +73,7 @@ function Goals() {
           <Button label="Back" />
         </Link>
         <Link to="/choice-1">
-          <Button label="Continue" />
+          {goalSelected ? <Button label="Continue" /> : <></>}
         </Link>
       </Buttons>
     </>

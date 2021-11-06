@@ -21,7 +21,7 @@ const checkboxData = [
   {
     name: "Buy for Fun",
     img: "https://previews.123rf.com/images/saphatthachat/saphatthachat1903/saphatthachat190300115/124294868-vector-pixel-art-fantasy-gift-box-isolated-cartoon.jpg",
-    price: 600000,
+    price: 10000,
     label: "fun",
     checked: false,
   },
@@ -49,7 +49,7 @@ const checkboxData = [
   {
     name: "Save for Vacation",
     img: "https://previews.123rf.com/images/pdreams/pdreams1305/pdreams130500011/19606915-family-road-trip-summer-vacation-holidays-pixel-art-retro-clipart.jpg",
-    price: 600000,
+    price: 25000,
     label: "vacation",
     checked: false,
   },
@@ -108,7 +108,7 @@ const Checkbox = ({ name, price, checked, onChange }) => {
   );
 };
 
-function GoalCards() {
+function GoalCards({ setGoalSelected }) {
   const { dispatch } = useContext(PlayerContext);
   const [checkedItems, setCheckedItems] = useState({});
 
@@ -138,6 +138,7 @@ function GoalCards() {
         payload: INVESTMENTS_VEHICLES.retirement,
       });
     }
+    setGoalSelected(true);
   };
 
   return (
