@@ -7,14 +7,14 @@ const checkboxData = [
   {
     name: "Buy a House",
     img: "https://cdn5.vectorstock.com/i/1000x1000/33/89/pixel-house-with-fence-and-garden-vector-10273389.jpg",
-    price: 250000,
+    price: 232500,
     label: "house",
     checked: false,
   },
   {
     name: "Buy a Car",
     img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2f6d8426253581.563537ab0f34f.jpg",
-    price: 24999,
+    price: 28000,
     label: "house",
     checked: false,
   },
@@ -49,14 +49,14 @@ const checkboxData = [
   {
     name: "Save for Vacation",
     img: "https://previews.123rf.com/images/pdreams/pdreams1305/pdreams130500011/19606915-family-road-trip-summer-vacation-holidays-pixel-art-retro-clipart.jpg",
-    price: 25000,
+    price: 2016,
     label: "vacation",
     checked: false,
   },
   {
     name: "Save for Education",
     img: "https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg",
-    price: 600000,
+    price: 48432,
     label: "education",
     checked: false,
   },
