@@ -52,7 +52,7 @@ const Content = styled.div`
 function Window() {
   return (
     <WindowWrapper>
-      <WindowHead>Welcome to Economic Awaraness Council</WindowHead>
+      <WindowHead>Welcome to Economic Awareness Council</WindowHead>
       <Router>
         <Content>
           {/* Inject dynamic components */}
