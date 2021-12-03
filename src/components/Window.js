@@ -17,6 +17,7 @@ import device from "../styles/mediaQueries";
 import Recap from "../pages/recap";
 import Summary from "../pages/Summary/Summary";
 import LifeEvent from "../pages/Life-Event";
+import Leaderboard from "./leaderboard";
 
 const WindowWrapper = styled.div`
   max-height: 700px; // height for home page
@@ -69,6 +70,7 @@ function Window() {
             <Route path="/goals" name="Home" component={Goals} />
             <Route path="/recap" name="Recap" component={Recap} />
             <Route path="/summary" name="Summary" component={Summary} />
+            <Route path="/board" name="board" component={Leaderboard} />
             <Route
               path="/event/:num"
               name="Random-event"

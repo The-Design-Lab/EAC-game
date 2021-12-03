@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/leaderboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Window.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Goals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Summary/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Summary/Summary.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -93,7 +106,11 @@
       <workItem from="1634934819674" duration="2876000" />
       <workItem from="1635372664146" duration="3218000" />
       <workItem from="1635432928280" duration="608000" />
-      <workItem from="1636219508894" duration="5820000" />
+      <workItem from="1636219508894" duration="6415000" />
+      <workItem from="1637190770315" duration="78000" />
+      <workItem from="1637621321449" duration="772000" />
+      <workItem from="1638230841896" duration="6839000" />
+      <workItem from="1638485938462" duration="5255000" />
     </task>
     <servers />
   </component>

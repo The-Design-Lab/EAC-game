@@ -57,10 +57,16 @@ function Goals() {
       <MainContent>
         <h1>What are your goals?</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Everyone wants something different out of life. What is important to
+          you? Choose a few things you are willing to save and make sacrifices
+          for, then play the game and let see what you can achieve! Be sure to
+          consider the total cost of your goals as this will be a factor in
+          whether or not you are successful in reaching these goals.
+          <b>
+            {" "}
+            (If you select too many, costly goals, you may not have enough funds
+            to reach these.)
+          </b>
         </p>
 
         <GoalChoices>
