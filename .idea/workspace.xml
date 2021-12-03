@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/leaderboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/firebase.js" afterDir="false" />
+    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="leaderboard added">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Window.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Goals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Summary/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Summary/Summary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/leaderboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leaderboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/firebase.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,8 +105,16 @@
       <workItem from="1637190770315" duration="78000" />
       <workItem from="1637621321449" duration="772000" />
       <workItem from="1638230841896" duration="6839000" />
-      <workItem from="1638485938462" duration="5255000" />
+      <workItem from="1638485938462" duration="6370000" />
     </task>
+    <task id="LOCAL-00001" summary="leaderboard added">
+      <created>1638493523191</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638493523191</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +131,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="leaderboard added" />
+    <option name="LAST_COMMIT_MESSAGE" value="leaderboard added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

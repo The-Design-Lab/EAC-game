@@ -7,6 +7,8 @@ import { MainContent } from "../styles/choicesSyles";
 function Leaderboard() {
   const [scores, setScores] = useState(null);
 
+  console.log(process.env.REACT_APP_STORAGE_BUCKET);
+
   useEffect(() => {
     async function getScores() {
       try {
