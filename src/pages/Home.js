@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import Button from '../components/Button'
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import Button from "../components/Button";
 
 const HomeContent = styled.div`
   display: flex;
@@ -16,17 +16,17 @@ const HomeContent = styled.div`
     margin-top: 20px;
     margin-left: 30px;
   }
-`
+`;
 
 const MainContent = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 30px;
-`
+`;
 const Buttons = styled.div`
   display: flex;
   justify-content: center;
-`
+`;
 
 function Home() {
   return (
@@ -39,10 +39,13 @@ function Home() {
         <div>
           <h1>Investor Simulator </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Investing may help you to build wealth and meet financial goals.
+            There are many opportunities, alternatives and risks associated with
+            investing. The year is 2006, and you are just about to start your
+            adult life. It’s time to get smart and start investing part of your
+            salary and setting some financial goals. Play this game and see if
+            you can achieve your financial goals and get set up for future
+            success!
           </p>
           <p>Over the course of the following game, you will learn about:</p>
           <ul>
@@ -59,7 +62,7 @@ function Home() {
         </Link>
       </Buttons>
     </HomeContent>
-  )
+  );
 }
 
-export default Home
+export default Home;

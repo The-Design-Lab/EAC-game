@@ -1,11 +1,11 @@
-import GlobalStyle from './styles/globalStyles'
-import Reset from './styles/reset'
+import GlobalStyle from "./styles/globalStyles";
+import Reset from "./styles/reset";
 // Components
-import Navbar from './components/Navbar'
-import Window from './components/Window'
+import Navbar from "./components/Navbar";
+import Window from "./components/Window";
 // Contexts
-import { PlayerProvider } from './contexts/PlayerContext'
-
+import { PlayerProvider } from "./contexts/PlayerContext";
+require("dotenv").config();
 function App() {
   return (
     <>
@@ -16,7 +16,7 @@ function App() {
         <Navbar />
       </PlayerProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
