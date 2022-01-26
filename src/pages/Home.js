@@ -47,6 +47,10 @@ function Home() {
             you can achieve your financial goals and get set up for future
             success!
           </p>
+          <p>
+            The information provided in this game is for educational purposes
+            only and should not be considered financial or investment advice.{" "}
+          </p>
           <p>Over the course of the following game, you will learn about:</p>
           <ul>
             <li>How to invest</li>

@@ -1,42 +1,42 @@
-import React, { useState } from 'react'
-import { MainContent, Buttons, Choices } from '../../styles/choicesSyles'
-import { Link } from 'react-router-dom'
-import Button from '../../components/Button'
-import '../../utilities.css'
-import usePlayer from '../../hooks/usePlayer'
-import useCheckInvestments from '../../hooks/useCheckInvestments'
+import React, { useState } from "react";
+import { MainContent, Buttons, Choices } from "../../styles/choicesSyles";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button";
+import "../../utilities.css";
+import usePlayer from "../../hooks/usePlayer";
+import useCheckInvestments from "../../hooks/useCheckInvestments";
 // import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const choiceData = {
   year: 2013,
   setup: `The stock market has recently increased. In 2004, you invested 15% of your income in shares of the S & P 500 at $17.18. The S & P 500 is now at $22.19. You do not need your money until 2040.`,
-  option1: `Keep all of the funds in the S & P 500 because you have 32 more years until you need your money which you think is plenty of time to withstand ups and downs in the market.`,
+  option1: `The $5 gain is nice, but you decide to keep all of the funds in the S & P 500 because you have 32 more years until you need your money which you think is plenty of time to withstand ups and downs in the market.`,
   option2: `Sell all of your shares because you are happy with the $5 gain you have made.`,
-}
+};
 
 function ChoiceFive() {
-  const { dispatch } = usePlayer()
-  const addAnnualExpenditures = useCheckInvestments()
-  const [choice, setChoice] = useState('')
+  const { dispatch } = usePlayer();
+  const addAnnualExpenditures = useCheckInvestments();
+  const [choice, setChoice] = useState("");
 
   const handleSelection = (e) => {
-    setChoice(e.target.value)
-  }
+    setChoice(e.target.value);
+  };
 
   const submitSelection = () => {
-    const removedInvestment = choice === 'sell' ? 'S&P' : null
+    const removedInvestment = choice === "sell" ? "S&P" : null;
     const selection = {
       choice: choice,
       expenditures: addAnnualExpenditures,
       investment: removedInvestment,
-    }
+    };
 
-    if (choice === 'sell')
+    if (choice === "sell")
       dispatch({
-        type: 'REMOVE_INVESTMENT',
+        type: "REMOVE_INVESTMENT",
         payload: selection,
-      })
-  }
+      });
+  };
 
   return (
     <>
@@ -84,7 +84,7 @@ function ChoiceFive() {
         </Link>
       </Buttons>
     </>
-  )
+  );
 }
 
-export default ChoiceFive
+export default ChoiceFive;

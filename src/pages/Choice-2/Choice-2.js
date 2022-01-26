@@ -1,47 +1,47 @@
-import React, { useState } from 'react'
-import { MainContent, Buttons, Choices } from '../../styles/choicesSyles'
-import { Link } from 'react-router-dom'
-import Button from '../../components/Button'
-import '../../utilities.css'
-import usePlayer from '../../hooks/usePlayer'
-import useCheckInvestments from '../../hooks/useCheckInvestments'
-import INVESTMENTS_VEHICLES from '../../data/Investments'
+import React, { useState } from "react";
+import { MainContent, Buttons, Choices } from "../../styles/choicesSyles";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button";
+import "../../utilities.css";
+import usePlayer from "../../hooks/usePlayer";
+import useCheckInvestments from "../../hooks/useCheckInvestments";
+import INVESTMENTS_VEHICLES from "../../data/Investments";
 
 const choiceData = {
   year: 2005,
-  setup: ` You have been working for over a year and you notice that you have some extra room in your budget. You have two choices:`,
-  option1: `You know how important emergency savings is so you save $2,000 and deposit this in a special savings account which is just for emergencies. `,
-  option2: `What can go wrong when you are a young adult? You decide you don’t need emergency savings and you use the $2,000 extra in your budget over the year to pay to upgrade your really old, used car to a nicer, used car. `,
-}
+  setup: ` You have been working for over a year and you notice that you have some extra room in your budget. You are conflicted because you have really old, used furniture. You have two choices:`,
+  option1: `You know how important emergency savings is so you save $2,000 and deposit this in a special savings account which is just for emergencies and just purchase a slipcover for your couch. `,
+  option2: `What can go wrong when you are a young adult? You decide you don’t need emergency savings and you use the $2,000 extra in your budget to pay for new furniture for your apartment throughout the year. `,
+};
 
 function ChoiceTwo() {
-  const { dispatch } = usePlayer()
-  const addAnnualExpenditures = useCheckInvestments()
-  const [choice, setChoice] = useState('')
+  const { dispatch } = usePlayer();
+  const addAnnualExpenditures = useCheckInvestments();
+  const [choice, setChoice] = useState("");
 
   const handleSelection = (e) => {
-    setChoice(e.target.value)
-  }
+    setChoice(e.target.value);
+  };
 
   const submitSelection = () => {
     const selection = {
       choice: choice,
-    }
+    };
 
-    const CD = -2000
-    const addBuyNewCar = -2000
-    if (choice === 'invest') {
-      selection.investment = INVESTMENTS_VEHICLES.CD
-      selection.expenditures = addAnnualExpenditures + CD
+    const CD = -2000;
+    const addBuyNewCar = -2000;
+    if (choice === "invest") {
+      selection.investment = INVESTMENTS_VEHICLES.CD;
+      selection.expenditures = addAnnualExpenditures + CD;
     } else {
-      selection.expenditures = addAnnualExpenditures + addBuyNewCar
+      selection.expenditures = addAnnualExpenditures + addBuyNewCar;
     }
 
     dispatch({
-      type: 'SELECT_CHOICE',
+      type: "SELECT_CHOICE",
       payload: selection,
-    })
-  }
+    });
+  };
 
   return (
     <>
@@ -89,7 +89,7 @@ function ChoiceTwo() {
         </Link>
       </Buttons>
     </>
-  )
+  );
 }
 
-export default ChoiceTwo
+export default ChoiceTwo;

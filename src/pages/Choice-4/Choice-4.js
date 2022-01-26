@@ -1,50 +1,50 @@
-import React, { useState } from 'react'
-import { MainContent, Buttons, Choices } from '../../styles/choicesSyles'
-import { Link } from 'react-router-dom'
-import Button from '../../components/Button'
-import '../../utilities.css'
-import usePlayer from '../../hooks/usePlayer'
-import useCheckInvestments from '../../hooks/useCheckInvestments'
+import React, { useState } from "react";
+import { MainContent, Buttons, Choices } from "../../styles/choicesSyles";
+import { Link } from "react-router-dom";
+import Button from "../../components/Button";
+import "../../utilities.css";
+import usePlayer from "../../hooks/usePlayer";
+import useCheckInvestments from "../../hooks/useCheckInvestments";
 // import INVESTMENTS_VEHICLES from '../../data/Investments'
 
 const choiceData = {
   year: 2009,
-  setup: `The stock market has gone down recently. In 2004, you invested 15% of your income in shares of an S & P 500 Index Fund at $17.18. The S & P 500 is now down at $13.93. BUT you do not need your money until 2040.`,
+  setup: `The stock market has gone down recently. In 2004, you invested 15% of your income in shares of an S & P 500 Index Fund at $17.18 per share. The S & P 500 is now down to $13.93 BUT you do not need your money until 2040.`,
   option1: `Keep all of the funds in the S & P 500 because you have 36 more years until you need your money.`,
-  option2: `Sell all of your shares because you are concerned the S & P 500 will continue to go down.`,
-}
+  option2: `Losing value in your investment is understandably concerning and scary. You sell your shares because you are concerned the S & P 500 will continue to go down.`,
+};
 
 function ChoiceFour() {
-  const { dispatch } = usePlayer()
-  const addAnnualExpenditures = useCheckInvestments()
-  const [choice, setChoice] = useState('')
+  const { dispatch } = usePlayer();
+  const addAnnualExpenditures = useCheckInvestments();
+  const [choice, setChoice] = useState("");
 
   const handleSelection = (e) => {
-    setChoice(e.target.value)
-    console.log(choice)
-  }
+    setChoice(e.target.value);
+    console.log(choice);
+  };
 
   const submitSelection = () => {
-    const removedInvestment = choice === 'sell' ? 'S&P' : null
+    const removedInvestment = choice === "sell" ? "S&P" : null;
     const selection = {
       choice: choice,
       expenditures: addAnnualExpenditures,
       investment: removedInvestment,
-    }
-    if (choice === 'S&P') {
+    };
+    if (choice === "S&P") {
       dispatch({
-        type: 'SELECT_CHOICE',
+        type: "SELECT_CHOICE",
         payload: selection,
-      })
+      });
     }
 
-    if (choice === 'sell') {
+    if (choice === "sell") {
       dispatch({
-        type: 'REMOVE_INVESTMENT',
+        type: "REMOVE_INVESTMENT",
         payload: selection,
-      })
+      });
     }
-  }
+  };
 
   return (
     <>
@@ -92,7 +92,7 @@ function ChoiceFour() {
         </Link>
       </Buttons>
     </>
-  )
+  );
 }
 
-export default ChoiceFour
+export default ChoiceFour;

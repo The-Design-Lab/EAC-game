@@ -10,10 +10,8 @@ import INVESTMENTS_VEHICLES from "../../data/Investments";
 const choiceData = {
   year: 2004,
   setup: `Congrats! Your employer has a benefits program to help workers invest for their retirement. Your employer allows you to invest funds into a 401k up to 10% of your salary with a match of 50% of your investment. You have two choices.`,
-  option1: `You know how important investing is and you choose to get a small studio apartment so that you can afford to invest 10% of your salary into a 401k with a match of 5% (of your annual income). All of the funds, 15% of your total salary, will be invested in the S&P 500 index fund throughout the game.`,
-  option2: `Keep the money and spend it. Maybe choose between swanky apartment
-  and used car with no investments vs. studio apt. and take public
-  transportation with investment
+  option1: `You choose to rent a small studio apartment and take public transportation to work so that you can afford to invest 10% of your salary into a 401k with a match of 5% (of your annual income). All of the funds, 15% of your total salary, will be invested in the S&P 500 index fund throughout the game.`,
+  option2: `You really want a larger apartment and a used car to drive to work. Even though this means you will not have any funds to invest for the long-term, you feel like retirement is a long way off so it will be OK.
 `,
 };
 

@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="leaderboard added">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/leaderboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leaderboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-4/Choice-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-4/Choice-4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-5/Choice-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-5/Choice-5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/npm/node_modules/prettier" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hub" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Raphy\AppData\Roaming\npm\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
@@ -106,6 +108,8 @@
       <workItem from="1637621321449" duration="772000" />
       <workItem from="1638230841896" duration="6839000" />
       <workItem from="1638485938462" duration="6370000" />
+      <workItem from="1641248109394" duration="114000" />
+      <workItem from="1643159074828" duration="1120000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>
