@@ -1,0 +1,178 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#choice-page{
+   width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+#choice-container{
+
+
+    display: flex;
+    justify-content: space-between;
+    margin: 0 150px;
+    height: 80%;
+}
+#details-container{
+    width:  60%;
+}
+
+#financial-container {
+    width: 40%;
+
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+}
+
+#financial-top-container {
+    background: #2D2D2D;
+    border-radius: 10px;
+}
+
+#account-container{
+    width: 96%;
+    border: 3px solid #464545;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+
+}
+
+#year-container{
+
+    background-color: black;
+    border-radius: 10px;
+    margin: 10px;
+
+}
+
+#year-container-header{
+    /*padding-left: 1rem;*/
+
+
+}
+#year-container hr {
+    margin: 10px
+}
+
+
+
+#investments-container{
+    background-color: #0D0C0C;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 10px 10px 1rem;
+}
+
+
+#details-header-container{
+    margin-bottom: 100px;
+    width: 70%;
+
+
+}
+#choices-header {
+    margin-bottom: 30px;
+
+}
+#choices{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#firstChoice, #secondChoice{
+    display: flex;
+    flex-direction: row;
+
+}
+#secondChoice{
+    margin-top: 25px;
+}
+
+#choice-text{
+    margin-left: 30px;
+    width: 60%;
+    font-size: 18px;
+}
+
+#button-container{
+    display: flex;
+    justify-content: center;
+
+
+}
+#btn{
+    margin: 5px;
+}
+
+#tabs-list{
+    display: flex;
+    flex-direction: row;
+    /*margin: 10px 10px 10px 10px;*/
+    list-style: none;
+    padding-left: 0;
+    border-radius: 10px;
+
+    /*border: blue 1px solid;*/
+
+
+}
+
+.tabs{
+
+    height: 60px;
+    padding-top: 3px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 0 25px;
+
+
+}
+
+
+.wrapper{
+    background-color: #0D0C0C;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    padding: 0 10px 10px 1rem;
+}
+
+.toggledTab{
+    background-color: #0D0C0C;
+}
+.closedTab{
+    background-color: #2D2D2D;
+}
+
+.class1{
+    pointer-events: none;
+}
+
+#account-grid{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 2fr 2fr;
+    margin: 4px;
+    width: 100%;
+}
+
+
+
+
+
+
+

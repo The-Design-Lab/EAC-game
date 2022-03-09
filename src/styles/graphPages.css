@@ -1,0 +1,90 @@
+#main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    margin: 2rem;
+    /*border: deepskyblue 1px solid;*/
+
+
+}
+
+.sub-containers{
+    /*display: grid;*/
+    /*grid-template-rows: 1fr 1fr 1fr 1fr;*/
+    /*grid-row-gap: 0.5rem;*/
+    display: flex;
+    flex-direction: column;
+    /*border: 1px red solid;*/
+    height: fit-content;
+
+
+}
+
+
+
+.title{
+    margin: 2rem;
+    /*border: blueviolet 1px solid;*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title p {
+    font-size: 1.3rem;
+}
+
+.graph{
+    /*border: darkmagenta 1px solid;*/
+    margin: 1rem;
+}
+
+.label-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: left;
+    /*border: yellow 1px solid;*/
+    gap: 1rem;
+}
+
+.investments-labels{
+    /*border: cyan 1px solid;*/
+}
+
+.investments {
+    margin: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 0.5fr;
+    grid-row-gap: 0;
+    height: fit-content;
+    /*border: darkorange 1px solid;*/
+}
+
+.account{
+    margin: 1rem;
+    /*border: greenyellow 1px solid;*/
+    height: fit-content;
+
+}
+.account-information-top{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem;
+}
+
+.account-information-bottom-label{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    height: fit-content;
+}
+
+.goals{
+    margin: 0.4rem;
+}
+
+.account-information-bottom {
+
+}
+#account-information-bottom-header{
+
+}

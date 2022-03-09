@@ -1,10 +1,10 @@
-import { createGlobalStyle } from 'styled-components'
-import device from './mediaQueries'
+import { createGlobalStyle } from "styled-components";
+import device from "./mediaQueries";
 
 const GlobalStyle = createGlobalStyle`
   :root {
     // Colors
-    --color-primary: #C9CBCD; // gray
+    --color-primary: #171515; // gray
     --color-primary-light: #E4E4E4; // light-gray
     --color-secondary: #000082; // blue
     --color-tertiary: #F9BA7F; // orange
@@ -28,23 +28,21 @@ const GlobalStyle = createGlobalStyle`
   }
 
   * {
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
+    
+    
   }
 
   html {
     font-size: 16px;
+    color: azure;
   }
 
   body {
-    background: #018281;
+    background: #0D0C0C;
 
     // center window 
-    display:grid;
-    height: 93vh;
-    place-items: center;
-    justify-items: stretch;
+ 
+    
   }
 
   body,button {
@@ -108,7 +106,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   
-}
-`
 
-export default GlobalStyle
+`;
+
+export default GlobalStyle;
