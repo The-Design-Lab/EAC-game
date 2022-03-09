@@ -3,7 +3,7 @@ import { createContext, useReducer } from "react";
 // Set initial state of expenses with mock data
 const initialState = {
   bank: 0,
-  salary: 45000,
+  salary: 60000,
   goals: [],
   choices: [],
   investments: [],
