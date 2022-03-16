@@ -80,6 +80,11 @@
 
 .goals{
     margin: 0.4rem;
+    background-color: white;
+    color: #0D0C0C;
+    padding: 0.1rem;
+    border-radius: 5px;
+    border: 0.2rem green solid;
 }
 
 .account-information-bottom {
@@ -88,3 +93,28 @@
 #account-information-bottom-header{
 
 }
+
+hr{
+    margin: 4rem;
+}
+
+.li-lines{
+    list-style-type: none;
+    position: relative;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    right: calc(100% + .25em);
+    top: 50%;
+    width: 1.2em;
+    height: .25em;
+    border-radius: .5em;
+}
+
+.li-lines:nth-child(1)::before { background: red; }
+.li-lines:nth-child(2)::before { background: orange; }
+.li-lines:nth-child(3)::before { background: gold; }
+.li-lines:nth-child(4)::before { background: green; }
+.li-lines:nth-child(5)::before { background: blue; }

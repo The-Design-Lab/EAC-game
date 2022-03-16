@@ -18,6 +18,11 @@ import Recap from "../pages/recap";
 import Summary from "../pages/Summary/Summary";
 import LifeEvent from "../pages/Life-Event";
 import Leaderboard from "./leaderboard";
+import Reflection1 from "../pages/Choice-1/reflection-1";
+import Reflection2 from "../pages/Choice-2/reflection-2";
+import Reflection3 from "../pages/Choice-3/reflection-3";
+import Reflection4 from "../pages/Choice-4/reflection-4";
+import Reflection5 from "../pages/Choice-5/reflection-5";
 
 // noinspection JSUnusedLocalSymbols
 // const WindowWrapper = styled.div`
@@ -69,6 +74,31 @@ function Window() {
           <Route path="/summary" name="Summary" component={Summary} />
           <Route path="/board" name="board" component={Leaderboard} />
           <Route path="/event/:num" name="Random-event" component={LifeEvent} />
+          <Route
+            path="/reflection-1"
+            name="Reflection-1"
+            component={Reflection1}
+          />
+          <Route
+            path="/reflection-2"
+            name="Reflection-2"
+            component={Reflection2}
+          />
+          <Route
+            path="/reflection-3"
+            name="Reflection-3"
+            component={Reflection3}
+          />
+          <Route
+            path="/reflection-4"
+            name="Reflection-4"
+            component={Reflection4}
+          />
+          <Route
+            path="/reflection-5"
+            name="Reflection-5"
+            component={Reflection5}
+          />
           <Route path="/" exact component={Home} />
         </Switch>
         {/* End injection */}

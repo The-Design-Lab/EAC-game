@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="initial phase of UI redesign">
-      <change afterPath="$PROJECT_DIR$/src/pages/Reflexion/reflexion-1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Reflexion/reflexion-2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/MUIThemes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/goals.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/graphPages.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
+    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="add pictures and changed salary">
+      <change afterPath="$PROJECT_DIR$/src/pages/Choice-1/reflection-1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Choice-2/reflection-2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Choice-3/reflection-3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Choice-4/reflection-4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Choice-5/reflection-5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/reflection.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChoiceCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChoiceCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DemoButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DemoButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Window.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/graph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/Graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useCheckInvestments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useCheckInvestments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/Graph-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/Graph-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-4/Choice-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-4/Choice-4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-5/Choice-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-5/Choice-5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Goals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globalStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/graphPages.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/graphPages.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -67,7 +51,7 @@
     <setting file="file://$PROJECT_DIR$/src/styles/graphPages.css" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
+    <option name="selectedIndex" value="2" />
   </component>
   <component name="ProjectId" id="1yjxPY9qd79xTdGB2HPVkolsdXu" />
   <component name="ProjectViewState">
@@ -78,9 +62,10 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/styles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/Choice-2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Raphy\AppData\Roaming\npm\node_modules\prettier" />
@@ -91,6 +76,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Raphy\Documents\Repos\EAC-game\src\pages\Choice-2" />
       <recent name="C:\Users\Raphy\Documents\Repos\EAC-game\src\styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -167,7 +153,10 @@
       <workItem from="1646066911308" duration="1527000" />
       <workItem from="1646237649628" duration="4923000" />
       <workItem from="1646674972235" duration="9993000" />
-      <workItem from="1646841141646" duration="8046000" />
+      <workItem from="1646841141646" duration="8701000" />
+      <workItem from="1647024227786" duration="161000" />
+      <workItem from="1647195285786" duration="9773000" />
+      <workItem from="1647454815026" duration="2519000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>
@@ -176,7 +165,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638493523191</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial phase of UI redesign">
+      <created>1646853256538</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646853256538</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add pictures and changed salary">
+      <created>1646854226135</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1646854226135</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +201,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="leaderboard added" />
     <MESSAGE value="initial phase of UI redesign" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial phase of UI redesign" />
+    <MESSAGE value="add pictures and changed salary" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pictures and changed salary" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
