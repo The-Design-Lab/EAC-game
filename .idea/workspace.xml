@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="add pictures and changed salary">
-      <change afterPath="$PROJECT_DIR$/src/pages/Choice-1/reflection-1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Choice-2/reflection-2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Choice-3/reflection-3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Choice-4/reflection-4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Choice-5/reflection-5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/reflection.css" afterDir="false" />
+    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="All reflection pages done.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Window.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/Graph-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/Graph-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/graphPages.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/graphPages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +148,7 @@
       <workItem from="1646841141646" duration="8701000" />
       <workItem from="1647024227786" duration="161000" />
       <workItem from="1647195285786" duration="9773000" />
-      <workItem from="1647454815026" duration="2519000" />
+      <workItem from="1647454815026" duration="4394000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>
@@ -179,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646854226135</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="All reflection pages done.">
+      <created>1647457399727</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647457399727</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +201,8 @@
     <MESSAGE value="leaderboard added" />
     <MESSAGE value="initial phase of UI redesign" />
     <MESSAGE value="add pictures and changed salary" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pictures and changed salary" />
+    <MESSAGE value="All reflection pages done." />
+    <option name="LAST_COMMIT_MESSAGE" value="All reflection pages done." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
