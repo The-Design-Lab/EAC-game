@@ -3,6 +3,7 @@ body{
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+
 }
 
 #choice-page{
@@ -21,6 +22,7 @@ body{
     justify-content: space-between;
     margin: 0 150px;
     height: fit-content;
+
     /*border: 1px blue solid;*/
 
 }
@@ -83,13 +85,14 @@ body{
 
 
 #details-header-container{
-    margin-bottom: 100px;
+    margin-bottom: 3rem;
     width: 70%;
 
 
 }
 #choices-header {
     margin-bottom: 30px;
+
 
 }
 #choices{
@@ -100,17 +103,23 @@ body{
 }
 #firstChoice, #secondChoice{
     display: flex;
-    flex-direction: row;
+    border: #00FF38 1px solid;
+    margin-right: 1rem;
+    border-radius: 1rem;
+
 
 }
 #secondChoice{
-    margin-top: 25px;
+    margin-top: 2rem;
 }
 
 #choice-text{
-    margin-left: 30px;
+
     width: 60%;
-    font-size: 18px;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: justify;
 }
 
 #button-container{
@@ -174,6 +183,11 @@ body{
     grid-template-columns: 2fr 2fr;
     margin: 4px;
     width: 100%;
+}
+
+#firstChoice {
+    align-items: center;
+
 }
 
 

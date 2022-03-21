@@ -85,22 +85,20 @@ function ChoiceOne() {
               <h4 id={"header"}>
                 <b>Retirement and financial goals</b>
               </h4>
-              <h5 id="subtext">{choiceData.setup}</h5>
+              <p id="subtext">{choiceData.setup}</p>
             </section>
-            <Typography id="choices-header" variant={"h3"}>
+            <Typography id="choices-header" variant={"h4"}>
               <b>Your Choices</b>
             </Typography>
             <section id="choices">
               <div id="firstChoice">
                 <img
                   src={choice1a}
-                  style={{ width: "248px", height: "188px" }}
+                  style={{ width: "12rem", height: "10rem" }}
                   alt="choice1a"
                 />
 
-                <Typography variant={"h6"} id="choice-text">
-                  {choiceData.option1}
-                </Typography>
+                <p id={"choice-text"}>{choiceData.option1}</p>
               </div>
               <Radio
                 checked={choice === "invest"}
@@ -112,12 +110,10 @@ function ChoiceOne() {
               <div id="secondChoice">
                 <img
                   src={choice1b}
-                  style={{ width: "248px", height: "188px" }}
+                  style={{ width: "12rem", height: "10rem" }}
                   alt="choice1b"
                 />
-                <Typography variant={"h6"} id="choice-text">
-                  {choiceData.option2}
-                </Typography>
+                <p id="choice-text">{choiceData.option2}</p>
               </div>
               <Radio
                 checked={choice === "else"}
