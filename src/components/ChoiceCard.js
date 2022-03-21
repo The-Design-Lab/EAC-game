@@ -139,10 +139,10 @@ function GoalCards({ setGoalSelected }) {
       <Splide
         options={{
           perPage: 4,
-          height: "30rem",
+          height: "25rem",
           rewind: true,
           gap: "3rem",
-          padding: "3rem",
+          padding: "4rem",
           pagination: "false",
         }}
       >

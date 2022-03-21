@@ -4,6 +4,7 @@
     display: grid;
     place-items: center;
 
+
 }
 
 .slider-text{
@@ -47,16 +48,21 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.slider-image{
-    height: 20vh;
+
+img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .slides{
 
     display: grid;
-    border: 0.1rem solid white;
-    border-radius: 10px;
-    height: 93%
+    border: 0.2rem solid white;
+    grid-row-gap: 3rem;
+    border-radius: 15px;
+    height: 93%;
+
+
 }
 #wrapper{
     display: flex;
