@@ -6,6 +6,7 @@ import { PlayerContext } from "../contexts/PlayerContext";
 import { CustomButton } from "../styles/MUIThemes";
 import "@splidejs/splide/dist/css/splide.min.css";
 import "../styles/goals.css";
+import { formatter } from "../formatter";
 
 const Buttons = styled.div`
   display: flex;
@@ -67,7 +68,9 @@ function Goals() {
             setTotalCost={setTotalCost}
           />
         </GoalChoices>
-        <h3 style={{ textAlign: "center" }}>Total cost: {totalCost}</h3>
+        <h3 style={{ textAlign: "center" }}>
+          Total cost: {formatter.format(totalCost)}
+        </h3>
         <hr />
         <Buttons>
           <Link to="/">

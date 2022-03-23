@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Choice 1 to 3 updated styling">
+    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Added option to remove goals from the player context">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChoiceCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChoiceCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/goals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/goals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Goals.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +150,8 @@
       <workItem from="1647195285786" duration="9773000" />
       <workItem from="1647454815026" duration="8254000" />
       <workItem from="1647805845953" duration="8648000" />
-      <workItem from="1647877596518" duration="1734000" />
+      <workItem from="1647877596518" duration="2885000" />
+      <workItem from="1648063865240" duration="8976000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>
@@ -202,7 +202,28 @@
       <option name="project" value="LOCAL" />
       <updated>1647878499787</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed goal card styling.">
+      <created>1647890937563</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1647890937563</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Choice pages styling fixed for laptop screen">
+      <created>1648076240553</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648076240553</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added option to remove goals from the player context">
+      <created>1648076326630</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648076326630</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,15 +249,19 @@
     <MESSAGE value="All reflection pages done." />
     <MESSAGE value="fixed responsiveness in choice pages" />
     <MESSAGE value="Choice 1 to 3 updated styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Choice 1 to 3 updated styling" />
+    <MESSAGE value="Fixed goal card styling." />
+    <MESSAGE value="Choice pages styling fixed for laptop screen" />
+    <MESSAGE value="Added option to remove goals from the player context" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added option to remove goals from the player context" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js</url>
-          <line>96</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js</url>
+          <line>68</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
