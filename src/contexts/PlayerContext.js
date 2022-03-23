@@ -39,6 +39,15 @@ const PlayerReducer = (state, action) => {
         ...state,
         goals: [...state.goals, action.payload],
       };
+    case "REMOVE_GOAL":
+      console.log(action.payload.name);
+      console.log(state.goals);
+      return {
+        ...state,
+        goals: [...state.goals].filter(
+          (goal) => goal.name !== action.payload.name
+        ),
+      };
     case "ADD_INVESTMENT":
       return {
         ...state,

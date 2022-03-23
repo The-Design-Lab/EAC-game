@@ -1,8 +1,10 @@
 
 .content{
     width: 100%;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    /*border: crimson 1px solid;*/
+
 
 
 }
@@ -30,11 +32,15 @@
 }
 
 #goals-header p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+}
+
+#goals-header h1{
+    font-size: 2.7rem;
 }
 #goals-container{
     width: 100%;
-    /*border: yellow solid 1px;*/
+    border: yellow solid 1px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,7 +64,7 @@ img{
 
     display: grid;
     border: 0.2rem solid white;
-    grid-row-gap: 3rem;
+    grid-row-gap: 0.5rem;
     border-radius: 15px;
     height: 93%;
 
@@ -69,8 +75,8 @@ img{
     flex-direction: column;
     align-items: center;
 
-}
 
+}
 .goal-card-text{
 
 }

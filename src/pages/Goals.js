@@ -22,6 +22,7 @@ function Goals() {
   const { dispatch } = useContext(PlayerContext);
 
   const [goalSelected, setGoalSelected] = useState(false);
+  const [totalCost, setTotalCost] = useState(0);
 
   /**
    * UseEffect to make sure that the previous information from the player gets wiped before playing again.
@@ -61,9 +62,12 @@ function Goals() {
       </div>
       <div id={"slide-container"}>
         <GoalChoices>
-          <ChoiceCard setGoalSelected={setGoalSelected} />
+          <ChoiceCard
+            setGoalSelected={setGoalSelected}
+            setTotalCost={setTotalCost}
+          />
         </GoalChoices>
-        <h3 style={{ textAlign: "center" }}>Total cost: $200.300</h3>
+        <h3 style={{ textAlign: "center" }}>Total cost: {totalCost}</h3>
         <hr />
         <Buttons>
           <Link to="/">

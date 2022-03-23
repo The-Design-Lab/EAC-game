@@ -75,43 +75,77 @@ const checkboxData = [
   },
 ];
 
-function GoalCards({ setGoalSelected }) {
+let cost = 0;
+
+function GoalCards({ setGoalSelected, setTotalCost }) {
   const { dispatch } = useContext(PlayerContext);
   const [checkedItems, setCheckedItems] = useState({});
 
-  const handleChange = (e) => {
-    // set checked items for UI change
-    setCheckedItems({
-      ...checkedItems,
-      [e.target.name]: e.target.checked,
-    });
-
-    // create an object to hold each goal data
-    const goal = {
-      name: e.target.attributes.name.value,
-      price: e.target.attributes.price.value,
-      checked: true,
-    };
-
-    // send the goal data to the global state
-    dispatch({
-      type: "ADD_GOAL",
-      payload: goal,
-    });
-
-    if (e.target.name === "Save for Retirement") {
-      dispatch({
-        type: `ADD_INVESTMENT`,
-        payload: INVESTMENTS_VEHICLES.retirement,
-      });
+  const addAmount = (e) => {
+    if (e.target.checked === false) {
+      cost = cost - parseInt(e.target.attributes.price.value);
+      setTotalCost(cost);
+    } else {
+      cost = cost + parseInt(e.target.attributes.price.value);
+      setTotalCost(cost);
     }
-    setGoalSelected(true);
+  };
+
+  const handleChange = (e) => {
+    if (e.target.checked === true) {
+      // set checked items for UI change
+      setCheckedItems({
+        ...checkedItems,
+        [e.target.name]: e.target.checked,
+      });
+
+      // create an object to hold each goal data
+      const goal = {
+        name: e.target.attributes.name.value,
+        price: e.target.attributes.price.value,
+        checked: true,
+      };
+
+      // send the goal data to the global state
+      dispatch({
+        type: "ADD_GOAL",
+        payload: goal,
+      });
+
+      if (e.target.name === "Save for Retirement") {
+        dispatch({
+          type: `ADD_INVESTMENT`,
+          payload: INVESTMENTS_VEHICLES.retirement,
+        });
+      }
+      console.log(checkedItems);
+      setGoalSelected(true);
+    } else if (e.target.checked === false) {
+      const goal = {
+        name: e.target.attributes.name.value,
+        price: e.target.attributes.price.value,
+        checked: true,
+      };
+
+      // send the goal data to the global state
+      dispatch({
+        type: "REMOVE_GOAL",
+        payload: goal,
+      });
+
+      if (e.target.name === "Save for Retirement") {
+        dispatch({
+          type: `REMOVE_INVESTMENT`,
+          payload: INVESTMENTS_VEHICLES.retirement,
+        });
+      }
+    }
   };
 
   const slides = checkboxData.map((goal) => (
     <SplideSlide>
       <div className="slides">
-        <div className="content">
+        <div className="content" id={"content-img"}>
           <img src={goal.img} alt="" />
         </div>
         <div className="content">
@@ -127,6 +161,8 @@ function GoalCards({ setGoalSelected }) {
               }}
               size="large"
               onChange={handleChange}
+              onClick={addAmount}
+              on
             />
           </div>
         </div>
@@ -138,13 +174,16 @@ function GoalCards({ setGoalSelected }) {
     <>
       <Splide
         options={{
-          perPage: 4,
-          height: "25rem",
+          perPage: 3,
+          height: "30vh",
           rewind: true,
           gap: "3rem",
-          padding: "4rem",
-          pagination: "false",
+          padding: "3rem",
+          pagination: false,
+          width: "60vw",
+          arrows: "slider",
         }}
+        type={"loop"}
       >
         {slides}
       </Splide>
