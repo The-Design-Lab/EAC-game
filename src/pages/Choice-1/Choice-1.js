@@ -87,9 +87,9 @@ function ChoiceOne() {
               </h4>
               <p id="subtext">{choiceData.setup}</p>
             </section>
-            <Typography id="choices-header" variant={"h4"}>
+            <h4 id="choices-header">
               <b>Your Choices</b>
-            </Typography>
+            </h4>
             <section id="choices">
               <div id="firstChoice">
                 <img
@@ -105,7 +105,7 @@ function ChoiceOne() {
                 onClick={() => handleSelection("invest")}
                 value="invest"
                 class={"radio"}
-                sx={{ width: "10px", height: "5px" }}
+                sx={{ width: "0.1rem", height: "0.1rem" }}
               />
               <div id="secondChoice">
                 <img
@@ -232,7 +232,7 @@ function ChoiceOne() {
       </div>
       <hr
         style={{
-          margin: "30px 150px",
+          margin: "0.2rem 150px",
         }}
       />
       <div id="button-container">

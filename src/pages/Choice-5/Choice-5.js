@@ -63,27 +63,23 @@ function ChoiceFive() {
         <div id={"choice-container"}>
           <div id={"details-container"}>
             <section id="details-header-container">
-              <Typography variant={"h4"} id={"header"}>
+              <h4 id={"header"}>
                 <b>Retirement and financial goals</b>
-              </Typography>
-              <Typography variant={"h6"} id="subtext">
-                {choiceData.setup}
-              </Typography>
+              </h4>
+              <p id="subtext">{choiceData.setup}</p>
             </section>
-            <Typography id="choices-header" variant={"h3"}>
+            <h4 id="choices-header">
               <b>Your Choices</b>
-            </Typography>
+            </h4>
             <section id="choices">
               <div id="firstChoice">
                 <img
                   src={choice1a}
-                  style={{ width: "248px", height: "188px" }}
+                  style={{ width: "12rem", height: "10rem" }}
                   alt="choice1a"
                 />
 
-                <Typography variant={"h6"} id="choice-text">
-                  {choiceData.option1}
-                </Typography>
+                <p id="choice-text">{choiceData.option1}</p>
               </div>
               <Radio
                 checked={choice === "hold"}
@@ -95,12 +91,10 @@ function ChoiceFive() {
               <div id="secondChoice">
                 <img
                   src={choice1b}
-                  style={{ width: "248px", height: "188px" }}
+                  style={{ width: "12rem", height: "10rem" }}
                   alt="choice1b"
                 />
-                <Typography variant={"h6"} id="choice-text">
-                  {choiceData.option2}
-                </Typography>
+                <p id="choice-text">{choiceData.option2}</p>
               </div>
               <Radio
                 checked={choice === "sell"}
@@ -219,7 +213,7 @@ function ChoiceFive() {
         </div>
         <hr
           style={{
-            margin: "30px 150px",
+            margin: "0.2rem 150px",
           }}
         />
         <div id="button-container">

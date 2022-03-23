@@ -219,7 +219,7 @@ function ChoiceTwo() {
         </div>
         <hr
           style={{
-            margin: "30px 150px",
+            margin: "0.2rem 150px",
           }}
         />
         <div id="button-container">

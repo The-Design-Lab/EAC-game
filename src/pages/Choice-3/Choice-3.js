@@ -1,7 +1,7 @@
 // noinspection ES6UnusedImports
 
 import React, { useState } from "react";
-// import { MainContent, Buttons, Choices } from "../../styles/choicesSyles";
+
 import { Link } from "react-router-dom";
 import "../../utilities.css";
 import usePlayer from "../../hooks/usePlayer";
@@ -219,7 +219,7 @@ function ChoiceThree() {
         </div>
         <hr
           style={{
-            margin: "30px 150px",
+            margin: "0.2rem 150px",
           }}
         />
         <div id="button-container">
