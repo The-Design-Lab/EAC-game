@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-
 import { Link } from "react-router-dom";
 import "../../utilities.css";
 import usePlayer from "../../hooks/usePlayer";
 import useCheckInvestments from "../../hooks/useCheckInvestments";
 import INVESTMENTS_VEHICLES from "../../data/Investments";
-import { green } from "@mui/material/colors";
 import "../../styles/style.css";
 import Button from "@mui/material/Button";
 import { choice2 } from "../../data/investmentData";
@@ -73,7 +71,7 @@ function ChoiceThree() {
               backgroundColor: "#e5e5e5",
               color: "#000000",
               "&:hover": {
-                backgroundColor: green[700],
+                backgroundColor: "#00FF38",
               },
             }}
             id="btn"
@@ -87,7 +85,7 @@ function ChoiceThree() {
                 backgroundColor: "#e5e5e5",
                 color: "#000000",
                 "&:hover": {
-                  backgroundColor: green[700],
+                  backgroundColor: "#00FF38",
                 },
               }}
               onClick={submitSelection}

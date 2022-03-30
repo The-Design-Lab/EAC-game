@@ -5,7 +5,6 @@ import useCheckInvestments from "../../hooks/useCheckInvestments";
 import INVESTMENTS_VEHICLES from "../../data/Investments";
 import Button from "@mui/material/Button";
 import "../../styles/style.css";
-import { green } from "@mui/material/colors";
 import { Link } from "react-router-dom";
 import ChoiceTabs from "../../components/choice-tabs";
 import InvestmentChoices from "../../components/investment-choices";
@@ -84,7 +83,7 @@ function ChoiceOne() {
             backgroundColor: "#e5e5e5",
             color: "#000000",
             "&:hover": {
-              backgroundColor: green[700],
+              backgroundColor: "#00FF38",
             },
           }}
           id="btn"
@@ -98,7 +97,7 @@ function ChoiceOne() {
               backgroundColor: "#e5e5e5",
               color: "#000000",
               "&:hover": {
-                backgroundColor: green[700],
+                backgroundColor: "#00FF38",
               },
             }}
             onClick={submitSelection}

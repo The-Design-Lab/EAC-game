@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/style.css";
-import { green } from "@mui/material/colors";
 import "../../utilities.css";
 import usePlayer from "../../hooks/usePlayer";
 import useCheckInvestments from "../../hooks/useCheckInvestments";
@@ -79,7 +78,7 @@ function ChoiceFour() {
               backgroundColor: "#e5e5e5",
               color: "#000000",
               "&:hover": {
-                backgroundColor: green[700],
+                backgroundColor: "#00FF38",
               },
             }}
             id="btn"
@@ -93,7 +92,7 @@ function ChoiceFour() {
                 backgroundColor: "#e5e5e5",
                 color: "#000000",
                 "&:hover": {
-                  backgroundColor: green[700],
+                  backgroundColor: "#00FF38",
                 },
               }}
               onClick={submitSelection}

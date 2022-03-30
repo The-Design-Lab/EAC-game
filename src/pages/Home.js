@@ -5,8 +5,6 @@ import { theme } from "../styles/MUIThemes";
 import { ThemeProvider } from "@mui/system";
 import dollars from "../img/home/dollars.png";
 import "../styles/home.css";
-import { green } from "@mui/material/colors";
-
 function Home() {
   return (
     <ThemeProvider theme={theme}>
@@ -53,7 +51,7 @@ function Home() {
               padding: "0",
 
               "&:hover": {
-                backgroundColor: green[700],
+                backgroundColor: "#00FF38",
               },
             }}
             id="btn"
