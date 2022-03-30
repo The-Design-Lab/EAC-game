@@ -1,5 +1,3 @@
-// noinspection ES6UnusedImports
-
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
@@ -7,17 +5,10 @@ import "../../utilities.css";
 import usePlayer from "../../hooks/usePlayer";
 import useCheckInvestments from "../../hooks/useCheckInvestments";
 import INVESTMENTS_VEHICLES from "../../data/Investments";
-import Typography from "@mui/material/Typography";
-import choice1a from "../../img/choice1-a.png";
-import choice1b from "../../img/choice1-b.png";
 import { green } from "@mui/material/colors";
 import "../../styles/style.css";
 import Button from "@mui/material/Button";
-import Radio from "@mui/material/Radio";
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import Graph from "../../components/graph/Graph";
 import { choice2 } from "../../data/investmentData";
-import { formatter } from "../../formatter";
 import InvestmentChoices from "../../components/investment-choices";
 import ChoiceTabs from "../../components/choice-tabs";
 
