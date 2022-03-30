@@ -1,9 +1,9 @@
-a.tooltip{
+span.tooltip{
     position: relative;
     color: #00FF38;
 }
 
-a.tooltip:hover::after{
+span.tooltip:hover::after{
     content: attr(data-tooltip);
     position: absolute;
     top: 1.1em;

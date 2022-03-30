@@ -3,10 +3,10 @@ import "../styles/tooltip.css";
 
 function Tooltip({ text, tooltipText }) {
   return (
-    <a href="#" data-tooltip={tooltipText} className={"tooltip"}>
+    <span data-tooltip={tooltipText} className={"tooltip"}>
       {" "}
       {text}
-    </a>
+    </span>
   );
 }
 
