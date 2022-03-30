@@ -7,7 +7,6 @@ import { choice1 } from "../../data/investmentData";
 import "../../styles/graphPages.css";
 import usePlayer from "../../hooks/usePlayer";
 import { formatter } from "../../formatter";
-import { green } from "@mui/material/colors";
 import Button from "@mui/material/Button";
 import INVESTMENTS_VEHICLES from "../../data/Investments";
 import { Link } from "react-router-dom";
@@ -32,44 +31,58 @@ function GraphOne() {
             <Graph data={choice1} />
           </div>
           <div className={"investments"}>
-            <h4>Current investments: </h4>
+            <h5>Total Balance: {formatter.format(player.bank)} </h5>
             <div className="label-container">
-              <ul>
-                {investments.includes(INVESTMENTS_VEHICLES.SP) && (
-                  <li className={"li-lines"}>S&P 500</li>
-                )}
-                {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
-                  <li className={"li-lines"}>Retirement</li>
-                )}
-              </ul>
-            </div>
-          </div>
-          <div className={"account"}>
-            <div className="account-information">
-              <h4>Your Account Information: </h4>
-              <div className="account-information-top">
-                <div className="account-information-top-label">
-                  Salary: {formatter.format(player.salary)}
-                </div>
-                <div className="account-information-top-label">
-                  Total Balance: {formatter.format(player.bank)}
-                </div>
-                <div className="account-information-top-label">
-                  Goals: $232.500
-                </div>
-              </div>
-            </div>
-            <div className="account-information-bottom">
-              <div id="account-information-bottom-header">
-                <span style={{ fontSize: "1.3rem", fontWeight: "bold" }}>
-                  Your investment choices:{" "}
-                </span>
-                {player.goals.map((goal) => (
-                  <span className={"goals"}>
-                    <b> {goal.name} </b>
+              {investments.includes(INVESTMENTS_VEHICLES.SP) && (
+                <div
+                  className={"investments-details-label"}
+                  style={{ border: "1px solid #BE8EEE" }}
+                >
+                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                    S&P 500
                   </span>
-                ))}{" "}
-              </div>
+                </div>
+              )}
+              {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
+                <div
+                  className={"investments-details-label"}
+                  style={{ border: "1px solid #BE8EEE" }}
+                >
+                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                    Retirement
+                  </span>
+                </div>
+              )}
+              {investments.includes(INVESTMENTS_VEHICLES.CD) && (
+                <div
+                  className={"investments-details-label"}
+                  style={{ border: "1px solid #BE8EEE" }}
+                >
+                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                    CD
+                  </span>
+                </div>
+              )}
+              {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
+                <div
+                  className={"investments-details-label"}
+                  style={{ border: "1px solid #BE8EEE" }}
+                >
+                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                    Inveesgo
+                  </span>
+                </div>
+              )}
+              {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
+                <div
+                  className={"investments-details-label"}
+                  style={{ border: "1px solid #BE8EEE" }}
+                >
+                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                    Mutual Fund
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -85,43 +98,59 @@ function GraphOne() {
             <Graph data={choice1} />
           </div>
           <div className={"investments"}>
-            <h4>What-If investments: </h4>
+            <h5>Total Balance: {formatter.format(player.bank)} </h5>
 
             <div className="label-container">
               {investments.includes(INVESTMENTS_VEHICLES.SP) && (
-                <div>S&P 500</div>
+                <div
+                  className={"investments-details-label"}
+                  style={{ border: "1px solid #BE8EEE" }}
+                >
+                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                    S&P 500
+                  </span>
+                </div>
               )}
               {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
-                <div>Retirement</div>
-              )}
-            </div>
-          </div>
-          <div className={"account"}>
-            <div className="account-information">
-              <h4>Your What-If Account Information: </h4>
-              <div className="account-information-top">
-                <div className="account-information-top-label">
-                  Salary: $60.000
-                </div>
-                <div className="account-information-top-label">
-                  Total Balance: $79.000
-                </div>
-                <div className="account-information-top-label">
-                  Goals: $232.500
-                </div>
-              </div>
-            </div>
-            <div className="account-information-bottom">
-              <div id="account-information-bottom-header">
-                <span style={{ fontSize: "1.3rem", fontWeight: "bold" }}>
-                  Your investment choices:{" "}
-                </span>
-                {player.goals.map((goal) => (
-                  <span className={"goals"}>
-                    <b> {goal.name} </b>
+                <div
+                  className={"investments-details-label"}
+                  style={{ border: "1px solid #BE8EEE" }}
+                >
+                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                    Retirement
                   </span>
-                ))}{" "}
-              </div>
+                </div>
+              )}
+              {investments.includes(INVESTMENTS_VEHICLES.CD) && (
+                <div
+                  className={"investments-details-label"}
+                  style={{ border: "1px solid #BE8EEE" }}
+                >
+                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                    CD
+                  </span>
+                </div>
+              )}
+              {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
+                <div
+                  className={"investments-details-label"}
+                  style={{ border: "1px solid #BE8EEE" }}
+                >
+                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                    Inveesgo
+                  </span>
+                </div>
+              )}
+              {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
+                <div
+                  className={"investments-details-label"}
+                  style={{ border: "1px solid #BE8EEE" }}
+                >
+                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                    Mutual Fund
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -133,13 +162,13 @@ function GraphOne() {
             sx={{
               backgroundColor: "#e5e5e5",
               color: "#000000",
-              height: "3rem",
-              width: "12rem",
-              fontSize: "1.5rem",
+              height: "2.5rem",
+              width: "10rem",
+              fontSize: "1.2rem",
               padding: "0",
 
               "&:hover": {
-                backgroundColor: green[700],
+                backgroundColor: "#00FF38",
               },
             }}
             id="btn"
@@ -152,13 +181,13 @@ function GraphOne() {
             sx={{
               backgroundColor: "#e5e5e5",
               color: "#000000",
-              height: "3rem",
-              width: "12rem",
-              fontSize: "1.5rem",
+              height: "2.5rem",
+              width: "10rem",
+              fontSize: "1.2rem",
               padding: "0",
 
               "&:hover": {
-                backgroundColor: green[700],
+                backgroundColor: "#00FF38",
               },
             }}
             id="btn"
