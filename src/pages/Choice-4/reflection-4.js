@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
-import { green } from "@mui/material/colors";
 import "../../styles/reflection.css";
 import bill from "../../img/reflections/bill.png";
 
