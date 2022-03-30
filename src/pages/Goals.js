@@ -41,7 +41,6 @@ function Goals() {
   }, []);
   return (
     <div id="goals-container">
-      {/*//TODO: vertical line next to TIPS*/}
       <div id="goals-header">
         <h1>What are your goals?</h1>
         <p>

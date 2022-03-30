@@ -22,6 +22,7 @@ body{
     justify-content: space-around;
     margin: 0 5rem;
     height: fit-content;
+
     /*border: 1px blue solid;*/
 
 
@@ -40,7 +41,7 @@ body{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    height: fit-content;
+    height: 100%;
     /*border: 1px crimson solid;*/
 
 }
@@ -49,6 +50,7 @@ body{
     background: #2D2D2D;
     border-radius: 10px;
     /*border: 1px magenta solid;*/
+    height: 100%;
 }
 
 #account-container{
@@ -56,25 +58,23 @@ body{
     border: 3px solid #464545;
     border-radius: 10px;
     margin-top: 20px;
-    padding: 10px;
-
 }
 
-#year-container{
+#year-container {
 
     background-color: black;
     border-radius: 10px;
     margin: 10px;
-
 }
 
-#year-container-header{
-    /*padding-left: 1rem;*/
-
-
+#marketNews-list{
+    list-style: none;
+    font-size: 0.85rem;
 }
-#year-container hr {
-    margin: 10px
+#marketNews-list li{
+    margin: 1rem;
+    list-style-type: circle;
+
 }
 
 
@@ -82,8 +82,54 @@ body{
 #investments-container{
     background-color: #0D0C0C;
     border-radius: 10px;
-    margin: 10px;
     padding: 10px 10px 10px 1rem;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 0.5fr;
+    grid-row-gap: 1rem;
+    max-height: 6rem;
+}
+
+#investment-graph{
+
+}
+
+#investment-graph p {
+    font-size: 1.5rem;
+}
+
+#investment-details-top{
+    height: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.5rem;
+    text-align: center;
+
+}
+
+#investment-details-bottom{
+    display: flex;
+    flex-direction: row;
+
+
+
+}
+#investment-details-bottom div{
+    font-size: 0.8rem;
+    width: fit-content;
+    flex-grow: 1;
+}
+
+.investments-details-label{
+    width: 8rem;
+    border-radius: 4px;
+    height: 2rem;
+
+}
+
+.investments-details-label span{
+    display: inline-block;
+    margin-top: 0.3rem;
 }
 
 
@@ -169,8 +215,10 @@ body{
 .wrapper{
     background-color: #0D0C0C;
     border-radius: 10px;
-    margin: 10px 10px 10px 10px;
+    margin: 0.6rem;
     padding: 0 10px 10px 1rem;
+    height: 93%;
+    /*border: yellow 1px solid;*/
 }
 
 .toggledTab{
@@ -196,6 +244,12 @@ body{
     align-items: center;
 
 }
+
+.recharts-cartesian-axis-tick {
+    fill: white;
+    font-family: Roboto, sans-serif;
+}
+
 
 
 

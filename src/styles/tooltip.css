@@ -1,0 +1,22 @@
+a.tooltip{
+    position: relative;
+    color: #00FF38;
+}
+
+a.tooltip:hover::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 1.1em;
+    left: 1em;
+    overflow-wrap: break-word;
+    border: 1px #00FF38 solid;
+    max-width: 30rem;
+    width: 20rem;
+    padding: 8px;
+    color: white;
+    background-color: #0D0C0C;
+    z-index: 1;
+    border-radius: 5px;
+    font-size: 1rem;
+    max-height: fit-content;
+}

@@ -23,6 +23,7 @@ const checkboxData = [
     price: 232500,
     label: "house",
     checked: false,
+    tag: "House",
   },
   {
     name: "Buy a Car",
@@ -30,6 +31,7 @@ const checkboxData = [
     price: 28000,
     label: "house",
     checked: false,
+    tag: "Car",
   },
   {
     name: "Buy for Fun",
@@ -37,6 +39,7 @@ const checkboxData = [
     price: 10000,
     label: "fun",
     checked: false,
+    tag: "Fun",
   },
   {
     name: "Start a Business",
@@ -44,6 +47,7 @@ const checkboxData = [
     price: 600000,
     label: "fun",
     checked: false,
+    tag: "Biz",
   },
   {
     name: "Save for Retirement",
@@ -51,6 +55,7 @@ const checkboxData = [
     price: 600000,
     label: "retirement",
     checked: false,
+    tag: "Retire",
   },
   {
     name: "Save for Kids",
@@ -58,6 +63,7 @@ const checkboxData = [
     price: 600000,
     label: "kids",
     checked: false,
+    tag: "Kids",
   },
   {
     name: "Save for Vacation",
@@ -65,6 +71,7 @@ const checkboxData = [
     price: 2016,
     label: "vacation",
     checked: false,
+    tag: "Trip",
   },
   {
     name: "Save for Education",
@@ -72,6 +79,7 @@ const checkboxData = [
     price: 48432,
     label: "education",
     checked: false,
+    tag: "Education",
   },
 ];
 
@@ -103,6 +111,7 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
       const goal = {
         name: e.target.attributes.name.value,
         price: e.target.attributes.price.value,
+        tag: e.target.attributes.tag.value,
         checked: true,
       };
 
@@ -158,6 +167,7 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
               inputProps={{
                 name: goal.name,
                 price: goal.price,
+                tag: goal.tag,
               }}
               size="large"
               onChange={handleChange}

@@ -26,24 +26,20 @@ const Graph = ({ data }) => {
   };
 
   return (
-    <ResponsiveContainer width="80%" height={220}>
+    <ResponsiveContainer width="80%" height={150}>
       <LineChart
         data={useGetQuarterData(...data)}
-        margin={{
-          top: 20,
-          right: 50,
-          bottom: 20,
-        }}
         style={{
           backgroundColor: "#0D0C0C",
           color: "white",
-          padding: "0 10px 0 10px",
+          paddingLeft: "0rem",
+          paddingRight: "0rem",
           // border: "1px solid white",
         }}
       >
         <CartesianGrid strokeDasharray="5 5" stroke="white" />
         <XAxis dataKey="name" stroke="White" />
-        <YAxis stroke="#white" color="white" />
+        <YAxis stroke="#white" label={{ fill: "white" }} />
         <Tooltip />
         {/* Lines */}
         {plotLines()}
