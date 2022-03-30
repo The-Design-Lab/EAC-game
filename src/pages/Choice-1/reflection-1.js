@@ -53,7 +53,7 @@ function Reflection1() {
               padding: "0",
 
               "&:hover": {
-                backgroundColor: green[700],
+                backgroundColor: "#00FF38",
               },
             }}
             id="btn"
@@ -72,7 +72,7 @@ function Reflection1() {
               padding: "0",
 
               "&:hover": {
-                backgroundColor: green[700],
+                backgroundColor: "#00FF38",
               },
             }}
             id="btn"

@@ -46,7 +46,7 @@ function Reflection5() {
               padding: "0",
 
               "&:hover": {
-                backgroundColor: green[700],
+                backgroundColor: "#00FF38",
               },
             }}
             id="btn"
@@ -54,7 +54,7 @@ function Reflection5() {
             Back
           </Button>
         </Link>
-        <Link to={"/choice-5"}>
+        <Link to={"/summary"}>
           <Button
             sx={{
               backgroundColor: "#e5e5e5",
@@ -65,7 +65,7 @@ function Reflection5() {
               padding: "0",
 
               "&:hover": {
-                backgroundColor: green[700],
+                backgroundColor: "#00FF38",
               },
             }}
             id="btn"
