@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Added option to remove goals from the player context">
+    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Added proper images and SVGs">
+      <change afterPath="$PROJECT_DIR$/src/img/goals/car-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/goals/education-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/goals/fun-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/goals/house-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/goals/kids-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/goals/retirement-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/goals/start-business-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/goals/vacation-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/svg/add.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/svg/remove.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Goals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ChoiceCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChoiceCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/choice-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/choice-tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/goals/car-photo-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/goals/education-photo-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/goals/fun-photo-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/goals/house-photo-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/goals/kids-photo-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/goals/retirement-photo-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/goals/start-a-biz-photo-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/goals/vacation-photo-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Life-Event.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Life-Event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/goals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/goals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -42,9 +64,6 @@
     <setting file="file://$PROJECT_DIR$/src/styles/goals.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/styles/graphPages.css" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="2" />
-  </component>
   <component name="ProjectId" id="1yjxPY9qd79xTdGB2HPVkolsdXu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -62,7 +81,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Raphy\AppData\Roaming\npm\node_modules\prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -151,7 +170,12 @@
       <workItem from="1647454815026" duration="8254000" />
       <workItem from="1647805845953" duration="8648000" />
       <workItem from="1647877596518" duration="2885000" />
-      <workItem from="1648063865240" duration="8976000" />
+      <workItem from="1648063865240" duration="11163000" />
+      <workItem from="1648240292591" duration="11644000" />
+      <workItem from="1648346219955" duration="2872000" />
+      <workItem from="1648658426797" duration="12089000" />
+      <workItem from="1648924883779" duration="8594000" />
+      <workItem from="1649014518073" duration="6366000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>
@@ -223,7 +247,77 @@
       <option name="project" value="LOCAL" />
       <updated>1648076326630</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Total cost formatted correctly.">
+      <created>1648076386627</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1648076386627</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Refactored choice pages.">
+      <created>1648667673652</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1648667673652</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Refactored choice pages.">
+      <created>1648667892283</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1648667892283</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed tooltip JSX errors">
+      <created>1648668091830</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1648668091830</updated>
+    </task>
+    <task id="LOCAL-00015" summary="New styling for Graph pages">
+      <created>1648672311322</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1648672311322</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fixed color for navigation buttons">
+      <created>1648672371778</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1648672371778</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixed routing and button color">
+      <created>1648672394892</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1648672394892</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixed routing and button color">
+      <created>1648672449682</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1648672449682</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Life events component styling done">
+      <created>1648931006007</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1648931006007</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Life events component styling done">
+      <created>1649014591465</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1649014591465</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,19 +346,15 @@
     <MESSAGE value="Fixed goal card styling." />
     <MESSAGE value="Choice pages styling fixed for laptop screen" />
     <MESSAGE value="Added option to remove goals from the player context" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added option to remove goals from the player context" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js</url>
-          <line>68</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Total cost formatted correctly." />
+    <MESSAGE value="Refactored choice pages." />
+    <MESSAGE value="Fixed tooltip JSX errors" />
+    <MESSAGE value="New styling for Graph pages" />
+    <MESSAGE value="Fixed color for navigation buttons" />
+    <MESSAGE value="Fixed routing and button color" />
+    <MESSAGE value="Life events component styling done" />
+    <MESSAGE value="Added proper images and SVGs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added proper images and SVGs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

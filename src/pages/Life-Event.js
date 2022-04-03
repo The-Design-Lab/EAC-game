@@ -44,26 +44,7 @@ function LifeEvent(props) {
       </div>
       <hr />
       <div id="button-container">
-        <Link to={"/graph-3"}>
-          <Button
-            sx={{
-              backgroundColor: "#e5e5e5",
-              color: "#000000",
-              height: "3rem",
-              width: "12rem",
-              fontSize: "1.5rem",
-              padding: "0",
-
-              "&:hover": {
-                backgroundColor: "#00FF38",
-              },
-            }}
-            id="btn"
-          >
-            Back
-          </Button>
-        </Link>
-        <Link to={"/choice-4"}>
+        <Link to={"/choice-3"}>
           <Button
             sx={{
               backgroundColor: "#e5e5e5",

@@ -1,15 +1,14 @@
 import React, { useState, useContext } from "react";
 import { PlayerContext } from "../contexts/PlayerContext";
 import INVESTMENTS_VEHICLES from "../data/Investments";
-import Checkbox from "@mui/material/Checkbox";
-import car from "../img/goals/car-photo-unsplash.jpg";
-import education from "../img/goals/education-photo-unsplash.jpg";
-import fun from "../img/goals/fun-photo-unsplash.jpg";
-import house from "../img/goals/house-photo-unsplash.jpg";
-// import kids from "../img/goals/kids-photo-unsplash.jpg";
-import retirement from "../img/goals/retirement-photo-unsplash.jpg";
-import biz from "../img/goals/start-a-biz-photo-unsplash.jpg";
-import vacation from "../img/goals/vacation-photo-unsplash.jpg";
+import car from "../img/goals/car-image.png";
+import education from "../img/goals/education-image.png";
+import fun from "../img/goals/fun-image.png";
+import house from "../img/goals/house-image.png";
+import kids from "../img/goals/kids-image.png";
+import retirement from "../img/goals/retirement-image.png";
+import biz from "../img/goals/start-business-image.png";
+import vacation from "../img/goals/vacation-image.png";
 import "swiper/swiper.scss";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
@@ -59,7 +58,7 @@ const checkboxData = [
   },
   {
     name: "Save for Kids",
-    img: retirement,
+    img: kids,
     price: 600000,
     label: "kids",
     checked: false,
@@ -90,16 +89,18 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
   const [checkedItems, setCheckedItems] = useState({});
 
   const addAmount = (e) => {
+    let data = JSON.parse(e.target.value);
     if (e.target.checked === false) {
-      cost = cost - parseInt(e.target.attributes.price.value);
+      cost = cost - parseInt(data.price);
       setTotalCost(cost);
     } else {
-      cost = cost + parseInt(e.target.attributes.price.value);
+      cost = cost + parseInt(data.price);
       setTotalCost(cost);
     }
   };
 
   const handleChange = (e) => {
+    let data = JSON.parse(e.target.value);
     if (e.target.checked === true) {
       // set checked items for UI change
       setCheckedItems({
@@ -109,9 +110,9 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
 
       // create an object to hold each goal data
       const goal = {
-        name: e.target.attributes.name.value,
-        price: e.target.attributes.price.value,
-        tag: e.target.attributes.tag.value,
+        name: data.name,
+        price: parseInt(data.price),
+        tag: data.tag,
         checked: true,
       };
 
@@ -131,8 +132,8 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
       setGoalSelected(true);
     } else if (e.target.checked === false) {
       const goal = {
-        name: e.target.attributes.name.value,
-        price: e.target.attributes.price.value,
+        name: data.name,
+        price: parseInt(data.price),
         checked: true,
       };
 
@@ -161,19 +162,19 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
           <div id="wrapper">
             <div className="goal-card-text">{goal.name}</div>
             <div className="goal-card-text">{formatter.format(goal.price)}</div>
-            <Checkbox
-              color="success"
-              label="Add"
-              inputProps={{
+            <input
+              type="checkbox"
+              id="check"
+              name="goal"
+              onChange={handleChange}
+              value={JSON.stringify({
                 name: goal.name,
                 price: goal.price,
                 tag: goal.tag,
-              }}
-              size="large"
-              onChange={handleChange}
+              })}
               onClick={addAmount}
-              on
             />
+            <label htmlFor="goal" />
           </div>
         </div>
       </div>
@@ -185,7 +186,7 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
       <Splide
         options={{
           perPage: 3,
-          height: "30vh",
+          height: "31vh",
           rewind: true,
           gap: "3rem",
           padding: "3rem",

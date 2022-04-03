@@ -96,9 +96,9 @@ function ChoiceTabs({ year, player, choice }) {
             {investments.includes(INVESTMENTS_VEHICLES.CD) && (
               <div
                 className={"investments-details-label"}
-                style={{ border: "1px solid #BE8EEE" }}
+                style={{ border: "1px solid #FF5C00" }}
               >
-                <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                <span style={{ marginLeft: "0.3rem", color: "#FF5C00" }}>
                   CD
                 </span>
               </div>
@@ -106,9 +106,9 @@ function ChoiceTabs({ year, player, choice }) {
             {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
               <div
                 className={"investments-details-label"}
-                style={{ border: "1px solid #BE8EEE" }}
+                style={{ border: "1px solid #FF5050" }}
               >
-                <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                <span style={{ marginLeft: "0.3rem", color: "#FF5050" }}>
                   Inveesgo
                 </span>
               </div>
@@ -116,9 +116,9 @@ function ChoiceTabs({ year, player, choice }) {
             {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
               <div
                 className={"investments-details-label"}
-                style={{ border: "1px solid #BE8EEE" }}
+                style={{ border: "1px solid #F5F937" }}
               >
-                <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                <span style={{ marginLeft: "0.3rem", color: "#F5F937" }}>
                   Mutual Fund
                 </span>
               </div>
