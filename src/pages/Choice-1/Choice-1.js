@@ -8,6 +8,8 @@ import "../../styles/style.css";
 import { Link } from "react-router-dom";
 import ChoiceTabs from "../../components/choice-tabs";
 import InvestmentChoices from "../../components/investment-choices";
+import Choice1A from "../../img/choices/c1-A-image.png";
+import Choice1B from "../../img/choices/c1-B-image.png";
 const choiceData = {
   year: 2004,
   setup: `Congrats! Your employer has a benefits program to help workers invest for their retirement. Your employer allows you to invest funds into a 401k up to 10% of your salary with a match of 50% of your investment. You have two choices.`,
@@ -22,16 +24,11 @@ function ChoiceOne() {
   const [choice, setChoice] = useState("");
   const player = usePlayer();
 
-  /**
-   * UseStates to handle tab switching:
-   * TODO: Find to optimize this
-   */
-
   // set choice value to selected choice in UI
   const handleSelection = (e) => {
-    setChoice(e);
+    setChoice(e.target.value);
   };
-  // const handleSelection = (e) => console.log(e.target);
+
   // send selection data to the global player object
   const submitSelection = () => {
     const selection = {
@@ -62,6 +59,10 @@ function ChoiceOne() {
             choice={choice}
             choiceData={choiceData}
             handleSelection={handleSelection}
+            imageA={Choice1A}
+            imageB={Choice1B}
+            choiceA={"invest"}
+            choiceB={"spend"}
           />
           <div id="financial-container">
             <div id="financial-top-container">
@@ -82,6 +83,11 @@ function ChoiceOne() {
           sx={{
             backgroundColor: "#e5e5e5",
             color: "#000000",
+            height: "2.5rem",
+            width: "10rem",
+            fontSize: "1.2rem",
+            padding: "0",
+
             "&:hover": {
               backgroundColor: "#00FF38",
             },
@@ -96,6 +102,11 @@ function ChoiceOne() {
             sx={{
               backgroundColor: "#e5e5e5",
               color: "#000000",
+              height: "2.5rem",
+              width: "10rem",
+              fontSize: "1.2rem",
+              padding: "0",
+
               "&:hover": {
                 backgroundColor: "#00FF38",
               },
@@ -111,40 +122,3 @@ function ChoiceOne() {
 }
 
 export default ChoiceOne;
-
-// <MainContent>
-//   <span>{choiceData.year}</span>
-//   <h1>Retirement and financial goals</h1>
-//   <p>{choiceData.setup}</p>
-//   <h2>Your Choices</h2>
-//   <ul>
-//     <li>
-//       <p>{choiceData.option1}</p>
-//       <Button>Invest in 401K</Button>
-//     </li>
-//     <li>
-//       <p>{choiceData.option2}</p>
-//     </li>
-//   </ul>
-// </MainContent>
-// <Choices>
-//   <input
-//       onClick={(e) => handleSelection(e)}
-//       type="radio"
-//       name="choice-1"
-//       id="invest"
-//       value="invest"
-//   />
-//   <label className="button" for="invest">
-//     <span class="invest">Invest in 401K</span>
-//   </label>
-//   <label className="button" for="spend">
-//     <span class="spend">Keep & spend the money</span>
-//   </label>
-// </Choices>
-// <hr />
-// <Buttons>
-//   <Link to="/graph-1">
-//     <Button label="Continue" onClick={submitSelection} />
-//   </Link>
-// </Buttons>

@@ -9,6 +9,8 @@ import Button from "@mui/material/Button";
 import { choice2 } from "../../data/investmentData";
 import InvestmentChoices from "../../components/investment-choices";
 import ChoiceTabs from "../../components/choice-tabs";
+import Choice3A from "../../img/choices/c3-A-image.png";
+import Choice3B from "../../img/choices/c3-B-image.png";
 
 const choiceData = {
   year: 2006,
@@ -24,7 +26,7 @@ function ChoiceThree() {
   const player = usePlayer();
 
   const handleSelection = (e) => {
-    setChoice(e);
+    setChoice(e.target.value);
   };
 
   let addInvestment = -2000; // this is the same for a inveesgo or a mutual fund
@@ -51,6 +53,10 @@ function ChoiceThree() {
             choice={choice}
             choiceData={choiceData}
             handleSelection={handleSelection}
+            imageA={Choice3A}
+            imageB={Choice3B}
+            choiceA={"Inveesgo"}
+            choiceB={"mutualFund"}
           />
           <div id="financial-container">
             <div id="financial-top-container">
@@ -60,40 +66,50 @@ function ChoiceThree() {
             </div>
           </div>
         </div>
-        <hr
-          style={{
-            margin: "0.2rem 150px",
+      </div>
+      <hr
+        style={{
+          margin: "0.2rem 150px",
+        }}
+      />
+      <div id="button-container">
+        <Button
+          sx={{
+            backgroundColor: "#e5e5e5",
+            color: "#000000",
+            height: "2.5rem",
+            width: "10rem",
+            fontSize: "1.2rem",
+            padding: "0",
+
+            "&:hover": {
+              backgroundColor: "#00FF38",
+            },
           }}
-        />
-        <div id="button-container">
+          id="btn"
+        >
+          Back
+        </Button>
+        <Link to="/graph-3">
           <Button
+            id="btn"
             sx={{
               backgroundColor: "#e5e5e5",
               color: "#000000",
+              height: "2.5rem",
+              width: "10rem",
+              fontSize: "1.2rem",
+              padding: "0",
+
               "&:hover": {
                 backgroundColor: "#00FF38",
               },
             }}
-            id="btn"
+            onClick={submitSelection}
           >
-            Back
+            Continue
           </Button>
-          <Link to="/graph-3">
-            <Button
-              id="btn"
-              sx={{
-                backgroundColor: "#e5e5e5",
-                color: "#000000",
-                "&:hover": {
-                  backgroundColor: "#00FF38",
-                },
-              }}
-              onClick={submitSelection}
-            >
-              Continue
-            </Button>
-          </Link>
-        </div>
+        </Link>
       </div>
     </>
     // <>
