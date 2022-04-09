@@ -8,15 +8,15 @@ import "../styles/home.css";
 function Home() {
   return (
     <ThemeProvider theme={theme}>
-      <div id="container">
-        <div id="header">
+      <div id="home-container">
+        <div id="home-header">
           <h4>Welcome to the Economic Awareness Council</h4>
           <h1>INVESTOR SIMULATOR</h1>
         </div>
-        <div id="content">
+        <div id="home-content">
           <img id={"image"} src={dollars} alt="" />
 
-          <div id="text">
+          <div id="home-text">
             <div className="text-content">
               The year is <span style={{ color: "#00FF38" }}>2004</span>, and
               you are just about to start your adult <br />

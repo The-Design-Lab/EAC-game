@@ -1,31 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Added proper images and SVGs">
-      <change afterPath="$PROJECT_DIR$/src/img/goals/car-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/goals/education-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/goals/fun-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/goals/house-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/goals/kids-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/goals/retirement-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/goals/start-business-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/goals/vacation-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/svg/add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/svg/remove.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Fixed misc issues">
+      <change afterPath="$PROJECT_DIR$/src/styles/summary.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChoiceCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChoiceCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/choice-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/choice-tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/goals/car-photo-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/goals/education-photo-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/goals/fun-photo-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/goals/house-photo-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/goals/kids-photo-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/goals/retirement-photo-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/goals/start-a-biz-photo-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/goals/vacation-photo-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Life-Event.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Life-Event.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/goals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/goals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/investment-choices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/investment-choices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/leaderboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leaderboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Summary/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Summary/Summary.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +58,7 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/Choice-2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Raphy\AppData\Roaming\npm\node_modules\prettier" />
@@ -87,6 +69,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Raphy\Documents\Repos\EAC-game\public" />
       <recent name="C:\Users\Raphy\Documents\Repos\EAC-game\src\pages\Choice-2" />
       <recent name="C:\Users\Raphy\Documents\Repos\EAC-game\src\styles" />
     </key>
@@ -175,7 +158,12 @@
       <workItem from="1648346219955" duration="2872000" />
       <workItem from="1648658426797" duration="12089000" />
       <workItem from="1648924883779" duration="8594000" />
-      <workItem from="1649014518073" duration="6366000" />
+      <workItem from="1649014518073" duration="7759000" />
+      <workItem from="1649272839960" duration="9687000" />
+      <workItem from="1649382832689" duration="510000" />
+      <workItem from="1649430545436" duration="10000" />
+      <workItem from="1649446661520" duration="12073000" />
+      <workItem from="1649524855239" duration="15077000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>
@@ -317,7 +305,56 @@
       <option name="project" value="LOCAL" />
       <updated>1649014591465</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added proper images and SVGs">
+      <created>1649020941381</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1649020941381</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Goals images added to public">
+      <created>1649541861062</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1649541861062</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Fixed tabs styling">
+      <created>1649541894984</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1649541894984</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fixed tabs styling">
+      <created>1649541935404</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649541935404</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added img path to goals object">
+      <created>1649541974828</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1649541974828</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fixed misc styling issues">
+      <created>1649541997412</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1649541997412</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Fixed misc graphs issues">
+      <created>1649542049213</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1649542049213</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +391,13 @@
     <MESSAGE value="Fixed routing and button color" />
     <MESSAGE value="Life events component styling done" />
     <MESSAGE value="Added proper images and SVGs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added proper images and SVGs" />
+    <MESSAGE value="Goals images added to public" />
+    <MESSAGE value="Fixed tabs styling" />
+    <MESSAGE value="added img path to goals object" />
+    <MESSAGE value="Fixed misc styling issues" />
+    <MESSAGE value="Fixed misc graphs issues" />
+    <MESSAGE value="Fixed misc issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed misc issues" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
