@@ -6,24 +6,27 @@ body{
 
 }
 
+
+
+
 #choice-page{
-   width: 100vw;
     height: 85vh;
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
+    justify-content: center;
+
     margin-top: 3rem;
     /*border: 1px red solid;*/
 }
 
 #choice-container{
 
-
     display: flex;
-    justify-content: space-around;
     margin: 0 5rem;
-    height: fit-content;
-
+    /*height: fit-content;*/
     /*border: 1px blue solid;*/
+    width: 75vw;
+    height: 70vh;
 
 
 
@@ -32,12 +35,12 @@ body{
     width:  60%;
     display: flex;
     flex-direction: column;
+
     /*border: 1px yellow solid;*/
 }
 
 #financial-container {
-    width: 40%;
-
+    width: 50%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -47,10 +50,12 @@ body{
 }
 
 #financial-top-container {
-    background: #2D2D2D;
+    background-color: #2D2D2D;
     border-radius: 10px;
     /*border: 1px magenta solid;*/
-    height: 100%;
+    height: 70vh;
+
+
 }
 
 #account-container{
@@ -69,29 +74,46 @@ body{
 
 #marketNews-list{
     list-style: none;
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
-#marketNews-list li{
-    margin: 1rem;
+#marketNews-list li {
+    /*margin: 1rem;*/
     list-style-type: circle;
+    margin: 1rem 0;
+}
+#marketNews-details h5{
+    margin-left: 2rem;
+}
 
+#marketNews-container{
+    background-color: #0D0C0C;
+    margin-top: -1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+    /*border: red 1px solid;*/
 }
 
 
 
 #investments-container{
+    margin-top: -1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
     background-color: #0D0C0C;
-    border-radius: 10px;
     padding: 10px 10px 10px 1rem;
     height: 100%;
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr 0.5fr;
-    grid-row-gap: 1rem;
-    max-height: 6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
-#investment-graph{
-
+.tabs-title{
+    font-size: 2rem;
 }
 
 #investment-graph p {
@@ -104,19 +126,19 @@ body{
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 0.5rem;
     text-align: center;
-
+    /*border: cyan 1px solid;*/
+    margin-bottom: 2rem;
 }
 
 #investment-details-bottom{
     display: flex;
     flex-direction: row;
 
-
-
 }
 #investment-details-bottom div{
-    font-size: 0.8rem;
+    font-size: 1rem;
     width: fit-content;
+    margin-bottom: 1.5rem;
     flex-grow: 1;
 }
 
@@ -149,19 +171,26 @@ body{
 #choices{
     display: flex;
     flex-direction: column;
-
     /*border: 1px darkred solid;*/
-
 }
+
 #firstChoice, #secondChoice{
     display: flex;
     border: #00FF38 1px solid;
-    margin-right: 1rem;
     border-radius: 1rem;
+}
+
+.choice-wrapper{
     width: 35rem;
     height: fit-content;
-
-
+    display: grid;
+    grid-template-rows: 1fr 0.1fr;
+    justify-items: center;
+    margin: 1rem 0;
+}
+.choice-wrapper img{
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 }
 
 
@@ -179,7 +208,6 @@ body{
     display: flex;
     justify-content: center;
 
-
 }
 #btn{
     margin: 5px;
@@ -191,7 +219,8 @@ body{
     /*margin: 10px 10px 10px 10px;*/
     list-style: none;
     padding-left: 0;
-    border-radius: 10px;
+    background-color: transparent;
+    width: 100%
 
     /*border: blue 1px solid;*/
 
@@ -201,32 +230,34 @@ body{
 .tabs{
 
     height: 60px;
-    padding-top: 3px;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0 !important;
+    margin: 0 !important;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    margin: 0 0 0 25px;
+    justify-content: center;
 
-
+    background-color: #2D2D2D;
 }
+
+
 
 
 .wrapper{
-    background-color: #0D0C0C;
+    background-color: transparent;
     border-radius: 10px;
-    margin: 0.6rem;
-    padding: 0 10px 10px 1rem;
-    height: 93%;
+
+    padding: 0 1rem 10px 1rem;
+    height: 96%;
     /*border: yellow 1px solid;*/
 }
 
-.toggledTab{
+.react-tabs__tab--selected{
     background-color: #0D0C0C;
 }
-.closedTab{
-    background-color: #2D2D2D;
-}
+
 
 .class1{
     pointer-events: none;
@@ -240,15 +271,147 @@ body{
     width: 100%;
 }
 
-#firstChoice {
-    align-items: center;
 
-}
 
 .recharts-cartesian-axis-tick {
     fill: white;
     font-family: Roboto, sans-serif;
 }
+
+#choices input[type="checkbox"] {
+
+    opacity: 0;
+    height: 15rem;
+    width: inherit;
+
+}
+
+#choices input + label {
+    display: inline-block;
+    cursor: pointer;
+    background-image: url("../img/svg/add.svg");
+    padding: 0;
+}
+
+#choices input[type="checkbox"]:checked + label {
+    background-image: url("../img/svg/remove.svg")
+}
+
+label{
+    width: 60px;
+    height: 3.5rem;
+}
+
+#react-tabs-1{
+    /*border: 1px cyan solid;*/
+
+}
+.react-tabs__tab-panel{
+    display: none;
+    justify-content: stretch;
+    height: 100%;
+}
+.react-tabs__tab-panel--selected{
+    display: flex;
+}
+
+.react-tabs{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+
+
+@media (max-width: 1280px) {
+
+    #choice-page {
+        display: flex;
+        /*flex-direction: column;*/
+        justify-content: center;
+        margin-top: 1rem !important;
+        /*border: 1px red solid;*/
+    }
+    #choice-container {
+        border: cyan 1px solid;
+        height: 100%;
+        grid-column-gap: 2rem;
+        width: 100%;
+    }
+    #details-container{
+        border: red 1px solid;
+
+    }
+
+    #header{
+        font-size: 1.7rem;
+    }
+
+    #choices-header{
+        font-size: 1.5rem;
+    }
+
+    #choices{
+
+        height: inherit;
+    }
+
+    .choice-wrapper{
+        border: 1px solid yellow;
+        height: 100%;
+    }
+
+
+
+    #firstChoice, #secondChoice{
+        font-size: 0.5rem;
+        height: 100%;
+    }
+    #choice-text{
+        font-size: 0.8rem;
+    }
+    .choice-image{
+        width: 10rem !important;
+        height: 8rem !important;
+    }
+
+    #choices input[type="checkbox"] {
+
+        opacity: 0;
+        height: 15rem;
+        width: inherit;
+
+    }
+
+    #choices input + label {
+        display: inline-block;
+        cursor: pointer;
+        background-image: url("../img/svg/add.svg");
+        padding: 0;
+    }
+
+    #choices input[type="checkbox"]:checked + label {
+        background-image: url("../img/svg/remove.svg")
+    }
+    #subtext{
+        font-size: 0.9rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

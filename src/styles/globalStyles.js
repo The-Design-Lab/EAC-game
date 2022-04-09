@@ -23,8 +23,7 @@ const GlobalStyle = createGlobalStyle`
       inset 2px 2px 0 0 #DEDCDE;
   
     // Fonts
-    --body: 'IBM Plex Sans', sans-serif;
-    --display: 'IBM Plex Mono', monospace;
+
   }
 
   * {
@@ -51,8 +50,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: 4.209rem;
-    line-height: 1.0em;
-    margin-bottom:20px;
+    
 
     @media ${device.tabletS} {
       /* font-size: 1.62rem; */
@@ -76,28 +74,16 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     font-size: 1rem;
-    margin-bottom:15px;
+    
   }
 
   button{
     font-size: 0.875rem;
   }
 
-  hr{
-    box-shadow: var(--bevel-default);
-    /* margin: 40px 0 30px 0; */
-    margin: 20px 0;
-  }
 
-  ul{
-    list-style: inside;
 
-    li {
-      list-style-type: disclosure-closed;
-      font-weight:700;
-      margin-bottom:5px;
-    }
-  }
+
 
   input[type='radio']{
     display:none;

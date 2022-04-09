@@ -1,0 +1,25 @@
+#leaderboard__container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#leaderboard{
+    height: 70vh;
+    width: 50vw;
+    color: white;
+}
+.MuiDataGrid-columnHeaderTitle{
+    color: white;
+}
+
+.MuiDataGrid-cell{
+    color: white;
+    font-size: 1rem;
+}
+.MuiSvgIcon-root{
+    fill: #00FF38;
+}

@@ -16,6 +16,8 @@ hr{
 #container{
     display: flex;
     flex-direction: column;
+    justify-content: center; align-items: center;
+    height: 75vh;
 
 }
 
@@ -35,4 +37,8 @@ hr{
 
 #reflection2-img{
     width: 17rem;
+}
+
+hr{
+    margin: 0 10rem !important;
 }
