@@ -3,13 +3,22 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import marketNews from "../data/marketNews";
 import { formatter } from "../formatter";
 import { GetGoalsAmount } from "../get-goals-amount";
-import { Typography } from "@mui/material";
 import Graph from "./graph/Graph";
 import { PlayerContext } from "../contexts/PlayerContext";
 import INVESTMENTS_VEHICLES from "../data/Investments";
 
 function ChoiceTabs({ year, player, choice }) {
   const { investments } = useContext(PlayerContext);
+
+  // let SP = 0;
+  // let retirement = 0;
+  // let CD = 0;
+  // let inveesgo = 0;
+  // let mutualFund = 0;
+  /**
+   * TODO: Switch to determine the number inside the tags
+   */
+
   return (
     <Tabs>
       <TabList id={"tabs-list"}>
@@ -19,14 +28,10 @@ function ChoiceTabs({ year, player, choice }) {
           style={{
             listStyle: "none",
             width: "50%",
-            backgroundColor: "#0D0C0C",
-            borderRadius: "10px",
-            margin: "0.5rem",
+            padding: "0",
           }}
         >
-          <div className={"class1"}>
-            <Typography variant={"h6"}>Market</Typography>
-          </div>
+          <div className={"tabs-title"}>Market News</div>
         </Tab>
         <Tab
           id={"secondTab"}
@@ -34,19 +39,14 @@ function ChoiceTabs({ year, player, choice }) {
           style={{
             listStyle: "none",
             width: "50%",
-            backgroundColor: "#2D2D2D",
-            borderRadius: "10px",
-            margin: "0.5rem",
           }}
         >
-          <div className={"class1"}>
-            <Typography variant={"h6"}>Investments</Typography>
-          </div>
+          <div className={"tabs-title"}>Investments</div>
         </Tab>
       </TabList>
       <TabPanel>
         <div id="marketNews-container">
-          <div id="news-details">
+          <div id="marketNews-details">
             <h5>Financial Market in 2003</h5>
             <div>
               <ul id={"marketNews-list"}>
@@ -65,7 +65,7 @@ function ChoiceTabs({ year, player, choice }) {
               <>
                 <Graph data={choice} />{" "}
                 <p style={{ fontSize: "1.3rem" }}>
-                  Total Balance: {player.bank}
+                  Total Balance: {formatter.format(player.bank)}
                 </p>
               </>
             ) : (
