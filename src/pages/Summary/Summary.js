@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
-import Button from "../../components/Button";
 import usePlayer from "../../hooks/usePlayer";
 import { formatter } from "../../formatter";
 import {
   uniqueNamesGenerator,
   adjectives,
-  colors,
   animals,
 } from "unique-names-generator";
 import scoresRef from "../../data/firebase";
+import Button from "@mui/material/Button";
+import { GetGoalsAmount } from "../../get-goals-amount";
+import "../../styles/summary.css";
+import green from "../../img/green-choice.png";
+import red from "../../img/red-choice.png";
 
 function Summary() {
   const player = usePlayer();
-  let total = 0;
   let goalsTotalAmount = 0;
   const date = Date.now();
   const now = new Date(date);
   const name = uniqueNamesGenerator({
-    dictionaries: [adjectives, colors, animals],
+    dictionaries: [adjectives, animals],
   });
 
   const [didWin, setDidWin] = useState(null);
@@ -60,88 +61,113 @@ function Summary() {
     }
   }, [didWin]);
 
-  const MainContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  const win = {
+    firstElement: "Username, you ane an investing ace!",
+    secondElement:
+      "You made smart investing decisions that paid off in the long run. Great job!",
+    thirdElement: "You have enough to purchase your goals, ",
+    fourthElement: "What were some of the smart investment decisions you made?",
+  };
 
-    h1 {
-      text-align: center;
-      font-family: var(--body);
-      font-weight: 400;
-    }
-    p {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-  `;
-
-  const Buttons = styled.div`
-    display: flex;
-    justify-content: center;
-  `;
-
-  const win = (
-    <>
-      <p>
-        <h1>Congratulations, {name}!</h1>
-      </p>
-      <p>
-        YES: You are an investing ace! You made smart investing decisions that
-        paid off in the long run. Great job! What were some of the smart
-        investing decisions you made? How did you think about investing early,
-        balancing risk and return, diversifying to reduce your risk and tax
-        benefits?{" "}
-      </p>
-      <p>You ended up with {formatter.format(player.bank)}</p>
-    </>
-  );
-  const lose = (
-    <>
-      <h1>Try Again!</h1>
-      <p>
-        You were off the mark! Good thing this is just a game for learning. Play
-        the game again, adjust your goals, and see if you can make better
-        financial choices. Investing success can happen for you! What decisions
-        in the game hurt your returns financially? How did you think about
-        investing early, balancing risk and return, diversifying to reduce your
-        risk and tax benefits? What could you do differently next time?
-      </p>
-      <p>You ended up with {formatter.format(player.bank)}</p>
-    </>
-  );
+  const lose = {
+    firstElement: "Username, you were a little off the mark!",
+    secondElement:
+      "Good thing this is just a game for learning. Play the game again, adjust your goals, and see if you can make better financial choices. Investing success can happen for you!",
+    thirdElement: "You don’t have enough to purchase your goals, ",
+    fourthElement:
+      "What decisions in the game hurt your returns financially? What could you do differently next time?",
+  };
 
   return (
     <>
-      {/* Is there a way to instead of having several pages change the content dynamically when the next is pressed?  */}
-      <MainContent>
-        {didWin ? win : lose}
-        <p>
-          Your goals were:{" "}
+      <div id="summary-page__container">
+        <div id={"summary-page__header"}>
+          <h3>{didWin ? win.firstElement : lose.firstElement}</h3>{" "}
+          <p>{didWin ? win.secondElement : lose.secondElement}</p>
+        </div>
+        <div id={"summary-page__totals"}>
+          <div>
+            {" "}
+            You earned{" "}
+            <span style={{ color: didWin ? "#00FF38" : "red" }}>
+              {" "}
+              {formatter.format(player.bank)}
+            </span>{" "}
+            from investing
+          </div>
+          <div>
+            {didWin ? win.thirdElement : lose.thirdElement} which totaled{" "}
+            <span style={{ color: didWin ? "#00FF38" : "red" }}>
+              {GetGoalsAmount(player)}
+            </span>
+          </div>
+        </div>
+        <div id={"summary-page__goal-images"}>
           {player.goals.map((goal) => {
-            total = total + parseInt(goal.price);
             return (
-              <ul>
-                <li>
+              <div>
+                <img
+                  src={process.env.PUBLIC_URL + goal.src}
+                  alt=""
+                  width="3rem"
+                />
+                <p>
                   {goal.name}: {formatter.format(goal.price)}
-                </li>
-              </ul>
+                </p>
+              </div>
             );
           })}
-        </p>
-        <p>
-          Total: <b>{formatter.format(total)}</b>
-        </p>
-      </MainContent>
-      <hr />
-      <Buttons>
-        <Link to="/recap">
-          <Button label="Back" />
+        </div>
+
+        <div id={"summary-page__subheader"}>
+          <p>Here are your investment choices.</p>
+          <p>{didWin ? win.fourthElement : lose.fourthElement}</p>
+        </div>
+        <div id={"summary-page__choices"}>
+          <div>
+            <img src={green} alt="" />
+            Investing early
+          </div>
+          <div>
+            <img src={red} alt="" />
+            Balancing risk & return
+          </div>
+          <div>
+            <img src={green} alt="" />
+            Diversifying to reduce risk
+          </div>
+          <div>
+            <img src={green} alt="" />
+            Tax benefits
+          </div>
+        </div>
+      </div>
+      <hr
+        style={{
+          margin: "0.2rem 150px",
+        }}
+      />
+      <div id="button-container">
+        <Link to="/board">
+          <Button
+            id="btn"
+            sx={{
+              backgroundColor: "#e5e5e5",
+              color: "#000000",
+              height: "2.5rem",
+              width: "10rem",
+              fontSize: "1.2rem",
+              padding: "0",
+
+              "&:hover": {
+                backgroundColor: "#00FF38",
+              },
+            }}
+          >
+            Continue
+          </Button>
         </Link>
-        <Link to="/Board">
-          <Button label="Continue" />
-        </Link>
-      </Buttons>
+      </div>
     </>
   );
 }
