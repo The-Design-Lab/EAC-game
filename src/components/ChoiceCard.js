@@ -23,6 +23,7 @@ const checkboxData = [
     label: "house",
     checked: false,
     tag: "House",
+    src: "goals/house-image.png",
   },
   {
     name: "Buy a Car",
@@ -31,6 +32,7 @@ const checkboxData = [
     label: "house",
     checked: false,
     tag: "Car",
+    src: "goals/vacation-image.png",
   },
   {
     name: "Buy for Fun",
@@ -39,6 +41,7 @@ const checkboxData = [
     label: "fun",
     checked: false,
     tag: "Fun",
+    src: "goals/fun-image.png",
   },
   {
     name: "Start a Business",
@@ -47,6 +50,7 @@ const checkboxData = [
     label: "fun",
     checked: false,
     tag: "Biz",
+    src: "goals/start-business-image.png",
   },
   {
     name: "Save for Retirement",
@@ -55,6 +59,7 @@ const checkboxData = [
     label: "retirement",
     checked: false,
     tag: "Retire",
+    src: "goals/retirement-image.png",
   },
   {
     name: "Save for Kids",
@@ -63,6 +68,7 @@ const checkboxData = [
     label: "kids",
     checked: false,
     tag: "Kids",
+    src: "goals/kids-image.png",
   },
   {
     name: "Save for Vacation",
@@ -71,6 +77,7 @@ const checkboxData = [
     label: "vacation",
     checked: false,
     tag: "Trip",
+    src: "goals/vacation-image.png",
   },
   {
     name: "Save for Education",
@@ -79,6 +86,7 @@ const checkboxData = [
     label: "education",
     checked: false,
     tag: "Education",
+    src: "goals/education-image.png",
   },
 ];
 
@@ -114,6 +122,7 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
         price: parseInt(data.price),
         tag: data.tag,
         checked: true,
+        src: data.src,
       };
 
       // send the goal data to the global state
@@ -156,7 +165,7 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
     <SplideSlide>
       <div className="slides">
         <div className="content" id={"content-img"}>
-          <img src={goal.img} alt="" />
+          <img id={"goal-page__img"} src={goal.img} alt="" />
         </div>
         <div className="content">
           <div id="wrapper">
@@ -171,6 +180,7 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
                 name: goal.name,
                 price: goal.price,
                 tag: goal.tag,
+                src: goal.src,
               })}
               onClick={addAmount}
             />
