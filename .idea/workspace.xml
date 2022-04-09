@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Fixed misc issues">
+    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Summary / finish page styled">
       <change afterPath="$PROJECT_DIR$/src/styles/summary.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/investment-choices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/investment-choices.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/leaderboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leaderboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Summary/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Summary/Summary.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +160,7 @@
       <workItem from="1649382832689" duration="510000" />
       <workItem from="1649430545436" duration="10000" />
       <workItem from="1649446661520" duration="12073000" />
-      <workItem from="1649524855239" duration="15077000" />
+      <workItem from="1649524855239" duration="15171000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>
@@ -354,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649542049213</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Fixed misc issues">
+      <created>1649542090437</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1649542090437</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +401,8 @@
     <MESSAGE value="Fixed misc styling issues" />
     <MESSAGE value="Fixed misc graphs issues" />
     <MESSAGE value="Fixed misc issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed misc issues" />
+    <MESSAGE value="Summary / finish page styled" />
+    <option name="LAST_COMMIT_MESSAGE" value="Summary / finish page styled" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
