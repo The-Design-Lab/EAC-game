@@ -2,7 +2,7 @@ import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { useEffect, useState } from "react";
 import scoresRef from "../data/firebase";
-import { MainContent } from "../styles/choicesSyles";
+import "../styles/leaderboard.css";
 
 function Leaderboard() {
   const [scores, setScores] = useState(null);
@@ -35,7 +35,7 @@ function Leaderboard() {
   }
 
   const columns = [
-    { field: "id", headerName: "ID", width: 200 },
+    { field: "id", headerName: "ID", width: 400 },
     {
       field: "amount",
       headerName: "Amount of money earned",
@@ -51,17 +51,19 @@ function Leaderboard() {
   ];
 
   return (
-    <MainContent>
-      <h1>LEADERBOARD</h1>
-      <div style={{ height: 400, width: "100%" }}>
-        <DataGrid
-          rows={tablebody}
-          columns={columns}
-          pageSize={5}
-          rowsPerPageOptions={[5]}
-        />
+    <>
+      <div id={"leaderboard__container"}>
+        <h1>LEADERBOARD</h1>
+        <div id={"leaderboard"}>
+          <DataGrid
+            rows={tablebody}
+            columns={columns}
+            pageSize={5}
+            rowsPerPageOptions={[5]}
+          />
+        </div>
       </div>
-    </MainContent>
+    </>
   );
 }
 
