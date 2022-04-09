@@ -26,7 +26,7 @@ const Graph = ({ data }) => {
   };
 
   return (
-    <ResponsiveContainer width="80%" height={150}>
+    <ResponsiveContainer width="80%" height={250}>
       <LineChart
         data={useGetQuarterData(...data)}
         style={{

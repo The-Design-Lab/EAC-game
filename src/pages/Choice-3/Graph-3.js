@@ -14,139 +14,141 @@ function GraphTwo() {
 
   return (
     <>
-      <div id="main-container">
-        <div className="sub-containers">
-          <div className={"title"}>
-            <h3>2003 Summary Report </h3>
-            <p>
-              This is the graph that you choose. It shows your investing
-              progress throughout the year
-            </p>
-          </div>
-          <div className={"graph"}>
-            <Graph data={choice3} />
-          </div>
-          <div className={"investments"}>
-            <h5>Total Balance: {formatter.format(player.bank)} </h5>
-            <div className="label-container">
-              {investments.includes(INVESTMENTS_VEHICLES.SP) && (
-                <div
-                  className={"investments-details-label"}
-                  style={{ border: "1px solid #BE8EEE" }}
-                >
-                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                    S&P 500
-                  </span>
-                </div>
-              )}
-              {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
-                <div
-                  className={"investments-details-label"}
-                  style={{ border: "1px solid #BE8EEE" }}
-                >
-                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                    Retirement
-                  </span>
-                </div>
-              )}
-              {investments.includes(INVESTMENTS_VEHICLES.CD) && (
-                <div
-                  className={"investments-details-label"}
-                  style={{ border: "1px solid #BE8EEE" }}
-                >
-                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                    CD
-                  </span>
-                </div>
-              )}
-              {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
-                <div
-                  className={"investments-details-label"}
-                  style={{ border: "1px solid #BE8EEE" }}
-                >
-                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                    Inveesgo
-                  </span>
-                </div>
-              )}
-              {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
-                <div
-                  className={"investments-details-label"}
-                  style={{ border: "1px solid #BE8EEE" }}
-                >
-                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                    Mutual Fund
-                  </span>
-                </div>
-              )}
+      <div id="container">
+        <div id="main-container">
+          <div className="sub-containers">
+            <div className={"title"}>
+              <h3>2003 Summary Report </h3>
+              <p>
+                This is the graph that you choose. It shows your investing
+                progress throughout the year
+              </p>
+            </div>
+            <div className={"graph"}>
+              <Graph data={choice3} />
+            </div>
+            <div className={"investments"}>
+              <h5>Total Balance: {formatter.format(player.bank)} </h5>
+              <div className="label-container">
+                {investments.includes(INVESTMENTS_VEHICLES.SP) && (
+                  <div
+                    className={"investments-details-label"}
+                    style={{ border: "1px solid #BE8EEE" }}
+                  >
+                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                      S&P 500
+                    </span>
+                  </div>
+                )}
+                {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
+                  <div
+                    className={"investments-details-label"}
+                    style={{ border: "1px solid #BE8EEE" }}
+                  >
+                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                      Retirement
+                    </span>
+                  </div>
+                )}
+                {investments.includes(INVESTMENTS_VEHICLES.CD) && (
+                  <div
+                    className={"investments-details-label"}
+                    style={{ border: "1px solid #BE8EEE" }}
+                  >
+                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                      CD
+                    </span>
+                  </div>
+                )}
+                {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
+                  <div
+                    className={"investments-details-label"}
+                    style={{ border: "1px solid #BE8EEE" }}
+                  >
+                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                      Inveesgo
+                    </span>
+                  </div>
+                )}
+                {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
+                  <div
+                    className={"investments-details-label"}
+                    style={{ border: "1px solid #BE8EEE" }}
+                  >
+                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                      Mutual Fund
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="sub-containers">
-          <div className={"title"}>
-            <h3>2003 What If Report </h3>
-            <p>
-              This is the graph if you choose the other option. It is here for
-              future reference.
-            </p>
-          </div>
-          <div className={"graph"}>
-            <Graph data={choice3} />
-          </div>
-          <div className={"investments"}>
-            <h5>Total Balance: {formatter.format(player.bank)} </h5>
+          <div className="sub-containers">
+            <div className={"title"}>
+              <h3>2003 What If Report </h3>
+              <p>
+                This is the graph if you choose the other option. It is here for
+                future reference.
+              </p>
+            </div>
+            <div className={"graph"}>
+              <Graph data={choice3} />
+            </div>
+            <div className={"investments"}>
+              <h5>Total Balance: {formatter.format(player.bank)} </h5>
 
-            <div className="label-container">
-              {investments.includes(INVESTMENTS_VEHICLES.SP) && (
-                <div
-                  className={"investments-details-label"}
-                  style={{ border: "1px solid #BE8EEE" }}
-                >
-                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                    S&P 500
-                  </span>
-                </div>
-              )}
-              {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
-                <div
-                  className={"investments-details-label"}
-                  style={{ border: "1px solid #BE8EEE" }}
-                >
-                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                    Retirement
-                  </span>
-                </div>
-              )}
-              {investments.includes(INVESTMENTS_VEHICLES.CD) && (
-                <div
-                  className={"investments-details-label"}
-                  style={{ border: "1px solid #BE8EEE" }}
-                >
-                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                    CD
-                  </span>
-                </div>
-              )}
-              {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
-                <div
-                  className={"investments-details-label"}
-                  style={{ border: "1px solid #BE8EEE" }}
-                >
-                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                    Inveesgo
-                  </span>
-                </div>
-              )}
-              {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
-                <div
-                  className={"investments-details-label"}
-                  style={{ border: "1px solid #BE8EEE" }}
-                >
-                  <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                    Mutual Fund
-                  </span>
-                </div>
-              )}
+              <div className="label-container">
+                {investments.includes(INVESTMENTS_VEHICLES.SP) && (
+                  <div
+                    className={"investments-details-label"}
+                    style={{ border: "1px solid #BE8EEE" }}
+                  >
+                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                      S&P 500
+                    </span>
+                  </div>
+                )}
+                {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
+                  <div
+                    className={"investments-details-label"}
+                    style={{ border: "1px solid #BE8EEE" }}
+                  >
+                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                      Retirement
+                    </span>
+                  </div>
+                )}
+                {investments.includes(INVESTMENTS_VEHICLES.CD) && (
+                  <div
+                    className={"investments-details-label"}
+                    style={{ border: "1px solid #BE8EEE" }}
+                  >
+                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                      CD
+                    </span>
+                  </div>
+                )}
+                {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
+                  <div
+                    className={"investments-details-label"}
+                    style={{ border: "1px solid #BE8EEE" }}
+                  >
+                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                      Inveesgo
+                    </span>
+                  </div>
+                )}
+                {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
+                  <div
+                    className={"investments-details-label"}
+                    style={{ border: "1px solid #BE8EEE" }}
+                  >
+                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
+                      Mutual Fund
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
