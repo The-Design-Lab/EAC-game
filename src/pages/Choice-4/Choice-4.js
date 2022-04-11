@@ -10,6 +10,7 @@ import InvestmentChoices from "../../components/investment-choices";
 import ChoiceTabs from "../../components/choice-tabs";
 import Choice4A from "../../img/choices/c4-A-image.png";
 import Choice4B from "../../img/choices/c4-B-image.png";
+import useFakePlayer from "../../hooks/useFakePlayer";
 
 const choiceData = {
   header: "Index Funds",
@@ -21,6 +22,7 @@ const choiceData = {
 
 function ChoiceFour() {
   const { dispatch } = usePlayer();
+  const { fakePlayerDispatch } = useFakePlayer();
   const addAnnualExpenditures = useCheckInvestments();
   const [choice, setChoice] = useState("");
 
@@ -38,10 +40,21 @@ function ChoiceFour() {
       expenditures: addAnnualExpenditures,
       investment: removedInvestment,
     };
+    const whatIfSelection = {
+      choice: choice === "sell" ? null : "S&P",
+      expenditures: addAnnualExpenditures,
+      investment: removedInvestment,
+    };
+
     if (choice === "S&P") {
       dispatch({
         type: "SELECT_CHOICE",
         payload: selection,
+      });
+
+      fakePlayerDispatch({
+        type: "REMOVE_INVESTMENT",
+        payload: whatIfSelection,
       });
     }
 
@@ -49,6 +62,11 @@ function ChoiceFour() {
       dispatch({
         type: "REMOVE_INVESTMENT",
         payload: selection,
+      });
+
+      fakePlayerDispatch({
+        type: "SELECT_CHOICE",
+        payload: whatIfSelection,
       });
     }
   };

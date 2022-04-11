@@ -9,12 +9,15 @@ import Button from "@mui/material/Button";
 import usePlayer from "../../hooks/usePlayer";
 import SingleGraph from "../../components/graph/SingleGraph";
 import "../../styles/graphPages.css";
+import useFakePlayer from "../../hooks/useFakePlayer";
+import WhatIfGraph from "../../components/graph/WhatIfGraph";
 
 function GraphFive() {
   const { investments } = useContext(PlayerContext);
   const [shownGraph, setShownGraph] = useState(<Graph data={choice5} />);
   console.log(investments);
   const player = usePlayer();
+  const fakePlayer = useFakePlayer();
 
   return (
     <>
@@ -121,10 +124,10 @@ function GraphFive() {
               </p>
             </div>
             <div className={"graph"}>
-              <Graph data={choice5} />
+              <WhatIfGraph data={choice5} />
             </div>
             <div className={"investments"}>
-              <h5>Total Balance: {formatter.format(player.bank)} </h5>
+              <h5>Total Balance: {formatter.format(fakePlayer.bank)} </h5>
 
               <div className="label-container">
                 {investments.includes(INVESTMENTS_VEHICLES.SP) && (

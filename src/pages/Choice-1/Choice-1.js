@@ -10,6 +10,7 @@ import ChoiceTabs from "../../components/choice-tabs";
 import InvestmentChoices from "../../components/investment-choices";
 import Choice1A from "../../img/choices/c1-A-image.png";
 import Choice1B from "../../img/choices/c1-B-image.png";
+import useFakePlayer from "../../hooks/useFakePlayer";
 const choiceData = {
   header: "Retirement & Financial Goals",
   year: 2004,
@@ -21,6 +22,7 @@ const choiceData = {
 
 function ChoiceOne() {
   const { salary, dispatch } = usePlayer();
+  const { fakePlayerDispatch } = useFakePlayer();
   const addAnnualExpenditures = useCheckInvestments();
   const [choice, setChoice] = useState("");
   const player = usePlayer();
@@ -35,20 +37,34 @@ function ChoiceOne() {
     const selection = {
       choice: choice,
     };
+    const whatIfSelection = {
+      whatIfChoice: null,
+    };
     let SPPercentage;
     if (choice === "invest") {
       SPPercentage = 0.1;
       selection.investment = INVESTMENTS_VEHICLES.SP;
       selection.expenditures = -(salary * SPPercentage) + addAnnualExpenditures;
+      //fake player
+      whatIfSelection.investment = "spend";
+      whatIfSelection.expenditures = -(salary * 0.02) + addAnnualExpenditures;
     } else {
       SPPercentage = 0.02;
       selection.investment = "spend";
       selection.expenditures = -(salary * SPPercentage) + addAnnualExpenditures;
+      //fake player
+      whatIfSelection.investment = INVESTMENTS_VEHICLES.SP;
+      whatIfSelection.expenditures = -(salary * 0.1) + addAnnualExpenditures;
     }
 
     dispatch({
       type: "SELECT_CHOICE",
       payload: selection,
+    });
+
+    fakePlayerDispatch({
+      type: "SELECT_CHOICE",
+      payload: whatIfSelection,
     });
   };
 

@@ -10,11 +10,15 @@ import Button from "@mui/material/Button";
 import INVESTMENTS_VEHICLES from "../../data/Investments";
 import { Link } from "react-router-dom";
 import SingleGraph from "../../components/graph/SingleGraph";
+import useFakePlayer from "../../hooks/useFakePlayer";
+import WhatIfGraph from "../../components/graph/WhatIfGraph";
 
 function GraphOne() {
   const { investments } = useContext(PlayerContext);
   const [shownGraph, setShownGraph] = useState(<Graph data={choice1} />);
   const player = usePlayer();
+  const fakePlayer = useFakePlayer();
+  console.log(fakePlayer);
 
   return (
     <>
@@ -30,7 +34,11 @@ function GraphOne() {
             </div>
             <div className={"graph"}>{shownGraph}</div>
             <div className={"investments"}>
-              <h5 onClick={() => setShownGraph(<Graph data={choice1} />)}>
+              <h5
+                onClick={() =>
+                  setShownGraph(<Graph data={choice1} isFake={false} />)
+                }
+              >
                 Total Balance: {formatter.format(player.bank)}{" "}
               </h5>
               <div className="label-container">
@@ -76,10 +84,10 @@ function GraphOne() {
               </p>
             </div>
             <div className={"graph"}>
-              <Graph data={choice1} />
+              <WhatIfGraph data={choice1} />
             </div>
             <div className={"investments"}>
-              <h5>Total Balance: {formatter.format(player.bank)} </h5>
+              <h5>Total Balance: {formatter.format(fakePlayer.bank)} </h5>
 
               <div className="label-container">
                 {investments.includes(INVESTMENTS_VEHICLES.SP) && (

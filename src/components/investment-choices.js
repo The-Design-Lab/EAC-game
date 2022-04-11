@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import Tooltip from "./tooltip";
 import Typography from "@mui/material/Typography";
 
@@ -10,6 +10,28 @@ function InvestmentChoices({
   choiceA,
   choiceB,
 }) {
+  const [isOptionADisabled, setIsOptionADisabled] = useState(false);
+  const [isOptionBDisabled, setIsOptionBDisabled] = useState(false);
+
+  const disableButtons = (e) => {
+    console.log(e.target);
+    if (e.target.id === "optionA" && isOptionBDisabled === false) {
+      setIsOptionBDisabled(true);
+      console.log(isOptionBDisabled);
+    } else if (e.target.id === "optionA" && isOptionBDisabled === true) {
+      setIsOptionBDisabled(false);
+    } else if (e.target.id === "optionB" && isOptionADisabled === true) {
+      setIsOptionADisabled(false);
+    } else if (e.target.id === "optionB" && isOptionADisabled === false) {
+      setIsOptionADisabled(true);
+    }
+  };
+
+  const onButtonChange = (e) => {
+    disableButtons(e);
+    handleSelection(e);
+  };
+
   return (
     <div id={"details-container"}>
       <section id="details-header-container">
@@ -21,11 +43,18 @@ function InvestmentChoices({
       </Typography>
       <section id="choices">
         <div className="choice-wrapper">
-          <div id="firstChoice">
+          <div
+            id="firstChoice"
+            style={isOptionADisabled ? { border: "black 1px solid" } : {}}
+          >
             <img
               className={"choice-image"}
               src={imageA}
-              style={{ width: "12rem", height: "10rem" }}
+              style={{
+                width: "12rem",
+                height: "10rem",
+                filter: isOptionADisabled ? "grayscale(100%)" : "",
+              }}
               alt="choice1a"
             />
 
@@ -33,29 +62,38 @@ function InvestmentChoices({
           </div>
           <input
             type="checkbox"
-            id="check"
+            id="optionA"
             name="goal"
             value={choiceA}
-            onChange={handleSelection}
+            onChange={onButtonChange}
+            disabled={isOptionADisabled}
           />
           <label htmlFor="goal" />
         </div>
         <div className="choice-wrapper">
-          <div id="secondChoice">
+          <div
+            id="secondChoice"
+            style={isOptionBDisabled ? { border: "black 1px solid" } : {}}
+          >
             <img
               className={"choice-image"}
               src={imageB}
-              style={{ width: "12rem", height: "10rem" }}
+              style={{
+                width: "12rem",
+                height: "10rem",
+                filter: isOptionBDisabled ? "grayscale(100%)" : "",
+              }}
               alt="choice1b"
             />
             <p id="choice-text">{choiceData.option2}</p>
           </div>
           <input
             type="checkbox"
-            id="check"
+            id="optionB"
             name="goal"
             value={choiceB}
-            onChange={handleSelection}
+            onChange={onButtonChange}
+            disabled={isOptionBDisabled}
           />
           <label htmlFor="goal" />
         </div>

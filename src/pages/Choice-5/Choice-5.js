@@ -10,6 +10,7 @@ import InvestmentChoices from "../../components/investment-choices";
 import ChoiceTabs from "../../components/choice-tabs";
 import Choice5A from "../../img/choices/c5-A-image.png";
 import Choice5B from "../../img/choices/c5-B-image.png";
+import useFakePlayer from "../../hooks/useFakePlayer";
 
 const choiceData = {
   header: "Hold or Sell",
@@ -21,6 +22,7 @@ const choiceData = {
 
 function ChoiceFive() {
   const { dispatch } = usePlayer();
+  const { fakePlayerDispatch } = useFakePlayer();
   const addAnnualExpenditures = useCheckInvestments();
   const [choice, setChoice] = useState("");
 
@@ -37,12 +39,31 @@ function ChoiceFive() {
       expenditures: addAnnualExpenditures,
       investment: removedInvestment,
     };
+    const whatIfSelection = {
+      choice: choice === "sell" ? null : "S&P",
+      expenditures: addAnnualExpenditures,
+      investment: removedInvestment,
+    };
 
-    if (choice === "sell")
+    if (choice === "sell") {
       dispatch({
         type: "REMOVE_INVESTMENT",
         payload: selection,
       });
+      fakePlayerDispatch({
+        type: "SELECT_CHOICE",
+        payload: whatIfSelection,
+      });
+    } else {
+      dispatch({
+        type: "SELECT_CHOICE",
+        payload: selection,
+      });
+      fakePlayerDispatch({
+        type: "REMOVE_INVESTMENT",
+        payload: whatIfSelection,
+      });
+    }
   };
 
   return (

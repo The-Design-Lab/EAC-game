@@ -9,14 +9,12 @@ import {
   // Legend,
   ResponsiveContainer,
 } from "recharts";
-import { PlayerContext } from "../../contexts/PlayerContext";
-
 import CreateLine from "./CreateLine";
+import { FakePlayerContext } from "../../contexts/FakePlayerContext";
+import useGetFakeQuarterData from "../../hooks/useGetFakeQuarterData";
 
-import useGetQuarterData from "../../hooks/useGetQuarterData";
-
-const Graph = ({ data }) => {
-  const { investments } = useContext(PlayerContext);
+const WhatIfGraph = ({ data }) => {
+  const { investments } = useContext(FakePlayerContext);
 
   const plotLines = () => {
     return investments.map((investment, index) =>
@@ -27,7 +25,7 @@ const Graph = ({ data }) => {
   return (
     <ResponsiveContainer width="80%" height={250} id={"responsive-container"}>
       <LineChart
-        data={useGetQuarterData(...data)}
+        data={useGetFakeQuarterData(...data)}
         style={{
           backgroundColor: "#0D0C0C",
           color: "white",
@@ -52,4 +50,4 @@ const Graph = ({ data }) => {
   );
 };
 
-export default Graph;
+export default WhatIfGraph;

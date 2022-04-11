@@ -2,33 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Summary / finish page styled">
-      <change afterPath="$PROJECT_DIR$/src/components/graph/SingleGraph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/graph/WhatIfGraph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contexts/FakePlayerContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useFakePlayer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useGetFakeQuarterData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChoiceCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChoiceCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/choice-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/choice-tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/graph/CreateLine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/CreateLine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/graph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/Graph.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/investment-choices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/investment-choices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/investmentData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/investmentData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/Graph-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/Graph-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/reflection-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/reflection-1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Graph-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Graph-2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/reflection-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/reflection-2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-3/Graph-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-3/Graph-3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-3/reflection-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-3/reflection-3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-4/Choice-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-4/Choice-4.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-4/Graph-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-4/Graph-4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-4/reflection-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-4/reflection-4.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-5/Choice-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-5/Choice-5.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-5/Graph-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-5/Graph-5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-5/reflection-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-5/reflection-5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Goals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/graphPages.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/graphPages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/reflection.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/reflection.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Summary/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Summary/Summary.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,6 +179,7 @@
       <workItem from="1649524855239" duration="15171000" />
       <workItem from="1649551245569" duration="3786000" />
       <workItem from="1649612004007" duration="22368000" />
+      <workItem from="1649687306811" duration="11743000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>

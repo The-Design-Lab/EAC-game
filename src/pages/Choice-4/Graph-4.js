@@ -8,11 +8,14 @@ import { formatter } from "../../formatter";
 import usePlayer from "../../hooks/usePlayer";
 import Button from "@mui/material/Button";
 import SingleGraph from "../../components/graph/SingleGraph";
+import useFakePlayer from "../../hooks/useFakePlayer";
+import WhatIfGraph from "../../components/graph/WhatIfGraph";
 
 function GraphFour() {
   const [shownGraph, setShownGraph] = useState(<Graph data={choice4} />);
   const { investments } = useContext(PlayerContext);
   const player = usePlayer();
+  const fakePlayer = useFakePlayer();
 
   return (
     <>
@@ -119,10 +122,10 @@ function GraphFour() {
               </p>
             </div>
             <div className={"graph"}>
-              <Graph data={choice4} />
+              <WhatIfGraph data={choice4} />
             </div>
             <div className={"investments"}>
-              <h5>Total Balance: {formatter.format(player.bank)} </h5>
+              <h5>Total Balance: {formatter.format(fakePlayer.bank)} </h5>
 
               <div className="label-container">
                 {investments.includes(INVESTMENTS_VEHICLES.SP) && (

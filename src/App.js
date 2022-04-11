@@ -8,15 +8,18 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import { FakePlayerProvider } from "./contexts/FakePlayerContext";
 
 require("dotenv").config();
 function App() {
   return (
     <>
       <PlayerProvider>
-        <Reset />
-        <GlobalStyle />
-        <Window />
+        <FakePlayerProvider>
+          <Reset />
+          <GlobalStyle />
+          <Window />
+        </FakePlayerProvider>
       </PlayerProvider>
     </>
   );

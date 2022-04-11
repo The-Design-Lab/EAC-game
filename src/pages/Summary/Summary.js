@@ -62,7 +62,7 @@ function Summary() {
   }, [didWin]);
 
   const win = {
-    firstElement: "Username, you ane an investing ace!",
+    firstElement: "Username, you are an investing ace!",
     secondElement:
       "You made smart investing decisions that paid off in the long run. Great job!",
     thirdElement: "You have enough to purchase your goals, ",

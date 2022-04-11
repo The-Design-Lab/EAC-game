@@ -11,6 +11,7 @@ import ChoiceTabs from "../../components/choice-tabs";
 import InvestmentChoices from "../../components/investment-choices";
 import Choice2A from "../../img/choices/c2-A-image.png";
 import Choice2B from "../../img/choices/c2-B-image.png";
+import useFakePlayer from "../../hooks/useFakePlayer";
 
 const choiceData = {
   header: "CDs & Emergency Savings",
@@ -22,6 +23,7 @@ const choiceData = {
 
 function ChoiceTwo() {
   const { dispatch } = usePlayer();
+  const { fakePlayerDispatch } = useFakePlayer();
   const addAnnualExpenditures = useCheckInvestments();
   const [choice, setChoice] = useState("");
 
@@ -36,18 +38,32 @@ function ChoiceTwo() {
       choice: choice,
     };
 
+    const whatIfSelection = {
+      whatIfChoice: null,
+    };
+
     const CD = -2000;
     const addBuyNewCar = -2000;
     if (choice === "invest") {
       selection.investment = INVESTMENTS_VEHICLES.CD;
       selection.expenditures = addAnnualExpenditures + CD;
+      //fake player
+      whatIfSelection.expenditures = addAnnualExpenditures + addBuyNewCar;
     } else {
       selection.expenditures = addAnnualExpenditures + addBuyNewCar;
+      //fake player
+      whatIfSelection.investment = INVESTMENTS_VEHICLES.CD;
+      whatIfSelection.expenditures = addAnnualExpenditures + CD;
     }
 
     dispatch({
       type: "SELECT_CHOICE",
       payload: selection,
+    });
+
+    fakePlayerDispatch({
+      type: "SELECT_CHOICE",
+      payload: whatIfSelection,
     });
   };
 

@@ -11,6 +11,7 @@ import InvestmentChoices from "../../components/investment-choices";
 import ChoiceTabs from "../../components/choice-tabs";
 import Choice3A from "../../img/choices/c3-A-image.png";
 import Choice3B from "../../img/choices/c3-B-image.png";
+import useFakePlayer from "../../hooks/useFakePlayer";
 
 const choiceData = {
   header: "Individual Stocks & Mutual Funds",
@@ -22,6 +23,7 @@ const choiceData = {
 
 function ChoiceThree() {
   const { dispatch } = usePlayer();
+  const { fakePlayerDispatch } = useFakePlayer();
   const addAnnualExpenditures = useCheckInvestments();
   const [choice, setChoice] = useState("");
   const player = usePlayer();
@@ -41,9 +43,22 @@ function ChoiceThree() {
           : INVESTMENTS_VEHICLES.mutualFund,
     };
 
+    const whatIfSelection = {
+      choice: choice,
+      expenditures: addAnnualExpenditures + addInvestment,
+      investment:
+        choice === INVESTMENTS_VEHICLES.inveesgo
+          ? INVESTMENTS_VEHICLES.mutualFund
+          : INVESTMENTS_VEHICLES.inveesgo,
+    };
+
     dispatch({
       type: "SELECT_CHOICE",
       payload: selection,
+    });
+    fakePlayerDispatch({
+      type: "SELECT_CHOICE",
+      payload: whatIfSelection,
     });
   };
   return (
