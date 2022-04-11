@@ -1,9 +1,9 @@
-import React from 'react'
-import { Line } from 'recharts'
-import CustomizedDot from './CustomizedDot'
+import React from "react";
+import { Line } from "recharts";
+import CustomizedDot from "./CustomizedDot";
 
 function CreateLine(title, index) {
-  const colors = ['#f96263', '#F9BA7F', '#E6E547', '#BBC2FF', 'BBC2FF']
+  const colors = ["#BE8EEE", "#F9BA7F", "#FF5C00", "#FF5050", "#FF5050"];
   return (
     <Line
       type="linear"
@@ -13,7 +13,7 @@ function CreateLine(title, index) {
       dot={<CustomizedDot color={colors[index]} />}
       activeDot={false}
     />
-  )
+  );
 }
 
-export default CreateLine
+export default CreateLine;

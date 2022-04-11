@@ -1,42 +1,49 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Graph from "../../components/graph/Graph";
 import { PlayerContext } from "../../contexts/PlayerContext";
-import { choice3 } from "../../data/investmentData";
+import { choice3, singleGraph3 } from "../../data/investmentData";
 import INVESTMENTS_VEHICLES from "../../data/Investments";
 import { formatter } from "../../formatter";
 import usePlayer from "../../hooks/usePlayer";
 import Button from "@mui/material/Button";
+import SingleGraph from "../../components/graph/SingleGraph";
 
-function GraphTwo() {
+function GraphThree() {
+  const [shownGraph, setShownGraph] = useState(<Graph data={choice3} />);
   const { investments } = useContext(PlayerContext);
   const player = usePlayer();
 
   return (
     <>
-      <div id="container">
+      <div id="graph-container">
         <div id="main-container">
           <div className="sub-containers">
             <div className={"title"}>
-              <h3>2003 Summary Report </h3>
+              <h3>2006 Summary Report </h3>
               <p>
                 This is the graph that you choose. It shows your investing
                 progress throughout the year
               </p>
             </div>
-            <div className={"graph"}>
-              <Graph data={choice3} />
-            </div>
+            <div className={"graph"}>{shownGraph}</div>
             <div className={"investments"}>
-              <h5>Total Balance: {formatter.format(player.bank)} </h5>
+              <h5 onClick={() => setShownGraph(<Graph data={choice3} />)}>
+                Total Balance: {formatter.format(player.bank)}{" "}
+              </h5>
               <div className="label-container">
                 {investments.includes(INVESTMENTS_VEHICLES.SP) && (
                   <div
                     className={"investments-details-label"}
                     style={{ border: "1px solid #BE8EEE" }}
+                    onClick={() =>
+                      setShownGraph(
+                        <SingleGraph data={singleGraph3[0]} color={"#BE8EEE"} />
+                      )
+                    }
                   >
-                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                      S&P 500
+                    <span style={{ color: "#BE8EEE" }}>
+                      S&P 500: {formatter.format(choice3[1][3])}
                     </span>
                   </div>
                 )}
@@ -44,9 +51,14 @@ function GraphTwo() {
                   <div
                     className={"investments-details-label"}
                     style={{ border: "1px solid #BE8EEE" }}
+                    onClick={() =>
+                      setShownGraph(
+                        <SingleGraph data={singleGraph3[1]} color={"#BE8EEE"} />
+                      )
+                    }
                   >
-                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                      Retirement
+                    <span style={{ color: "#BE8EEE" }}>
+                      Retirement: {formatter.format(choice3[0][3])}
                     </span>
                   </div>
                 )}
@@ -54,9 +66,14 @@ function GraphTwo() {
                   <div
                     className={"investments-details-label"}
                     style={{ border: "1px solid #BE8EEE" }}
+                    onClick={() =>
+                      setShownGraph(
+                        <SingleGraph data={singleGraph3[2]} color={"#FF5C00"} />
+                      )
+                    }
                   >
-                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                      CD
+                    <span style={{ color: "#BE8EEE" }}>
+                      CD: {formatter.format(choice3[2][3])}
                     </span>
                   </div>
                 )}
@@ -64,9 +81,14 @@ function GraphTwo() {
                   <div
                     className={"investments-details-label"}
                     style={{ border: "1px solid #BE8EEE" }}
+                    onClick={() =>
+                      setShownGraph(
+                        <SingleGraph data={singleGraph3[3]} color={"#FF5050"} />
+                      )
+                    }
                   >
-                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                      Inveesgo
+                    <span style={{ color: "#BE8EEE" }}>
+                      Inveesgo: {formatter.format(choice3[3][3])}
                     </span>
                   </div>
                 )}
@@ -74,9 +96,14 @@ function GraphTwo() {
                   <div
                     className={"investments-details-label"}
                     style={{ border: "1px solid #BE8EEE" }}
+                    onClick={() =>
+                      setShownGraph(
+                        <SingleGraph data={singleGraph3[4]} color={"#F5F937"} />
+                      )
+                    }
                   >
-                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                      Mutual Fund
+                    <span style={{ color: "#BE8EEE" }}>
+                      Mutual Fund: {formatter.format(choice3[4][3])}
                     </span>
                   </div>
                 )}
@@ -85,7 +112,7 @@ function GraphTwo() {
           </div>
           <div className="sub-containers">
             <div className={"title"}>
-              <h3>2003 What If Report </h3>
+              <h3>2006 What If Report </h3>
               <p>
                 This is the graph if you choose the other option. It is here for
                 future reference.
@@ -103,9 +130,7 @@ function GraphTwo() {
                     className={"investments-details-label"}
                     style={{ border: "1px solid #BE8EEE" }}
                   >
-                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                      S&P 500
-                    </span>
+                    <span style={{ color: "#BE8EEE" }}>S&P 500</span>
                   </div>
                 )}
                 {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
@@ -113,9 +138,7 @@ function GraphTwo() {
                     className={"investments-details-label"}
                     style={{ border: "1px solid #BE8EEE" }}
                   >
-                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                      Retirement
-                    </span>
+                    <span style={{ color: "#BE8EEE" }}>Retirement</span>
                   </div>
                 )}
                 {investments.includes(INVESTMENTS_VEHICLES.CD) && (
@@ -123,9 +146,7 @@ function GraphTwo() {
                     className={"investments-details-label"}
                     style={{ border: "1px solid #BE8EEE" }}
                   >
-                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                      CD
-                    </span>
+                    <span style={{ color: "#BE8EEE" }}>CD</span>
                   </div>
                 )}
                 {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
@@ -133,9 +154,7 @@ function GraphTwo() {
                     className={"investments-details-label"}
                     style={{ border: "1px solid #BE8EEE" }}
                   >
-                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                      Inveesgo
-                    </span>
+                    <span style={{ color: "#BE8EEE" }}>Inveesgo</span>
                   </div>
                 )}
                 {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
@@ -143,59 +162,57 @@ function GraphTwo() {
                     className={"investments-details-label"}
                     style={{ border: "1px solid #BE8EEE" }}
                   >
-                    <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                      Mutual Fund
-                    </span>
+                    <span style={{ color: "#BE8EEE" }}>Mutual Fund</span>
                   </div>
                 )}
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <hr />
-      <div id="button-container">
-        <Link to={"/choice-3"}>
-          <Button
-            sx={{
-              backgroundColor: "#e5e5e5",
-              color: "#000000",
-              height: "2.5rem",
-              width: "10rem",
-              fontSize: "1.2rem",
-              padding: "0",
+        <div id="button-container">
+          <Link to={"/choice-3"}>
+            <Button
+              sx={{
+                backgroundColor: "#e5e5e5",
+                color: "#000000",
+                height: "2.5rem",
+                width: "10rem",
+                fontSize: "1.2rem",
+                padding: "0",
 
-              "&:hover": {
-                backgroundColor: "#00FF38",
-              },
-            }}
-            id="btn"
-          >
-            Back
-          </Button>
-        </Link>
-        <Link to={"/reflection-3"}>
-          <Button
-            sx={{
-              backgroundColor: "#e5e5e5",
-              color: "#000000",
-              height: "2.5rem",
-              width: "10rem",
-              fontSize: "1.2rem",
-              padding: "0",
+                "&:hover": {
+                  backgroundColor: "#00FF38",
+                },
+              }}
+              id="btn"
+            >
+              Back
+            </Button>
+          </Link>
+          <Link to={"/reflection-3"}>
+            <Button
+              sx={{
+                backgroundColor: "#e5e5e5",
+                color: "#000000",
+                height: "2.5rem",
+                width: "10rem",
+                fontSize: "1.2rem",
+                padding: "0",
 
-              "&:hover": {
-                backgroundColor: "#00FF38",
-              },
-            }}
-            id="btn"
-          >
-            Continue
-          </Button>
-        </Link>
+                "&:hover": {
+                  backgroundColor: "#00FF38",
+                },
+              }}
+              id="btn"
+            >
+              Continue
+            </Button>
+          </Link>
+        </div>
       </div>
+      {/*<hr />*/}
     </>
   );
 }
 
-export default GraphTwo;
+export default GraphThree;

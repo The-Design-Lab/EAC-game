@@ -1,34 +1,19 @@
-// noinspection ES6UnusedImports
-
-import React, { useContext } from "react";
+import React from "react";
 import {
   LineChart,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  // Legend,
   ResponsiveContainer,
+  Line,
 } from "recharts";
-import { PlayerContext } from "../../contexts/PlayerContext";
 
-import CreateLine from "./CreateLine";
-
-import useGetQuarterData from "../../hooks/useGetQuarterData";
-
-const Graph = ({ data }) => {
-  const { investments } = useContext(PlayerContext);
-
-  const plotLines = () => {
-    return investments.map((investment, index) =>
-      CreateLine(investment, index)
-    );
-  };
-
+const SingleGraph = ({ data, color }) => {
   return (
-    <ResponsiveContainer width="80%" height={250} id={"responsive-container"}>
+    <ResponsiveContainer width="80%" height={250}>
       <LineChart
-        data={useGetQuarterData(...data)}
+        data={data}
         style={{
           backgroundColor: "#0D0C0C",
           color: "white",
@@ -42,15 +27,15 @@ const Graph = ({ data }) => {
         <YAxis
           stroke="#white"
           label={{ fill: "white" }}
-          type="number"
           domain={["dataMin", "dataMax"]}
         />
         <Tooltip contentStyle={{ backgroundColor: "black" }} />
         {/* Lines */}
-        {plotLines()}
+        {/*{plotLines()}*/}
+        <Line type="monotone" dataKey="amount" stroke={color} />
       </LineChart>
     </ResponsiveContainer>
   );
 };
 
-export default Graph;
+export default SingleGraph;

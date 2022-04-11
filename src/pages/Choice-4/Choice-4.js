@@ -12,6 +12,7 @@ import Choice4A from "../../img/choices/c4-A-image.png";
 import Choice4B from "../../img/choices/c4-B-image.png";
 
 const choiceData = {
+  header: "Index Funds",
   year: 2009,
   setup: `The stock market has gone down recently. In 2004, you invested 15% of your income in shares of an S & P 500 Index Fund at $17.18 per share. The S & P 500 is now down to $13.93 BUT you do not need your money until 2040.`,
   option1: `Keep all of the funds in the S & P 500 because you have 36 more years until you need your money.`,

@@ -6,7 +6,11 @@ body{
 
 }
 
-
+#page-container{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
 
 
 #choice-page{
@@ -171,6 +175,7 @@ body{
 #choices{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     /*border: 1px darkred solid;*/
 }
 
@@ -324,7 +329,7 @@ label{
 
 
 
-@media (max-width: 1280px) {
+@media (max-width: 1500px) {
 
     #choice-page {
         display: flex;
@@ -334,13 +339,13 @@ label{
         /*border: 1px red solid;*/
     }
     #choice-container {
-        border: cyan 1px solid;
-        height: 100%;
+        /*border: cyan 1px solid;*/
+        height: 110%;
         grid-column-gap: 2rem;
         width: 100%;
     }
     #details-container{
-        border: red 1px solid;
+        /*border: red 1px solid;*/
 
     }
 
@@ -358,8 +363,9 @@ label{
     }
 
     .choice-wrapper{
-        border: 1px solid yellow;
+        /*border: 1px solid yellow;*/
         height: 100%;
+        margin: 0;
     }
 
 
@@ -384,6 +390,12 @@ label{
 
     }
 
+    #choices label{
+        zoom: 0.5;
+        -moz-transform: scale(0.7);
+        -moz-transform-origin: 0 0;
+    }
+
     #choices input + label {
         display: inline-block;
         cursor: pointer;
@@ -399,6 +411,12 @@ label{
     }
 
 
+}
+
+@media (max-width: 1920px){
+    *{
+
+    }
 }
 
 

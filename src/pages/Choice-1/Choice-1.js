@@ -11,6 +11,7 @@ import InvestmentChoices from "../../components/investment-choices";
 import Choice1A from "../../img/choices/c1-A-image.png";
 import Choice1B from "../../img/choices/c1-B-image.png";
 const choiceData = {
+  header: "Retirement & Financial Goals",
   year: 2004,
   setup: `Congrats! Your employer has a benefits program to help workers invest for their retirement. Your employer allows you to invest funds into a 401k up to 10% of your salary with a match of 50% of your investment. You have two choices.`,
   option1: `You choose to rent a small studio apartment and take public transportation to work so that you can afford to invest 10% of your salary into a 401k with a match of 5% (of your annual income). All of the funds, 15% of your total salary, will be invested in the S&P 500 index fund throughout the game.`,
@@ -53,52 +54,34 @@ function ChoiceOne() {
 
   return (
     <>
-      <div id="choice-page">
-        <div id={"choice-container"}>
-          <InvestmentChoices
-            choice={choice}
-            choiceData={choiceData}
-            handleSelection={handleSelection}
-            imageA={Choice1A}
-            imageB={Choice1B}
-            choiceA={"invest"}
-            choiceB={"spend"}
-          />
-          <div id="financial-container">
-            <div id="financial-top-container">
-              <div className={"wrapper"}>
-                <ChoiceTabs year={"2003"} player={player} />
+      <div id="page-container">
+        <div id="choice-page">
+          <div id={"choice-container"}>
+            <InvestmentChoices
+              choice={choice}
+              choiceData={choiceData}
+              handleSelection={handleSelection}
+              imageA={Choice1A}
+              imageB={Choice1B}
+              choiceA={"invest"}
+              choiceB={"spend"}
+            />
+            <div id="financial-container">
+              <div id="financial-top-container">
+                <div className={"wrapper"}>
+                  <ChoiceTabs year={"2003"} player={player} />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <hr
-        style={{
-          margin: "0.2rem 150px",
-        }}
-      />
-      <div id="button-container">
-        <Button
-          sx={{
-            backgroundColor: "#e5e5e5",
-            color: "#000000",
-            height: "2.5rem",
-            width: "10rem",
-            fontSize: "1.2rem",
-            padding: "0",
-
-            "&:hover": {
-              backgroundColor: "#00FF38",
-            },
+        <hr
+          style={{
+            margin: "0.2rem 150px",
           }}
-          id="btn"
-        >
-          Back
-        </Button>
-        <Link to="/graph-1">
+        />
+        <div id="button-container">
           <Button
-            id="btn"
             sx={{
               backgroundColor: "#e5e5e5",
               color: "#000000",
@@ -111,11 +94,31 @@ function ChoiceOne() {
                 backgroundColor: "#00FF38",
               },
             }}
-            onClick={submitSelection}
+            id="btn"
           >
-            Continue
+            Back
           </Button>
-        </Link>
+          <Link to="/graph-1">
+            <Button
+              id="btn"
+              sx={{
+                backgroundColor: "#e5e5e5",
+                color: "#000000",
+                height: "2.5rem",
+                width: "10rem",
+                fontSize: "1.2rem",
+                padding: "0",
+
+                "&:hover": {
+                  backgroundColor: "#00FF38",
+                },
+              }}
+              onClick={submitSelection}
+            >
+              Continue
+            </Button>
+          </Link>
+        </div>
       </div>
     </>
   );

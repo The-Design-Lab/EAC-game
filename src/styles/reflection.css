@@ -13,11 +13,11 @@ hr{
     margin: 2rem;
 }
 
-#container{
+#reflection-container{
     display: flex;
     flex-direction: column;
     justify-content: center; align-items: center;
-    height: 75vh;
+    /*height: 85vh;*/
 
 }
 

@@ -3,15 +3,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ChoiceCard from "../components/ChoiceCard";
 import { PlayerContext } from "../contexts/PlayerContext";
-import { CustomButton } from "../styles/MUIThemes";
+
 import "@splidejs/splide/dist/css/splide.min.css";
 import "../styles/goals.css";
 import { formatter } from "../formatter";
-
-const Buttons = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+import Button from "@mui/material/Button";
 
 const GoalChoices = styled.div`
   display: flex;
@@ -71,14 +67,48 @@ function Goals() {
           Total cost: {formatter.format(totalCost)}
         </h3>
         <hr />
-        <Buttons>
-          <Link to="/">
-            <CustomButton> Back </CustomButton>
-          </Link>{" "}
-          <Link to="/choice-1">
-            {goalSelected ? <CustomButton> Continue </CustomButton> : <></>}
-          </Link>
-        </Buttons>
+        <div id="button-container">
+          <Button
+            sx={{
+              backgroundColor: "#e5e5e5",
+              color: "#000000",
+              height: "2.5rem",
+              width: "10rem",
+              fontSize: "1.2rem",
+              padding: "0",
+
+              "&:hover": {
+                backgroundColor: "#00FF38",
+              },
+            }}
+            id="btn"
+          >
+            Back
+          </Button>
+          {goalSelected ? (
+            <Link to="/choice-1">
+              <Button
+                id="btn"
+                sx={{
+                  backgroundColor: "#e5e5e5",
+                  color: "#000000",
+                  height: "2.5rem",
+                  width: "10rem",
+                  fontSize: "1.2rem",
+                  padding: "0",
+
+                  "&:hover": {
+                    backgroundColor: "#00FF38",
+                  },
+                }}
+              >
+                Continue
+              </Button>
+            </Link>
+          ) : (
+            <> </>
+          )}
+        </div>
       </div>
     </div>
   );

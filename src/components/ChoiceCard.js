@@ -32,7 +32,7 @@ const checkboxData = [
     label: "house",
     checked: false,
     tag: "Car",
-    src: "goals/vacation-image.png",
+    src: "goals/car-image.png",
   },
   {
     name: "Buy for Fun",
@@ -110,6 +110,7 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
   const handleChange = (e) => {
     let data = JSON.parse(e.target.value);
     if (e.target.checked === true) {
+      console.log("from false to true");
       // set checked items for UI change
       setCheckedItems({
         ...checkedItems,
@@ -131,7 +132,7 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
         payload: goal,
       });
 
-      if (e.target.name === "Save for Retirement") {
+      if (data.name === "Save for Retirement") {
         dispatch({
           type: `ADD_INVESTMENT`,
           payload: INVESTMENTS_VEHICLES.retirement,

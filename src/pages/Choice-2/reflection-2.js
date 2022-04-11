@@ -7,7 +7,7 @@ import questionMark from "../../img/reflections/questionmark.png";
 function Reflection2() {
   return (
     <>
-      <div id="container">
+      <div id="reflection-container">
         <div className="subcontainer">
           <h1> Time to reflect! </h1>
         </div>

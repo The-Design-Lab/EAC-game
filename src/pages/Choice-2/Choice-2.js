@@ -13,6 +13,7 @@ import Choice2A from "../../img/choices/c2-A-image.png";
 import Choice2B from "../../img/choices/c2-B-image.png";
 
 const choiceData = {
+  header: "CDs & Emergency Savings",
   year: 2005,
   setup: ` You have been working for over a year and you notice that you have some extra room in your budget. You are conflicted because you have really old, used furniture. You have two choices:`,
   option1: `You know how important emergency savings is so you save $2,000 and deposit this in a special savings account which is just for emergencies and just purchase a slipcover for your couch. `,

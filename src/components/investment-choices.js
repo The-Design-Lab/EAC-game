@@ -1,5 +1,5 @@
 import React from "react";
-import Tooltip from "./tooltip";
+// import Tooltip from "./tooltip";
 import Typography from "@mui/material/Typography";
 
 function InvestmentChoices({
@@ -13,12 +13,7 @@ function InvestmentChoices({
   return (
     <div id={"details-container"}>
       <section id="details-header-container">
-        <h3 id={"header"}>
-          <b>
-            Retirement and financial{" "}
-            <Tooltip text={"goal"} tooltipText={"this is a goal"} />
-          </b>
-        </h3>
+        <h3 id={"header"}>{choiceData.header}</h3>
         <p id="subtext">{choiceData.setup}</p>
       </section>
       <Typography id="choices-header" variant={"h4"}>

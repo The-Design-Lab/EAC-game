@@ -13,6 +13,7 @@ import Choice3A from "../../img/choices/c3-A-image.png";
 import Choice3B from "../../img/choices/c3-B-image.png";
 
 const choiceData = {
+  header: "Individual Stocks & Mutual Funds",
   year: 2006,
   setup: `You have been working for a few more years and have another $2,000 saved up that you are thinking about investing. You have two choices:`,
   option1: `You invest the money in stock in a small company, Invesgo, that has high risk but recently has shown potential for a high return. Invesgo’s stock price has increased from $6.01 to $13.1 in the years 2004 - 2006 with a high of $19.25 during that time.`,

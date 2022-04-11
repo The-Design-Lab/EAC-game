@@ -7,7 +7,7 @@ import emoji from "../../img/reflections/reflect1";
 function Reflection1() {
   return (
     <>
-      <div id="container">
+      <div id="reflection-container">
         <div className="subcontainer">
           <h1> Time to reflect! </h1>
         </div>

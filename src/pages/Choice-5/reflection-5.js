@@ -7,7 +7,7 @@ import think from "../../img/reflections/think.png";
 function Reflection5() {
   return (
     <>
-      <div id="container">
+      <div id="reflection-container">
         <div className="subcontainer">
           <h1> Time to reflect! </h1>
         </div>

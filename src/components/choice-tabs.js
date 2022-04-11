@@ -47,7 +47,7 @@ function ChoiceTabs({ year, player, choice }) {
       <TabPanel>
         <div id="marketNews-container">
           <div id="marketNews-details">
-            <h5>Financial Market in 2003</h5>
+            <h5>Financial Market in {year}</h5>
             <div>
               <ul id={"marketNews-list"}>
                 {marketNews[year].map((item) => (
@@ -78,9 +78,7 @@ function ChoiceTabs({ year, player, choice }) {
                 className={"investments-details-label"}
                 style={{ border: "1px solid #BE8EEE" }}
               >
-                <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                  S&P 500
-                </span>
+                <span style={{ color: "#BE8EEE" }}>S&P 500</span>
               </div>
             )}
             {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
@@ -88,9 +86,7 @@ function ChoiceTabs({ year, player, choice }) {
                 className={"investments-details-label"}
                 style={{ border: "1px solid #BE8EEE" }}
               >
-                <span style={{ marginLeft: "0.3rem", color: "#BE8EEE" }}>
-                  Retirement
-                </span>
+                <span style={{ color: "#BE8EEE" }}>Retirement</span>
               </div>
             )}
             {investments.includes(INVESTMENTS_VEHICLES.CD) && (
@@ -98,9 +94,7 @@ function ChoiceTabs({ year, player, choice }) {
                 className={"investments-details-label"}
                 style={{ border: "1px solid #FF5C00" }}
               >
-                <span style={{ marginLeft: "0.3rem", color: "#FF5C00" }}>
-                  CD
-                </span>
+                <span style={{ color: "#FF5C00" }}>CD</span>
               </div>
             )}
             {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
@@ -108,9 +102,7 @@ function ChoiceTabs({ year, player, choice }) {
                 className={"investments-details-label"}
                 style={{ border: "1px solid #FF5050" }}
               >
-                <span style={{ marginLeft: "0.3rem", color: "#FF5050" }}>
-                  Inveesgo
-                </span>
+                <span style={{ color: "#FF5050" }}>Inveesgo</span>
               </div>
             )}
             {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
@@ -118,9 +110,7 @@ function ChoiceTabs({ year, player, choice }) {
                 className={"investments-details-label"}
                 style={{ border: "1px solid #F5F937" }}
               >
-                <span style={{ marginLeft: "0.3rem", color: "#F5F937" }}>
-                  Mutual Fund
-                </span>
+                <span style={{ color: "#F5F937" }}>Mutual Fund</span>
               </div>
             )}
           </div>

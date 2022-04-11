@@ -12,6 +12,7 @@ import Choice5A from "../../img/choices/c5-A-image.png";
 import Choice5B from "../../img/choices/c5-B-image.png";
 
 const choiceData = {
+  header: "Hold or Sell",
   year: 2013,
   setup: `The stock market has recently increased. In 2004, you invested 15% of your income in shares of the S & P 500 at $17.18. The S & P 500 is now at $22.19. You do not need your money until 2040.`,
   option1: `The $5 gain is nice, but you decide to keep all of the funds in the S & P 500 because you have 32 more years until you need your money which you think is plenty of time to withstand ups and downs in the market.`,
