@@ -17,7 +17,7 @@ const WhatIfGraph = () => {
   const { graph } = useFakePlayer();
 
   return (
-    <ResponsiveContainer width="80%" height={250} id={"responsive-container"}>
+    <ResponsiveContainer width="80%" height={400} id={"responsive-container"}>
       <LineChart
         data={graph}
         style={{

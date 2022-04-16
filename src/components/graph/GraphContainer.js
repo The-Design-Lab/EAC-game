@@ -25,8 +25,8 @@ const GraphContainer = ({ year, limit, choice, singleGraph }) => {
         <div className={"title"}>
           <h3>{year} Summary Report </h3>
           <p>
-            This is the graph that you choose. It shows your investing progress
-            throughout the year
+            This is graphs shows your investing progress
+            throughout the year.
           </p>
         </div>
         <div className={"graph"}>{shownGraph}</div>
@@ -72,14 +72,14 @@ const GraphContainer = ({ year, limit, choice, singleGraph }) => {
             {investments.includes(INVESTMENTS_VEHICLES.CD) && (
               <div
                 className={"investments-details-label"}
-                style={{ border: "1px solid #FF5C00" }}
+                              style={{ border: "1px solid #f78da7" }}
                 onClick={() =>
                   setShownGraph(
-                    <SingleGraph data={singleGraph[2]} color={"#FF5C00"} />
+                      <SingleGraph data={singleGraph[2]} color={"#f78da7"} />
                   )
                 }
               >
-                <span style={{ color: "#FF5C00" }}>
+                <span style={{ color: "#f78da7" }}>
                   CD: {formatter.format(choice[2].slice(-1))}
                 </span>
               </div>
@@ -121,8 +121,7 @@ const GraphContainer = ({ year, limit, choice, singleGraph }) => {
         <div className={"title"}>
           <h3>{year} What If Report </h3>
           <p>
-            This is the graph if you choose the other option. It is here for
-            future reference.
+            This graph charts what would have happened if you made the other choice.
           </p>
         </div>
         <div className={"graph"}>{shownWhatIfGraph}</div>
@@ -132,7 +131,7 @@ const GraphContainer = ({ year, limit, choice, singleGraph }) => {
             style={{ border: "1px solid white" }}
             onClick={() => setShownWhatIfGraph(<WhatIfGraph />)}
           >
-            Total Balance: {formatter.format(fakePlayer.bank)}{" "}
+            Potential Balance: {formatter.format(fakePlayer.bank)}{" "}
           </h5>
           <div className="label-container">
             {fakeContext.investments.includes(INVESTMENTS_VEHICLES.SP) && (

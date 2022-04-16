@@ -85,7 +85,7 @@ function ChoiceTabs({ year, player, choice }) {
             )}
             {investments.includes(INVESTMENTS_VEHICLES.CD) && (
               <div className={"investments-details-label"}>
-                <span style={{ color: "#FF5C00" }}>CD</span>
+                <span style={{ color: "#f78da7" }}>CD</span>
               </div>
             )}
             {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
