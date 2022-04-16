@@ -9,11 +9,17 @@
 
 #leaderboard{
     height: 70vh;
-    width: 50vw;
+    width: 90vw;
     color: white;
+    margin: 1rem;
 }
 .MuiDataGrid-columnHeaderTitle{
     color: white;
+    text-align: center;
+}
+.MuiDataGrid-columnHeaderTitleContainer{
+    justify-content: center;
+    font-size: 2rem;
 }
 
 .MuiDataGrid-cell{
@@ -22,4 +28,5 @@
 }
 .MuiSvgIcon-root{
     fill: #00FF38;
+    display: none;
 }

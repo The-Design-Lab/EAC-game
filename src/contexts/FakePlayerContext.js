@@ -7,6 +7,7 @@ const initialState = {
   goals: [],
   choices: [],
   investments: [],
+  graph: [{ year: 2002, amount: 0 }],
 };
 
 // create the context
@@ -28,6 +29,7 @@ export const FakePlayerProvider = ({ children }) => {
         goals: state.goals,
         choices: state.choices,
         investments: state.investments,
+        graph: state.graph,
         fakePlayerDispatch,
       }}
     >
@@ -79,6 +81,12 @@ const FakePlayerReducer = (state, action) => {
 
         bank: state.bank + action.payload,
       };
+    case "GENERATE_GRAPH": {
+      return {
+        ...state,
+        graph: [...state.graph, action.payload],
+      };
+    }
     case "RESET":
       return initialState;
     default:

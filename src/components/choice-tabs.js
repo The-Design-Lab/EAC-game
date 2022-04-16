@@ -74,42 +74,27 @@ function ChoiceTabs({ year, player, choice }) {
           </div>
           <div id="investment-details-top">
             {investments.includes(INVESTMENTS_VEHICLES.SP) && (
-              <div
-                className={"investments-details-label"}
-                style={{ border: "1px solid #BE8EEE" }}
-              >
+              <div className={"investments-details-label"}>
                 <span style={{ color: "#BE8EEE" }}>S&P 500</span>
               </div>
             )}
             {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
-              <div
-                className={"investments-details-label"}
-                style={{ border: "1px solid #BE8EEE" }}
-              >
+              <div className={"investments-details-label"}>
                 <span style={{ color: "#BE8EEE" }}>Retirement</span>
               </div>
             )}
             {investments.includes(INVESTMENTS_VEHICLES.CD) && (
-              <div
-                className={"investments-details-label"}
-                style={{ border: "1px solid #FF5C00" }}
-              >
+              <div className={"investments-details-label"}>
                 <span style={{ color: "#FF5C00" }}>CD</span>
               </div>
             )}
             {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
-              <div
-                className={"investments-details-label"}
-                style={{ border: "1px solid #FF5050" }}
-              >
+              <div className={"investments-details-label"}>
                 <span style={{ color: "#FF5050" }}>Inveesgo</span>
               </div>
             )}
             {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
-              <div
-                className={"investments-details-label"}
-                style={{ border: "1px solid #F5F937" }}
-              >
+              <div className={"investments-details-label"}>
                 <span style={{ color: "#F5F937" }}>Mutual Fund</span>
               </div>
             )}
@@ -134,7 +119,7 @@ function ChoiceTabs({ year, player, choice }) {
                     width: "3rem",
                     display: "inline-block",
                     height: "fit-content",
-                    borderRadius: "5%",
+                    borderRadius: "15px",
                     fontSize: "0.9rem",
                     padding: "1px",
                     margin: "0.5rem",

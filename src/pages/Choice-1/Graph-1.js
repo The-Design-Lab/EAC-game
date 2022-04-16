@@ -1,139 +1,21 @@
 // noinspection JSUnusedLocalSymbols
-import React, { useContext, useState } from "react";
-import Graph from "../../components/graph/Graph";
-import { PlayerContext } from "../../contexts/PlayerContext";
+import React from "react";
+import GraphContainer from "../../components/graph/GraphContainer";
 import { choice1, singleGraph1 } from "../../data/investmentData";
-import "../../styles/graphPages.css";
-import usePlayer from "../../hooks/usePlayer";
-import { formatter } from "../../formatter";
 import Button from "@mui/material/Button";
-import INVESTMENTS_VEHICLES from "../../data/Investments";
 import { Link } from "react-router-dom";
-import SingleGraph from "../../components/graph/SingleGraph";
-import useFakePlayer from "../../hooks/useFakePlayer";
-import WhatIfGraph from "../../components/graph/WhatIfGraph";
+import "../../styles/graphPages.css";
 
 function GraphOne() {
-  const { investments } = useContext(PlayerContext);
-  const [shownGraph, setShownGraph] = useState(<Graph data={choice1} />);
-  const player = usePlayer();
-  const fakePlayer = useFakePlayer();
-  console.log(fakePlayer);
-
   return (
     <>
       <div id="graph-container">
-        <div id="main-container">
-          <div className="sub-containers">
-            <div className={"title"}>
-              <h3>2003 Summary Report </h3>
-              <p>
-                This is the graph that you choose. It shows your investing
-                progress throughout the year
-              </p>
-            </div>
-            <div className={"graph"}>{shownGraph}</div>
-            <div className={"investments"}>
-              <h5
-                onClick={() =>
-                  setShownGraph(<Graph data={choice1} isFake={false} />)
-                }
-              >
-                Total Balance: {formatter.format(player.bank)}{" "}
-              </h5>
-              <div className="label-container">
-                {investments.includes(INVESTMENTS_VEHICLES.SP) && (
-                  <div
-                    className={"investments-details-label"}
-                    style={{ border: "1px solid #BE8EEE" }}
-                    onClick={() =>
-                      setShownGraph(
-                        <SingleGraph data={singleGraph1[0]} color={"#BE8EEE"} />
-                      )
-                    }
-                  >
-                    <span style={{ color: "#BE8EEE" }}>
-                      S&P 500: {formatter.format(choice1[1][3])}
-                    </span>
-                  </div>
-                )}
-                {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
-                  <div
-                    className={"investments-details-label"}
-                    style={{ border: "1px solid #BE8EEE" }}
-                    onClick={() =>
-                      setShownGraph(
-                        <SingleGraph data={singleGraph1[1]} color={"#BE8EEE"} />
-                      )
-                    }
-                  >
-                    <span style={{ color: "#BE8EEE" }}>
-                      Retirement: {formatter.format(choice1[0][3])}
-                    </span>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-          <div className="sub-containers">
-            <div className={"title"}>
-              <h3>2003 What If Report </h3>
-              <p>
-                This is the graph if you choose the other option. It is here for
-                future reference.
-              </p>
-            </div>
-            <div className={"graph"}>
-              <WhatIfGraph data={choice1} />
-            </div>
-            <div className={"investments"}>
-              <h5>Total Balance: {formatter.format(fakePlayer.bank)} </h5>
-
-              <div className="label-container">
-                {investments.includes(INVESTMENTS_VEHICLES.SP) && (
-                  <div
-                    className={"investments-details-label"}
-                    style={{ border: "1px solid #BE8EEE" }}
-                  >
-                    <span style={{ color: "#BE8EEE" }}>S&P 500</span>
-                  </div>
-                )}
-                {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
-                  <div
-                    className={"investments-details-label"}
-                    style={{ border: "1px solid #BE8EEE" }}
-                  >
-                    <span style={{ color: "#BE8EEE" }}>Retirement</span>
-                  </div>
-                )}
-                {investments.includes(INVESTMENTS_VEHICLES.CD) && (
-                  <div
-                    className={"investments-details-label"}
-                    style={{ border: "1px solid #BE8EEE" }}
-                  >
-                    <span style={{ color: "#BE8EEE" }}>CD</span>
-                  </div>
-                )}
-                {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
-                  <div
-                    className={"investments-details-label"}
-                    style={{ border: "1px solid #BE8EEE" }}
-                  >
-                    <span style={{ color: "#BE8EEE" }}>Inveesgo</span>
-                  </div>
-                )}
-                {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
-                  <div
-                    className={"investments-details-label"}
-                    style={{ border: "1px solid #BE8EEE" }}
-                  >
-                    <span style={{ color: "#BE8EEE" }}>Mutual Fund</span>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
+        <GraphContainer
+          year={2003}
+          choice={choice1}
+          singleGraph={singleGraph1}
+          limit={2}
+        />
         {/*<hr />*/}
         <div id="button-container">
           <Link to={"/choice-1"}>

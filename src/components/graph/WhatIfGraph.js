@@ -8,24 +8,18 @@ import {
   Tooltip,
   // Legend,
   ResponsiveContainer,
+  Line,
 } from "recharts";
-import CreateLine from "./CreateLine";
-import { FakePlayerContext } from "../../contexts/FakePlayerContext";
-import useGetFakeQuarterData from "../../hooks/useGetFakeQuarterData";
 
-const WhatIfGraph = ({ data }) => {
-  const { investments } = useContext(FakePlayerContext);
+import useFakePlayer from "../../hooks/useFakePlayer";
 
-  const plotLines = () => {
-    return investments.map((investment, index) =>
-      CreateLine(investment, index)
-    );
-  };
+const WhatIfGraph = () => {
+  const { graph } = useFakePlayer();
 
   return (
     <ResponsiveContainer width="80%" height={250} id={"responsive-container"}>
       <LineChart
-        data={useGetFakeQuarterData(...data)}
+        data={graph}
         style={{
           backgroundColor: "#0D0C0C",
           color: "white",
@@ -35,7 +29,7 @@ const WhatIfGraph = ({ data }) => {
         }}
       >
         <CartesianGrid strokeDasharray="5 5" stroke="white" />
-        <XAxis dataKey="name" stroke="White" />
+        <XAxis dataKey="year" stroke="White" />
         <YAxis
           stroke="#white"
           label={{ fill: "white" }}
@@ -44,7 +38,14 @@ const WhatIfGraph = ({ data }) => {
         />
         <Tooltip contentStyle={{ backgroundColor: "black" }} />
         {/* Lines */}
-        {plotLines()}
+        <Line
+          type="linear"
+          dataKey={"amount"}
+          stroke={"#ee3514"}
+          strokeWidth="2"
+          activeDot={false}
+        />
+        {/*{plotLines()}*/}
       </LineChart>
     </ResponsiveContainer>
   );

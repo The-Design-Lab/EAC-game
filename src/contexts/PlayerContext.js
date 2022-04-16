@@ -7,6 +7,7 @@ const initialState = {
   goals: [],
   choices: [],
   investments: [],
+  graph: [{ year: 2002, amount: 0 }],
 };
 
 // create the context
@@ -24,6 +25,7 @@ export const PlayerProvider = ({ children }) => {
         goals: state.goals,
         choices: state.choices,
         investments: state.investments,
+        graph: state.graph,
         dispatch,
       }}
     >
@@ -75,6 +77,12 @@ const PlayerReducer = (state, action) => {
 
         bank: state.bank + action.payload,
       };
+    case "GENERATE_GRAPH": {
+      return {
+        ...state,
+        graph: [...state.graph, action.payload],
+      };
+    }
     case "RESET":
       return initialState;
     default:

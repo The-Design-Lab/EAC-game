@@ -8,26 +8,24 @@ import {
   Tooltip,
   // Legend,
   ResponsiveContainer,
+  Line,
 } from "recharts";
-import { PlayerContext } from "../../contexts/PlayerContext";
 
-import CreateLine from "./CreateLine";
+import usePlayer from "../../hooks/usePlayer";
 
-import useGetQuarterData from "../../hooks/useGetQuarterData";
+const Graph = () => {
+  const { graph } = usePlayer();
 
-const Graph = ({ data }) => {
-  const { investments } = useContext(PlayerContext);
-
-  const plotLines = () => {
-    return investments.map((investment, index) =>
-      CreateLine(investment, index)
-    );
-  };
+  // const plotLines = () => {
+  //   return investments.map((investment, index) =>
+  //     CreateLine(investment, index)
+  //   );
+  // };
 
   return (
     <ResponsiveContainer width="80%" height={250} id={"responsive-container"}>
       <LineChart
-        data={useGetQuarterData(...data)}
+        data={graph}
         style={{
           backgroundColor: "#0D0C0C",
           color: "white",
@@ -37,7 +35,7 @@ const Graph = ({ data }) => {
         }}
       >
         <CartesianGrid strokeDasharray="5 5" stroke="white" />
-        <XAxis dataKey="name" stroke="White" />
+        <XAxis dataKey="year" stroke="White" />
         <YAxis
           stroke="#white"
           label={{ fill: "white" }}
@@ -46,7 +44,14 @@ const Graph = ({ data }) => {
         />
         <Tooltip contentStyle={{ backgroundColor: "black" }} />
         {/* Lines */}
-        {plotLines()}
+        <Line
+          type="linear"
+          dataKey={"amount"}
+          stroke={"#00FF38"}
+          strokeWidth="2"
+          activeDot={false}
+        />
+        {/*{plotLines()}*/}
       </LineChart>
     </ResponsiveContainer>
   );

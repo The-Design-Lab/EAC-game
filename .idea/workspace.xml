@@ -2,25 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Summary / finish page styled">
-      <change afterPath="$PROJECT_DIR$/src/components/graph/WhatIfGraph.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contexts/FakePlayerContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useFakePlayer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useGetFakeQuarterData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/graph/GraphContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/graph/LineColors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useGenerateGraphData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/choice-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/choice-tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/graph/CreateLine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/CreateLine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/graph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/Graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/graph/WhatIfGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/WhatIfGraph.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/investment-choices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/investment-choices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/leaderboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leaderboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/FakePlayerContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/FakePlayerContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/PlayerContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/PlayerContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Investments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Investments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/formatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/formatter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useGetQuarterData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useGetQuarterData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/usePlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/usePlayer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/Graph-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/Graph-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Graph-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Graph-2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-3/Graph-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-3/Graph-3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-4/Choice-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-4/Choice-4.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-4/Graph-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-4/Graph-4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-5/Choice-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-5/Choice-5.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-5/Graph-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-5/Graph-5.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Summary/Summary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Summary/Summary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/graphPages.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/graphPages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/leaderboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/leaderboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +78,7 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../systemhub" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Raphy\AppData\Roaming\npm\node_modules\prettier" />
@@ -180,6 +187,8 @@
       <workItem from="1649551245569" duration="3786000" />
       <workItem from="1649612004007" duration="22368000" />
       <workItem from="1649687306811" duration="11743000" />
+      <workItem from="1649860299228" duration="2152000" />
+      <workItem from="1650036291100" duration="19869000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>

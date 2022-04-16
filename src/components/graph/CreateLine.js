@@ -2,15 +2,15 @@ import React from "react";
 import { Line } from "recharts";
 import CustomizedDot from "./CustomizedDot";
 
-function CreateLine(title, index) {
-  const colors = ["#BE8EEE", "#F9BA7F", "#FF5C00", "#FF5050", "#FF5050"];
+function CreateLine(title) {
+  // const colors = ["#BE8EEE", "#F9BA7F", "#FF5C00", "#FF5050", "#FF5050"];
   return (
     <Line
       type="linear"
-      dataKey={title}
-      stroke={colors[index]}
+      dataKey={title.name}
+      stroke={title.color}
       strokeWidth="2"
-      dot={<CustomizedDot color={colors[index]} />}
+      dot={<CustomizedDot color={title.color} />}
       activeDot={false}
     />
   );

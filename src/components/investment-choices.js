@@ -12,6 +12,8 @@ function InvestmentChoices({
 }) {
   const [isOptionADisabled, setIsOptionADisabled] = useState(false);
   const [isOptionBDisabled, setIsOptionBDisabled] = useState(false);
+  const [colorA, setColorA] = useState("white");
+  const [colorB, setColorB] = useState("white");
 
   const disableButtons = (e) => {
     console.log(e.target);
@@ -30,6 +32,15 @@ function InvestmentChoices({
   const onButtonChange = (e) => {
     disableButtons(e);
     handleSelection(e);
+    if (e.target.id === "optionA" && colorA === "white") {
+      setColorA("#00FF38");
+    } else if (e.target.id === "optionB" && colorB === "white") {
+      setColorB("#00FF38");
+    } else if (e.target.id === "optionA" && colorA === "#00FF38") {
+      setColorA("white");
+    } else if (e.target.id === "optionB" && colorB === "#00FF38") {
+      setColorB("white");
+    }
   };
 
   return (
@@ -45,7 +56,11 @@ function InvestmentChoices({
         <div className="choice-wrapper">
           <div
             id="firstChoice"
-            style={isOptionADisabled ? { border: "black 1px solid" } : {}}
+            style={
+              isOptionADisabled
+                ? { border: "black 1px solid" }
+                : { border: `${colorA} 1px solid` }
+            }
           >
             <img
               className={"choice-image"}
@@ -73,7 +88,11 @@ function InvestmentChoices({
         <div className="choice-wrapper">
           <div
             id="secondChoice"
-            style={isOptionBDisabled ? { border: "black 1px solid" } : {}}
+            style={
+              isOptionBDisabled
+                ? { border: "black 1px solid" }
+                : { border: `${colorB} 1px solid` }
+            }
           >
             <img
               className={"choice-image"}

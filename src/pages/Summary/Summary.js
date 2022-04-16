@@ -62,7 +62,7 @@ function Summary() {
   }, [didWin]);
 
   const win = {
-    firstElement: "Username, you are an investing ace!",
+    firstElement: `${name}, you are an investing ace!`,
     secondElement:
       "You made smart investing decisions that paid off in the long run. Great job!",
     thirdElement: "You have enough to purchase your goals, ",
@@ -70,7 +70,7 @@ function Summary() {
   };
 
   const lose = {
-    firstElement: "Username, you were a little off the mark!",
+    firstElement: `${name}, you were a little off the mark!`,
     secondElement:
       "Good thing this is just a game for learning. Play the game again, adjust your goals, and see if you can make better financial choices. Investing success can happen for you!",
     thirdElement: "You don’t have enough to purchase your goals, ",

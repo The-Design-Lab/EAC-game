@@ -35,18 +35,18 @@ function Leaderboard() {
   }
 
   const columns = [
-    { field: "id", headerName: "ID", width: 400 },
+    { field: "id", headerName: "ID", width: 600 },
     {
       field: "amount",
       headerName: "Amount of money earned",
       type: "number",
-      width: 400,
+      width: 600,
     },
     {
       field: "date",
       headerName: "Date and Time",
       type: "string",
-      width: 400,
+      width: 600,
     },
   ];
 
