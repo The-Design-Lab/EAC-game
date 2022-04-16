@@ -12,6 +12,7 @@ import {
 } from "recharts";
 
 import usePlayer from "../../hooks/usePlayer";
+import { formatter } from "../../formatter";
 
 const Graph = () => {
   const { graph } = usePlayer();
@@ -31,7 +32,7 @@ const Graph = () => {
           color: "white",
           paddingLeft: "0rem",
           paddingRight: "0rem",
-          // border: "1px solid white",
+          
         }}
       >
         <CartesianGrid strokeDasharray="5 5" stroke="white" />
@@ -41,6 +42,10 @@ const Graph = () => {
           label={{ fill: "white" }}
           type="number"
           domain={["dataMin", "dataMax"]}
+          tickFormatter={(value) => formatter.format(value)}
+
+
+
         />
         <Tooltip contentStyle={{ backgroundColor: "black" }} />
         {/* Lines */}
