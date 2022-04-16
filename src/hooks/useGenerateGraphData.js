@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { PlayerContext } from "../contexts/PlayerContext";
 import { FakePlayerContext } from "../contexts/FakePlayerContext";
+import { formatter } from "../formatter";
 
 /**
  * Hook to handle the creation of the both graphs used for the GRAPH pages
@@ -16,8 +17,14 @@ const useGenerateGraphData = (year, player, fakePlayer, limit) => {
   //useEffect to trigger the dispatchers // is a useEffect hook needed here?
   useEffect(() => {
     if (player.graph.length < limit) {
-      const graphData = { year: year, amount: player.bank };
-      const whatIfGraphData = { year: year, amount: fakePlayer.bank };
+      const graphData = {
+        year: year,
+        amount: formatter.format(parseInt(player.bank)),
+      };
+      const whatIfGraphData = {
+        year: year,
+        amount: formatter.format(parseInt(fakePlayer.bank)),
+      };
       dispatch({
         type: "GENERATE_GRAPH",
         payload: graphData,

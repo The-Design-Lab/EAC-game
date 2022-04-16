@@ -3,6 +3,8 @@
 
 // 1 years passes
 
+import { formatter } from "../formatter";
+
 export const choice1 = [
   [1500, 3000, 4500, 6000],
   [10158, 9891, 9795, 10595],
@@ -66,37 +68,37 @@ export const singleGraph1 = [
   [
     {
       name: "Q1",
-      amount: 10158,
+      amount: formatter.format(10158),
     },
     {
       name: "Q2",
-      amount: 9891,
+      amount: formatter.format(9891),
     },
     {
       name: "Q3",
-      amount: 9795,
+      amount: formatter.format(9795),
     },
     {
       name: "Q4",
-      amount: 10595,
+      amount: formatter.format(10595),
     },
   ],
   [
     {
       name: "Q1",
-      amount: 1500,
+      amount: formatter.format(1500),
     },
     {
       name: "Q2",
-      amount: 3000,
+      amount: formatter.format(3000),
     },
     {
       name: "Q3",
-      amount: 4500,
+      amount: formatter.format(4500),
     },
     {
       name: "Q4",
-      amount: 6000,
+      amount: formatter.format(6000),
     },
   ],
 ];
@@ -105,57 +107,57 @@ export const singleGraph2 = [
     // SP500
     {
       name: "Q1",
-      amount: 20468,
+      amount: formatter.format(20468),
     },
     {
       name: "Q2",
-      amount: 20424,
+      amount: formatter.format(20424),
     },
     {
       name: "Q3",
-      amount: 20840,
+      amount: formatter.format(20840),
     },
     {
       name: "Q4",
-      amount: 21671,
+      amount: formatter.format(21671),
     },
   ],
   [
     //Retirement
     {
       name: "Q1",
-      amount: 8500,
+      amount: formatter.format(8500),
     },
     {
       name: "Q2",
-      amount: 10000,
+      amount: formatter.format(10000),
     },
     {
       name: "Q3",
-      amount: 11500,
+      amount: formatter.format(11500),
     },
     {
       name: "Q4",
-      amount: 13000,
+      amount: formatter.format(13000),
     },
   ],
   [
     //CD
     {
       name: "Q1",
-      amount: 2013,
+      amount: formatter.format(2013),
     },
     {
       name: "Q2",
-      amount: 2027,
+      amount: formatter.format(2027),
     },
     {
       name: "Q3",
-      amount: 2040,
+      amount: formatter.format(2040),
     },
     {
       name: "Q4",
-      amount: 2054,
+      amount: formatter.format(2054),
     },
   ],
 ];
@@ -164,95 +166,95 @@ export const singleGraph3 = [
     // SP500
     {
       name: "Q1",
-      amount: 31982,
+      amount: formatter.format(31982),
     },
     {
       name: "Q2",
-      amount: 31966,
+      amount: formatter.format(31966),
     },
     {
       name: "Q3",
-      amount: 32766,
+      amount: formatter.format(32766),
     },
     {
       name: "Q4",
-      amount: 35017,
+      amount: formatter.format(35017),
     },
   ],
   [
     //Retirement
     {
       name: "Q1",
-      amount: 14500,
+      amount: formatter.format(14500),
     },
     {
       name: "Q2",
-      amount: 17000,
+      amount: formatter.format(17000),
     },
     {
       name: "Q3",
-      amount: 19500,
+      amount: formatter.format(19500),
     },
     {
       name: "Q4",
-      amount: 22000,
+      amount: formatter.format(22000),
     },
   ],
   [
     //CD
     {
       name: "Q1",
-      amount: 2079,
+      amount: formatter.format(2079),
     },
     {
       name: "Q2",
-      amount: 2103,
+      amount: formatter.format(2103),
     },
     {
       name: "Q3",
-      amount: 2128,
+      amount: formatter.format(2128),
     },
     {
       name: "Q4",
-      amount: 2153,
+      amount: formatter.format(2153),
     },
   ],
   [
     //invesgoo
     {
       name: "Q1",
-      amount: 1355,
+      amount: formatter.format(1355),
     },
     {
       name: "Q2",
-      amount: 1833,
+      amount: formatter.format(1833),
     },
     {
       name: "Q3",
-      amount: 1843,
+      amount: formatter.format(1843),
     },
     {
       name: "Q4",
-      amount: 1544,
+      amount: formatter.format(1544),
     },
   ],
   [
     //Mutual Fund
     {
       name: "Q1",
-      amount: 1996,
+      amount: formatter.format(1996),
     },
     {
       name: "Q2",
-      amount: 1986,
+      amount: formatter.format(1986),
     },
     {
       name: "Q3",
-      amount: 2003,
+      amount: formatter.format(2003),
     },
     {
       name: "Q4",
-      amount: 2019,
+      amount: formatter.format(2019),
     },
   ],
 ];
@@ -261,255 +263,255 @@ export const singleGraph4 = [
     // SP500
     {
       name: "Q1",
-      amount: 44481,
+      amount: formatter.format(44481),
     },
     {
       name: "Q2",
-      amount: 48898,
+      amount: formatter.format(48898),
     },
     {
       name: "Q3",
-      amount: 47160,
+      amount: formatter.format(47160),
     },
     {
       name: "Q4",
-      amount: 47323,
+      amount: formatter.format(47323),
     },
     {
       name: "Q5",
-      amount: 51080,
+      amount: formatter.format(51080),
     },
     {
       name: "Q6",
-      amount: 53381,
+      amount: formatter.format(53381),
     },
     {
       name: "Q7",
-      amount: 49793,
+      amount: formatter.format(49793),
     },
     {
       name: "Q8",
-      amount: 32024,
+      amount: formatter.format(32024),
     },
     {
       name: "Q9",
-      amount: 28340,
+      amount: formatter.format(28340),
     },
     {
       name: "Q10",
-      amount: 38326,
+      amount: formatter.format(38326),
     },
     {
       name: "Q11",
-      amount: 40803,
+      amount: formatter.format(40803),
     },
     {
       name: "Q12",
-      amount: 45522,
+      amount: formatter.format(45522),
     },
   ],
   [
     // Retirement
     {
       name: "Q1",
-      amount: 23500,
+      amount: formatter.format(23500),
     },
     {
       name: "Q2",
-      amount: 25000,
+      amount: formatter.format(25000),
     },
     {
       name: "Q3",
-      amount: 26500,
+      amount: formatter.format(26500),
     },
     {
       name: "Q4",
-      amount: 28000,
+      amount: formatter.format(28000),
     },
     {
       name: "Q5",
-      amount: 29500,
+      amount: formatter.format(29500),
     },
     {
       name: "Q6",
-      amount: 31000,
+      amount: formatter.format(31000),
     },
     {
       name: "Q7",
-      amount: 32500,
+      amount: formatter.format(32500),
     },
     {
       name: "Q8",
-      amount: 34000,
+      amount: formatter.format(34000),
     },
     {
       name: "Q9",
-      amount: 35500,
+      amount: formatter.format(35500),
     },
     {
       name: "Q10",
-      amount: 37000,
+      amount: formatter.format(37000),
     },
     {
       name: "Q11",
-      amount: 38500,
+      amount: formatter.format(38500),
     },
     {
       name: "Q12",
-      amount: 40000,
+      amount: formatter.format(40000),
     },
   ],
   [
     // CD
     {
       name: "Q1",
-      amount: 2181,
+      amount: formatter.format(2181),
     },
     {
       name: "Q2",
-      amount: 2209,
+      amount: formatter.format(2209),
     },
     {
       name: "Q3",
-      amount: 2237,
+      amount: formatter.format(2237),
     },
     {
       name: "Q4",
-      amount: 2266,
+      amount: formatter.format(2266),
     },
     {
       name: "Q5",
-      amount: 2287,
+      amount: formatter.format(2287),
     },
     {
       name: "Q6",
-      amount: 2291,
+      amount: formatter.format(2291),
     },
     {
       name: "Q7",
-      amount: 2304,
+      amount: formatter.format(2304),
     },
     {
       name: "Q8",
-      amount: 2317,
+      amount: formatter.format(2317),
     },
     {
       name: "Q9",
-      amount: 2318,
+      amount: formatter.format(2318),
     },
     {
       name: "Q10",
-      amount: 2319,
+      amount: formatter.format(2319),
     },
     {
       name: "Q11",
-      amount: 2320,
+      amount: formatter.format(2320),
     },
     {
       name: "Q12",
-      amount: 2321,
+      amount: formatter.format(2321),
     },
   ],
   [
     // Inveesgo
     {
       name: "Q1",
-      amount: 2135,
+      amount: formatter.format(2135),
     },
     {
       name: "Q2",
-      amount: 2866,
+      amount: formatter.format(2866),
     },
     {
       name: "Q3",
-      amount: 3746,
+      amount: formatter.format(3746),
     },
     {
       name: "Q4",
-      amount: 2596,
+      amount: formatter.format(2596),
     },
     {
       name: "Q5",
-      amount: 1747,
+      amount: formatter.format(1747),
     },
     {
       name: "Q6",
-      amount: 1701,
+      amount: formatter.format(1701),
     },
     {
       name: "Q7",
-      amount: 1701,
+      amount: formatter.format(1701),
     },
     {
       name: "Q8",
-      amount: 610,
+      amount: formatter.format(610),
     },
     {
       name: "Q9",
-      amount: 873,
+      amount: formatter.format(873),
     },
     {
       name: "Q10",
-      amount: 1929,
+      amount: formatter.format(1929),
     },
     {
       name: "Q11",
-      amount: 1587,
+      amount: formatter.format(1587),
     },
     {
       name: "Q12",
-      amount: 1406,
+      amount: formatter.format(1406),
     },
   ],
   [
     //Mutual Fund
     {
       name: "Q1",
-      amount: 2018,
+      amount: formatter.format(2018),
     },
     {
       name: "Q2",
-      amount: 1999,
+      amount: formatter.format(1999),
     },
     {
       name: "Q3",
-      amount: 2007,
+      amount: formatter.format(2007),
     },
     {
       name: "Q4",
-      amount: 2038,
+      amount: formatter.format(2038),
     },
     {
       name: "Q5",
-      amount: 2049,
+      amount: formatter.format(2049),
     },
     {
       name: "Q6",
-      amount: 2013,
+      amount: formatter.format(2013),
     },
     {
       name: "Q7",
-      amount: 1984,
+      amount: formatter.format(1984),
     },
     {
       name: "Q8",
-      amount: 1830,
+      amount: formatter.format(1830),
     },
     {
       name: "Q9",
-      amount: 1857,
+      amount: formatter.format(1857),
     },
     {
       name: "Q10",
-      amount: 1929,
+      amount: formatter.format(1929),
     },
     {
       name: "Q11",
-      amount: 1996,
+      amount: formatter.format(1996),
     },
     {
       name: "Q12",
-      amount: 2028,
+      amount: formatter.format(2028),
     },
   ],
 ];
@@ -518,335 +520,335 @@ export const singleGraph5 = [
     // SP500
     {
       name: "Q1",
-      amount: 46025,
+      amount: formatter.format(46025),
     },
     {
       name: "Q2",
-      amount: 44386,
+      amount: formatter.format(44386),
     },
     {
       name: "Q3",
-      amount: 45020,
+      amount: formatter.format(45020),
     },
     {
       name: "Q4",
-      amount: 50493,
+      amount: formatter.format(50493),
     },
     {
       name: "Q5",
-      amount: 53621,
+      amount: formatter.format(53621),
     },
     {
       name: "Q6",
-      amount: 27928,
+      amount: formatter.format(27928),
     },
     {
       name: "Q7",
-      amount: 49939,
+      amount: formatter.format(49939),
     },
     {
       name: "Q8",
-      amount: 51912,
+      amount: formatter.format(51912),
     },
     {
       name: "Q9",
-      amount: 57572,
+      amount: formatter.format(57572),
     },
     {
       name: "Q10",
-      amount: 53843,
+      amount: formatter.format(53843),
     },
     {
       name: "Q11",
-      amount: 59585,
+      amount: formatter.format(59585),
     },
     {
       name: "Q12",
-      amount: 60041,
+      amount: formatter.format(60041),
     },
     {
       name: "Q13",
-      amount: 63838,
+      amount: formatter.format(63838),
     },
     {
       name: "Q14",
-      amount: 69304,
+      amount: formatter.format(69304),
     },
     {
       name: "Q15",
-      amount: 69331,
+      amount: formatter.format(69331),
     },
     {
       name: "Q16",
-      amount: 76848,
+      amount: formatter.format(76848),
     },
   ],
   [
     // Retirement
     {
       name: "Q1",
-      amount: 41500,
+      amount: formatter.format(41500),
     },
     {
       name: "Q2",
-      amount: 43000,
+      amount: formatter.format(43000),
     },
     {
       name: "Q3",
-      amount: 44500,
+      amount: formatter.format(44500),
     },
     {
       name: "Q4",
-      amount: 46000,
+      amount: formatter.format(46000),
     },
     {
       name: "Q5",
-      amount: 47500,
+      amount: formatter.format(47500),
     },
     {
       name: "Q6",
-      amount: 49000,
+      amount: formatter.format(49000),
     },
     {
       name: "Q7",
-      amount: 50500,
+      amount: formatter.format(50500),
     },
     {
       name: "Q8",
-      amount: 52000,
+      amount: formatter.format(52000),
     },
     {
       name: "Q9",
-      amount: 53500,
+      amount: formatter.format(53500),
     },
     {
       name: "Q10",
-      amount: 55000,
+      amount: formatter.format(55000),
     },
     {
       name: "Q11",
-      amount: 56500,
+      amount: formatter.format(56500),
     },
     {
       name: "Q12",
-      amount: 58000,
+      amount: formatter.format(58000),
     },
     {
       name: "Q13",
-      amount: 59500,
+      amount: formatter.format(59500),
     },
     {
       name: "Q14",
-      amount: 61000,
+      amount: formatter.format(61000),
     },
     {
       name: "Q15",
-      amount: 62500,
+      amount: formatter.format(62500),
     },
     {
       name: "Q16",
-      amount: 64000,
+      amount: formatter.format(64000),
     },
   ],
   [
     // CD
     {
       name: "Q1",
-      amount: 2328,
+      amount: formatter.format(2328),
     },
     {
       name: "Q2",
-      amount: 2336,
+      amount: formatter.format(2336),
     },
     {
       name: "Q3",
-      amount: 2343,
+      amount: formatter.format(2343),
     },
     {
       name: "Q4",
-      amount: 2351,
+      amount: formatter.format(2351),
     },
     {
       name: "Q5",
-      amount: 2355,
+      amount: formatter.format(2355),
     },
     {
       name: "Q6",
-      amount: 2360,
+      amount: formatter.format(2360),
     },
     {
       name: "Q7",
-      amount: 2365,
+      amount: formatter.format(2365),
     },
     {
       name: "Q8",
-      amount: 2370,
+      amount: formatter.format(2370),
     },
     {
       name: "Q9",
-      amount: 2374,
+      amount: formatter.format(2374),
     },
     {
       name: "Q10",
-      amount: 2377,
+      amount: formatter.format(2377),
     },
     {
       name: "Q11",
-      amount: 2381,
+      amount: formatter.format(2381),
     },
     {
       name: "Q12",
-      amount: 2385,
+      amount: formatter.format(2385),
     },
     {
       name: "Q13",
-      amount: 2387,
+      amount: formatter.format(2387),
     },
     {
       name: "Q14",
-      amount: 2390,
+      amount: formatter.format(2390),
     },
     {
       name: "Q15",
-      amount: 2393,
+      amount: formatter.format(2393),
     },
     {
       name: "Q16",
-      amount: 2395,
+      amount: formatter.format(2395),
     },
   ],
   [
     // invesgoo
     {
       name: "Q1",
-      amount: 1098,
+      amount: formatter.format(1098),
     },
     {
       name: "Q2",
-      amount: 1010,
+      amount: formatter.format(1010),
     },
     {
       name: "Q3",
-      amount: 974,
+      amount: formatter.format(974),
     },
     {
       name: "Q4",
-      amount: 1632,
+      amount: formatter.format(1632),
     },
     {
       name: "Q5",
-      amount: 977,
+      amount: formatter.format(977),
     },
     {
       name: "Q6",
-      amount: 880,
+      amount: formatter.format(880),
     },
     {
       name: "Q7",
-      amount: 552,
+      amount: formatter.format(552),
     },
     {
       name: "Q8",
-      amount: 527,
+      amount: formatter.format(527),
     },
     {
       name: "Q9",
-      amount: 563,
+      amount: formatter.format(563),
     },
     {
       name: "Q10",
-      amount: 333,
+      amount: formatter.format(333),
     },
     {
       name: "Q11",
-      amount: 333,
+      amount: formatter.format(333),
     },
     {
       name: "Q12",
-      amount: 222,
+      amount: formatter.format(222),
     },
     {
       name: "Q13",
-      amount: 362,
+      amount: formatter.format(362),
     },
     {
       name: "Q14",
-      amount: 562,
+      amount: formatter.format(562),
     },
     {
       name: "Q15",
-      amount: 483,
+      amount: formatter.format(483),
     },
     {
       name: "Q16",
-      amount: 395,
+      amount: formatter.format(395),
     },
   ],
   [
     // Mutual fund
     {
       name: "Q1",
-      amount: 2053,
+      amount: formatter.format(2053),
     },
     {
       name: "Q2",
-      amount: 2057,
+      amount: formatter.format(2057),
     },
     {
       name: "Q3",
-      amount: 2041,
+      amount: formatter.format(2041),
     },
     {
       name: "Q4",
-      amount: 2020,
+      amount: formatter.format(2020),
     },
     {
       name: "Q5",
-      amount: 2045,
+      amount: formatter.format(2045),
     },
     {
       name: "Q6",
-      amount: 2043,
+      amount: formatter.format(2043),
     },
     {
       name: "Q7",
-      amount: 2062,
+      amount: formatter.format(2062),
     },
     {
       name: "Q8",
-      amount: 2070,
+      amount: formatter.format(2070),
     },
     {
       name: "Q9",
-      amount: 2062,
+      amount: formatter.format(2062),
     },
     {
       name: "Q10",
-      amount: 2049,
+      amount: formatter.format(2049),
     },
     {
       name: "Q11",
-      amount: 2026,
+      amount: formatter.format(2026),
     },
     {
       name: "Q12",
-      amount: 2045,
+      amount: formatter.format(2045),
     },
     {
       name: "Q13",
-      amount: 2047,
+      amount: formatter.format(2047),
     },
     {
       name: "Q14",
-      amount: 2049,
+      amount: formatter.format(2049),
     },
     {
       name: "Q15",
-      amount: 2045,
+      amount: formatter.format(2045),
     },
     {
       name: "Q16",
-      amount: 2041,
+      amount: formatter.format(2041),
     },
   ],
 ];
