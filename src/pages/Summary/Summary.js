@@ -41,7 +41,7 @@ function Summary() {
       try {
         const newPlayer = {
           id: name,
-          amount: player.bank,
+          amount: formatter.format(parseInt(player.bank)),
           date: now.toDateString(),
         };
         await scoresRef.doc(newPlayer.name).set({
