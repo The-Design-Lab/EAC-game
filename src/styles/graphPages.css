@@ -166,6 +166,10 @@ h4 {
         font-size: 0.8rem;
     }
 }
+.recharts-cartesian-axis-tick-value{
+    font-size: 0.8rem;
+}
+
 .recharts-surface{
-    width: 800px !important;
+
 }

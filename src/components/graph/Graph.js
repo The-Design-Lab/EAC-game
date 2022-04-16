@@ -12,6 +12,7 @@ import {
 } from "recharts";
 
 import usePlayer from "../../hooks/usePlayer";
+import { formatter } from "../../formatter";
 
 const Graph = () => {
   const { graph } = usePlayer();
@@ -23,7 +24,7 @@ const Graph = () => {
   // };
 
   return (
-    <ResponsiveContainer width="80%" height={400} id={"responsive-container"}>
+    <ResponsiveContainer width="85%" height={400} id={"responsive-container"}>
       <LineChart
         data={graph}
         style={{
@@ -41,6 +42,7 @@ const Graph = () => {
           label={{ fill: "white" }}
           type="number"
           domain={["dataMin", "dataMax"]}
+          tickFormatter={(value) => formatter.format(value)}
         />
         <Tooltip contentStyle={{ backgroundColor: "black" }} />
         {/* Lines */}
