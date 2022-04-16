@@ -169,14 +169,14 @@ const GraphContainer = ({ year, limit, choice, singleGraph }) => {
             {fakeContext.investments.includes(INVESTMENTS_VEHICLES.CD) && (
               <div
                 className={"investments-details-label"}
-                style={{ border: "1px solid #FF5C00" }}
+                              style={{ border: "1px solid #F78DA7" }}
                 onClick={() =>
                   setShownWhatIfGraph(
-                    <SingleGraph data={singleGraph[2]} color={"#FF5C00"} />
+                      <SingleGraph data={singleGraph[2]} color={"#F78DA7"} />
                   )
                 }
               >
-                <span style={{ color: "#FF5C00" }}>
+                              <span style={{ color: "#F78DA7" }}>
                   CD: {formatter.format(choice[2].slice(-1))}
                 </span>
               </div>

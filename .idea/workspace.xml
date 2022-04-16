@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Formatted Data for Y-Axis on the graph">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/choice-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/choice-tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/graph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/Graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/reflection-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/reflection-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/reflection-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/reflection-2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-3/reflection-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-3/reflection-3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-4/reflection-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-4/reflection-4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-5/reflection-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-5/reflection-5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/graphPages.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/graphPages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Fixed Graph styling" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,7 +162,7 @@
       <workItem from="1649687306811" duration="11743000" />
       <workItem from="1649860299228" duration="2152000" />
       <workItem from="1650036291100" duration="19869000" />
-      <workItem from="1650132864545" duration="8000000" />
+      <workItem from="1650132864545" duration="8338000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>
@@ -413,7 +402,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650139190647</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added GIFS to reflection pages">
+      <created>1650150635072</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1650150635072</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Fixed Graph styling">
+      <created>1650150649519</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1650150649519</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,8 +436,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="All reflection pages done." />
-    <MESSAGE value="fixed responsiveness in choice pages" />
     <MESSAGE value="Choice 1 to 3 updated styling" />
     <MESSAGE value="Fixed goal card styling." />
     <MESSAGE value="Choice pages styling fixed for laptop screen" />
@@ -458,7 +459,9 @@
     <MESSAGE value="Formatted amount for Leaderboard" />
     <MESSAGE value="Formatted data for the graphs" />
     <MESSAGE value="Formatted Data for Y-Axis on the graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formatted Data for Y-Axis on the graph" />
+    <MESSAGE value="Added GIFS to reflection pages" />
+    <MESSAGE value="Fixed Graph styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Graph styling" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
