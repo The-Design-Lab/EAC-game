@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import "../../styles/reflection.css";
-import bulb from "../../img/reflections/bulb.png";
+import bulb from "../../img/reflections/ChoiceThreeReflection.gif";
 
 function Reflection3() {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import "../../styles/reflection.css";
-import questionMark from "../../img/reflections/questionmark.png";
+import questionMark from "../../img/reflections/ChoiceTwoReflection.gif";
 
 function Reflection2() {
   return (

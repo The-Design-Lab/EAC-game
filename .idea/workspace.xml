@@ -3,15 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Formatted Data for Y-Axis on the graph">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/choice-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/choice-tabs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/graph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/Graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/graph/GraphContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/GraphContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/graph/SingleGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/SingleGraph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/graph/WhatIfGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/WhatIfGraph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/leaderboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/leaderboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/leaderboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/leaderboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/reflection-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/reflection-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/reflection-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/reflection-2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-3/reflection-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-3/reflection-3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-4/reflection-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-4/reflection-4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Choice-5/reflection-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-5/reflection-5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/graphPages.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/graphPages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +173,7 @@
       <workItem from="1649687306811" duration="11743000" />
       <workItem from="1649860299228" duration="2152000" />
       <workItem from="1650036291100" duration="19869000" />
-      <workItem from="1650132864545" duration="4178000" />
+      <workItem from="1650132864545" duration="8000000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>
@@ -399,7 +399,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650137172281</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Formatted Data for Y-Axis on the graph">
+      <created>1650137443639</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1650137443639</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Formatted Data for Y-Axis on the graph">
+      <created>1650139190647</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1650139190647</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

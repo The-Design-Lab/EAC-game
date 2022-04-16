@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import "../../styles/reflection.css";
-import bill from "../../img/reflections/bill.png";
+import bill from "../../img/reflections/ChoiceFourReflection.gif";
 
 function Reflection4() {
   return (

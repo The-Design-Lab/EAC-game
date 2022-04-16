@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import "../../styles/reflection.css";
-import emoji from "../../img/reflections/reflect1";
+import emoji from "../../img/reflections/ChoiceOneReflection.gif";
 
 function Reflection1() {
   return (
