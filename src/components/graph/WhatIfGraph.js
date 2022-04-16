@@ -1,5 +1,5 @@
 // noinspection ES6UnusedImports
-import React, { useContext } from "react";
+import React from "react";
 import {
   LineChart,
   XAxis,
@@ -12,6 +12,7 @@ import {
 } from "recharts";
 
 import useFakePlayer from "../../hooks/useFakePlayer";
+import { formatter } from "../../formatter";
 
 const WhatIfGraph = () => {
   const { graph } = useFakePlayer();
@@ -35,6 +36,7 @@ const WhatIfGraph = () => {
           label={{ fill: "white" }}
           type="number"
           domain={["dataMin", "dataMax"]}
+          tickFormatter={(value) => formatter.format(value)}
         />
         <Tooltip contentStyle={{ backgroundColor: "black" }} />
         {/* Lines */}

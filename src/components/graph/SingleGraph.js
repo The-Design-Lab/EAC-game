@@ -8,6 +8,7 @@ import {
   ResponsiveContainer,
   Line,
 } from "recharts";
+import { formatter } from "../../formatter";
 
 const SingleGraph = ({ data, color }) => {
   return (
@@ -28,6 +29,7 @@ const SingleGraph = ({ data, color }) => {
           stroke="#white"
           label={{ fill: "white" }}
           domain={["dataMin", "dataMax"]}
+          tickFormatter={(value) => formatter.format(value)}
         />
         <Tooltip contentStyle={{ backgroundColor: "black" }} />
         {/* Lines */}
