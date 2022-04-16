@@ -1,5 +1,6 @@
 import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useEffect, useState } from "react";
 import scoresRef from "../data/firebase";
 import "../styles/leaderboard.css";
@@ -35,32 +36,76 @@ function Leaderboard() {
   }
 
   const columns = [
-    { field: "id", headerName: "ID", width: 600 },
+      {
+          field: "id",
+          headerName: "Player",
+          headerAlign: 'center',
+          align: 'center',
+          width: 200
+      },
     {
       field: "amount",
-      headerName: "Amount of money earned",
+      headerName: "Amount of Money Earned",
       type: "number",
-      width: 600,
+        width: 600,
+        headerAlign: 'center',
+        align: 'center'
+
     },
     {
       field: "date",
       headerName: "Date and Time",
       type: "string",
-      width: 600,
+        width: 300,
+        headerAlign: 'center',
+          align: 'center'
+
+
     },
   ];
+
+    const tableTheme = createTheme({
+        components: {
+            // Name of the component
+            MuiDataGrid: {
+                styleOverrides: {
+
+                    root: {
+                        border: '10px solid rgba(70, 69, 69, 1)',
+
+                    },
+                },
+            },
+            MuiSvgIcon: {
+                styleOverrides: {
+                    root: {
+                        fill: '#00FF38',
+                   
+                    },
+
+                },
+            },
+
+        },
+    });
+
 
   return (
     <>
       <div id={"leaderboard__container"}>
         <h1>LEADERBOARD</h1>
-        <div id={"leaderboard"}>
-          <DataGrid
-            rows={tablebody}
-            columns={columns}
-            pageSize={5}
-            rowsPerPageOptions={[5]}
-          />
+              <div id={"leaderboard"}>
+                  <ThemeProvider theme={tableTheme}>
+                      <DataGrid
+                          autoPageSize={true}
+                          disableSelectionOnClick={true}
+                    rows={tablebody}
+                    columns={columns}
+                    pageSize={5}
+                    rowsPerPageOptions={[5]}
+                              />
+                  </ThemeProvider>
+
         </div>
       </div>
     </>
