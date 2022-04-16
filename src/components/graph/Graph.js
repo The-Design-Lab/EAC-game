@@ -1,5 +1,5 @@
 // noinspection ES6UnusedImports
-import React, { useContext } from "react";
+import React from "react";
 import {
   LineChart,
   XAxis,
