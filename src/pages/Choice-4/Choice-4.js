@@ -8,8 +8,8 @@ import Button from "@mui/material/Button";
 import { choice3 } from "../../data/investmentData";
 import InvestmentChoices from "../../components/investment-choices";
 import ChoiceTabs from "../../components/choice-tabs";
-import Choice4A from "../../img/choices/c4-A-image.png";
-import Choice4B from "../../img/choices/c4-B-image.png";
+import Choice4A from "../../img/choices/c4-A-image.webp";
+import Choice4B from "../../img/choices/c4-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
 
 const choiceData = {

@@ -9,8 +9,8 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import ChoiceTabs from "../../components/choice-tabs";
 import InvestmentChoices from "../../components/investment-choices";
-import Choice2A from "../../img/choices/c2-A-image.png";
-import Choice2B from "../../img/choices/c2-B-image.png";
+import Choice2A from "../../img/choices/c2-A-image.webp";
+import Choice2B from "../../img/choices/c2-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
 
 const choiceData = {

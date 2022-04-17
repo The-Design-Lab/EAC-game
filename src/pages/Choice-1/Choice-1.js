@@ -8,8 +8,8 @@ import "../../styles/style.css";
 import { Link } from "react-router-dom";
 import ChoiceTabs from "../../components/choice-tabs";
 import InvestmentChoices from "../../components/investment-choices";
-import Choice1A from "../../img/choices/c1-A-image.png";
-import Choice1B from "../../img/choices/c1-B-image.png";
+import Choice1A from "../../img/choices/c1-A-image.webp";
+import Choice1B from "../../img/choices/c1-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
 const choiceData = {
   header: "Retirement & Financial Goals",
