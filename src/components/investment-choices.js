@@ -9,6 +9,7 @@ function InvestmentChoices({
   imageB,
   choiceA,
   choiceB,
+  setIsChoiceSelected,
 }) {
   const [isOptionADisabled, setIsOptionADisabled] = useState(false);
   const [isOptionBDisabled, setIsOptionBDisabled] = useState(false);
@@ -19,13 +20,17 @@ function InvestmentChoices({
     console.log(e.target);
     if (e.target.id === "optionA" && isOptionBDisabled === false) {
       setIsOptionBDisabled(true);
+      setIsChoiceSelected(true);
       console.log(isOptionBDisabled);
     } else if (e.target.id === "optionA" && isOptionBDisabled === true) {
       setIsOptionBDisabled(false);
+      setIsChoiceSelected(false);
     } else if (e.target.id === "optionB" && isOptionADisabled === true) {
       setIsOptionADisabled(false);
+      setIsChoiceSelected(false);
     } else if (e.target.id === "optionB" && isOptionADisabled === false) {
       setIsOptionADisabled(true);
+      setIsChoiceSelected(true);
     }
   };
 

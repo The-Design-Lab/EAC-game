@@ -25,6 +25,7 @@ function ChoiceFive() {
   const { fakePlayerDispatch } = useFakePlayer();
   const addAnnualExpenditures = useCheckInvestments();
   const [choice, setChoice] = useState("");
+  const [isChoiceSelected, setIsChoiceSelected] = useState(false);
 
   const player = usePlayer();
 
@@ -78,6 +79,7 @@ function ChoiceFive() {
             imageB={Choice5B}
             choiceA={""}
             choiceB={"sell"}
+            setIsChoiceSelected={setIsChoiceSelected}
           />
           <div id="financial-container">
             <div id="financial-top-container">
@@ -111,26 +113,30 @@ function ChoiceFive() {
         >
           Back
         </Button>
-        <Link to="/graph-5">
-          <Button
-            id="btn"
-            sx={{
-              backgroundColor: "#e5e5e5",
-              color: "#000000",
-              height: "2.5rem",
-              width: "10rem",
-              fontSize: "1.2rem",
-              padding: "0",
+        {isChoiceSelected ? (
+          <Link to="/graph-5">
+            <Button
+              id="btn"
+              sx={{
+                backgroundColor: "#e5e5e5",
+                color: "#000000",
+                height: "2.5rem",
+                width: "10rem",
+                fontSize: "1.2rem",
+                padding: "0",
 
-              "&:hover": {
-                backgroundColor: "#00FF38",
-              },
-            }}
-            onClick={submitSelection}
-          >
-            Continue
-          </Button>
-        </Link>
+                "&:hover": {
+                  backgroundColor: "#00FF38",
+                },
+              }}
+              onClick={submitSelection}
+            >
+              Continue
+            </Button>
+          </Link>
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );

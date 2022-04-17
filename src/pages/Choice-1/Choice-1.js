@@ -26,6 +26,7 @@ function ChoiceOne() {
   const addAnnualExpenditures = useCheckInvestments();
   const [choice, setChoice] = useState("");
   const player = usePlayer();
+  const [isChoiceSelected, setIsChoiceSelected] = useState(false);
 
   // set choice value to selected choice in UI
   const handleSelection = (e) => {
@@ -81,6 +82,7 @@ function ChoiceOne() {
               imageB={Choice1B}
               choiceA={"invest"}
               choiceB={"spend"}
+              setIsChoiceSelected={setIsChoiceSelected}
             />
             <div id="financial-container">
               <div id="financial-top-container">
@@ -114,26 +116,30 @@ function ChoiceOne() {
           >
             Back
           </Button>
-          <Link to="/graph-1">
-            <Button
-              id="btn"
-              sx={{
-                backgroundColor: "#e5e5e5",
-                color: "#000000",
-                height: "2.5rem",
-                width: "10rem",
-                fontSize: "1.2rem",
-                padding: "0",
+          {isChoiceSelected ? (
+            <Link to="/graph-1">
+              <Button
+                id="btn"
+                sx={{
+                  backgroundColor: "#e5e5e5",
+                  color: "#000000",
+                  height: "2.5rem",
+                  width: "10rem",
+                  fontSize: "1.2rem",
+                  padding: "0",
 
-                "&:hover": {
-                  backgroundColor: "#00FF38",
-                },
-              }}
-              onClick={submitSelection}
-            >
-              Continue
-            </Button>
-          </Link>
+                  "&:hover": {
+                    backgroundColor: "#00FF38",
+                  },
+                }}
+                onClick={submitSelection}
+              >
+                Continue
+              </Button>
+            </Link>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </>
