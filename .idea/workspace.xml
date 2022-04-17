@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Fixed Graph styling">
+    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="Added conditional rendering to the Buttons for Choice pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/investment-choices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/investment-choices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/choices/c5-A-image.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" afterDir="false" />
@@ -171,7 +171,7 @@
       <workItem from="1649860299228" duration="2152000" />
       <workItem from="1650036291100" duration="19869000" />
       <workItem from="1650132864545" duration="10722000" />
-      <workItem from="1650219159237" duration="1780000" />
+      <workItem from="1650219159237" duration="3024000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>
@@ -432,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650150721503</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Added conditional rendering to the Buttons for Choice pages">
+      <created>1650233436830</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1650233436830</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +459,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Choice 1 to 3 updated styling" />
     <MESSAGE value="Fixed goal card styling." />
     <MESSAGE value="Choice pages styling fixed for laptop screen" />
     <MESSAGE value="Added option to remove goals from the player context" />
@@ -477,7 +483,8 @@
     <MESSAGE value="Formatted Data for Y-Axis on the graph" />
     <MESSAGE value="Added GIFS to reflection pages" />
     <MESSAGE value="Fixed Graph styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Graph styling" />
+    <MESSAGE value="Added conditional rendering to the Buttons for Choice pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added conditional rendering to the Buttons for Choice pages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
