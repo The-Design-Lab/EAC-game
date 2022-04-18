@@ -25,8 +25,7 @@ const GraphContainer = ({ year, limit, choice, singleGraph }) => {
         <div className={"title"}>
           <h3>{year} Summary Report </h3>
           <p>
-            This is graphs shows your investing progress
-            throughout the year.
+            This is graphs shows your investing progress throughout the year.
           </p>
         </div>
         <div className={"graph"}>{shownGraph}</div>
@@ -72,10 +71,10 @@ const GraphContainer = ({ year, limit, choice, singleGraph }) => {
             {investments.includes(INVESTMENTS_VEHICLES.CD) && (
               <div
                 className={"investments-details-label"}
-                              style={{ border: "1px solid #f78da7" }}
+                style={{ border: "1px solid #f78da7" }}
                 onClick={() =>
                   setShownGraph(
-                      <SingleGraph data={singleGraph[2]} color={"#f78da7"} />
+                    <SingleGraph data={singleGraph[2]} color={"#f78da7"} />
                   )
                 }
               >
@@ -121,7 +120,8 @@ const GraphContainer = ({ year, limit, choice, singleGraph }) => {
         <div className={"title"}>
           <h3>{year} What If Report </h3>
           <p>
-            This graph charts what would have happened if you made the other choice.
+            This graph charts what would have happened if you made the other
+            choice.
           </p>
         </div>
         <div className={"graph"}>{shownWhatIfGraph}</div>
@@ -169,14 +169,14 @@ const GraphContainer = ({ year, limit, choice, singleGraph }) => {
             {fakeContext.investments.includes(INVESTMENTS_VEHICLES.CD) && (
               <div
                 className={"investments-details-label"}
-                              style={{ border: "1px solid #F78DA7" }}
+                style={{ border: "1px solid #F78DA7" }}
                 onClick={() =>
                   setShownWhatIfGraph(
-                      <SingleGraph data={singleGraph[2]} color={"#F78DA7"} />
+                    <SingleGraph data={singleGraph[2]} color={"#F78DA7"} />
                   )
                 }
               >
-                              <span style={{ color: "#F78DA7" }}>
+                <span style={{ color: "#F78DA7" }}>
                   CD: {formatter.format(choice[2].slice(-1))}
                 </span>
               </div>
