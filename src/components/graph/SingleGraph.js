@@ -12,7 +12,7 @@ import { formatter } from "../../formatter";
 
 const SingleGraph = ({ data, color }) => {
   return (
-    <ResponsiveContainer width="80%" height={400}>
+    <ResponsiveContainer width="100%" height={400}>
       <LineChart
         data={data}
         style={{
