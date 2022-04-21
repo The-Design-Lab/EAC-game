@@ -152,6 +152,9 @@ h4 {
         -moz-transform:  scale(0.8,0.8);
 
     }
+    .investments h5{
+        margin: 0 0 1rem 0;
+    }
     .title h3{
         font-size: 1.8rem;
     }
