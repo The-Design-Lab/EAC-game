@@ -97,7 +97,7 @@ function Summary() {
             You earned{" "}
             <span style={{ color: didWin ? "#00FF38" : "red" }}>
               {" "}
-              {formatter.format(player.bank)}
+              {formatter.format(finalAmount)}
             </span>{" "}
             from investing
           </div>
