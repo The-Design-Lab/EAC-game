@@ -7,7 +7,8 @@ const initialState = {
   goals: [],
   choices: [],
   investments: [],
-  graph: [{ year: 2002, amount: 0 }],
+  investmentAccount: 0,
+  graph: [{ year: "", amount: 0 }],
 };
 
 // create the context
