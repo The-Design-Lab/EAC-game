@@ -18,6 +18,7 @@ import Recap from "../pages/recap";
 import Summary from "../pages/Summary/Summary";
 import LifeEvent from "../pages/Life-Event";
 import Leaderboard from "./leaderboard";
+import Credits from "../pages/Credits";
 import Reflection1 from "../pages/Choice-1/reflection-1";
 import Reflection2 from "../pages/Choice-2/reflection-2";
 import Reflection3 from "../pages/Choice-3/reflection-3";
@@ -73,6 +74,7 @@ function Window() {
           <Route path="/recap" name="Recap" component={Recap} />
           <Route path="/summary" name="Summary" component={Summary} />
           <Route path="/board" name="board" component={Leaderboard} />
+          <Route path="/credits" name="Credits" component={Credits} />
           <Route path="/event/:num" name="Random-event" component={LifeEvent} />
           <Route
             path="/reflection-1"
