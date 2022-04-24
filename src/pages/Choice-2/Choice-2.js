@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { choice1 } from "../../data/investmentData";
+import React, { useContext, useState } from "react";
+import { choice1, choice2 } from "../../data/investmentData";
 import "../../utilities.css";
 import usePlayer from "../../hooks/usePlayer";
 import useCheckInvestments from "../../hooks/useCheckInvestments";
@@ -12,6 +12,8 @@ import InvestmentChoices from "../../components/investment-choices";
 import Choice2A from "../../img/choices/c2-A-image.webp";
 import Choice2B from "../../img/choices/c2-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
+import { PlayerContext } from "../../contexts/PlayerContext";
+import CalculateGraphReturns from "../../hooks/CalculateGraphReturns";
 
 const choiceData = {
   header: "CDs & Emergency Savings",
@@ -23,6 +25,7 @@ const choiceData = {
 
 function ChoiceTwo() {
   const { dispatch } = usePlayer();
+  const { investments } = useContext(PlayerContext);
   const { fakePlayerDispatch } = useFakePlayer();
   const addAnnualExpenditures = useCheckInvestments();
   const [choice, setChoice] = useState("");
@@ -35,6 +38,9 @@ function ChoiceTwo() {
   };
 
   const submitSelection = () => {
+    dispatch({
+      type: "RESET_RETURNS",
+    });
     const selection = {
       choice: choice,
     };
@@ -45,9 +51,12 @@ function ChoiceTwo() {
 
     const CD = -2000;
     const addBuyNewCar = -2000;
+    let returns;
     if (choice === "invest") {
       selection.investment = INVESTMENTS_VEHICLES.CD;
       selection.expenditures = addAnnualExpenditures + CD;
+      returns = CalculateGraphReturns(2005, investments) + choice2[2][3];
+
       //fake player
       whatIfSelection.expenditures = addAnnualExpenditures + addBuyNewCar;
     } else {
@@ -56,10 +65,14 @@ function ChoiceTwo() {
       whatIfSelection.investment = INVESTMENTS_VEHICLES.CD;
       whatIfSelection.expenditures = addAnnualExpenditures + CD;
     }
-
     dispatch({
       type: "SELECT_CHOICE",
       payload: selection,
+    });
+
+    dispatch({
+      type: "ADD_RETURNS",
+      payload: returns,
     });
 
     fakePlayerDispatch({

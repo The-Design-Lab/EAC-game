@@ -35,7 +35,8 @@ const GraphContainer = ({ year, limit, choice, singleGraph }) => {
             style={{ border: "1px solid white" }}
             onClick={() => setShownGraph(<Graph />)}
           >
-            Total Balance: {formatter.format(player.bank)}{" "}
+            Total Balance:{" "}
+            {formatter.format(player.bank + player.investmentAccount)}{" "}
           </h5>
           <div className="label-container">
             {investments.includes(INVESTMENTS_VEHICLES.SP) && (

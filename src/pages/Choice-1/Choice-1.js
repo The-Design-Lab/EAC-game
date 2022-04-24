@@ -11,6 +11,7 @@ import InvestmentChoices from "../../components/investment-choices";
 import Choice1A from "../../img/choices/c1-A-image.webp";
 import Choice1B from "../../img/choices/c1-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
+import { choice1 } from "../../data/investmentData";
 const choiceData = {
   header: "Retirement & Financial Goals",
   year: 2004,
@@ -35,6 +36,7 @@ function ChoiceOne() {
 
   // send selection data to the global player object
   const submitSelection = () => {
+    let returns;
     const selection = {
       choice: choice,
     };
@@ -46,6 +48,7 @@ function ChoiceOne() {
       SPPercentage = 0.1;
       selection.investment = INVESTMENTS_VEHICLES.SP;
       selection.expenditures = -(salary * SPPercentage) + addAnnualExpenditures;
+      returns = choice1[1][3];
       //fake player
       whatIfSelection.investment = "spend";
       whatIfSelection.expenditures = -(salary * 0.02) + addAnnualExpenditures;
@@ -61,6 +64,10 @@ function ChoiceOne() {
     dispatch({
       type: "SELECT_CHOICE",
       payload: selection,
+    });
+    dispatch({
+      type: "ADD_RETURNS",
+      payload: returns,
     });
 
     fakePlayerDispatch({

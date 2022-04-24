@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../utilities.css";
 import usePlayer from "../../hooks/usePlayer";
@@ -6,12 +6,14 @@ import useCheckInvestments from "../../hooks/useCheckInvestments";
 import INVESTMENTS_VEHICLES from "../../data/Investments";
 import "../../styles/style.css";
 import Button from "@mui/material/Button";
-import { choice2 } from "../../data/investmentData";
+import { choice2, choice3 } from "../../data/investmentData";
 import InvestmentChoices from "../../components/investment-choices";
 import ChoiceTabs from "../../components/choice-tabs";
 import Choice3A from "../../img/choices/c3-A-image.webp";
 import Choice3B from "../../img/choices/c3-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
+import CalculateGraphReturns from "../../hooks/CalculateGraphReturns";
+import { PlayerContext } from "../../contexts/PlayerContext";
 
 const choiceData = {
   header: "Individual Stocks & Mutual Funds",
@@ -22,6 +24,7 @@ const choiceData = {
 };
 
 function ChoiceThree() {
+  const { investments } = useContext(PlayerContext);
   const { dispatch } = usePlayer();
   const { fakePlayerDispatch } = useFakePlayer();
   const addAnnualExpenditures = useCheckInvestments();
@@ -35,6 +38,11 @@ function ChoiceThree() {
 
   let addInvestment = -2000; // this is the same for a inveesgo or a mutual fund
   const submitSelection = () => {
+    dispatch({
+      type: "RESET_RETURNS",
+    });
+    let returns;
+    let temp = CalculateGraphReturns(2006, investments);
     const selection = {
       choice: choice,
       expenditures: addAnnualExpenditures + addInvestment,
@@ -52,10 +60,20 @@ function ChoiceThree() {
           ? INVESTMENTS_VEHICLES.mutualFund
           : INVESTMENTS_VEHICLES.inveesgo,
     };
+    returns =
+      selection.choice === INVESTMENTS_VEHICLES.inveesgo
+        ? choice3[4][3] + temp
+        : choice3[3][3] + temp;
+
+    console.log(returns);
 
     dispatch({
       type: "SELECT_CHOICE",
       payload: selection,
+    });
+    dispatch({
+      type: "ADD_RETURNS",
+      payload: returns,
     });
     fakePlayerDispatch({
       type: "SELECT_CHOICE",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/style.css";
 import "../../utilities.css";
@@ -11,6 +11,8 @@ import ChoiceTabs from "../../components/choice-tabs";
 import Choice5A from "../../img/choices/c5-A-image.webp";
 import Choice5B from "../../img/choices/c5-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
+import { PlayerContext } from "../../contexts/PlayerContext";
+import CalculateGraphReturns from "../../hooks/CalculateGraphReturns";
 
 const choiceData = {
   header: "Hold or Sell",
@@ -22,6 +24,7 @@ const choiceData = {
 
 function ChoiceFive() {
   const { dispatch } = usePlayer();
+  const { investments } = useContext(PlayerContext);
   const { fakePlayerDispatch } = useFakePlayer();
   const addAnnualExpenditures = useCheckInvestments();
   const [choice, setChoice] = useState("");
@@ -34,6 +37,9 @@ function ChoiceFive() {
   };
 
   const submitSelection = () => {
+    dispatch({
+      type: "RESET_RETURNS",
+    });
     const removedInvestment = choice === "sell" ? "S&P" : null;
     const selection = {
       choice: choice,
@@ -56,9 +62,14 @@ function ChoiceFive() {
         payload: whatIfSelection,
       });
     } else {
+      let returns = CalculateGraphReturns(2013, investments);
       dispatch({
         type: "SELECT_CHOICE",
         payload: selection,
+      });
+      dispatch({
+        type: "ADD_RETURNS",
+        payload: returns,
       });
       fakePlayerDispatch({
         type: "REMOVE_INVESTMENT",

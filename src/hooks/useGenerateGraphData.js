@@ -16,7 +16,11 @@ const useGenerateGraphData = (year, player, fakePlayer, limit) => {
   //useEffect to trigger the dispatchers // is a useEffect hook needed here?
   useEffect(() => {
     if (player.graph.length < limit) {
-      const graphData = { year: year, amount: player.bank };
+      const graphData = {
+        year: year,
+        amount: player.bank + player.investmentAccount,
+      };
+      console.log(player.investmentAccount);
       const whatIfGraphData = { year: year, amount: fakePlayer.bank };
       dispatch({
         type: "GENERATE_GRAPH",

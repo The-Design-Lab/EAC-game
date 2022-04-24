@@ -26,6 +26,7 @@ export const PlayerProvider = ({ children }) => {
         goals: state.goals,
         choices: state.choices,
         investments: state.investments,
+        investmentAccount: state.investmentAccount,
         graph: state.graph,
         dispatch,
       }}
@@ -82,6 +83,18 @@ const PlayerReducer = (state, action) => {
       return {
         ...state,
         graph: [...state.graph, action.payload],
+      };
+    }
+    case "ADD_RETURNS": {
+      return {
+        ...state,
+        investmentAccount: state.investmentAccount + action.payload,
+      };
+    }
+    case "RESET_RETURNS": {
+      return {
+        ...state,
+        investmentAccount: 0,
       };
     }
     case "RESET":

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/style.css";
 import "../../utilities.css";
@@ -11,6 +11,8 @@ import ChoiceTabs from "../../components/choice-tabs";
 import Choice4A from "../../img/choices/c4-A-image.webp";
 import Choice4B from "../../img/choices/c4-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
+import CalculateGraphReturns from "../../hooks/CalculateGraphReturns";
+import { PlayerContext } from "../../contexts/PlayerContext";
 
 const choiceData = {
   header: "Index Funds",
@@ -21,6 +23,7 @@ const choiceData = {
 };
 
 function ChoiceFour() {
+  const { investments } = useContext(PlayerContext);
   const { dispatch } = usePlayer();
   const { fakePlayerDispatch } = useFakePlayer();
   const addAnnualExpenditures = useCheckInvestments();
@@ -35,6 +38,9 @@ function ChoiceFour() {
   };
 
   const submitSelection = () => {
+    dispatch({
+      type: "RESET_RETURNS",
+    });
     const removedInvestment = choice === "sell" ? "S&P" : null;
     const selection = {
       choice: choice,
@@ -48,9 +54,14 @@ function ChoiceFour() {
     };
 
     if (choice === "S&P") {
+      let returns = CalculateGraphReturns(2008, investments);
       dispatch({
         type: "SELECT_CHOICE",
         payload: selection,
+      });
+      dispatch({
+        type: "ADD_RETURNS",
+        payload: returns,
       });
 
       fakePlayerDispatch({

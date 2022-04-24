@@ -131,19 +131,19 @@ function Summary() {
         </div>
         <div id={"summary-page__choices"}>
           <div>
-            <img src={green} alt="" />
+            <img src={player.choices[0] === "invest" ? green : red} alt="" />
             Investing early
           </div>
           <div>
-            <img src={red} alt="" />
+            <img src={player.choices[1] === "invest" ? green : red} alt="" />
             Balancing risk & return
           </div>
           <div>
-            <img src={green} alt="" />
+            <img src={player.choices[2] ? green : red} alt="" />
             Diversifying to reduce risk
           </div>
           <div>
-            <img src={green} alt="" />
+            <img src={player.choices[3] === "S&P" ? green : red} alt="" />
             Tax benefits
           </div>
         </div>

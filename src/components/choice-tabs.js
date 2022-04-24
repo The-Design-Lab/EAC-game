@@ -65,7 +65,8 @@ function ChoiceTabs({ year, player, choice }) {
               <>
                 <Graph />{" "}
                 <p style={{ fontSize: "1.3rem" }}>
-                  Total Balance: {formatter.format(player.bank)}
+                  Total Balance:{" "}
+                  {formatter.format(player.bank + player.investmentAccount)}
                 </p>
               </>
             ) : (
