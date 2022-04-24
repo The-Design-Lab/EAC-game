@@ -92,7 +92,7 @@ function Leaderboard() {
               disableSelectionOnClick={true}
               rows={tablebody}
               columns={columns}
-              pageSize={5}
+              pageSize={13}
               rowsPerPageOptions={[5]}
             />
           </ThemeProvider>
