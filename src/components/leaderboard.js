@@ -72,7 +72,7 @@ function Leaderboard() {
 
                     root: {
                         border: '10px solid rgba(70, 69, 69, 1)',
-
+                        width: '100%',
                     },
                 },
             },

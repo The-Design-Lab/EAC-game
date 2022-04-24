@@ -16,8 +16,8 @@ import useFakePlayer from "../../hooks/useFakePlayer";
 const choiceData = {
   header: "CDs & Emergency Savings",
   year: 2005,
-  setup: ` You have been working for over a year and you notice that you have some extra room in your budget. You are conflicted because you have really old, used furniture. You have two choices:`,
-  option1: `You know how important emergency savings is so you save $2,000 and deposit this in a special savings account which is just for emergencies and just purchase a slipcover for your couch. `,
+  setup: `You have been working for over a year and you notice that you have some extra room in your budget. You are conflicted because you have really old, used furniture. You have two choices:`,
+  option1: `You know how important emergency savings is so you save $2,000 and deposit this in a special savings account which is just for emergencies. You only purchase a slipcover for your couch. `,
   option2: `What can go wrong when you are a young adult? You decide you don’t need emergency savings and you use the $2,000 extra in your budget to pay for new furniture for your apartment throughout the year. `,
 };
 
