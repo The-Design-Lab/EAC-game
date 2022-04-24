@@ -19,25 +19,6 @@ function GraphTwo() {
           year={2005}
         />
         <div id="button-container">
-          <Link to={"/choice-2"}>
-            <Button
-              sx={{
-                backgroundColor: "#e5e5e5",
-                color: "#000000",
-                height: "2.5rem",
-                width: "10rem",
-                fontSize: "1.2rem",
-                padding: "0",
-
-                "&:hover": {
-                  backgroundColor: "#00FF38",
-                },
-              }}
-              id="btn"
-            >
-              Back
-            </Button>
-          </Link>
           <Link to={eventTrigger ? `/event/${eventTrigger}` : "/reflection-2"}>
             <Button
               sx={{

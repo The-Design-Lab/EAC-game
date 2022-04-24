@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function Leaderboard() {
   const [scores, setScores] = useState(null);
 
-  console.log(process.env.REACT_APP_STORAGE_BUCKET);
+  //console.log(process.env.REACT_APP_STORAGE_BUCKET);
 
   useEffect(() => {
     async function getScores() {
@@ -19,7 +19,6 @@ function Leaderboard() {
         const list = await ref.docs;
         if (list) {
           setScores(list);
-          list.map((doc) => console.log(doc.data()));
         }
       } catch (e) {
         console.error(e);
@@ -32,7 +31,6 @@ function Leaderboard() {
   if (scores) {
     tablebody = scores.map((doc) => {
       let scoreData = doc.data();
-      console.log(scoreData);
       return scoreData.scores;
     });
   }

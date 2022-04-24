@@ -19,15 +19,14 @@ function InvestmentChoices({
   const delayInput = () => {
     setTimeout(() => {
       setIsChoiceSelected(true);
-    }, 100);
+    }, 300);
   };
 
   const disableButtons = (e) => {
-    console.log(e.target);
+    //console.log(e.target);
     if (e.target.id === "optionA" && isOptionBDisabled === false) {
       setIsOptionBDisabled(true);
       delayInput();
-      console.log(isOptionBDisabled);
     } else if (e.target.id === "optionA" && isOptionBDisabled === true) {
       setIsOptionBDisabled(false);
       setIsChoiceSelected(false);

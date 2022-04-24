@@ -19,7 +19,6 @@ function getInvestmentReturns(investments) {
   for (let [i, value] of investmentsUsed.entries()) {
     if (investments.includes(value)) investmentReturns += choice5[i][15];
   }
-  console.log(investmentReturns);
   return investmentReturns;
 }
 

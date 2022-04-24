@@ -110,7 +110,7 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
   const handleChange = (e) => {
     let data = JSON.parse(e.target.value);
     if (e.target.checked === true) {
-      console.log("from false to true");
+      //console.log("from false to true");
       // set checked items for UI change
       setCheckedItems({
         ...checkedItems,
@@ -138,7 +138,7 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
           payload: INVESTMENTS_VEHICLES.retirement,
         });
       }
-      console.log(checkedItems);
+      //console.log(checkedItems);
       setGoalSelected(true);
     } else if (e.target.checked === false) {
       const goal = {

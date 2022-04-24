@@ -81,8 +81,6 @@ function Summary() {
       "What decisions in the game hurt your returns financially? What could you do differently next time?",
   };
 
-  console.log(player);
-
   return (
     <>
       <div id="summary-page__container">

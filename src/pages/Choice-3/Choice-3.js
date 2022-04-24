@@ -95,8 +95,6 @@ function ChoiceThree() {
         ? choice3[4][3] + temp
         : choice3[3][3] + temp;
 
-    console.log(returns);
-
     dispatch({
       type: "SELECT_CHOICE",
       payload: selection,
@@ -139,23 +137,6 @@ function ChoiceThree() {
         }}
       />
       <div id="button-container">
-        <Button
-          sx={{
-            backgroundColor: "#e5e5e5",
-            color: "#000000",
-            height: "2.5rem",
-            width: "10rem",
-            fontSize: "1.2rem",
-            padding: "0",
-
-            "&:hover": {
-              backgroundColor: "#00FF38",
-            },
-          }}
-          id="btn"
-        >
-          Back
-        </Button>
         {isChoiceSelected ? (
           <Link to="/graph-3">
             <Button

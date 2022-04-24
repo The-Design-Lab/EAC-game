@@ -39,7 +39,7 @@ function useGetQuarterData(...quarterData) {
       }
     });
   }
-  console.log(result);
+
   return result;
 }
 

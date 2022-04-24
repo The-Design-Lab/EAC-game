@@ -15,9 +15,6 @@ import {
 
 function CalculateGraphReturns(year, investments) {
   let returns = 0;
-  console.log("I'm being called!");
-  console.log(investments, year);
-
   switch (year) {
     case 2004:
       returns = choice1[1][3];
@@ -66,8 +63,7 @@ function CalculateGraphReturns(year, investments) {
     default:
       return null;
   }
-  console.log(returns);
-  console.log(investments);
+
   return returns;
 }
 

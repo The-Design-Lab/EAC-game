@@ -9,7 +9,6 @@ import "../styles/life-event.css";
 import entrepreneur from "../img/entrepreneurship.png";
 
 function LifeEvent(props) {
-  console.log(props.match.params.num);
   const event = events[props.match.params.num];
 
   const { dispatch } = useContext(PlayerContext);

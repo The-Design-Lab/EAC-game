@@ -46,8 +46,6 @@ const FakePlayerReducer = (state, action) => {
         goals: [...state.goals, action.payload],
       };
     case "REMOVE_GOAL":
-      console.log(action.payload.name);
-      console.log(state.goals);
       return {
         ...state,
         goals: [...state.goals].filter(
