@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import usePlayer from "../../hooks/usePlayer";
 import { formatter } from "../../formatter";
@@ -13,12 +13,9 @@ import { GetGoalsAmount } from "../../get-goals-amount";
 import "../../styles/summary.css";
 import green from "../../img/green-choice.png";
 import red from "../../img/red-choice.png";
-import getInvestmentReturns from "../../get-investment-returns";
-import { PlayerContext } from "../../contexts/PlayerContext";
 
 function Summary() {
   const player = usePlayer();
-  const { investments } = useContext(PlayerContext);
   let goalsTotalAmount = 0;
   const date = Date.now();
   const now = new Date(date);
@@ -26,8 +23,8 @@ function Summary() {
     dictionaries: [adjectives, animals],
   });
   const [didWin, setDidWin] = useState(null);
-  const totalReturns = getInvestmentReturns(investments);
-  const finalAmount = player.bank + totalReturns;
+
+  const finalAmount = player.bank + player.investmentAccount;
 
   useEffect(() => {
     player.goals.forEach((goal) => {
@@ -45,7 +42,9 @@ function Summary() {
       try {
         const newPlayer = {
           id: name,
-          amount: formatter.format(parseInt(player.bank)),
+          amount: formatter.format(
+            parseInt(player.bank + player.investmentAccount)
+          ),
           date: now.toDateString(),
         };
         await scoresRef.doc(newPlayer.name).set({
