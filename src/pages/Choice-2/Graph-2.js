@@ -16,7 +16,7 @@ function GraphTwo() {
           limit={3}
           singleGraph={singleGraph2}
           choice={choice2}
-          year={2004}
+          year={2005}
         />
         <div id="button-container">
           <Link to={"/choice-2"}>
