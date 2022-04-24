@@ -107,7 +107,7 @@ function ChoiceOne() {
             <div id="financial-container">
               <div id="financial-top-container">
                 <div className={"wrapper"}>
-                  <ChoiceTabs year={"2003"} player={player} />
+                  <ChoiceTabs year={"2004"} player={player} />
                 </div>
               </div>
             </div>

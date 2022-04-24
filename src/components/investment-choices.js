@@ -16,11 +16,17 @@ function InvestmentChoices({
   const [colorA, setColorA] = useState("white");
   const [colorB, setColorB] = useState("white");
 
+  const delayInput = () => {
+    setTimeout(() => {
+      setIsChoiceSelected(true);
+    }, 100);
+  };
+
   const disableButtons = (e) => {
     console.log(e.target);
     if (e.target.id === "optionA" && isOptionBDisabled === false) {
       setIsOptionBDisabled(true);
-      setIsChoiceSelected(true);
+      delayInput();
       console.log(isOptionBDisabled);
     } else if (e.target.id === "optionA" && isOptionBDisabled === true) {
       setIsOptionBDisabled(false);
@@ -30,7 +36,7 @@ function InvestmentChoices({
       setIsChoiceSelected(false);
     } else if (e.target.id === "optionB" && isOptionADisabled === false) {
       setIsOptionADisabled(true);
-      setIsChoiceSelected(true);
+      delayInput();
     }
   };
 

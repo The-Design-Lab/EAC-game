@@ -39,7 +39,10 @@ function LifeEvent(props) {
           </div>
         </div>
         <div id="life-event--balance">
-          <h4>New Account Balance: {formatter.format(player.bank)}</h4>
+          <h4>
+            New Account Balance:{" "}
+            {formatter.format(player.bank + player.investmentAccount)}
+          </h4>
         </div>
       </div>
       <hr />

@@ -11,7 +11,7 @@ function GraphOne() {
     <>
       <div id="graph-container">
         <GraphContainer
-          year={2003}
+          year={2004}
           choice={choice1}
           singleGraph={singleGraph1}
           limit={2}
