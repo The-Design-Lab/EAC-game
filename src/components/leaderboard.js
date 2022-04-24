@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import scoresRef from "../data/firebase";
 import "../styles/leaderboard.css";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
 
 function Leaderboard() {
   const [scores, setScores] = useState(null);
@@ -100,7 +99,7 @@ function Leaderboard() {
         </div>
       </div>
       <div id="button-container" style={{ marginTop: "1rem" }}>
-        <Link to="/">
+        <a href={"/"}>
           <Button
             id="btn"
             sx={{
@@ -119,7 +118,7 @@ function Leaderboard() {
           >
             HOME
           </Button>
-        </Link>
+        </a>
       </div>
     </>
   );

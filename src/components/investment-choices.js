@@ -19,7 +19,7 @@ function InvestmentChoices({
   const delayInput = () => {
     setTimeout(() => {
       setIsChoiceSelected(true);
-    }, 300);
+    }, 500);
   };
 
   const disableButtons = (e) => {
