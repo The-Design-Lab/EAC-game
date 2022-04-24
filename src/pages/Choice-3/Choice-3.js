@@ -14,13 +14,43 @@ import Choice3B from "../../img/choices/c3-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
 import CalculateGraphReturns from "../../hooks/CalculateGraphReturns";
 import { PlayerContext } from "../../contexts/PlayerContext";
+import Tooltip from "../../components/tooltip";
 
 const choiceData = {
   header: "Individual Stocks & Mutual Funds",
   year: 2006,
-  setup: `You have been working for a few more years and have another $2,000 saved up that you are thinking about investing. You have two choices:`,
-  option1: `You invest the money in the stock of a small company, Inveesgo, that has high risk but recently has shown potential for a high return. Invesgo’s stock price has increased from $6.01 to $13.10 in the years 2004 - 2006 with a high of $19.25 during that time.`,
-  option2: `Invest the $2,000 in a growth mutual fund so that you can continue to diversify. The growth mutual fund has had a price increase from $5.14 per share to $6.97 per share from 2004-2006.`,
+  setup: (
+    <>
+      You have been working for a few more years and have another $2,000 saved
+      up that you are thinking about investing.
+      <p>
+        Take a look at the Market News. How is the U.S. economy performing? What
+        is the <Tooltip text={"S&P 500"} tooltipText={"S&P 500"} /> at now? How
+        might this impact your financial decisions, if at all?
+      </p>{" "}
+    </>
+  ),
+  option1: (
+    <>
+      You invest the money in <Tooltip tooltipText={"Stock"} text={"stock"} />{" "}
+      in a small company, Invesgo, that has high{" "}
+      <Tooltip tooltipText={"Risk"} text={"risk"} /> but recently has shown
+      potential for a high{" "}
+      <Tooltip tooltipText={"Potential Return"} text={"return"} />. Invesgo’s
+      stock price has increased from $6.01 to $13.1 in the years 2004 - 2006
+      with a high of $19.25 during that time.
+    </>
+  ),
+  option2: (
+    <>
+      Invest the $2,000 in a growth{" "}
+      <Tooltip text={"mutual fund"} tooltipText={"Mutual Fund"} /> so that you
+      can continue to <Tooltip text={"diversify"} tooltipText={"Diversify"} />.
+      The growth mutual fund has had a price increase from $5.14 per{" "}
+      <Tooltip tooltipText={"Share"} text={"share"} /> to $6.97 per share from
+      2004-2006.
+    </>
+  ),
 };
 
 function ChoiceThree() {

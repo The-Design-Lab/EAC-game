@@ -13,13 +13,26 @@ import Choice5B from "../../img/choices/c5-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
 import { PlayerContext } from "../../contexts/PlayerContext";
 import CalculateGraphReturns from "../../hooks/CalculateGraphReturns";
+import Tooltip from "../../components/tooltip";
 
 const choiceData = {
   header: "Hold or Sell",
   year: 2013,
-  setup: `The stock market has recently increased. In 2004, you invested 15% of your income in shares of the S & P 500 at $17.18. The S & P 500 is now at $22.19. You do not need your money until 2040.`,
-  option1: `The $5 gain is nice, but you decide to keep all of the funds in the S & P 500 because you have 32 more years until you need your money which you think is plenty of time to withstand ups and downs in the market.`,
-  option2: `Sell all of your shares because you are happy with the $5 gain you have made.`,
+  setup: (
+    <>
+      How has the stock market recently performed? In 2004, you invested 15% of
+      your income in shares of the S&P 500 at $17.18.
+      <p>
+        Take a look at the Market News. How is the U.S. economy performing? What
+        is the <Tooltip text={"S&P 500"} tooltipText={"S&P 500"} /> at now? How
+        might this impact your financial decisions, if at all?
+      </p>{" "}
+    </>
+  ),
+  option1:
+    "You do not need your money until 2040. The $5 gain is nice, but you decide to keep all of the funds in the S&P 500 because you have 32 more years until you need your money which you think is plenty of time to withstand ups and downs in the market.",
+  option2:
+    "Sell all of your shares because you are happy with the $5 gain you have made.",
 };
 
 function ChoiceFive() {

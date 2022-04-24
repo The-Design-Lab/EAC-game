@@ -13,13 +13,24 @@ import Choice4B from "../../img/choices/c4-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
 import CalculateGraphReturns from "../../hooks/CalculateGraphReturns";
 import { PlayerContext } from "../../contexts/PlayerContext";
+import Tooltip from "../../components/tooltip";
 
 const choiceData = {
   header: "Index Funds",
   year: 2009,
-  setup: `The stock market has gone down recently. In 2004, you invested 15% of your income in shares of an S & P 500 Index Fund at $17.18 per share. The S & P 500 is now down to $13.93 BUT you do not need your money until 2040.`,
-  option1: `Keep all of the funds in the S & P 500 because you have 36 more years until you need your money.`,
-  option2: `Losing value in your investment is understandably concerning and scary. You sell your shares because you are concerned the S & P 500 will continue to go down.`,
+  setup: (
+    <>
+      What has happened with the stock market recently? In 2004, you invested
+      15% of your income in shares of an S&P 500 Index Fund at $17.18 per share.
+      <p>
+        Take a look at the Market News. How is the U.S. economy performing? What
+        is the <Tooltip text={"S&P 500"} tooltipText={"S&P 500"} /> at now? How
+        might this impact your financial decisions, if at all?
+      </p>{" "}
+    </>
+  ),
+  option1: `You do not need your money until 2040. You keep all of the funds in the S&P 500 because you have 36 more years until you need your money.`,
+  option2: `Losing value in your investment is understandably concerning and scary. You sell some of your shares because you are concerned the S&P 500 will continue to go down`,
 };
 
 function ChoiceFour() {
