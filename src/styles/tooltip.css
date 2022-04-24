@@ -1,7 +1,7 @@
-span.tooltip{
+span.tooltip {
     position: relative;
     color: #00FF38;
-    z-index: 5;
+    z-index: 1;
 }
 
 span.tooltip:hover::after{
@@ -20,4 +20,8 @@ span.tooltip:hover::after{
     border-radius: 5px;
     font-size: 1rem;
     max-height: fit-content;
+}
+
+span.tooltip:hover ~ span.tooltip {
+    z-index: 0;
 }

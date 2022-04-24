@@ -42,9 +42,9 @@ const choiceData = {
   ),
   option2: (
     <>
-      What can go wrong when you are a young adult? You decide you don’t need
-      <Tooltip tooltipText={"Emergency Savings"} text={"emergency savings"} />
-      and you use the $2,000 extra in your budget to pay for new furniture for
+          What can go wrong when you are a young adult? You decide you don’t need
+          <Tooltip tooltipText={"Emergency Savings"} text={"emergency savings"} />{" "}
+       and you use the $2,000 extra in your budget to pay for new furniture for
       your apartment throughout the year.
     </>
   ),
