@@ -59,7 +59,20 @@ width: fit-content;
 
 }
 
-.text-content{
+#credits {
+    position: absolute;
+    left: 72%;
+    top: 80%;
+    color: #00FF38;
+    font-size: 1 rem;
+}
+
+#credits:link {
+    color: #00FF38;
+}
+
+
+.text-content {
     font-size: 1.5rem;
     line-height: 1.5;
     text-align: left;
@@ -67,5 +80,25 @@ width: fit-content;
 }
 
 
+.credits-content {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px;
+}
 
 
+
+#credits-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: white 1px solid;
+    border-left: none;
+    border-right: none;
+    width: fit-content;
+    padding: 10px
+}
+
+.credits-content.ul.li {
+    list-style-type: none;
+}

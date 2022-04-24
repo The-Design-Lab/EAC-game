@@ -37,6 +37,9 @@ function Home() {
                 <li>Retirement Funds.</li>
               </ul>
             </div>
+            <div>
+                          <b>Disclaimer:</b> The information provided in this game is for educational purposes only  <br />and should not be considered investment advice
+            </div>
           </div>
         </div>
 
@@ -58,8 +61,12 @@ function Home() {
           >
             Let's play!
           </Button>
-        </Link>
+              </Link>
+              <div id="credits">
+                  <Link to="/credits"> <span style={{ color: "#00FF38" }}>CREDITS</span> </Link>
+         </div>
       </div>
+
     </ThemeProvider>
   );
 }
