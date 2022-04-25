@@ -437,24 +437,24 @@ body{
 
 
 @media screen and (max-height: 768px) {
-    #choice-page {
+   #choice-page {
         height: 120vh;
         display: flex;
-        /*flex-direction: column;*/
+        flex-direction: column;
         justify-content: center;
         margin-top: 3rem;
         /*border: 1px red solid;*/
     }
 
-            #choice-container {
-            /*border: cyan 1px solid;
-            height: 110%;*/
-            height: fit-content;
+    #choice-container {
+        /*border: cyan 1px solid; */
+            position: relative;
+            height: 130vh;
             grid-column-gap: 2rem;
             width: 100%;
         }
 
-    .choice-wrapper {
+        .choice-wrapper {
         width: 35rem;
         height: fit-content;
         display: grid;
