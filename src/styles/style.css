@@ -32,9 +32,6 @@ body{
     /*height: fit-content;*/
     /*border: 1px blue solid;*/
     width: 75vw;
-    height: 70vh;
-
-
 
 }
 #details-container{
@@ -436,18 +433,25 @@ body{
 
 
 
-@media screen and (max-height: 768px) {
-    #choice-page {
+@media screen and (max-height: 100px) {
+   #choice-page {
         height: 120vh;
         display: flex;
-        /*flex-direction: column;*/
+        flex-direction: column;
         justify-content: center;
         margin-top: 3rem;
         /*border: 1px red solid;*/
     }
 
+    #choice-container {
+        /*border: cyan 1px solid; */
+            position: relative;
+            height: 130vh;
+            grid-column-gap: 2rem;
+            width: 100%;
+        }
 
-    .choice-wrapper {
+        .choice-wrapper {
         width: 35rem;
         height: fit-content;
         display: grid;
