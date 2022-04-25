@@ -62,9 +62,9 @@ width: fit-content;
 #credits {
     position: absolute;
     left: 72%;
-    top: 80%;
+    bottom: 1%;
     color: #00FF38;
-    font-size: 1 rem;
+    font-size: 1rem;
 }
 
 #credits:link {

@@ -62,9 +62,9 @@ function Home() {
             Let's play!
           </Button>
               </Link>
-              <div id="credits">
+              
                   <Link to="/credits"> <span style={{ color: "#00FF38" }}>CREDITS</span> </Link>
-         </div>
+     
       </div>
 
     </ThemeProvider>

@@ -16,6 +16,19 @@
 
 
 }
+
+@media only screen and (max-height: 768px) {
+    #leaderboard{
+    height: 70vh;
+    width: 80vw;
+    color: white;
+    overflow: hidden;
+    font-size: 100px;
+    background: black;
+}
+
+
+}
 .MuiDataGrid-columnHeaderTitle{
     color: white;
     text-align: center;

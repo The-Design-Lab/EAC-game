@@ -197,7 +197,7 @@ function GoalCards({ setGoalSelected, setTotalCost }) {
       <Splide
         options={{
           perPage: 3,
-          height: "31vh",
+          height: "44vh",
           rewind: true,
           gap: "3rem",
           padding: "3rem",

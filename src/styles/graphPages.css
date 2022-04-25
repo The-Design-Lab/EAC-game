@@ -182,3 +182,15 @@ h4 {
 .recharts-surface{
     width: 100%;
 }
+
+@media (max-height: 768px) {
+    #graph-container {
+        margin-top: 2%;
+        /*border: #00FF38 1px solid;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        grid-row-gap: 2rem;
+        height: 100vh;
+    }
+}
