@@ -25,7 +25,7 @@ body{
 
 @media only screen and (max-height: 768px) {
     #choice-page {
-        height: 110vh;
+        height: 160vh;
         display: flex;
         /*flex-direction: column;*/
         justify-content: center;
