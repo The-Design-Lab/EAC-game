@@ -446,6 +446,13 @@ body{
         /*border: 1px red solid;*/
     }
 
+            #choice-container {
+            /*border: cyan 1px solid;
+            height: 110%;*/
+            height: fit-content;
+            grid-column-gap: 2rem;
+            width: 100%;
+        }
 
     .choice-wrapper {
         width: 35rem;
