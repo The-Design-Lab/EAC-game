@@ -63,24 +63,7 @@ body{
 }
 
 
-@media only screen and (max-height: 768px) {
 
-
-    #financial-top-container {
-        background-color: #2D2D2D;
-        border-radius: 10px;
-        /*border: 1px magenta solid;*/
-        height: fit-content;
-    }
-
-
-    #investment-graph {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
 
 
 
@@ -442,11 +425,7 @@ body{
         }
     }
 
-@media (max-height: 768px) {
-    #investments-container {
-        height: 85vh;
-    }
-}
+
 
     @media (max-width: 1920px) {
         * {
@@ -459,7 +438,7 @@ body{
 
 @media only screen and (max-height: 768px) {
     #choice-page {
-        height: 160vh;
+        height: 120vh;
         display: flex;
         /*flex-direction: column;*/
         justify-content: center;
@@ -502,9 +481,26 @@ body{
         height: fit-content;
         /*border: red 1px solid;*/
     }
+
+    #investments-container {
+        height: 85vh;
+    }
+
+    #financial-top-container {
+        background-color: #2D2D2D;
+        border-radius: 10px;
+        /*border: 1px magenta solid;*/
+        height: fit-content;
+    }
+
+
+    #investment-graph {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
-
-
 
 
 
