@@ -32,9 +32,6 @@ body{
     /*height: fit-content;*/
     /*border: 1px blue solid;*/
     width: 75vw;
-    height: fit-content;
-
-
 
 }
 #details-container{
@@ -436,7 +433,7 @@ body{
 
 
 
-@media screen and (max-height: 1000px) {
+@media screen and (max-height: 100px) {
    #choice-page {
         height: 120vh;
         display: flex;
