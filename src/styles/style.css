@@ -183,6 +183,7 @@ body{
     #choices {
         display: flex;
         flex-direction: column;
+
         justify-content: space-between;
         /*border: 1px darkred solid;*/
     }
@@ -197,7 +198,7 @@ body{
         width: 35rem;
         height: fit-content;
         display: grid;
-        grid-template-rows: 1fr 0.1fr;
+        grid-template-rows: 0.6fr 0.01fr;
         justify-items: center;
         margin: 1rem 0;
         cursor: pointer;
@@ -504,6 +505,60 @@ body{
         justify-content: center;
         align-items: center;
     }
+}
+
+@media(max-height: 1000px) {
+    #firstChoice, #secondChoice {
+        font-size: 0.4rem;
+        height: 60%;
+        width: 90%;
+    }
+    .choice-image {
+        width: fit-content !important;
+        height: 100% !important;
+    }
+    #choices input[type="checkbox"] {
+        opacity: 0;
+        height: 10rem;
+        width: inherit;
+        grid-row-gap: 0;
+    }
+
+    #choices label {
+        zoom: 0.5;
+        -moz-transform: scale(0.7);
+        -moz-transform-origin: 0 0;
+    }
+
+    #choices input + label {
+        display: inline-block;
+        cursor: pointer;
+        background-image: url("../img/svg/add.svg");
+        padding: 0;
+    }
+
+    #choices input[type="checkbox"]:checked + label {
+        background-image: url("../img/svg/remove.svg")
+    }
+    .choice-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #choices{
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media(max-height: 850px){
+    #choice-page{
+        transform: scale(0.9);
+    }
+
 }
 
 
