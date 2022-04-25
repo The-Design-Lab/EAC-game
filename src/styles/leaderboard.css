@@ -17,7 +17,7 @@
 
 }
 
-@media only screen and (max-height: 768px) {
+@media screen and (max-height: 768px) {
     #leaderboard{
     height: 70vh;
     width: 80vw;
