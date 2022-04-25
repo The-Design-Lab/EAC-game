@@ -59,7 +59,7 @@ body{
     background-color: #2D2D2D;
     border-radius: 10px;
     /*border: 1px magenta solid;*/
-    height: 75vh;
+    height: fit-content;
 }
 
 
