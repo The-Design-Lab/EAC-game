@@ -20,7 +20,7 @@
 @media screen and (max-height: 800px) {
     #leaderboard{
     height: 70vh;
-    width: 76vw;
+    width: 90vw;
     color: white;
     overflow: hidden;
     font-size: 100px;
