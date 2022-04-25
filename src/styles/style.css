@@ -436,7 +436,7 @@ body{
 
 
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 768px) {
     #choice-page {
         height: 120vh;
         display: flex;
