@@ -334,7 +334,7 @@ body{
 
 
 
-    @media (max-width: 1500px) {
+    @media screen and (max-width: 1500px) {
 
         #choice-page {
             display: flex;
