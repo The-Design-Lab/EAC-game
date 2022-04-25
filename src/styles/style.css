@@ -23,54 +23,7 @@ body{
     /*border: 1px red solid;*/
 }
 
-@media only screen and (max-height: 768px) {
-    #choice-page {
-        height: 160vh;
-        display: flex;
-        /*flex-direction: column;*/
-        justify-content: center;
-        margin-top: 3rem;
-        /*border: 1px red solid;*/
-    }
 
-
-    .choice-wrapper {
-        width: 35rem;
-        height: fit-content;
-        display: grid;
-        grid-template-rows: 1fr 0.1fr;
-        justify-items: center;
-        margin: 1rem 0;
-        cursor: pointer;
-        padding-bottom: 20px;
-    }
-
-    .tabs {
-        height: 90px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        padding: 0 !important;
-        margin: 0 !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #2D2D2D;
-        cursor: pointer;
-    }
-
-    #marketNews-container {
-        background-color: #0D0C0C;
-        margin-top: -1rem;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
-        height: fit-content;
-        /*border: red 1px solid;*/
-    }
-
-
-}
 
 #choice-container{
 
@@ -504,7 +457,52 @@ body{
 
 
 
+@media only screen and (max-height: 768px) {
+    #choice-page {
+        height: 160vh;
+        display: flex;
+        /*flex-direction: column;*/
+        justify-content: center;
+        margin-top: 3rem;
+        /*border: 1px red solid;*/
+    }
 
+
+    .choice-wrapper {
+        width: 35rem;
+        height: fit-content;
+        display: grid;
+        grid-template-rows: 1fr 0.1fr;
+        justify-items: center;
+        margin: 1rem 0;
+        cursor: pointer;
+        padding-bottom: 20px;
+    }
+
+    .tabs {
+        height: 90px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #2D2D2D;
+        cursor: pointer;
+    }
+
+    #marketNews-container {
+        background-color: #0D0C0C;
+        margin-top: -1rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        height: fit-content;
+        /*border: red 1px solid;*/
+    }
+}
 
 
 
