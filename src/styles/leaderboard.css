@@ -17,10 +17,10 @@
 
 }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 600px) {
     #leaderboard{
     height: 70vh;
-    width: 80vw;
+    width: 76vw;
     color: white;
     overflow: hidden;
     font-size: 100px;
