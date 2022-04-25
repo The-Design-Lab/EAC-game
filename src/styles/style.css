@@ -345,8 +345,8 @@ body{
         }
 
         #choice-container {
-            /*border: cyan 1px solid;*/
-            height: 110%;
+            /*border: cyan 1px solid;
+            height: 110%;*/
             grid-column-gap: 2rem;
             width: 100%;
         }
