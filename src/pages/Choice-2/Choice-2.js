@@ -17,7 +17,7 @@ import CalculateGraphReturns from "../../hooks/CalculateGraphReturns";
 import Tooltip from "../../components/tooltip";
 
 const choiceData = {
-  header: "CDs & Emergency Savings",
+  header: "2005 Choice: CDs & Emergency Savings",
   year: 2005,
   setup: (
     <>
@@ -36,8 +36,9 @@ const choiceData = {
       You know how important{" "}
       <Tooltip tooltipText={"Emergency Savings"} text={"emergency savings"} />{" "}
       is so you save $2,000 and deposit this in a{" "}
-      <Tooltip text={"CD"} tooltipText={"CD"} /> which is just for emergencies
-      and just purchase a slipcover for your couch.{" "}
+      <Tooltip text={"CD"} tooltipText={"CD"} />, earning 2.73%{" "}
+      <Tooltip text={"APR"} tooltipText={"APR"} />, which is just for
+      emergencies and just purchase a slipcover for your couch.{" "}
     </>
   ),
   option2: (

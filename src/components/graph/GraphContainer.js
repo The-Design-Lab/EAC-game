@@ -10,12 +10,12 @@ import usePlayer from "../../hooks/usePlayer";
 import useFakePlayer from "../../hooks/useFakePlayer";
 import useGenerateGraphData from "../../hooks/useGenerateGraphData";
 
-const GraphContainer = ({ year, limit, choice, singleGraph }) => {
+const GraphContainer = ({ year, limit, choice, singleGraph, graphYear }) => {
   const { investments } = useContext(PlayerContext);
   const fakeContext = useContext(FakePlayerContext);
   const player = usePlayer();
   const fakePlayer = useFakePlayer();
-  useGenerateGraphData(year, player, fakePlayer, limit);
+  useGenerateGraphData(graphYear, player, fakePlayer, limit);
   const [shownGraph, setShownGraph] = useState(<Graph />);
   const [shownWhatIfGraph, setShownWhatIfGraph] = useState(<WhatIfGraph />);
 

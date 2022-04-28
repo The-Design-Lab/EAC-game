@@ -31,9 +31,12 @@ function Reflection4() {
               high are called "bear markets". Looking at the S&P 500 Index,
               there have been 16 bear markets since 1926. That's one every 6
               years on average. The bear markets last an average of 22 months,
-              and the market typically loses an average of 39%. There is no
-              guarantee this is what will happen in the future but this is what
-              has happened over the past almost 100 years.
+              and the market typically loses an average of 39% before it begins
+              to recover. A "bull market" is a term for a time when the market
+              is rising. The average bull market period since 1942 lasted 4.4
+              years with an average cumulative total return of 154.9%. There is
+              no guarantee this is what will happen in the future but this is
+              what has happened over the past almost 100 years.
             </p>
           </div>
         </div>

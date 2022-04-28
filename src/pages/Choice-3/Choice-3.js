@@ -17,8 +17,8 @@ import { PlayerContext } from "../../contexts/PlayerContext";
 import Tooltip from "../../components/tooltip";
 
 const choiceData = {
-  header: "Individual Stocks & Mutual Funds",
-  year: 2006,
+  header: "2007 Choice: Individual Stocks & Mutual Funds",
+  year: 2007,
   setup: (
     <>
       You have been working for a few more years and have another $2,000 saved
@@ -46,7 +46,7 @@ const choiceData = {
       Invest the $2,000 in a growth{" "}
       <Tooltip text={"mutual fund"} tooltipText={"Mutual Fund"} /> so that you
       can continue to <Tooltip text={"diversify"} tooltipText={"Diversify"} />.
-      The growth mutual fund has had a price increase from $5.14 per{" "}
+      The growth mutual fund has had a price increase from $5.15 per{" "}
       <Tooltip tooltipText={"Share"} text={"share"} /> to $6.97 per share from
       2004-2006.
     </>
@@ -72,7 +72,7 @@ function ChoiceThree() {
       type: "RESET_RETURNS",
     });
     let returns;
-    let temp = CalculateGraphReturns(2006, investments);
+    let temp = CalculateGraphReturns(2007, investments);
     const selection = {
       choice: choice,
       expenditures: addAnnualExpenditures + addInvestment,
@@ -125,7 +125,7 @@ function ChoiceThree() {
           <div id="financial-container">
             <div id="financial-top-container">
               <div className={"wrapper"}>
-                <ChoiceTabs choice={choice2} player={player} year={2006} />
+                <ChoiceTabs choice={choice2} player={player} year={2007} />
               </div>
             </div>
           </div>

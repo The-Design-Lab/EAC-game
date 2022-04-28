@@ -10,10 +10,11 @@ function GraphFive() {
     <>
       <div id="graph-container">
         <GraphContainer
-          year={2013}
+          year={2014}
           choice={choice5}
           singleGraph={singleGraph5}
           limit={6}
+          graphYear={2014}
         />
         <div id="button-container">
           <Link to={"/reflection-5"}>

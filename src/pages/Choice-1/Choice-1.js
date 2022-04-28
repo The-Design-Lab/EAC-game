@@ -14,14 +14,14 @@ import useFakePlayer from "../../hooks/useFakePlayer";
 import { choice1 } from "../../data/investmentData";
 import Tooltip from "../../components/tooltip";
 const choiceData = {
-  header: "Retirement & Financial Goals",
+  header: "2004 Choice: Retirement & Financial Goals",
   year: 2004,
   setup: (
     <>
       Congrats! Your employer has a benefits program to help workers invest for
       their retirement. Your employer allows you to invest funds into a{" "}
       <Tooltip text={"401K"} tooltipText={"401K"} /> up to 10% of your salary
-      with an e
+      with an
       <Tooltip text={"employer match"} tooltipText={"Employer Match"} /> of 50%
       of your investment. Take a look at the Market News. How is the U.S.
       economy performing? What is the{" "}

@@ -13,7 +13,8 @@ function GraphFour() {
           limit={5}
           singleGraph={singleGraph4}
           choice={choice4}
-          year={2008}
+          year={2009}
+          graphYear={2009}
         />
         <div id="button-container">
           <Link to={"/reflection-4"}>

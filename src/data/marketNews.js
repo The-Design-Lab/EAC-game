@@ -12,38 +12,28 @@ const marketNews = {
       The <Tooltip tooltipText={"Shiller PE"} text={" Shiller PE"} /> Ratio
       increased from 22.9 at the beginning of the year to 26.64 at year end,
       indicating that <Tooltip text={"stocks"} tooltipText={"Stock"} /> are in
-      an extreme bubble.
+      an a bubble as this is well above the historical average or median levels
+      of 15-16.
     </>,
   ],
   2005: [
     <>
-      The US economy{" "}
-      <Tooltip tooltipText={"Gross Domestic Product (GDP)"} text={"GDP"} /> grew
-      3.5% in 2005, a slight decrease from the preceding year due primarily to
-      the impact of Hurricane Katrina and Rita on the economy.
+      The US economy grew at an annual rate of 3.8% in 2004, an increase from
+      the preceding year.
     </>,
     <>
-      The <Tooltip text={"S&P 500"} tooltipText={"S&P 500"} /> increased by 3%
-      over the previous year.
+      The stock market, as represented by the{" "}
+      <Tooltip text={"S&P 500"} tooltipText={"S&P 500"} /> index increased by
+      8.99%
     </>,
     <>
-      <Tooltip tooltipText={"Inflation"} text={"Inflation"} /> or the increase
-      in prices (as measured by{" "}
-      <Tooltip text={"CPI"} tooltipText={"Consumer Price Index (CPI)"} />)
-      increased 3.4%.
-    </>,
-    <>
-      10 Year <Tooltip tooltipText={"Treasury"} text={"Treasury"} /> yields
-      increased slightly throughout the year.{" "}
-    </>,
-    <>
-      <Tooltip text={"Stocks"} tooltipText={"Stock"} /> remained in an extreme
-      bubble as demonstrated by the Shiller{" "}
-      <Tooltip text={"PE Ratio"} tooltipText={"PE Ratio"} />, which ranged from
-      24.88 to 26.74 throughout the year.
+      The <Tooltip tooltipText={"PE Ratio"} text={"Schiller PE Ratio"} /> ranged
+      from 25.17 to 27.66 throughout the year, indicating that{" "}
+      <Tooltip text={"stocks"} tooltipText={"Stock"} /> are in a bubble as this
+      is well above the historical average or median levels of 15-16.
     </>,
   ],
-  2006: [
+  2007: [
     <>
       Economic growth slowed slightly as{" "}
       <Tooltip tooltipText={"Gross Domestic Product (GDP)"} text={"GDP"} /> grew
@@ -68,12 +58,13 @@ const marketNews = {
     </>,
     <>
       <Tooltip tooltipText={"Stock"} text={"Stock"} /> valuations remained in a
-      significant bubble as demonstrated by the Shiller{" "}
+      bubble as demonstrated by the Shiller{" "}
       <Tooltip tooltipText={"PE Ratio"} text={"PE Ratio"} />, which ranged from
-      24.70 to 27.28 throughout the year.
+      24.70 to 27.28 throughout the year.This was well above the historical
+      average or median levels of 15-16.
     </>,
   ],
-  2008: [
+  2009: [
     "Economic growth turned negative in 2008. The US economy grew at an annual rate of -0.137% as the world entered the Great Recession.",
     <>
       The <Tooltip text={"S&P 500"} tooltipText={"S&P 500"} /> fell by nearly
@@ -91,13 +82,13 @@ const marketNews = {
     </>,
     <>
       At year-end, <Tooltip tooltipText={"Stock"} text={"stock"} /> valuations
-      were at the historical average, remained slightly overvalued, however the
-      Shiller <Tooltip tooltipText={"PE Ratio"} text={"PE Ratio"} /> fell from
+      were at the historical average, as the Shiller{" "}
+      <Tooltip tooltipText={"PE Ratio"} text={"PE Ratio"} /> fell from
       significant bubble levels during the year, down from 24.02 to 15.38
       throughout the year.
     </>,
   ],
-  2013: [
+  2014: [
     "Economic growth continued at a relatively slow pace in 2013.\n",
     <>
       The economy as indicated by{" "}
@@ -107,7 +98,8 @@ const marketNews = {
     <>
       {" "}
       <Tooltip tooltipText={"Stock"} text={"Stocks"} /> as measured by the S&P
-      500 increased by 29.6% to rise above the previous high in 2007
+      500 increased by 29.6% to rise above the previous high in 2007. The S&P
+      500 closed the year at $28.85.
     </>,
     <>
       10 Year <Tooltip text={"Treasury"} tooltipText={"Treasury"} /> r rates

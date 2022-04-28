@@ -73,9 +73,9 @@ function Summary() {
   };
 
   const lose = {
-    firstElement: `${name}, you were a little off the mark!`,
+    firstElement: `${name}, you were a little off the mark or need longer to continue investing`,
     secondElement:
-      "Good thing this is just a game for learning. Play the game again, adjust your goals, and see if you can make better financial choices. Investing success can happen for you!",
+      "Many investing goals take longer to achieve than just the 10 years reflected in this game. Investing success can happen for you!  You may have just needed more time but also look your investing choices highlighted below and see if you have any areas to improve. Visit EconCouncil.org & FutureFinanceReady.com & continue to learn more about investing!",
     thirdElement: "You don’t have enough to purchase your goals, ",
     fourthElement:
       "What decisions in the game hurt your returns financially? What could you do differently next time?",

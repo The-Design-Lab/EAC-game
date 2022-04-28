@@ -10,10 +10,11 @@ function GraphThree() {
     <>
       <div id="graph-container">
         <GraphContainer
-          year={2006}
+          year={2007}
           choice={choice3}
           singleGraph={singleGraph3}
           limit={4}
+          graphYear={2007}
         />
         <div id="button-container">
           <Link to={"/reflection-3"}>

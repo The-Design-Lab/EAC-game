@@ -17,6 +17,7 @@ function GraphTwo() {
           singleGraph={singleGraph2}
           choice={choice2}
           year={2005}
+          graphYear={2006}
         />
         <div id="button-container">
           <Link to={eventTrigger ? `/event/${eventTrigger}` : "/reflection-2"}>

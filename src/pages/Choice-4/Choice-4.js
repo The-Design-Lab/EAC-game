@@ -16,12 +16,13 @@ import { PlayerContext } from "../../contexts/PlayerContext";
 import Tooltip from "../../components/tooltip";
 
 const choiceData = {
-  header: "Index Funds",
+  header: "2009 Choice: Bear Market",
   year: 2009,
   setup: (
     <>
-      What has happened with the stock market recently? In 2004, you invested
-      15% of your income in shares of an S&P 500 Index Fund at $17.18 per share.
+      What has happened with the stock market recently? In 2004, you may have
+      invested 15% of your income in shares of an S&P 500 Index Fund at $17.18
+      per share.
       <p>
         Take a look at the Market News. How is the U.S. economy performing? What
         is the <Tooltip text={"S&P 500"} tooltipText={"S&P 500"} /> at now? How
@@ -64,7 +65,7 @@ function ChoiceFour() {
     };
 
     if (choice === "S&P") {
-      let returns = CalculateGraphReturns(2008, investments);
+      let returns = CalculateGraphReturns(2009, investments);
       dispatch({
         type: "SELECT_CHOICE",
         payload: selection,
@@ -110,7 +111,7 @@ function ChoiceFour() {
           <div id="financial-container">
             <div id="financial-top-container">
               <div className={"wrapper"}>
-                <ChoiceTabs year={2008} choice={choice3} player={player} />
+                <ChoiceTabs year={2009} choice={choice3} player={player} />
               </div>
             </div>
           </div>

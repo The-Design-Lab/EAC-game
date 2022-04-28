@@ -15,6 +15,7 @@ function GraphOne() {
           choice={choice1}
           singleGraph={singleGraph1}
           limit={2}
+          graphYear={2005}
         />
         {/*<hr />*/}
         <div id="button-container">

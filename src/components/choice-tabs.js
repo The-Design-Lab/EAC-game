@@ -47,7 +47,7 @@ function ChoiceTabs({ year, player, choice }) {
       <TabPanel>
         <div id="marketNews-container">
           <div id="marketNews-details">
-            <h5>Financial Market in {year}</h5>
+            <h5>Financial Market background - {year - 1}</h5>
             <div>
               <ul id={"marketNews-list"}>
                 {marketNews[year].map((item) => (
