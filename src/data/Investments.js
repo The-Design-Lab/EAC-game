@@ -2,7 +2,7 @@ const INVESTMENTS_VEHICLES = {
   retirement: "Retirement",
   SP: "S&P",
   CD: "CD",
-  inveesgo: "Inveesgo",
+  invesgo: "Invesgo",
   mutualFund: "Mutual Fund",
 };
 //

@@ -63,7 +63,7 @@ function Goals() {
             setTotalCost={setTotalCost}
           />
         </GoalChoices>
-        <h3 style={{ textAlign: "center" }}>
+        <h3 style={{ textAlign: "center", marginTop:"0px" }}>
           Total cost: {formatter.format(totalCost)}
         </h3>
         <hr />

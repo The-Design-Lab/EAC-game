@@ -23,7 +23,7 @@ const choiceData = {
     <>
       You have been working for a few more years and have another $2,000 saved
       up that you are thinking about investing.
-      <p>
+      <p id="subtext">
         Take a look at the Market News. How is the U.S. economy performing? What
         is the <Tooltip text={"S&P 500"} tooltipText={"S&P 500"} /> at now? How
         might this impact your financial decisions, if at all?
@@ -66,7 +66,7 @@ function ChoiceThree() {
     setChoice(e.target.value);
   };
 
-  let addInvestment = -2000; // this is the same for a inveesgo or a mutual fund
+  let addInvestment = -2000; // this is the same for a invesgo or a mutual fund
   const submitSelection = () => {
     dispatch({
       type: "RESET_RETURNS",
@@ -77,8 +77,8 @@ function ChoiceThree() {
       choice: choice,
       expenditures: addAnnualExpenditures + addInvestment,
       investment:
-        choice === INVESTMENTS_VEHICLES.inveesgo
-          ? INVESTMENTS_VEHICLES.inveesgo
+        choice === INVESTMENTS_VEHICLES.invesgo
+          ? INVESTMENTS_VEHICLES.invesgo
           : INVESTMENTS_VEHICLES.mutualFund,
     };
 
@@ -86,12 +86,12 @@ function ChoiceThree() {
       choice: choice,
       expenditures: addAnnualExpenditures + addInvestment,
       investment:
-        choice === INVESTMENTS_VEHICLES.inveesgo
+        choice === INVESTMENTS_VEHICLES.invesgo
           ? INVESTMENTS_VEHICLES.mutualFund
-          : INVESTMENTS_VEHICLES.inveesgo,
+          : INVESTMENTS_VEHICLES.invesgo,
     };
     returns =
-      selection.choice === INVESTMENTS_VEHICLES.inveesgo
+      selection.choice === INVESTMENTS_VEHICLES.invesgo
         ? choice3[4][3] + temp
         : choice3[3][3] + temp;
 
@@ -118,7 +118,7 @@ function ChoiceThree() {
             handleSelection={handleSelection}
             imageA={Choice3A}
             imageB={Choice3B}
-            choiceA={"Inveesgo"}
+            choiceA={"Invesgo"}
             choiceB={"mutualFund"}
             setIsChoiceSelected={setIsChoiceSelected}
           />

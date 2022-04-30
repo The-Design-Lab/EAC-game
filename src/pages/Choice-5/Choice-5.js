@@ -22,7 +22,7 @@ const choiceData = {
     <>
       How has the stock market recently performed? In 2004, you invested 15% of
       your income in shares of the S&P 500 at $17.18.
-      <p>
+      <p id="subtext">
         Take a look at the Market News. How is the U.S. economy performing? What
         is the <Tooltip text={"S&P 500"} tooltipText={"S&P 500"} /> at now? How
         might this impact your financial decisions, if at all?

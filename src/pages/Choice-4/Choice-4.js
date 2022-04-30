@@ -23,7 +23,7 @@ const choiceData = {
       What has happened with the stock market recently? In 2004, you may have
       invested 15% of your income in shares of an S&P 500 Index Fund at $17.18
       per share.
-      <p>
+      <p id="subtext">
         Take a look at the Market News. How is the U.S. economy performing? What
         is the <Tooltip text={"S&P 500"} tooltipText={"S&P 500"} /> at now? How
         might this impact your financial decisions, if at all?

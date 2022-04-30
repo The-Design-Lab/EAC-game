@@ -35,7 +35,7 @@ const GraphContainer = ({ year, limit, choice, singleGraph, graphYear }) => {
             style={{ border: "1px solid white" }}
             onClick={() => setShownGraph(<Graph />)}
           >
-            Total Balance:{" "}
+            Total Investment Balance:{" "}
             {formatter.format(player.bank + player.investmentAccount)}{" "}
           </h5>
           <div className="label-container">
@@ -84,7 +84,7 @@ const GraphContainer = ({ year, limit, choice, singleGraph, graphYear }) => {
                 </span>
               </div>
             )}
-            {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
+            {investments.includes(INVESTMENTS_VEHICLES.invesgo) && (
               <div
                 className={"investments-details-label"}
                 style={{ border: "1px solid #FF5050" }}
@@ -95,7 +95,7 @@ const GraphContainer = ({ year, limit, choice, singleGraph, graphYear }) => {
                 }
               >
                 <span style={{ color: "#FF5050" }}>
-                  Inveesgo: {formatter.format(choice[3].slice(-1))}
+                  Invesgo: {formatter.format(choice[3].slice(-1))}
                 </span>
               </div>
             )}
@@ -132,7 +132,7 @@ const GraphContainer = ({ year, limit, choice, singleGraph, graphYear }) => {
             style={{ border: "1px solid white" }}
             onClick={() => setShownWhatIfGraph(<WhatIfGraph />)}
           >
-            Potential Balance: {formatter.format(fakePlayer.bank)}{" "}
+            Potential Investment Balance: {formatter.format(fakePlayer.bank)}{" "}
           </h5>
           <div className="label-container">
             {fakeContext.investments.includes(INVESTMENTS_VEHICLES.SP) && (
@@ -183,7 +183,7 @@ const GraphContainer = ({ year, limit, choice, singleGraph, graphYear }) => {
               </div>
             )}
             {fakeContext.investments.includes(
-              INVESTMENTS_VEHICLES.inveesgo
+              INVESTMENTS_VEHICLES.invesgo
             ) && (
               <div
                 className={"investments-details-label"}
@@ -195,7 +195,7 @@ const GraphContainer = ({ year, limit, choice, singleGraph, graphYear }) => {
                 }
               >
                 <span style={{ color: "#FF5050" }}>
-                  Inveesgo: {formatter.format(choice[3].slice(-1))}
+                  Invesgo: {formatter.format(choice[3].slice(-1))}
                 </span>
               </div>
             )}

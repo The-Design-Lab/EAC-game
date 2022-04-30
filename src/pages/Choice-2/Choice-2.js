@@ -24,7 +24,7 @@ const choiceData = {
       You have been working for over a year and you notice that you have some
       extra room in your budget. You are conflicted because you have really old,
       used furniture
-      <p>
+      <p id="subtext">
         Take a look at the Market News. How is the U.S. economy performing? What
         is the <Tooltip text={"S&P 500"} tooltipText={"S&P 500"} /> at now? How
         might this impact your financial decisions, if at all?

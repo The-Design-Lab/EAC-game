@@ -411,7 +411,7 @@ export const singleGraph4 = [
     },
   ],
   [
-    // Inveesgo
+    // Invesgo
     {
       name: "Q1",
       amount: 2135,

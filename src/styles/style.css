@@ -62,17 +62,19 @@ body{
 
 
 
+.splide__arrow{
+    height: 3em;
+    width: 3em;
 
+}
 
+.splide__arrow--prev {
+    left: -2em;
+}
 
-
-
-    #account-container {
-        width: 96%;
-        border: 3px solid #464545;
-        border-radius: 10px;
-        margin-top: 20px;
-    }
+.splide__arrow--next {
+    right: -2em;
+}
 
     #year-container {
         background-color: black;
@@ -378,13 +380,10 @@ body{
             height: 100%;
         }
 
-        #choice-text {
-            font-size: 0.8rem;
-        }
 
         .choice-image {
             width: 10rem !important;
-            height: 8rem !important;
+            height: 10rem !important;
         }
 
         #choices input[type="checkbox"] {
@@ -435,6 +434,14 @@ body{
 
 
 @media screen and (max-height: 1000px) {
+
+
+    #details-header-container {
+        margin: 0;
+        width: 80%;
+        /*border: #ACFFBE 1px solid;*/
+    }
+
    #choice-page {
         height: 120vh;
         display: flex;
@@ -446,13 +453,36 @@ body{
 
     #choice-container {
         /*border: cyan 1px solid; */
-            position: relative;
-            height: 130vh;
-            grid-column-gap: 2rem;
-            width: 100%;
-        }
+        padding-top: 20px;
+        position: relative;
+        height: 130vh;
+        grid-column-gap: 2rem;
+        width: 100%;
+    }
 
-        .choice-wrapper {
+    #choices input + label {
+        display: inline-block;
+        cursor: pointer;
+        background-image: url("../img/svg/add.svg");
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .choice-image {
+        width: 10rem !important;
+        height: 10rem !important;
+    }
+
+    #financial-container {
+        /*border: cyan 1px solid; */
+        padding-top: 30px;
+        position: relative;
+        height: 130vh;
+        grid-column-gap: 2rem;
+        margin-right: 120px;
+    }
+
+    .choice-wrapper {
         width: 35rem;
         height: fit-content;
         display: grid;
@@ -507,7 +537,7 @@ body{
     }
 }
 
-@media(max-height: 1000px) {
+/*@media(max-height: 1000px) {
     #firstChoice, #secondChoice {
         font-size: 0.4rem;
         height: 60%;
@@ -557,9 +587,9 @@ body{
 @media(max-height: 850px){
     #choice-page{
         transform: scale(0.9);
-    }
+    }*/
 
-}
+
 
 
 
