@@ -396,12 +396,14 @@ body{
             zoom: 0.5;
             -moz-transform: scale(0.7);
             -moz-transform-origin: 0 0;
+
         }
 
         #choices input + label {
             display: inline-block;
             cursor: pointer;
             background-image: url("../img/svg/add.svg");
+            background-repeat: no-repeat;
             padding: 0;
         }
 
