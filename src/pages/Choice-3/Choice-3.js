@@ -30,27 +30,33 @@ const choiceData = {
       </p>{" "}
     </>
   ),
-  option1: (
-    <>
-      You invest the money in <Tooltip tooltipText={"Stock"} text={"stock"} />{" "}
-      in a small company, Invesgo, that has high{" "}
-      <Tooltip tooltipText={"Risk"} text={"risk"} /> but recently has shown
-      potential for a high{" "}
-      <Tooltip tooltipText={"Potential Return"} text={"return"} />. Invesgo’s
-      stock price has increased from $6.01 to $13.1 in the years 2004 - 2006
-      with a high of $19.25 during that time.
-    </>
-  ),
-  option2: (
-    <>
-      Invest the $2,000 in a growth{" "}
-      <Tooltip text={"mutual fund"} tooltipText={"Mutual Fund"} /> so that you
-      can continue to <Tooltip text={"diversify"} tooltipText={"Diversify"} />.
-      The growth mutual fund has had a price increase from $5.15 per{" "}
-      <Tooltip tooltipText={"Share"} text={"share"} /> to $6.97 per share from
-      2004-2006.
-    </>
-  ),
+  option1: {
+    index: 1,
+    text: (
+      <>
+        You invest the money in <Tooltip tooltipText={"Stock"} text={"stock"} />{" "}
+        in a small company, Invesgo, that has high{" "}
+        <Tooltip tooltipText={"Risk"} text={"risk"} /> but recently has shown
+        potential for a high{" "}
+        <Tooltip tooltipText={"Potential Return"} text={"return"} />. Invesgo’s
+        stock price has increased from $6.01 to $13.1 in the years 2004 - 2006
+        with a high of $19.25 during that time.
+      </>
+    ),
+  },
+  option2: {
+    index: 2,
+    text: (
+      <>
+        Invest the $2,000 in a growth{" "}
+        <Tooltip text={"mutual fund"} tooltipText={"Mutual Fund"} /> so that you
+        can continue to <Tooltip text={"diversify"} tooltipText={"Diversify"} />
+        . The growth mutual fund has had a price increase from $5.15 per{" "}
+        <Tooltip tooltipText={"Share"} text={"share"} /> to $6.97 per share from
+        2004-2006.
+      </>
+    ),
+  },
 };
 
 function ChoiceThree() {
@@ -76,6 +82,10 @@ function ChoiceThree() {
     const selection = {
       choice: choice,
       expenditures: addAnnualExpenditures + addInvestment,
+      index:
+        choice === INVESTMENTS_VEHICLES.invesgo
+          ? choiceData.option1.index
+          : choiceData.option2.index,
       investment:
         choice === INVESTMENTS_VEHICLES.invesgo
           ? INVESTMENTS_VEHICLES.invesgo
@@ -85,6 +95,10 @@ function ChoiceThree() {
     const whatIfSelection = {
       choice: choice,
       expenditures: addAnnualExpenditures + addInvestment,
+      index:
+        choice === INVESTMENTS_VEHICLES.invesgo
+          ? choiceData.option2.index
+          : choiceData.option1.index,
       investment:
         choice === INVESTMENTS_VEHICLES.invesgo
           ? INVESTMENTS_VEHICLES.mutualFund
@@ -106,6 +120,10 @@ function ChoiceThree() {
     fakePlayerDispatch({
       type: "SELECT_CHOICE",
       payload: whatIfSelection,
+    });
+    fakePlayerDispatch({
+      type: "ADD_RETURNS",
+      payload: returns,
     });
   };
   return (

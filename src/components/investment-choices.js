@@ -68,7 +68,7 @@ function InvestmentChoices({
             id="firstChoice"
             style={
               isOptionADisabled
-                ? { border: "black 1px solid" }
+                ? { border: "white 1px solid" }
                 : { border: `${colorA} 1px solid` }
             }
           >
@@ -83,7 +83,7 @@ function InvestmentChoices({
               alt="choice1a"
             />
 
-            <p id="choice-text">{choiceData.option1}</p>
+            <p id="choice-text">{choiceData.option1.text}</p>
           </div>
           <input
             type="checkbox"
@@ -100,7 +100,7 @@ function InvestmentChoices({
             id="secondChoice"
             style={
               isOptionBDisabled
-                ? { border: "black 1px solid" }
+                ? { border: "white 1px solid" }
                 : { border: `${colorB} 1px solid` }
             }
           >
@@ -114,7 +114,7 @@ function InvestmentChoices({
               }}
               alt="choice1b"
             />
-            <p id="choice-text">{choiceData.option2}</p>
+            <p id="choice-text">{choiceData.option2.text}</p>
           </div>
           <input
             type="checkbox"

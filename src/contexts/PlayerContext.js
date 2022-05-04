@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import { investmentTotals } from "../data/data";
 
 // Set initial state of expenses with mock data
 const initialState = {
@@ -9,6 +10,7 @@ const initialState = {
   investments: [],
   investmentAccount: 0,
   graph: [{ year: 2004, amount: 0 }],
+  totals: [],
 };
 
 // create the context
@@ -28,6 +30,7 @@ export const PlayerProvider = ({ children }) => {
         investments: state.investments,
         investmentAccount: state.investmentAccount,
         graph: state.graph,
+        totals: state.totals,
         dispatch,
       }}
     >
@@ -58,18 +61,18 @@ const PlayerReducer = (state, action) => {
     case "SELECT_CHOICE":
       return {
         ...state,
+        totals: [...state.totals, action.payload.index],
         choices: [...state.choices, action.payload.choice],
         investments: [...state.investments, action.payload.investment],
-        bank: state.bank + state.salary + action.payload.expenditures,
       };
     case "REMOVE_INVESTMENT":
       return {
         ...state,
         choices: [...state.choices, action.payload.choice],
+        totals: [...state.totals, action.payload.index],
         investments: [...state.investments, action.payload.investment].filter(
           (investment) => investment !== "S&P"
         ),
-        bank: state.bank + state.salary + action.payload.expenditures,
       };
     case "ADD_EVENT":
       return {
@@ -86,7 +89,7 @@ const PlayerReducer = (state, action) => {
     case "ADD_RETURNS": {
       return {
         ...state,
-        investmentAccount: state.investmentAccount + action.payload,
+        bank: investmentTotals[state.totals.map((c) => c).join(",")],
       };
     }
     case "RESET_RETURNS": {

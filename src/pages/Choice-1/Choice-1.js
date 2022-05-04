@@ -11,7 +11,6 @@ import InvestmentChoices from "../../components/investment-choices";
 import Choice1A from "../../img/choices/c1-A-image.webp";
 import Choice1B from "../../img/choices/c1-B-image.webp";
 import useFakePlayer from "../../hooks/useFakePlayer";
-import { choice1 } from "../../data/investmentData";
 import Tooltip from "../../components/tooltip";
 const choiceData = {
   header: "2004 Choice: Retirement & Financial Goals",
@@ -29,9 +28,14 @@ const choiceData = {
       this impact your financial decisions, if at all?
     </>
   ),
-  option1: `You choose to rent a small studio apartment and take public transportation to work so that you can afford to invest 10% of your salary into a 401k with a match of 5% (of your annual income). All of the funds, 15% of your total salary, will be invested in the S&P 500 index fund throughout the game.`,
-  option2: `You really want a larger apartment and a used car to drive to work. Even though this means you will not have any funds to invest for the long-term, you feel like retirement is a long way off so it will be OK.
-`,
+  option1: {
+    index: 1,
+    text: `You choose to rent a small studio apartment and take public transportation to work so that you can afford to invest 10% of your salary into a 401k with a match of 5% (of your annual income). All of the funds, 15% of your total salary, will be invested in the S&P 500 index fund throughout the game.`,
+  },
+  option2: {
+    index: 2,
+    text: `You really want a larger apartment and a used car to drive to work. Even though this means you will not have any funds to invest for the long-term, you feel like retirement is a long way off so it will be OK.`,
+  },
 };
 
 function ChoiceOne() {
@@ -49,7 +53,6 @@ function ChoiceOne() {
 
   // send selection data to the global player object
   const submitSelection = () => {
-    let returns;
     const selection = {
       choice: choice,
     };
@@ -61,17 +64,21 @@ function ChoiceOne() {
       SPPercentage = 0.1;
       selection.investment = INVESTMENTS_VEHICLES.SP;
       selection.expenditures = -(salary * SPPercentage) + addAnnualExpenditures;
-      returns = choice1[1][3];
+      selection.index = choiceData.option1.index;
+
       //fake player
       whatIfSelection.investment = "spend";
       whatIfSelection.expenditures = -(salary * 0.02) + addAnnualExpenditures;
+      whatIfSelection.index = choiceData.option2.index;
     } else {
       SPPercentage = 0.02;
       selection.investment = "spend";
       selection.expenditures = -(salary * SPPercentage) + addAnnualExpenditures;
+      selection.index = choiceData.option2.index;
       //fake player
       whatIfSelection.investment = INVESTMENTS_VEHICLES.SP;
       whatIfSelection.expenditures = -(salary * 0.1) + addAnnualExpenditures;
+      whatIfSelection.index = choiceData.option1.index;
     }
 
     dispatch({
@@ -80,12 +87,16 @@ function ChoiceOne() {
     });
     dispatch({
       type: "ADD_RETURNS",
-      payload: returns,
+      payload: "",
     });
 
     fakePlayerDispatch({
       type: "SELECT_CHOICE",
       payload: whatIfSelection,
+    });
+    fakePlayerDispatch({
+      type: "ADD_RETURNS",
+      payload: "",
     });
   };
 

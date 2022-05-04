@@ -5,8 +5,14 @@ import { choice1, singleGraph1 } from "../../data/investmentData";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import "../../styles/graphPages.css";
+import usePlayer from "../../hooks/usePlayer";
+import { investmentTotals } from "../../data/data";
 
 function GraphOne() {
+  const player = usePlayer();
+  console.log(player);
+  let test = investmentTotals[player.totals.map((c) => c).join(",")];
+  console.log(test);
   return (
     <>
       <div id="graph-container">

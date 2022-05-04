@@ -30,8 +30,14 @@ const choiceData = {
       </p>{" "}
     </>
   ),
-  option1: `You do not need your money until 2040. You keep all of the funds in the S&P 500 because you have 36 more years until you need your money.`,
-  option2: `Losing value in your investment is understandably concerning and scary. You sell some of your shares because you are concerned the S&P 500 will continue to go down`,
+  option1: {
+    index: 1,
+    text: `You do not need your money until 2040. You keep all of the funds in the S&P 500 because you have 36 more years until you need your money.`,
+  },
+  option2: {
+    index: 2,
+    text: `Losing value in your investment is understandably concerning and scary. You sell some of your shares because you are concerned the S&P 500 will continue to go down`,
+  },
 };
 
 function ChoiceFour() {
@@ -57,11 +63,15 @@ function ChoiceFour() {
       choice: choice,
       expenditures: addAnnualExpenditures,
       investment: removedInvestment,
+      index:
+        choice === "S&P" ? choiceData.option1.index : choiceData.option2.index,
     };
     const whatIfSelection = {
       choice: choice === "sell" ? null : "S&P",
       expenditures: addAnnualExpenditures,
       investment: removedInvestment,
+      index:
+        choice === "S&P" ? choiceData.option2.index : choiceData.option1.index,
     };
 
     if (choice === "S&P") {
@@ -79,6 +89,10 @@ function ChoiceFour() {
         type: "REMOVE_INVESTMENT",
         payload: whatIfSelection,
       });
+      fakePlayerDispatch({
+        type: "ADD_RETURNS",
+        payload: returns,
+      });
     }
 
     if (choice === "sell") {
@@ -90,6 +104,11 @@ function ChoiceFour() {
       fakePlayerDispatch({
         type: "SELECT_CHOICE",
         payload: whatIfSelection,
+      });
+
+      fakePlayerDispatch({
+        type: "ADD_RETURNS",
+        payload: "",
       });
     }
   };
