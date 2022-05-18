@@ -29,10 +29,14 @@ const choiceData = {
       </p>{" "}
     </>
   ),
-  option1:
-    "You do not need your money until 2040. The 68% gain is nice, but you decide to keep all of the funds in the S&P 500 because you have 32 more years until you need your money which you think is plenty of time to withstand ups and downs in the market.",
-  option2:
-    "Sell all of your shares because you are happy with the 68% gain that you have made.",
+  option1: {
+    index: 1,
+    text: "You do not need your money until 2040. The 68% gain is nice, but you decide to keep all of the funds in the S&P 500 because you have 32 more years until you need your money which you think is plenty of time to withstand ups and downs in the market.",
+  },
+  option2: {
+    index: 2,
+    text: "Sell all of your shares because you are happy with the 68% gain that you have made.",
+  },
 };
 
 function ChoiceFive() {
@@ -58,11 +62,15 @@ function ChoiceFive() {
       choice: choice,
       expenditures: addAnnualExpenditures,
       investment: removedInvestment,
+      index:
+        choice === "S&P" ? choiceData.option1.index : choiceData.option2.index,
     };
     const whatIfSelection = {
       choice: choice === "sell" ? null : "S&P",
       expenditures: addAnnualExpenditures,
       investment: removedInvestment,
+      index:
+        choice === "S&P" ? choiceData.option2.index : choiceData.option1.index,
     };
 
     if (choice === "sell") {
@@ -70,9 +78,17 @@ function ChoiceFive() {
         type: "REMOVE_INVESTMENT",
         payload: selection,
       });
+      dispatch({
+        type: "ADD_RETURNS",
+        payload: "",
+      });
       fakePlayerDispatch({
         type: "SELECT_CHOICE",
         payload: whatIfSelection,
+      });
+      fakePlayerDispatch({
+        type: "ADD_RETURNS",
+        payload: "",
       });
     } else {
       let returns = CalculateGraphReturns(2013, investments);
@@ -84,9 +100,14 @@ function ChoiceFive() {
         type: "ADD_RETURNS",
         payload: returns,
       });
+
       fakePlayerDispatch({
         type: "REMOVE_INVESTMENT",
         payload: whatIfSelection,
+      });
+      fakePlayerDispatch({
+        type: "ADD_RETURNS",
+        payload: returns,
       });
     }
   };

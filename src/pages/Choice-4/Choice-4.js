@@ -84,7 +84,6 @@ function ChoiceFour() {
         type: "ADD_RETURNS",
         payload: returns,
       });
-
       fakePlayerDispatch({
         type: "REMOVE_INVESTMENT",
         payload: whatIfSelection,
@@ -100,7 +99,10 @@ function ChoiceFour() {
         type: "REMOVE_INVESTMENT",
         payload: selection,
       });
-
+      dispatch({
+        type: "ADD_RETURNS",
+        payload: "",
+      });
       fakePlayerDispatch({
         type: "SELECT_CHOICE",
         payload: whatIfSelection,
