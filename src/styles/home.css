@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#home-container {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-rows: 0.5fr 1fr 0.46fr;
+    align-items: center;
+    justify-items: center;
+
+}
+
+#home-header {
+    width: 100%;
+    margin: 0;
+}
+
+#home-header h1{
+    font-size: 5.8rem;
+    letter-spacing: 0.3rem;
+    margin: 0;
+}
+#home-header h4{
+
+    letter-spacing: 0.2rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+#home-content{
+    display: grid;
+    grid-template-columns: 1.2fr  2fr;
+    border: white 1px solid;
+    border-left: none;
+    border-right: none;
+    width: fit-content;
+
+    padding: 10px
+}
+
+#picture{
+
+    /*border: yellow 1px solid;*/
+width: fit-content;
+}
+#image{
+    margin-top: 20px;
+    width: 344px;
+    height: 361px;
+
+}
+#home-text{
+    /*border: cyan 1px solid;*/
+    height: 100%;
+    padding: 5px;
+
+}
+
+#credits {
+    position: absolute;
+    left: 72%;
+    bottom: 1%;
+    color: #00FF38;
+    font-size: 1rem;
+}
+
+#credits:link {
+    color: #00FF38;
+}
+
+
+.text-content {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 10px;
+}
+
+
+.credits-content {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 10px;
+}
+
+
+
+#credits-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: white 1px solid;
+    border-left: none;
+    border-right: none;
+    width: fit-content;
+    padding: 10px
+}
+
+.credits-content.ul.li {
+    list-style-type: none;
+}

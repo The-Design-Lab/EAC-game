@@ -21,6 +21,6 @@ export const events = [
     name: "Education",
     amount: -1000,
     description:
-      "You complete community college credits and your cost of tuition is reduced by $XXK  $1,000. Your education goal is easier to reach.",
+      "You complete community college credits and your cost of tuition is reduced by $1,000. Your education goal is easier to reach.",
   },
 ];

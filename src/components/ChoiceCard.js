@@ -1,178 +1,457 @@
 import React, { useState, useContext } from "react";
 import { PlayerContext } from "../contexts/PlayerContext";
-import styled from "styled-components";
 import INVESTMENTS_VEHICLES from "../data/Investments";
+import car from "../img/goals/car-image.png";
+import education from "../img/goals/education-image.png";
+import fun from "../img/goals/fun-image.png";
+import house from "../img/goals/house-image.png";
+import kids from "../img/goals/kids-image.png";
+import retirement from "../img/goals/retirement-image.png";
+import biz from "../img/goals/start-business-image.png";
+import vacation from "../img/goals/vacation-image.png";
+import "swiper/swiper.scss";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { formatter } from "../formatter";
 
 const checkboxData = [
   {
     name: "Buy a House",
-    img: "https://cdn5.vectorstock.com/i/1000x1000/33/89/pixel-house-with-fence-and-garden-vector-10273389.jpg",
+    img: house,
     price: 232500,
     label: "house",
     checked: false,
+    tag: "House",
+    src: "goals/house-image.png",
   },
   {
     name: "Buy a Car",
-    img: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2f6d8426253581.563537ab0f34f.jpg",
+    img: car,
     price: 28000,
     label: "house",
     checked: false,
+    tag: "Car",
+    src: "goals/car-image.png",
   },
   {
     name: "Buy for Fun",
-    img: "https://previews.123rf.com/images/saphatthachat/saphatthachat1903/saphatthachat190300115/124294868-vector-pixel-art-fantasy-gift-box-isolated-cartoon.jpg",
+    img: fun,
     price: 10000,
     label: "fun",
     checked: false,
+    tag: "Fun",
+    src: "goals/fun-image.png",
   },
   {
     name: "Start a Business",
-    img: "https://images.cdn2.stockunlimited.net/preview1300/pixel-art-business-agreement_2009884.jpg",
+    img: biz,
     price: 600000,
     label: "fun",
     checked: false,
+    tag: "Biz",
+    src: "goals/start-business-image.png",
   },
   {
     name: "Save for Retirement",
-    img: "https://image.shutterstock.com/image-vector/vector-8-bit-pixel-art-260nw-534940771.jpg",
+    img: retirement,
     price: 600000,
     label: "retirement",
     checked: false,
+    tag: "Retire",
+    src: "goals/retirement-image.png",
   },
   {
     name: "Save for Kids",
-    img: "https://image.shutterstock.com/shutterstock/photos/1171388173/display_1500/stock-vector-vector-pixel-art-cry-baby-isolated-cartoon-1171388173.jpg",
+    img: kids,
     price: 600000,
     label: "kids",
     checked: false,
+    tag: "Kids",
+    src: "goals/kids-image.png",
   },
   {
     name: "Save for Vacation",
-    img: "https://previews.123rf.com/images/pdreams/pdreams1305/pdreams130500011/19606915-family-road-trip-summer-vacation-holidays-pixel-art-retro-clipart.jpg",
+    img: vacation,
     price: 2016,
     label: "vacation",
     checked: false,
+    tag: "Trip",
+    src: "goals/vacation-image.png",
   },
   {
     name: "Save for Education",
-    img: "https://previews.123rf.com/images/saphatthachat/saphatthachat1803/saphatthachat180300162/98031934-vector-pixel-art-book-open-isolated-cartoon.jpg",
+    img: education,
     price: 48432,
     label: "education",
     checked: false,
+    tag: "Education",
+    src: "goals/education-image.png",
   },
 ];
 
-const Card = styled.label`
-  box-shadow: var(--bevel-default);
-  padding: 20px;
-  width: 250px;
-  outline: 2px none;
-  cursor: pointer;
+let cost = 0;
 
-  &:active {
-    opacity: 0.6;
-    box-shadow: var(--bevel-active);
-    background: var(--color-primary-light);
-  }
-
-  //FIXME: Focus attribute is not working
-  &:focus {
-    outline: 2px dotted var(--color-secondary);
-  }
-
-  .title {
-    text-align: center;
-    display: block;
-    padding-top: 10px;
-    font-size: 22px;
-  }
-
-  .price {
-    display: block;
-    text-align: center;
-  }
-
-  hr {
-    margin: 10px 0;
-  }
-`;
-const Checkbox = ({ name, price, checked, onChange }) => {
-  return (
-    <input
-      type="checkbox"
-      name={name}
-      price={price}
-      checked={checked}
-      onChange={onChange}
-    />
-  );
-};
-
-function GoalCards({ setGoalSelected }) {
+function GoalCards({ setGoalSelected, setTotalCost }) {
   const { dispatch } = useContext(PlayerContext);
   const [checkedItems, setCheckedItems] = useState({});
 
-  const handleChange = (e) => {
-    // set checked items for UI change
-    setCheckedItems({
-      ...checkedItems,
-      [e.target.name]: e.target.checked,
-    });
-
-    // create an object to hold each goal data
-    const goal = {
-      name: e.target.attributes.name.value,
-      price: e.target.attributes.price.value,
-      checked: true,
-    };
-
-    // send the goal data to the global state
-    dispatch({
-      type: "ADD_GOAL",
-      payload: goal,
-    });
-
-    if (e.target.name === "Save for Retirement") {
-      dispatch({
-        type: `ADD_INVESTMENT`,
-        payload: INVESTMENTS_VEHICLES.retirement,
-      });
+  const addAmount = (e) => {
+    let data = JSON.parse(e.target.value);
+    if (e.target.checked === false) {
+      cost = cost - parseInt(data.price);
+      setTotalCost(cost);
+    } else {
+      cost = cost + parseInt(data.price);
+      setTotalCost(cost);
     }
-    setGoalSelected(true);
   };
+
+  const handleChange = (e) => {
+    let data = JSON.parse(e.target.value);
+    if (e.target.checked === true) {
+      //console.log("from false to true");
+      // set checked items for UI change
+      setCheckedItems({
+        ...checkedItems,
+        [e.target.name]: e.target.checked,
+      });
+
+      // create an object to hold each goal data
+      const goal = {
+        name: data.name,
+        price: parseInt(data.price),
+        tag: data.tag,
+        checked: true,
+        src: data.src,
+      };
+
+      // send the goal data to the global state
+      dispatch({
+        type: "ADD_GOAL",
+        payload: goal,
+      });
+
+      if (data.name === "Save for Retirement") {
+        dispatch({
+          type: `ADD_INVESTMENT`,
+          payload: INVESTMENTS_VEHICLES.retirement,
+        });
+      }
+      //console.log(checkedItems);
+      setGoalSelected(true);
+    } else if (e.target.checked === false) {
+      const goal = {
+        name: data.name,
+        price: parseInt(data.price),
+        checked: true,
+      };
+
+      // send the goal data to the global state
+      dispatch({
+        type: "REMOVE_GOAL",
+        payload: goal,
+      });
+
+      if (e.target.name === "Save for Retirement") {
+        dispatch({
+          type: `REMOVE_INVESTMENT`,
+          payload: INVESTMENTS_VEHICLES.retirement,
+        });
+      }
+    }
+  };
+
+  const slides = checkboxData.map((goal) => (
+    <SplideSlide>
+      <div className="slides">
+        <div className="content" id={"content-img"}>
+          <img id={"goal-page__img"} src={goal.img} alt="" />
+        </div>
+        <div className="content">
+          <div id="wrapper">
+            <div className="goal-card-text">{goal.name}</div>
+            <div className="goal-card-text">{formatter.format(goal.price)}</div>
+            <input
+              type="checkbox"
+              id="check"
+              name="goal"
+              onChange={handleChange}
+              value={JSON.stringify({
+                name: goal.name,
+                price: goal.price,
+                tag: goal.tag,
+                src: goal.src,
+              })}
+              onClick={addAmount}
+            />
+            <label htmlFor="goal" />
+          </div>
+        </div>
+      </div>
+    </SplideSlide>
+  ));
 
   return (
     <>
-      {checkboxData.map(({ name, price, img, checked, label }, index) => (
-        <Card
-          key={index}
-          tabindex={index}
-          label={label}
-          checked={checked}
-          style={
-            checkedItems[name]
-              ? { boxShadow: "var(--bevel-active)", opacity: ".4" }
-              : null
-          }
-        >
-          <Checkbox
-            name={name}
-            price={price}
-            checked={checkedItems[name]}
-            onChange={handleChange}
-          />
-          <img
-            src={img}
-            style={{ height: "100px", objectFit: "cover" }}
-            alt={name}
-          />
-          <span className="title">{name}</span>
-          <hr />
-          <span className="price">${price}</span>
-        </Card>
-      ))}
+      <Splide
+        options={{
+          perPage: 3,
+          height: "44vh",
+          rewind: true,
+          gap: "3rem",
+          padding: "3rem",
+          pagination: false,
+          width: "60vw",
+          arrows: "slider",
+        }}
+        type={"loop"}
+      >
+        {slides}
+      </Splide>
     </>
   );
 }
 
 export default GoalCards;
+
+// <Swiper
+//     spaceBetween={20}
+//     slidesPerView={1}
+//     loop={false}
+//     autoplay={{ delay: 3000 }}
+//     onSwiper={(swiper) => console.log(swiper)}
+// >
+//   <SwiperSlide>
+//     <div className="content">
+//       <div className="slider-image">
+//         <img src={car} alt="" />
+//       </div>
+//       <div className="slider-text">
+//         <div className="slider-goal-name">{checkboxData[0].name}</div>
+//         <div className="slider-goal-price">{checkboxData[0].price}</div>
+//         <Checkbox
+//             color="success"
+//             label="Add"
+//             inputProps={{
+//               name: checkboxData[0].name,
+//               price: checkboxData[0].price,
+//             }}
+//             size="large"
+//             onChange={handleChange}
+//         />
+//       </div>
+//     </div>
+//   </SwiperSlide>
+//   <SwiperSlide>
+//     <div className="content">
+//       <div className="slider-image">
+//         <img src={education} alt="" />
+//       </div>
+//       <div className="slider-text">
+//         <div className="slider-goal-name">{checkboxData[1].name}</div>
+//         <div className="slider-goal-price">{checkboxData[1].price}</div>
+//         <Checkbox
+//             color="success"
+//             label="Add"
+//             inputProps={{
+//               name: checkboxData[1].name,
+//               price: checkboxData[1].price,
+//             }}
+//             size="large"
+//             onChange={handleChange}
+//         />
+//       </div>
+//     </div>
+//   </SwiperSlide>
+//   <SwiperSlide>
+//     <div className="content">
+//       <div className="slider-image">
+//         <img src={fun} alt="" />
+//       </div>
+//       <div className="slider-text">
+//         <div className="slider-goal-name">{checkboxData[2].name}</div>
+//         <div className="slider-goal-price">{checkboxData[2].price}</div>
+//         <Checkbox
+//             color="success"
+//             label="Add"
+//             inputProps={{
+//               name: checkboxData[2].name,
+//               price: checkboxData[2].price,
+//             }}
+//             size="large"
+//             onChange={handleChange}
+//         />
+//       </div>
+//     </div>
+//   </SwiperSlide>
+//   <SwiperSlide>
+//     <div className="content">
+//       <div className="slider-image">
+//         <img src={house} alt="" />
+//       </div>
+//       <div className="slider-text">
+//         <div className="slider-goal-name">{checkboxData[3].name}</div>
+//         <div className="slider-goal-price">{checkboxData[3].price}</div>
+//         <Checkbox
+//             color="success"
+//             label="Add"
+//             inputProps={{
+//               name: checkboxData[3].name,
+//               price: checkboxData[3].price,
+//             }}
+//             size="large"
+//             onChange={handleChange}
+//         />
+//       </div>
+//     </div>
+//   </SwiperSlide>
+//   <SwiperSlide>
+//     <div className="content">
+//       <div className="slider-image">
+//         <img src={car} alt="" width="50%" height="50%" />
+//       </div>
+//       <div className="slider-text">
+//         <div className="slider-goal-name">{checkboxData[4].name}</div>
+//         <div className="slider-goal-price">{checkboxData[4].price}</div>
+//         <Checkbox
+//             color="success"
+//             label="Add"
+//             inputProps={{
+//               name: checkboxData[4].name,
+//               price: checkboxData[4].price,
+//             }}
+//             size="large"
+//             onChange={handleChange}
+//         />
+//       </div>
+//     </div>
+//   </SwiperSlide>
+//   <SwiperSlide>
+//     <div className="content">
+//       <div className="slider-image">
+//         <img src={retirement} alt="" />
+//       </div>
+//       <div className="slider-text">
+//         <div className="slider-goal-name">{checkboxData[5].name}</div>
+//         <div className="slider-goal-price">{checkboxData[5].price}</div>
+//         <Checkbox
+//             color="success"
+//             label="Add"
+//             inputProps={{
+//               name: checkboxData[5].name,
+//               price: checkboxData[5].price,
+//             }}
+//             size="large"
+//             onChange={handleChange}
+//         />
+//       </div>
+//     </div>
+//   </SwiperSlide>
+//   <SwiperSlide>
+//     <div className="content">
+//       <div className="slider-image">
+//         <img src={biz} alt="" />
+//       </div>
+//       <div className="slider-text">
+//         <div className="slider-goal-name">{checkboxData[6].name}</div>
+//         <div className="slider-goal-price">{checkboxData[6].price}</div>
+//         <Checkbox
+//             color="success"
+//             label="Add"
+//             inputProps={{
+//               name: checkboxData[6].name,
+//               price: checkboxData[6].price,
+//             }}
+//             size="large"
+//             onChange={handleChange}
+//         />
+//       </div>
+//     </div>
+//   </SwiperSlide>
+//   <SwiperSlide>
+//     <div className="content">
+//       <div className="slider-image">
+//         <img src={vacation} alt="" />
+//       </div>
+//       <div className="slider-text">
+//         <div className="slider-goal-name">{checkboxData[7].name}</div>
+//         <div className="slider-goal-price">{checkboxData[7].price}</div>
+//         <Checkbox
+//             color="success"
+//             label="Add"
+//             inputProps={{
+//               name: checkboxData[7].name,
+//               price: checkboxData[7].price,
+//             }}
+//             size="large"
+//             onChange={handleChange}
+//         />
+//       </div>
+//     </div>
+//   </SwiperSlide>
+// </Swiper>
+
+// <>
+//   {checkboxData.map(({ name, price, img, checked, label }, index) => (
+//       <Card
+//           key={index}
+//           tabindex={index}
+//           label={label}
+//           checked={checked}
+//           style={
+//             checkedItems[name]
+//                 ? { boxShadow: "var(--bevel-active)", opacity: ".4" }
+//                 : null
+//           }
+//       >
+//         <Checkbox
+//             name={name}
+//             price={price}
+//             checked={checkedItems[name]}
+//             onChange={handleChange}
+//         />
+//         <img
+//             src={img}
+//             style={{ height: "100px", objectFit: "cover" }}
+//             alt={name}
+//         />
+//         <span className="title">{name}</span>
+//         <hr />
+//         <span className="price">${price}</span>
+//       </Card>
+//   ))}
+// </>
+
+// <Card
+//     sx={{ maxWidth: 345, backgroundColor: "#202124" }}
+//     key={index}
+//     tabindex={index}
+//     label={label}
+//     checked={checked}
+// >
+//   <img src={img} alt="" style={{ height: "250px" }} />
+//   <CardContent>
+//     <Typography variant={"h5"} component="div" sx={{ color: "white" }}>
+//       {name}
+//     </Typography>
+//     <Typography variant="body1" sx={{ color: "white" }}>
+//       {price}
+//     </Typography>
+//   </CardContent>
+//   <CardActions>
+//     <Button size="small" sx={{ color: "green" }}>
+//       <Checkbox
+//           color="success"
+//           label="Add"
+//           inputProps={{
+//             name: name,
+//             price: price,
+//             checked: checkedItems[name],
+//           }}
+//           size="large"
+//           onChange={handleChange}
+//       />
+//     </Button>
+//   </CardActions>
+// </Card>

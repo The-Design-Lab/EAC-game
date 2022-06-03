@@ -3,11 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../components/Button";
 import ChoiceCard from "../components/ChoiceCard";
-import usePlayer from "../hooks/usePlayer";
 
 function Recap() {
-  const player = usePlayer();
-  console.log(player.bank);
   const MainContent = styled.div`
     display: flex;
     flex-direction: column;

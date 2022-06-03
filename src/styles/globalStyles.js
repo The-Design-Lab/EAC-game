@@ -1,10 +1,10 @@
-import { createGlobalStyle } from 'styled-components'
-import device from './mediaQueries'
+import { createGlobalStyle } from "styled-components";
+import device from "./mediaQueries";
 
 const GlobalStyle = createGlobalStyle`
   :root {
     // Colors
-    --color-primary: #C9CBCD; // gray
+    --color-primary: #171515; // gray
     --color-primary-light: #E4E4E4; // light-gray
     --color-secondary: #000082; // blue
     --color-tertiary: #F9BA7F; // orange
@@ -23,28 +23,25 @@ const GlobalStyle = createGlobalStyle`
       inset 2px 2px 0 0 #DEDCDE;
   
     // Fonts
-    --body: 'IBM Plex Sans', sans-serif;
-    --display: 'IBM Plex Mono', monospace;
+
   }
 
   * {
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
+    
+    
   }
 
   html {
     font-size: 16px;
+    color: azure;
   }
 
   body {
-    background: #018281;
+    background: #0D0C0C;
 
     // center window 
-    display:grid;
-    height: 93vh;
-    place-items: center;
-    justify-items: stretch;
+ 
+    
   }
 
   body,button {
@@ -53,8 +50,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: 4.209rem;
-    line-height: 1.0em;
-    margin-bottom:20px;
+    
 
     @media ${device.tabletS} {
       /* font-size: 1.62rem; */
@@ -78,28 +74,16 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     font-size: 1rem;
-    margin-bottom:15px;
+    
   }
 
   button{
     font-size: 0.875rem;
   }
 
-  hr{
-    box-shadow: var(--bevel-default);
-    /* margin: 40px 0 30px 0; */
-    margin: 20px 0;
-  }
 
-  ul{
-    list-style: inside;
 
-    li {
-      list-style-type: disclosure-closed;
-      font-weight:700;
-      margin-bottom:5px;
-    }
-  }
+
 
   input[type='radio']{
     display:none;
@@ -108,7 +92,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   
-}
-`
 
-export default GlobalStyle
+`;
+
+export default GlobalStyle;

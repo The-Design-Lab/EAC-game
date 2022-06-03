@@ -1,0 +1,606 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+}
+
+#page-container{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+
+#choice-page{
+    height: 85vh;
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: center;
+
+    margin-top: 3rem;
+    /*border: 1px red solid;*/
+}
+
+
+
+#choice-container{
+
+    display: flex;
+    margin: 0 5rem;
+    /*height: fit-content;*/
+    /*border: 1px blue solid;*/
+    width: 75vw;
+
+}
+#details-container{
+    width:  60%;
+    display: flex;
+    flex-direction: column;
+
+    /*border: 1px yellow solid;*/
+}
+
+#financial-container {
+    width: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /*border: 1px crimson solid;*/
+
+}
+
+#financial-top-container {
+    background-color: #2D2D2D;
+    border-radius: 10px;
+    /*border: 1px magenta solid;*/
+    height: fit-content;
+}
+
+
+
+
+.splide__arrow{
+    height: 3em;
+    width: 3em;
+
+}
+
+.splide__arrow--prev {
+    left: -2em;
+}
+
+.splide__arrow--next {
+    right: -2em;
+}
+
+    #year-container {
+        background-color: black;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    #marketNews-list {
+        list-style: none;
+        font-size: 1rem;
+    }
+
+        #marketNews-list li {
+            /*margin: 1rem;*/
+            list-style-type: circle;
+            margin: 1rem 0;
+        }
+
+    #marketNews-details h5 {
+        margin-left: 2rem;
+    }
+
+    #marketNews-container {
+        background-color: #0D0C0C;
+        margin-top: -1rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        /*border: red 1px solid;*/
+    }
+
+
+
+    #investments-container {
+        margin-top: -1rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        background-color: #0D0C0C;
+        padding: 10px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tabs-title {
+        font-size: 2rem;
+    }
+
+    #investment-graph p {
+        font-size: 1.5rem;
+    }
+
+    #investment-graph {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #investment-details-top {
+        height: 6rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 0.5rem;
+        text-align: center;
+        /*border: cyan 1px solid;*/
+    }
+
+    #investment-details-bottom {
+        display: flex;
+        flex-direction: row;
+    }
+
+        #investment-details-bottom div {
+            font-size: 1rem;
+            width: fit-content;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+    .investments-details-label {
+        width: 8rem;
+        border-radius: 4px;
+        height: 2rem;
+    }
+
+        .investments-details-label span {
+            display: inline-block;
+            margin-top: 0.3rem;
+        }
+
+
+    #details-header-container {
+        margin: 0;
+        width: 70%;
+        /*border: #ACFFBE 1px solid;*/
+    }
+
+    #choices-header {
+        margin-bottom: 1rem;
+        margin-top: 0;
+        /*border: darkorange 1px solid;*/
+    }
+
+    #choices {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-between;
+        /*border: 1px darkred solid;*/
+    }
+
+    #firstChoice, #secondChoice {
+        display: flex;
+        border: white 1px solid;
+        border-radius: 1rem;
+    }
+
+    .choice-wrapper {
+        width: 35rem;
+        height: fit-content;
+        display: grid;
+        grid-template-rows: 0.6fr 0.01fr;
+        justify-items: center;
+        margin: 1rem 0;
+        cursor: pointer;
+    }
+
+        .choice-wrapper img {
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+
+
+    #choice-text {
+        width: 60%;
+        font-size: 0.9rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        text-align: justify;
+        /*border: 1px yellow solid;*/
+    }
+
+    #button-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #btn {
+        margin: 5px;
+    }
+
+    #tabs-list {
+        display: flex;
+        flex-direction: row;
+        /*margin: 10px 10px 10px 10px;*/
+        list-style: none;
+        padding-left: 0;
+        background-color: transparent;
+        width: 100%
+        /*border: blue 1px solid;*/
+    }
+
+    .tabs {
+        height: 60px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #2D2D2D;
+        cursor: pointer;
+    }
+
+
+
+
+    .wrapper {
+        background-color: transparent;
+        border-radius: 10px;
+        padding: 0 1rem 10px 1rem;
+        height: 96%;
+        /*border: yellow 1px solid;*/
+    }
+
+    .react-tabs__tab--selected {
+        background-color: #0D0C0C;
+    }
+
+
+    .class1 {
+        pointer-events: none;
+    }
+
+    #account-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 2fr 2fr;
+        margin: 4px;
+        width: 100%;
+    }
+
+
+
+    .recharts-cartesian-axis-tick {
+        fill: white;
+        font-family: Roboto, sans-serif;
+    }
+
+    #choices input[type="checkbox"] {
+        opacity: 0;
+        height: 15rem;
+        width: inherit;
+    }
+
+    #choices input + label {
+        display: inline-block;
+        cursor: pointer;
+        background-image: url("../img/svg/add.svg");
+        padding: 0;
+    }
+
+    #choices input[type="checkbox"]:checked + label {
+        background-image: url("../img/svg/remove.svg")
+    }
+
+    label {
+        width: 60px;
+        height: 3.5rem;
+    }
+
+    #react-tabs-1 {
+        /*border: 1px cyan solid;*/
+    }
+
+    .react-tabs__tab-panel {
+        display: none;
+        justify-content: stretch;
+        height: 100%;
+    }
+
+    .react-tabs__tab-panel--selected {
+        display: flex;
+    }
+
+    .react-tabs {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+
+
+    @media screen and (max-width: 1500px) {
+
+        #choice-page {
+            display: flex;
+            /*flex-direction: column;*/
+            justify-content: center;
+            margin-top: 1rem !important;
+            /*border: 1px red solid;*/
+        }
+
+        #choice-container {
+            /*border: cyan 1px solid;
+            height: 110%;*/
+            grid-column-gap: 2rem;
+            width: 100%;
+        }
+
+        #details-container {
+            /*border: red 1px solid;*/
+        }
+
+        #header {
+            font-size: 1.7rem;
+        }
+
+        #choices-header {
+            font-size: 1.5rem;
+        }
+
+        #choices {
+            height: inherit;
+        }
+
+        .choice-wrapper {
+            /*border: 1px solid yellow;*/
+            height: 100%;
+            margin: 0;
+        }
+
+
+
+        #firstChoice, #secondChoice {
+            font-size: 0.5rem;
+            height: 100%;
+        }
+
+
+        .choice-image {
+            width: 10rem !important;
+            height: 10rem !important;
+        }
+
+        #choices input[type="checkbox"] {
+            opacity: 0;
+            height: 15rem;
+            width: inherit;
+        }
+
+        #choices label {
+            zoom: 0.5;
+            -moz-transform: scale(0.7);
+            -moz-transform-origin: 0 0;
+
+        }
+
+        #choices input + label {
+            display: inline-block;
+            cursor: pointer;
+            background-image: url("../img/svg/add.svg");
+            background-repeat: no-repeat;
+            padding: 0;
+        }
+
+        #choices input[type="checkbox"]:checked + label {
+            background-image: url("../img/svg/remove.svg")
+        }
+
+        #subtext {
+            font-size: 0.9rem;
+        }
+
+        #investments-container {
+            height: 63vh;
+        }
+
+        #investment-graph p {
+            margin: 0;
+        }
+    }
+
+
+
+    @media (max-width: 1920px) {
+        * {
+        }
+    }
+
+
+
+
+
+@media screen and (max-height: 1000px) {
+
+
+    #details-header-container {
+        margin: 0;
+        width: 80%;
+        /*border: #ACFFBE 1px solid;*/
+    }
+
+   #choice-page {
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 3rem;
+        /*border: 1px red solid;*/
+    }
+
+    #choice-container {
+        /*border: cyan 1px solid; */
+        padding-top: 20px;
+        position: relative;
+        height: 130vh;
+        grid-column-gap: 2rem;
+        width: 100%;
+    }
+
+    #choices input + label {
+        display: inline-block;
+        cursor: pointer;
+        background-image: url("../img/svg/add.svg");
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .choice-image {
+        width: 10rem !important;
+        height: 10rem !important;
+    }
+
+    #financial-container {
+        /*border: cyan 1px solid; */
+        padding-top: 30px;
+        position: relative;
+        height: 130vh;
+        grid-column-gap: 2rem;
+        margin-right: 120px;
+    }
+
+    .choice-wrapper {
+        width: 35rem;
+        height: fit-content;
+        display: grid;
+        grid-template-rows: 1fr 0.1fr;
+        justify-items: center;
+        margin: 1rem 0;
+        cursor: pointer;
+        padding-bottom: 20px;
+    }
+
+    .tabs {
+        height: 90px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #2D2D2D;
+        cursor: pointer;
+    }
+
+    #marketNews-container {
+        background-color: #0D0C0C;
+        margin-top: -1rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        height: fit-content;
+        /*border: red 1px solid;*/
+    }
+
+    #investments-container {
+        height: 85vh;
+    }
+
+    #financial-top-container {
+        background-color: #2D2D2D;
+        border-radius: 10px;
+        /*border: 1px magenta solid;*/
+        height: fit-content;
+    }
+
+
+    #investment-graph {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*@media(max-height: 1000px) {
+    #firstChoice, #secondChoice {
+        font-size: 0.4rem;
+        height: 60%;
+        width: 90%;
+    }
+    .choice-image {
+        width: fit-content !important;
+        height: 100% !important;
+    }
+    #choices input[type="checkbox"] {
+        opacity: 0;
+        height: 10rem;
+        width: inherit;
+        grid-row-gap: 0;
+    }
+
+    #choices label {
+        zoom: 0.5;
+        -moz-transform: scale(0.7);
+        -moz-transform-origin: 0 0;
+    }
+
+    #choices input + label {
+        display: inline-block;
+        cursor: pointer;
+        background-image: url("../img/svg/add.svg");
+        padding: 0;
+    }
+
+    #choices input[type="checkbox"]:checked + label {
+        background-image: url("../img/svg/remove.svg")
+    }
+    .choice-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #choices{
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media(max-height: 850px){
+    #choice-page{
+        transform: scale(0.9);
+    }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

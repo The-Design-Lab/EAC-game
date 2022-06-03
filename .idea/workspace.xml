@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="leaderboard added">
+    <list default="true" id="a533ccb0-0d98-49a0-b35e-d4fb5a7b4a62" name="Changes" comment="fixed margin in choice tabs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-2/Choice-2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-3/Choice-3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-4/Choice-4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-4/Choice-4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Choice-5/Choice-5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Choice-5/Choice-5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/graph/SingleGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/SingleGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/graph/WhatIfGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/graph/WhatIfGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/choices/c5-A-image.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -38,24 +36,43 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/components/ChoiceCard.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/Choice-1/Graph-1.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/Choice-1/Choice-1.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/Goals.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/styles/goals.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/styles/graphPages.css" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1yjxPY9qd79xTdGB2HPVkolsdXu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hub" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../systemhub" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Raphy\AppData\Roaming\npm\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Raphy\Documents\Repos\EAC-game\public" />
+      <recent name="C:\Users\Raphy\Documents\Repos\EAC-game\src\pages\Choice-2" />
+      <recent name="C:\Users\Raphy\Documents\Repos\EAC-game\src\styles" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Raphy\Documents\Repos\EAC-game\src\img" />
       <recent name="C:\Users\Raphy\Documents\Repos\EAC-game\src\data" />
     </key>
   </component>
@@ -109,7 +126,49 @@
       <workItem from="1638230841896" duration="6839000" />
       <workItem from="1638485938462" duration="6370000" />
       <workItem from="1641248109394" duration="114000" />
-      <workItem from="1643159074828" duration="1120000" />
+      <workItem from="1643159074828" duration="1320000" />
+      <workItem from="1643398810268" duration="17000" />
+      <workItem from="1643656259511" duration="9294000" />
+      <workItem from="1643821920934" duration="4776000" />
+      <workItem from="1643931354448" duration="6127000" />
+      <workItem from="1644011387504" duration="11298000" />
+      <workItem from="1644129491893" duration="3875000" />
+      <workItem from="1644186592946" duration="206000" />
+      <workItem from="1644423550268" duration="3215000" />
+      <workItem from="1644876809564" duration="21597000" />
+      <workItem from="1645030466331" duration="950000" />
+      <workItem from="1645469550477" duration="9567000" />
+      <workItem from="1645647889451" duration="11057000" />
+      <workItem from="1645733344941" duration="15427000" />
+      <workItem from="1645763106366" duration="12731000" />
+      <workItem from="1645823814330" duration="2888000" />
+      <workItem from="1646066911308" duration="1527000" />
+      <workItem from="1646237649628" duration="4923000" />
+      <workItem from="1646674972235" duration="9993000" />
+      <workItem from="1646841141646" duration="8701000" />
+      <workItem from="1647024227786" duration="161000" />
+      <workItem from="1647195285786" duration="9773000" />
+      <workItem from="1647454815026" duration="8254000" />
+      <workItem from="1647805845953" duration="8648000" />
+      <workItem from="1647877596518" duration="2885000" />
+      <workItem from="1648063865240" duration="11163000" />
+      <workItem from="1648240292591" duration="11644000" />
+      <workItem from="1648346219955" duration="2872000" />
+      <workItem from="1648658426797" duration="12089000" />
+      <workItem from="1648924883779" duration="8594000" />
+      <workItem from="1649014518073" duration="7759000" />
+      <workItem from="1649272839960" duration="9687000" />
+      <workItem from="1649382832689" duration="510000" />
+      <workItem from="1649430545436" duration="10000" />
+      <workItem from="1649446661520" duration="12073000" />
+      <workItem from="1649524855239" duration="15171000" />
+      <workItem from="1649551245569" duration="3786000" />
+      <workItem from="1649612004007" duration="22368000" />
+      <workItem from="1649687306811" duration="11743000" />
+      <workItem from="1649860299228" duration="2152000" />
+      <workItem from="1650036291100" duration="19869000" />
+      <workItem from="1650132864545" duration="10722000" />
+      <workItem from="1650219159237" duration="6773000" />
     </task>
     <task id="LOCAL-00001" summary="leaderboard added">
       <created>1638493523191</created>
@@ -118,7 +177,287 @@
       <option name="project" value="LOCAL" />
       <updated>1638493523191</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial phase of UI redesign">
+      <created>1646853256538</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646853256538</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add pictures and changed salary">
+      <created>1646854226135</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1646854226135</updated>
+    </task>
+    <task id="LOCAL-00004" summary="All reflection pages done.">
+      <created>1647457399727</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647457399727</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fixed responsiveness in choice pages">
+      <created>1647460031847</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647460031847</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixed responsiveness in choice pages">
+      <created>1647460155792</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647460155792</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Choice 1 to 3 updated styling">
+      <created>1647878499787</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647878499787</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixed goal card styling.">
+      <created>1647890937563</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1647890937563</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Choice pages styling fixed for laptop screen">
+      <created>1648076240553</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648076240553</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added option to remove goals from the player context">
+      <created>1648076326630</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648076326630</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Total cost formatted correctly.">
+      <created>1648076386627</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1648076386627</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Refactored choice pages.">
+      <created>1648667673652</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1648667673652</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Refactored choice pages.">
+      <created>1648667892283</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1648667892283</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed tooltip JSX errors">
+      <created>1648668091830</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1648668091830</updated>
+    </task>
+    <task id="LOCAL-00015" summary="New styling for Graph pages">
+      <created>1648672311322</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1648672311322</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fixed color for navigation buttons">
+      <created>1648672371778</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1648672371778</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixed routing and button color">
+      <created>1648672394892</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1648672394892</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fixed routing and button color">
+      <created>1648672449682</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1648672449682</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Life events component styling done">
+      <created>1648931006007</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1648931006007</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Life events component styling done">
+      <created>1649014591465</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1649014591465</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added proper images and SVGs">
+      <created>1649020941381</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1649020941381</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Goals images added to public">
+      <created>1649541861062</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1649541861062</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Fixed tabs styling">
+      <created>1649541894984</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1649541894984</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fixed tabs styling">
+      <created>1649541935404</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649541935404</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added img path to goals object">
+      <created>1649541974828</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1649541974828</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fixed misc styling issues">
+      <created>1649541997412</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1649541997412</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Fixed misc graphs issues">
+      <created>1649542049213</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1649542049213</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Fixed misc issues">
+      <created>1649542090437</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1649542090437</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Graph and choice pages refactored">
+      <created>1650133051699</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1650133051699</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Formatted amount for Leaderboard">
+      <created>1650133898392</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1650133898392</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Formatted data for the graphs">
+      <created>1650135751659</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1650135751659</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Formatted Data for Y-Axis on the graph">
+      <created>1650137172281</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1650137172281</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Formatted Data for Y-Axis on the graph">
+      <created>1650137443639</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1650137443639</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Formatted Data for Y-Axis on the graph">
+      <created>1650139190647</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1650139190647</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added GIFS to reflection pages">
+      <created>1650150635072</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1650150635072</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Fixed Graph styling">
+      <created>1650150649519</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1650150649519</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Fixed Graph styling">
+      <created>1650150721503</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1650150721503</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added conditional rendering to the Buttons for Choice pages">
+      <created>1650233436830</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1650233436830</updated>
+    </task>
+    <task id="LOCAL-00039" summary="changed pngs for WebP files">
+      <created>1650235927343</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1650235927343</updated>
+    </task>
+    <task id="LOCAL-00040" summary="changed pngs for WebP files">
+      <created>1650235951272</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1650235951272</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fixed margin in choice tabs">
+      <created>1650243174337</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1650243174337</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,8 +476,33 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="leaderboard added" />
-    <option name="LAST_COMMIT_MESSAGE" value="leaderboard added" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added option to remove goals from the player context" />
+    <MESSAGE value="Total cost formatted correctly." />
+    <MESSAGE value="Refactored choice pages." />
+    <MESSAGE value="Fixed tooltip JSX errors" />
+    <MESSAGE value="New styling for Graph pages" />
+    <MESSAGE value="Fixed color for navigation buttons" />
+    <MESSAGE value="Fixed routing and button color" />
+    <MESSAGE value="Life events component styling done" />
+    <MESSAGE value="Added proper images and SVGs" />
+    <MESSAGE value="Goals images added to public" />
+    <MESSAGE value="Fixed tabs styling" />
+    <MESSAGE value="added img path to goals object" />
+    <MESSAGE value="Fixed misc styling issues" />
+    <MESSAGE value="Fixed misc graphs issues" />
+    <MESSAGE value="Fixed misc issues" />
+    <MESSAGE value="Summary / finish page styled" />
+    <MESSAGE value="Graph and choice pages refactored" />
+    <MESSAGE value="Formatted amount for Leaderboard" />
+    <MESSAGE value="Formatted data for the graphs" />
+    <MESSAGE value="Formatted Data for Y-Axis on the graph" />
+    <MESSAGE value="Added GIFS to reflection pages" />
+    <MESSAGE value="Fixed Graph styling" />
+    <MESSAGE value="Added conditional rendering to the Buttons for Choice pages" />
+    <MESSAGE value="changed pngs for WebP files" />
+    <MESSAGE value="fixed margin in choice tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed margin in choice tabs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

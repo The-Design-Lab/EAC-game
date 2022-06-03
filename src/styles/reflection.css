@@ -1,0 +1,44 @@
+body{
+    color: white;
+}
+hr{
+    margin: 4rem;
+}
+
+#image-container{
+    width: 20rem;
+    height: 20rem;
+    background-color: #ACFFBE;
+    border-radius: 41px;
+    margin: 2rem;
+}
+
+#reflection-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; align-items: center;
+    /*height: 85vh;*/
+
+}
+
+.subcontainer{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+#text-container{
+    width: 40rem;
+    text-align: left;
+}
+
+
+#reflection2-img{
+    width: 17rem;
+}
+
+hr{
+    margin: 0 10rem !important;
+}

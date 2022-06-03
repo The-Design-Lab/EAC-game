@@ -1,0 +1,196 @@
+#main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    margin: 2rem;
+    /*border: deepskyblue 1px solid;*/
+
+}
+
+.sub-containers{
+    /*display: grid;*/
+    /*grid-template-rows: 1fr 1fr 1fr 1fr;*/
+    /*grid-row-gap: 0.5rem;*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /*border: 1px red solid;*/
+
+}
+.title{
+    margin: 0.5rem;
+    /*border: blueviolet 1px solid;*/
+    display: grid;
+    grid-template-rows: 1fr;
+    text-align: center;
+    grid-row-gap: 0;
+}
+
+.title h3{
+    margin: 0;
+}
+
+.title p {
+    font-size: 1.2rem;
+}
+
+.graph{
+    /*border: darkmagenta 1px solid;*/
+    margin: 1rem;
+}
+
+.label-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: left;
+    /*border: yellow 1px solid;*/
+    gap: 1rem;
+}
+
+.investments-labels{
+    border: cyan 1px solid;
+}
+
+.investments {
+    margin-left: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 0.5fr;
+    grid-row-gap: 0;
+    height: 6rem;
+    /*border: darkorange 1px solid;*/
+}
+
+.investments h4{
+    margin: 0;
+}
+
+.account{
+    margin: 1rem;
+    /*border: greenyellow 1px solid;*/
+    height: fit-content;
+
+}
+.account-information-top{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem;
+}
+
+.account-information-bottom-label{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    height: fit-content;
+}
+
+.goals{
+    margin: 0.4rem;
+    background-color: white;
+    color: #0D0C0C;
+    padding: 0.1rem;
+    border-radius: 5px;
+    border: 0.2rem green solid;
+}
+
+.account-information-bottom {
+
+}
+#account-information-bottom-header{
+
+}
+
+hr{
+    margin: 4rem;
+}
+
+.li-lines{
+    list-style-type: none;
+    position: relative;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    right: calc(100% + .25em);
+    top: 50%;
+    width: 1.2em;
+    height: .25em;
+    border-radius: .5em;
+}
+
+h4 {
+    margin: 0;
+}
+
+.investments-details-label{
+    width: fit-content;
+    border-radius: 4px;
+    height: 2rem;
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.investments-details-label span{
+    display: inline-block;
+
+}
+
+#graph-container{
+    /*border: #00FF38 1px solid;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-row-gap: 2rem;
+    height: 100vh;
+}
+
+@media  (max-width: 1500px){
+    #responsive-container{
+        /*border: #00FF38 1px solid;*/
+        zoom: 0.9;
+        -ms-zoom: 0.9;
+        -moz-transform:  scale(0.8,0.8);
+
+    }
+    .investments h5{
+        margin: 0 0 1rem 0;
+    }
+    .title h3{
+        font-size: 1.8rem;
+    }
+    .title p{
+        font-size: 1rem;
+    }
+    .graph{
+        margin: 0;
+    }
+
+    .investments span{
+        font-size: 0.8rem;
+    }
+}
+.recharts-cartesian-axis-tick-value{
+    font-size: 0.8rem;
+}
+
+.recharts-wrapper{
+    width: fit-content;
+    /*border: 0.5px solid red;*/
+}
+
+.recharts-surface{
+    width: 100%;
+}
+
+@media (max-height: 768px) {
+    #graph-container {
+        margin-top: 2%;
+        /*border: #00FF38 1px solid;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        grid-row-gap: 2rem;
+        height: 100vh;
+    }
+}

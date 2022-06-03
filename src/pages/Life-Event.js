@@ -1,35 +1,18 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Button from "../components/Button";
-import styled from "styled-components";
 import { events } from "../data/event-list";
 import { PlayerContext } from "../contexts/PlayerContext";
+import usePlayer from "../hooks/usePlayer";
+import { formatter } from "../formatter";
+import Button from "@mui/material/Button";
+import "../styles/life-event.css";
+import entrepreneur from "../img/entrepreneurship.png";
 
 function LifeEvent(props) {
-  console.log(props.match.params.num);
   const event = events[props.match.params.num];
-  const MainContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    h1 {
-      text-align: center;
-      font-family: var(--body);
-      font-weight: 400;
-    }
-    p {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-  `;
-
-  const Buttons = styled.div`
-    display: flex;
-    justify-content: center;
-  `;
 
   const { dispatch } = useContext(PlayerContext);
+  const player = usePlayer();
 
   useEffect(() => {
     dispatch({
@@ -41,20 +24,48 @@ function LifeEvent(props) {
 
   return (
     <>
-      <MainContent>
-        <h1>{event.name}</h1>
-        <img src={""} alt="Name of the life event" />
-        <p>{event.description}</p>
-      </MainContent>
+      <div id="life-event--container">
+        <div className="life-event--header">
+          <h3>A life event just occurred!</h3>
+        </div>
+        <div id="life-event--content">
+          <div className="life-event--image">
+            <img src={entrepreneur} alt="" />
+          </div>
+          <div className="life-event--text">
+            <h4>{event.name}</h4>
+            <p>{event.description}</p>
+          </div>
+        </div>
+        <div id="life-event--balance">
+          <h4>
+            New Account Balance:{" "}
+            {formatter.format(player.bank + player.investmentAccount)}
+          </h4>
+        </div>
+      </div>
       <hr />
-      <Buttons>
-        <Link to="/choice-2">
-          <Button label="Back" />
+      <div id="button-container">
+        <Link to={"/choice-3"}>
+          <Button
+            sx={{
+              backgroundColor: "#e5e5e5",
+              color: "#000000",
+              height: "3rem",
+              width: "12rem",
+              fontSize: "1.5rem",
+              padding: "0",
+
+              "&:hover": {
+                backgroundColor: "#00FF38",
+              },
+            }}
+            id="btn"
+          >
+            Continue
+          </Button>
         </Link>
-        <Link to="/choice-3">
-          <Button label="Continue" />
-        </Link>
-      </Buttons>
+      </div>
     </>
   );
 }

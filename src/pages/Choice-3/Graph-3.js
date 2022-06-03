@@ -1,100 +1,46 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import Button from '../../components/Button'
-import Graph from '../../components/graph/Graph'
-import { PlayerContext } from '../../contexts/PlayerContext'
-import { choice3 } from '../../data/investmentData'
-import INVESTMENTS_VEHICLES from '../../data/Investments'
+import React from "react";
+import { choice3, singleGraph3 } from "../../data/investmentData";
+import GraphContainer from "../../components/graph/GraphContainer";
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
+import "../../styles/graphPages.css";
 
-const Title = styled.h4`
-  text-align: center;
-  margin-bottom: 20px;
-`
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-`
-const Investments = styled.aside`
-  padding: 0 20px;
-
-  h5 {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  hr {
-    margin: 20px 0;
-  }
-`
-const InvestmentName = styled.div`
-  box-shadow: var(--bevel-default);
-  width: 150px;
-  padding: 15px 20px;
-  text-align: center;
-`
-const InvestmentGroup = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-`
-
-const Buttons = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-`
-
-function GraphTwo() {
-  const { investments } = useContext(PlayerContext)
-  console.log(investments)
-
+function GraphThree() {
   return (
-    <div>
-      <Title>2006 Summary</Title>
-      <hr />
-      <Grid>
-        <Graph data={choice3} />
-        <Investments>
-          <h5>Investments</h5>
-          <hr />
-          {/* render condtional investment labels */}
-          <InvestmentGroup>
-            {investments.includes(INVESTMENTS_VEHICLES.SP) && (
-              <InvestmentName style={{ backgroundColor: '#F9BA7F' }}>
-                S&P 500
-              </InvestmentName>
-            )}
-            {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
-              <InvestmentName style={{ backgroundColor: '#f96263' }}>
-                Retirement
-              </InvestmentName>
-            )}
-            {investments.includes(INVESTMENTS_VEHICLES.CD) && (
-              <InvestmentName style={{ backgroundColor: '#E6E547' }}>
-                CD
-              </InvestmentName>
-            )}
-            {investments.includes(INVESTMENTS_VEHICLES.inveesgo) && (
-              <InvestmentName style={{ backgroundColor: '#BBC2FF' }}>
-                Insego
-              </InvestmentName>
-            )}
-            {investments.includes(INVESTMENTS_VEHICLES.mutualFund) && (
-              <InvestmentName style={{ backgroundColor: '#BBC2FF' }}>
-                Mutual Fund
-              </InvestmentName>
-            )}
-          </InvestmentGroup>
-        </Investments>
-      </Grid>
-      <Buttons>
-        <Link to="/choice-4">
-          <Button label="Continue" />
-        </Link>
-      </Buttons>
-    </div>
-  )
+    <>
+      <div id="graph-container">
+        <GraphContainer
+          year={2007}
+          choice={choice3}
+          singleGraph={singleGraph3}
+          limit={4}
+          graphYear={2007}
+        />
+        <div id="button-container">
+          <Link to={"/reflection-3"}>
+            <Button
+              sx={{
+                backgroundColor: "#e5e5e5",
+                color: "#000000",
+                height: "2.5rem",
+                width: "10rem",
+                fontSize: "1.2rem",
+                padding: "0",
+
+                "&:hover": {
+                  backgroundColor: "#00FF38",
+                },
+              }}
+              id="btn"
+            >
+              Continue
+            </Button>
+          </Link>
+        </div>
+      </div>
+      {/*<hr />*/}
+    </>
+  );
 }
 
-export default GraphTwo
+export default GraphThree;

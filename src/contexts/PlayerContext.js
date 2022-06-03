@@ -1,12 +1,16 @@
 import { createContext, useReducer } from "react";
+import { investmentTotals } from "../data/data";
 
 // Set initial state of expenses with mock data
 const initialState = {
   bank: 0,
-  salary: 45000,
+  salary: 60000,
   goals: [],
   choices: [],
   investments: [],
+  investmentAccount: 0,
+  graph: [{ year: 2004, amount: 0 }],
+  totals: [],
 };
 
 // create the context
@@ -24,6 +28,9 @@ export const PlayerProvider = ({ children }) => {
         goals: state.goals,
         choices: state.choices,
         investments: state.investments,
+        investmentAccount: state.investmentAccount,
+        graph: state.graph,
+        totals: state.totals,
         dispatch,
       }}
     >
@@ -39,6 +46,13 @@ const PlayerReducer = (state, action) => {
         ...state,
         goals: [...state.goals, action.payload],
       };
+    case "REMOVE_GOAL":
+      return {
+        ...state,
+        goals: [...state.goals].filter(
+          (goal) => goal.name !== action.payload.name
+        ),
+      };
     case "ADD_INVESTMENT":
       return {
         ...state,
@@ -47,18 +61,18 @@ const PlayerReducer = (state, action) => {
     case "SELECT_CHOICE":
       return {
         ...state,
+        totals: [...state.totals, action.payload.index],
         choices: [...state.choices, action.payload.choice],
         investments: [...state.investments, action.payload.investment],
-        bank: state.bank + state.salary + action.payload.expenditures,
       };
     case "REMOVE_INVESTMENT":
       return {
         ...state,
         choices: [...state.choices, action.payload.choice],
+        totals: [...state.totals, action.payload.index],
         investments: [...state.investments, action.payload.investment].filter(
           (investment) => investment !== "S&P"
         ),
-        bank: state.bank + state.salary + action.payload.expenditures,
       };
     case "ADD_EVENT":
       return {
@@ -66,6 +80,24 @@ const PlayerReducer = (state, action) => {
 
         bank: state.bank + action.payload,
       };
+    case "GENERATE_GRAPH": {
+      return {
+        ...state,
+        graph: [...state.graph, action.payload],
+      };
+    }
+    case "ADD_RETURNS": {
+      return {
+        ...state,
+        bank: investmentTotals[state.totals.map((c) => c).join(",")],
+      };
+    }
+    case "RESET_RETURNS": {
+      return {
+        ...state,
+        investmentAccount: 0,
+      };
+    }
     case "RESET":
       return initialState;
     default:

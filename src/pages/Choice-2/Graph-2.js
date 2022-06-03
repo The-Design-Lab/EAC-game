@@ -1,99 +1,61 @@
-import React, { useContext } from "react";
+import React from "react";
+import GraphContainer from "../../components/graph/GraphContainer";
+import { choice2, singleGraph2 } from "../../data/investmentData";
+import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
-import Button from "../../components/Button";
-import Graph from "../../components/graph/Graph";
-import { PlayerContext } from "../../contexts/PlayerContext";
-import { choice2 } from "../../data/investmentData";
-import INVESTMENTS_VEHICLES from "../../data/Investments";
 import { randomEvent } from "../../data/pick-random-event";
-
-const Title = styled.h4`
-  text-align: center;
-  margin-bottom: 20px;
-`;
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-`;
-const Investments = styled.aside`
-  padding: 0 20px;
-
-  h5 {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  hr {
-    margin: 20px 0;
-  }
-`;
-const InvestmentName = styled.div`
-  box-shadow: var(--bevel-default);
-  width: 150px;
-  padding: 15px 20px;
-  text-align: center;
-`;
-const InvestmentGroup = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-`;
-
-const Buttons = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-`;
+import "../../styles/graphPages.css";
 
 function GraphTwo() {
-  const { investments } = useContext(PlayerContext);
   const eventTrigger = randomEvent();
-  console.log(eventTrigger);
-  console.log(investments);
 
   return (
-    <div>
-      <Title>2005 Summary</Title>
-      <hr />
-      <Grid>
-        <Graph data={choice2} />
-        <Investments>
-          <h5>Investments</h5>
-          <hr />
-          {/* render condtional investment labels */}
-          <InvestmentGroup>
-            {investments.includes(INVESTMENTS_VEHICLES.SP) && (
-              <InvestmentName style={{ backgroundColor: "#F9BA7F" }}>
-                S&P 500
-              </InvestmentName>
-            )}
-            {investments.includes(INVESTMENTS_VEHICLES.retirement) && (
-              <InvestmentName style={{ backgroundColor: "#f96263" }}>
-                Retirement
-              </InvestmentName>
-            )}
-            {investments.includes("CD") && (
-              <InvestmentName style={{ backgroundColor: "#E6E547" }}>
-                CD
-              </InvestmentName>
-            )}
-          </InvestmentGroup>
-        </Investments>
-      </Grid>
-      <Buttons>
-        {eventTrigger ? (
-          <Link to={`/event/${eventTrigger}`}>
-            <Button label="Continue" />
+    <>
+      <div id="graph-container">
+        <GraphContainer
+          limit={3}
+          singleGraph={singleGraph2}
+          choice={choice2}
+          year={2005}
+          graphYear={2006}
+        />
+        <div id="button-container">
+          <Link to={eventTrigger ? `/event/${eventTrigger}` : "/reflection-2"}>
+            <Button
+              sx={{
+                backgroundColor: "#e5e5e5",
+                color: "#000000",
+                height: "2.5rem",
+                width: "10rem",
+                fontSize: "1.2rem",
+                padding: "0",
+
+                "&:hover": {
+                  backgroundColor: "#00FF38",
+                },
+              }}
+              id="btn"
+            >
+              Continue
+            </Button>
           </Link>
-        ) : (
-          <Link to="/choice-3">
-            <Button label="Continue" />
-          </Link>
-        )}
-      </Buttons>
-    </div>
+        </div>
+      </div>
+      {/*<hr />*/}
+    </>
   );
 }
 
 export default GraphTwo;
+
+// <Buttons>
+//     {eventTrigger ? (
+//         <Link to={`/event/${eventTrigger}`}>
+//             <Button label="Continue" />
+//         </Link>
+//     ) : (
+//         <Link to="/choice-3">
+//             <Button label="Continue" />
+//         </Link>
+//     )}
+// </Buttons>
